@@ -1,0 +1,58 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate and return all angles of a pentagon based on angle relationships.",
+      "name": "calculate_pentagon_angle_measurements",
+      "parameters": {
+        "properties": {
+          "angles": {
+            "description": "A dictionary containing the measures of angles A, B and additional_angle.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "output_fraction": {
+            "description": "Indicate whether the output should be in fractional form.",
+            "type": "boolean"
+          },
+          "total_outcomes": {
+            "description": "The total number of outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate and return all angles of a polygon based on given angle relationships.",
+      "name": "calculate_and_return_angle_measures",
+      "parameters": {
+        "properties": {
+          "angles": {
+            "description": "A dictionary containing the measures of angles in the polygon.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

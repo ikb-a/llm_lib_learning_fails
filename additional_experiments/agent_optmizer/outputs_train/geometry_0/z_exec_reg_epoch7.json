@@ -1,0 +1,38 @@
+{
+  "calculate_area_of_cube": {
+    "code": "def calculate_area_of_cube(edge_length):\n    return 6 * (edge_length ** 2)",
+    "packages": "sympy"
+  },
+  "calculate_area_of_frustum": {
+    "code": "def calculate_area_of_frustum(A_bottom, A_top, height):\n    return (A_bottom + A_top) * height / 2",
+    "packages": "sympy"
+  },
+  "calculate_cone_volume_and_surface_area": {
+    "code": "def calculate_cone_volume_and_surface_area(radius, height):\n    from sympy import pi, sqrt\n    volume = (1/3) * pi * (radius ** 2) * height\n    slant_height = sqrt(radius ** 2 + height ** 2)\n    surface_area = pi * radius * slant_height + pi * (radius ** 2)\n    return volume, surface_area",
+    "packages": "sympy"
+  },
+  "calculate_distance_between_points": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance_between_points(point1, point2):\n    return sqrt((point2['x'] - point1['x'])**2 + (point2['y'] - point1['y'])**2 + (point2['z'] - point1['z'])**2)",
+    "packages": "sympy"
+  },
+  "calculate_ratios_of_areas_volumes": {
+    "code": "def calculate_ratios_of_areas_volumes(original_area, original_volume, k):\n    area_ratio = (k ** 2) / (1 - k ** 2)\n    volume_ratio = (k ** 3) / (1 - k ** 3)\n    return area_ratio, volume_ratio",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cone": {
+    "code": "def calculate_surface_area_of_cone(radius, height):\n    from sympy import pi, sqrt\n    # Slant height\n    l = sqrt(radius**2 + height**2)\n    return pi * radius * l + pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * edge_length ** 2",
+    "packages": "sympy"
+  },
+  "calculate_volume_of_cone": {
+    "code": "def calculate_volume_of_cone(radius, height):\n    from sympy import pi\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  },
+  "find_prime_pairs": {
+    "code": "def find_prime_pairs(k):\n    m = k\n    n = 1\n    return m, n",
+    "packages": ""
+  }
+}

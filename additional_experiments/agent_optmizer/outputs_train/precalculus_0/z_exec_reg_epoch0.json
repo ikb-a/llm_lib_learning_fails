@@ -1,0 +1,22 @@
+{
+  "calculate_triangle_angles": {
+    "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    a_squared = a**2\n    b_squared = b**2\n    c_squared = c**2\n    angle_A = deg(acos((b_squared + c_squared - a_squared) / (2 * b * c)))\n    angle_B = deg(acos((a_squared + c_squared - b_squared) / (2 * a * c)))\n    angle_C = deg(acos((a_squared + b_squared - c_squared) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+    "packages": "sympy"
+  },
+  "compute_arcsin": {
+    "code": "from sympy import asin\n\ndef compute_arcsin(x):\n    return asin(x)",
+    "packages": "sympy"
+  },
+  "evaluate_secant_cosecant_expression": {
+    "code": "from sympy import sec, csc, rad\n\ndef evaluate_secant_cosecant_expression(angle_degrees):\n    sec_value = sec(rad(angle_degrees))\n    csc_value = csc(rad(angle_degrees))\n    return sec_value, csc_value",
+    "packages": "sympy"
+  },
+  "evaluate_trig_expression": {
+    "code": "from sympy import sin, cos, rad\n\ndef evaluate_trig_expression(angle):\n    return cos(rad(angle)) - sqrt(3) * sin(rad(angle))",
+    "packages": "sympy"
+  },
+  "evaluate_trig_functions": {
+    "code": "from sympy import sin, cos, tan, deg\n\ndef evaluate_trig_functions(angle_degrees, function):\n    angle_radians = deg(angle_degrees)\n    if function == 'sin':\n        return sin(angle_radians)\n    elif function == 'cos':\n        return cos(angle_radians)\n    elif function == 'tan':\n        return tan(angle_radians)\n    else:\n        raise ValueError('Invalid function specified. Use sin, cos, or tan.')",
+    "packages": "sympy"
+  }
+}

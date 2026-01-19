@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_tangent_arccos(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + tan_alpha * tan_beta\n    return numerator / denominator",
+      "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+      "name": "calculate_tangent_arccos",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_angles_of_triangle(a, b, c):\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    # Convert angles to degrees\n    angle_A_degrees = sp.deg(angle_A)\n    angle_B_degrees = sp.deg(angle_B)\n    angle_C_degrees = sp.deg(angle_C)\n    return angle_A_degrees, angle_B_degrees, angle_C_degrees",
+      "description": "Calculate the angles of a triangle given its sides.",
+      "name": "calculate_angles_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def evaluate_arcsin(value):\n    try:\n        result = sp.asin(value)\n        return result\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluate the arcsine of a given value.",
+      "name": "evaluate_arcsin",
+      "packages": "sympy"
+    }
+  }
+]

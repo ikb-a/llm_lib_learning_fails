@@ -1,0 +1,77 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate tan(arccos(x^2)) based on domain and return value based on constraints.",
+      "name": "calculate_tan_arccos",
+      "parameters": {
+        "properties": {
+          "x": {
+            "description": "value of x",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles of a triangle given its sides with validity checks.",
+      "name": "calculate_angles_of_triangle_v2",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of the triangle given the lengths of its sides using the Law of Cosines.",
+      "name": "calculate_angles_of_triangle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "calculate_domain_of_tan_arccos",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

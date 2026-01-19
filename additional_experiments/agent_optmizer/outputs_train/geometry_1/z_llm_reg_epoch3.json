@@ -1,0 +1,42 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cylinder given its radius and height.",
+      "name": "calculate_surface_area_of_cylinder",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cylinder.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cylinder.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

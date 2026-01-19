@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin, pi\n\ndef calculate_arcsin(x):\n    arcsin_value = asin(x)\n    return arcsin_value, arcsin_value.evalf() * (180/pi)",
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, pi\n\ndef calculate_angles_of_triangle(a, b, c):\n    A = acos((b**2 + c**2 - a**2) / (2 * b * c))\n    B = acos((a**2 + c**2 - b**2) / (2 * a * c))\n    C = acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return (180 * A / pi, 180 * B / pi, 180 * C / pi)",
+      "description": "Calculate the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "calculate_angles_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sin, cos, tan, sympify\n\ndef calculate_trigonometric_expression(expression):\n    try:\n        return sympify(expression)\n    except Exception as e:\n        return str(e)",
+      "description": "Calculate trigonometric expressions such as sin, cos, and tan for given input values.",
+      "name": "calculate_trigonometric_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def find_domain_of_tan_arccos():\n    return '[-1, 0) \u222a (0, 1]'",
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import tan, acos\n\ndef compute_tangent_arccos(value):\n    if value < -1 or value > 1:\n        return \"Invalid input: value must be between -1 and 1\"\n    arccos_value = acos(value)\n    return tan(arccos_value)",
+      "description": "Compute the tangent of the arccosine value for a given input.",
+      "name": "compute_tangent_arccos",
+      "packages": "sympy"
+    }
+  }
+]

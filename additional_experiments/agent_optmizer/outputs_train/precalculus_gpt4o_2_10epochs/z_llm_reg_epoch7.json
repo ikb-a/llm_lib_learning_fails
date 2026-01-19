@@ -1,0 +1,18 @@
+[
+  {
+    "func_sig": {
+      "description": "Solves mathematical problems by recognizing the problem type and applying necessary SymPy transformations. Outputs results in fractions and radical forms, ensuring compatibility with problem requirements. Enhanced error handling and evaluations included for common SymPy execution issues.",
+      "name": "transform_and_solve",
+      "parameters": {
+        "properties": {
+          "problem_code": {
+            "description": "Python code implementing the solution using SymPy, with print for output.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

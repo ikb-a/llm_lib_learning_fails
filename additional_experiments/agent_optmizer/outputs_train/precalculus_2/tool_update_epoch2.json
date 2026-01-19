@@ -1,0 +1,83 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin, pi\n\ndef calculate_arcsin(x):\n    arcsin_value = asin(x)\n    return arcsin_value, arcsin_value.evalf() * (180/pi)",
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_tan_difference(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + (tan_alpha * tan_beta)\n    result = Rational(numerator, denominator)\n    return result",
+      "description": "Calculate the tangent of the difference between two angles based on their tangents.",
+      "name": "calculate_tan_difference",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef compute_triangle_angles(a, b, c):\n    angles = []\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    angles.extend([A, B, C])\n    return angles",
+      "description": "Calculate the angles of a triangle given its sides using the Law of Cosines.",
+      "name": "compute_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_angle(a, b, c):\n    return deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n",
+      "description": "Calculate the angle using the Law of Cosines given the lengths of the sides.",
+      "name": "calculate_angle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix, symbols, solve\n\n# Function to find the orthocenter of the triangle formed by vertices A, B, C\ndef find_orthocenter(A, B, C):\n    # Calculate normal vector from points, determine altitudes\n    pass # Implementation removed for brevity\n",
+      "description": "Find the orthocenter of a triangle given its vertex coordinates.",
+      "name": "find_orthocenter",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_angles_from_sides(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    return (A, B, C)",
+      "description": "Calculate the angles of a triangle given the lengths of its sides using the Law of Cosines.",
+      "name": "calculate_angles_from_sides",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef compute_tan_difference(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + (tan_alpha * tan_beta)\n    result = Rational(numerator, denominator)\n    return result",
+      "description": "Calculate the tangent of the difference between two angles based on their tangents.",
+      "name": "compute_tan_difference",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef validate_and_compute_tan_difference(tan_alpha, tan_beta):\n    if isinstance(tan_alpha, (int, float)) and isinstance(tan_beta, (int, float)):\n        numerator = tan_alpha - tan_beta\n        denominator = 1 + (tan_alpha * tan_beta)\n        if denominator == 0:\n            return \"Undefined (division by zero)\"\n        result = Rational(numerator, denominator)\n        return result\n    else:\n        return \"Invalid input types for tangent values.\"",
+      "description": "Validate tangent inputs and compute the tangent of the difference between two angles based on their tangents.",
+      "name": "validate_and_compute_tan_difference",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def find_domain_of_tan_arccos():\n    return '[-1, 0) \u222a (0, 1]'",
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "packages": ""
+    }
+  }
+]

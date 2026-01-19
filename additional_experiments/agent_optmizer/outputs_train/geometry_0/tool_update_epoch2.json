@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_sphere_volume(radius):\n    return (4/3) * pi * radius ** 3",
+      "description": "Calculate the volume of a sphere given its radius.",
+      "name": "calculate_sphere_volume",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_triangle_area(base, height):\n    return (base * height) / 2",
+      "description": "Calculate the area of a triangle given the base and height.",
+      "name": "calculate_triangle_area",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle_from_sides(a, b, c):\n    s = (a + b + c) / 2\n    area = sqrt(s * (s - a) * (s - b) * (s - c))\n    return area",
+      "description": "Calculate the area of a triangle given its three sides using Heron's formula.",
+      "name": "calculate_area_of_triangle_from_sides",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * radius ** 2 * height",
+      "description": "Calculates the volume of a cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+      "description": "Calculates the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_surface_area_of_cylinder(radius, height):\n    return 2 * pi * radius * height + 2 * calculate_area_of_circle(radius)",
+      "description": "Calculate the surface area of a cylinder given its radius and height.",
+      "name": "calculate_surface_area_of_cylinder",
+      "packages": "sympy"
+    }
+  }
+]

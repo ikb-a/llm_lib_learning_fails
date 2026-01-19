@@ -1,0 +1,78 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the probability of an event based on favorable and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "The total number of possible outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls given a non-leap year.",
+      "name": "expected_number_of_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "The number of days in a non-leap year.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of die rolls based on defined probabilities and rules.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in a non-leap year.",
+            "type": "integer"
+          },
+          "expected_roll": {
+            "description": "Expected number of rolls per day.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the probability of rolling outcomes given defined conditions.",
+      "name": "calculate_probability_of_outcome",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "Favorable outcomes that meet conditions",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "Total possible outcomes",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

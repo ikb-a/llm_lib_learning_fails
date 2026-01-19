@@ -1,0 +1,150 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the sum of the interior angles of a pentagon.",
+      "name": "sum_of_angles_of_pentagon",
+      "parameters": {
+        "properties": {
+          "n": {
+            "description": "The number of sides of the polygon.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a 2D plane using the distance formula.",
+      "name": "calculate_distance_between_points",
+      "parameters": {
+        "properties": {
+          "x1": {
+            "description": "The x-coordinate of the first point.",
+            "type": "integer"
+          },
+          "x2": {
+            "description": "The x-coordinate of the second point.",
+            "type": "integer"
+          },
+          "y1": {
+            "description": "The y-coordinate of the first point.",
+            "type": "integer"
+          },
+          "y2": {
+            "description": "The y-coordinate of the second point.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the length of AC in a pentagon using the distance formula.",
+      "name": "calculate_ac_length",
+      "parameters": {
+        "properties": {
+          "a_x": {
+            "description": "The x-coordinate of point A.",
+            "type": "integer"
+          },
+          "a_y": {
+            "description": "The y-coordinate of point A.",
+            "type": "integer"
+          },
+          "c_x": {
+            "description": "The x-coordinate of point C.",
+            "type": "integer"
+          },
+          "c_y": {
+            "description": "The y-coordinate of point C.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angle measures based on the relationships in a pentagon.",
+      "name": "calculate_angle",
+      "parameters": {
+        "properties": {
+          "A": {
+            "description": "Angle A in degrees.",
+            "type": "integer"
+          },
+          "B": {
+            "description": "Angle B in degrees.",
+            "type": "integer"
+          },
+          "C": {
+            "description": "Angle C in degrees (which is equal to angle D).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a 2D plane using the distance formula and return the result.",
+      "name": "calculate_length",
+      "parameters": {
+        "properties": {
+          "x1": {
+            "description": "The x-coordinate of the first point.",
+            "type": "integer"
+          },
+          "x2": {
+            "description": "The x-coordinate of the second point.",
+            "type": "integer"
+          },
+          "y1": {
+            "description": "The y-coordinate of the first point.",
+            "type": "integer"
+          },
+          "y2": {
+            "description": "The y-coordinate of the second point.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a pentagon from given angle relationships.",
+      "name": "calculate_pentagon_angle",
+      "parameters": {
+        "properties": {
+          "A": {
+            "description": "Angle A in degrees.",
+            "type": "integer"
+          },
+          "B": {
+            "description": "Angle B in degrees.",
+            "type": "integer"
+          },
+          "C": {
+            "description": "Angle C in degrees (to be set equal to angle D).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

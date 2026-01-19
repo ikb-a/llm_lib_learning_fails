@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_modulo(number, modulus):\n    return number % modulus",
+      "description": "Calculate the modulo of a number when divided by a given modulus.",
+      "name": "calculate_modulo",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef gcd(a, b):\n    return math.gcd(a, b)",
+      "description": "Calculate the greatest common divisor of two integers.",
+      "name": "gcd",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_remainder(number, divisor):\n    if divisor == 0:\n        return 'Division by zero is undefined'\n    return number % divisor",
+      "description": "Calculate the remainder of a number when divided by a given divisor.",
+      "name": "calculate_remainder",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def convert_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "description": "Convert a decimal number to a specified base and return its representation as a string.",
+      "name": "convert_to_base",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def sum_of_digits_in_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    total = 0\n    digits = convert_to_base(number, base)\n    for digit in digits:\n        total += int(digit)\n    return total",
+      "description": "Sum the digits of a number in a given base representation.",
+      "name": "sum_of_digits_in_base",
+      "packages": ""
+    }
+  }
+]

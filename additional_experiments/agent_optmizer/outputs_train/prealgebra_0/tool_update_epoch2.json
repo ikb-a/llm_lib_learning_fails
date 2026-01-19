@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import primerange\n\ndef calculate_remainder(n, m):\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    sum_of_primes = sum(primes[:n])  # sum of the first n primes\n    return sum_of_primes % primes[m-1]  # remainder when divided by mth prime",
+      "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+      "name": "calculate_remainder",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def sum_of_angles_pentagon(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "sum_of_angles_pentagon",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_honda_sales(total_cars, percentage_audi, percentage_toyota, percentage_acura):\n    total_percentage = percentage_audi + percentage_toyota + percentage_acura\n    if total_percentage > 100:\n        raise ValueError('Percentages cannot exceed 100%')\n    percentage_honda = 100 - total_percentage\n    number_of_hondas = (percentage_honda / 100) * total_cars\n    return number_of_hondas",
+      "description": "Calculate the number of Hondas sold based on percentages of other car types.",
+      "name": "calculate_honda_sales",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import N\n\ndef evaluate_and_round_expression(expression, decimal_places):\n    result = N(expression)\n    if decimal_places is not None:\n        result = round(result, decimal_places)\n    return result",
+      "description": "Evaluate an arithmetic expression and round the result to the nearest specified decimal places.",
+      "name": "evaluate_and_round_expression",
+      "packages": "sympy"
+    }
+  }
+]

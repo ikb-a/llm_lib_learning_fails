@@ -1,0 +1,12 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ]
+}

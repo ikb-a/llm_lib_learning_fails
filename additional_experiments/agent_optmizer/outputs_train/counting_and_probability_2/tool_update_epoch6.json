@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability(favorable_outcomes, total_outcomes):\n    if total_outcomes == 0:\n        return 0\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+      "description": "Calculate the probability of an event based on favorable and total outcomes.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef expected_number_of_rolls_v2(days):\n    # Probability analysis for the die's outcome\n    prob_prime = Rational(3, 6)  # Prime: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite: 4, 6\n    prob_one = Rational(1, 6)  # 1\n    expected_rolls_day = 0\n\n    # Expected rolls calculation considering re-rolls\n    expected_rolls_day = Rational(1, 1 - prob_one)  # Based on geometric series for the re-roll\n    return days * expected_rolls_day",
+      "description": "Calculate the expected number of rolls based on defined probabilities and rules, including handling re-rolls.",
+      "name": "expected_number_of_rolls_v2",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef expected_number_of_rolls(days):\n    daily_expected_rolls = Rational(6, 5)  # Expected rolls for one day considering re-rolls\n    return days * daily_expected_rolls",
+      "description": "Calculate the expected number of rolls given a non-leap year.",
+      "name": "expected_number_of_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import factorial\n\ndef calculate_unique_permutations(total_items, item_counts):\n    denominator = 1\n    for count in item_counts.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+      "description": "Calculate the number of distinct permutations of a multiset given the counts of each distinct item.",
+      "name": "calculate_unique_permutations",
+      "packages": "sympy"
+    }
+  }
+]

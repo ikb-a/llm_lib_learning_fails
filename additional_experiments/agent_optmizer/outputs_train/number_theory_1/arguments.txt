@@ -1,0 +1,8 @@
+{
+  "dataset": "number_theory",
+  "epochs": 10,
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_train/number_theory_1/",
+  "run_id": "1"
+}

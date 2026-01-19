@@ -1,0 +1,98 @@
+{
+  "calculate_area": {
+    "code": "from sympy import pi\n\ndef calculate_area(shape_type, dimensions):\n    if shape_type == 'circle':\n        radius = dimensions['radius']\n        return pi * radius ** 2\n    elif shape_type == 'triangle':\n        base = dimensions['base']\n        height = dimensions['height']\n        return (1/2) * base * height\n    else:\n        return None",
+    "packages": "sympy"
+  },
+  "calculate_area_and_volume_of_shapes": {
+    "code": "from sympy import pi, sqrt\n\ndef calculate_area_and_volume_of_shapes(shape_type, dimensions):\n    if shape_type == 'circle':\n        radius = dimensions['radius']\n        area = pi * radius ** 2\n        volume = None\n        return {'area': area, 'volume': None}\n    elif shape_type == 'cone':\n        radius = dimensions['radius']\n        height = dimensions['height']\n        area = pi * radius * sqrt(radius**2 + height**2) + pi * radius**2  # lateral + base\n        volume = (1/3) * pi * radius**2 * height\n        return {'area': area, 'volume': volume}\n    elif shape_type == 'rectangle':\n        width = dimensions['width']\n        height = dimensions['height']\n        area = width * height\n        volume = None\n        return {'area': area, 'volume': None}\n    else:\n        return {'area': None, 'volume': None}",
+    "packages": "sympy"
+  },
+  "calculate_area_of_circle": {
+    "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_cube": {
+    "code": "def calculate_area_of_cube(edge_length):\n    return 6 * (edge_length ** 2)",
+    "packages": "sympy"
+  },
+  "calculate_area_of_frustum": {
+    "code": "def calculate_area_of_frustum(A_bottom, A_top, height):\n    return (A_bottom + A_top) * height / 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_right_triangle": {
+    "code": "def calculate_area_of_right_triangle(leg_a, leg_b):\n    return (leg_a * leg_b) / 2",
+    "packages": ""
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_area_of_triangle_from_sides": {
+    "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle_from_sides(a, b, c):\n    s = (a + b + c) / 2\n    area = sqrt(s * (s - a) * (s - b) * (s - c))\n    return area",
+    "packages": "sympy"
+  },
+  "calculate_circle_area": {
+    "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_cone_volume_and_surface_area": {
+    "code": "def calculate_cone_volume_and_surface_area(radius, height):\n    from sympy import pi, sqrt\n    volume = (1/3) * pi * (radius ** 2) * height\n    slant_height = sqrt(radius ** 2 + height ** 2)\n    surface_area = pi * radius * slant_height + pi * (radius ** 2)\n    return volume, surface_area",
+    "packages": "sympy"
+  },
+  "calculate_cube_surface_area": {
+    "code": "def calculate_cube_surface_area(edge_length):\n    return 6 * (edge_length ** 2)",
+    "packages": ""
+  },
+  "calculate_cylinder_volume": {
+    "code": "from sympy import pi\n\ndef calculate_cylinder_volume(radius, height):\n    return pi * radius ** 2 * height",
+    "packages": "sympy"
+  },
+  "calculate_distance_between_points": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance_between_points(point1, point2):\n    return sqrt((point2['x'] - point1['x'])**2 + (point2['y'] - point1['y'])**2 + (point2['z'] - point1['z'])**2)",
+    "packages": "sympy"
+  },
+  "calculate_paint_area": {
+    "code": "from sympy import pi, sqrt\n\ndef calculate_paint_area(radius_cone, radius_frustum_top, radius_frustum_bottom, height_cone, height_frustum):\n    # Areas\n    A_cone = pi * radius_cone * sqrt(radius_cone**2 + height_cone**2) + pi * radius_cone**2\n    A_frustum = pi * (radius_frustum_top + radius_frustum_bottom) * (height_frustum + sqrt((radius_frustum_top - radius_frustum_bottom)**2 + height_frustum**2))\n    return A_cone + A_frustum",
+    "packages": "sympy"
+  },
+  "calculate_ratio": {
+    "code": "def calculate_ratio(num1, num2):\n    return (num1 / num2) if num2 != 0 else None",
+    "packages": ""
+  },
+  "calculate_ratios_of_areas_volumes": {
+    "code": "def calculate_ratios_of_areas_volumes(original_area, original_volume, k):\n    area_ratio = (k ** 2) / (1 - k ** 2)\n    volume_ratio = (k ** 3) / (1 - k ** 3)\n    return area_ratio, volume_ratio",
+    "packages": "sympy"
+  },
+  "calculate_sphere_volume": {
+    "code": "from sympy import pi\n\ndef calculate_sphere_volume(radius):\n    return (4/3) * pi * radius ** 3",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_frustum": {
+    "code": "def calculate_surface_area_frustum(radius1, radius2, height):\n    from sympy import pi, sqrt\n    slant_height = sqrt(height**2 + (radius2 - radius1)**2)\n    area = pi * (radius1 + radius2) * slant_height + pi * (radius1**2 + radius2**2)\n    return area",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cone": {
+    "code": "def calculate_surface_area_of_cone(radius, height):\n    from sympy import pi, sqrt\n    # Slant height\n    l = sqrt(radius**2 + height**2)\n    return pi * radius * l + pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * edge_length ** 2",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cylinder": {
+    "code": "from sympy import pi\n\ndef calculate_surface_area_of_cylinder(radius, height):\n    return 2 * pi * radius * height + 2 * calculate_area_of_circle(radius)",
+    "packages": "sympy"
+  },
+  "calculate_triangle_area": {
+    "code": "def calculate_triangle_area(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_volume_of_cone": {
+    "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  },
+  "find_prime_pairs": {
+    "code": "def find_prime_pairs(k):\n    m = k\n    n = 1\n    return m, n",
+    "packages": ""
+  }
+}

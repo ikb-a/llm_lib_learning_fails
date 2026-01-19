@@ -1,0 +1,142 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate and return all angles of a pentagon based on angle relationships.",
+      "name": "calculate_pentagon_angle_measurements",
+      "parameters": {
+        "properties": {
+          "angles": {
+            "description": "A dictionary containing the measures of angles A, B and additional_angle.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the result of a fractional arithmetic expression.",
+      "name": "calculate_fractional_expression",
+      "parameters": {
+        "properties": {
+          "denominator": {
+            "description": "The denominator of the fraction.",
+            "type": "integer"
+          },
+          "numerator": {
+            "description": "The numerator of the fraction.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the perpendicular distance to a line given two points.",
+      "name": "calculate_perpendicular_distance",
+      "parameters": {
+        "properties": {
+          "x1": {
+            "description": "x-coordinate of the first point.",
+            "type": "integer"
+          },
+          "x2": {
+            "description": "x-coordinate of the second point.",
+            "type": "integer"
+          },
+          "y1": {
+            "description": "y-coordinate of the first point.",
+            "type": "integer"
+          },
+          "y2": {
+            "description": "y-coordinate of the second point.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "output_fraction": {
+            "description": "Indicate whether the output should be in fractional form.",
+            "type": "boolean"
+          },
+          "total_outcomes": {
+            "description": "The total number of outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate and return all angles of a polygon based on given angle relationships.",
+      "name": "calculate_polygon_angle_measurements",
+      "parameters": {
+        "properties": {
+          "angles": {
+            "description": "A dictionary containing the measures of angles in the polygon.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

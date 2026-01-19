@@ -1,0 +1,55 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the area of various shapes given their dimensions.",
+        "name": "calculate_area_of_shapes",
+        "parameters": {
+          "properties": {
+            "dimensions": {
+              "description": "Dimensions of the shape (e.g., radius for circle, length & width for rectangle).",
+              "type": "object"
+            },
+            "shape_type": {
+              "description": "Type of shape (e.g., 'circle', 'rectangle', 'triangle').",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its base and height.",
+        "name": "calculate_area_of_triangle",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The length of the base of the triangle.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "The height of the triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

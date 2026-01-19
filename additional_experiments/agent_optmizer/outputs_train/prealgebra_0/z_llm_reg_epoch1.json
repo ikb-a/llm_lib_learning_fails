@@ -1,0 +1,66 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the square root of a number.",
+      "name": "calculate_square_root",
+      "parameters": {
+        "properties": {
+          "number": {
+            "description": "The number to calculate the square root for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the length of the hypotenuse given the lengths of the other two sides using the Pythagorean theorem.",
+      "name": "calculate_pythagorean_length",
+      "parameters": {
+        "properties": {
+          "side_a": {
+            "description": "Length of side A.",
+            "type": "integer"
+          },
+          "side_b": {
+            "description": "Length of side B.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the interior angles of a pentagon based on the provided angle relationships and return the largest angle.",
+      "name": "calculate_interior_angles_pentagon",
+      "parameters": {
+        "properties": {
+          "angle_a": {
+            "description": "Measurement of angle A.",
+            "type": "integer"
+          },
+          "angle_b": {
+            "description": "Measurement of angle B.",
+            "type": "integer"
+          },
+          "angle_c_d": {
+            "description": "Measurement of angles C and D.",
+            "type": "integer"
+          },
+          "angle_e_formula": {
+            "description": "Formula representing angle E in terms of angle C.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

@@ -1,0 +1,530 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the total number of ants for two species based on given growth rates and initial conditions.",
+        "name": "calculate_total_ants",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days of growth.",
+              "type": "integer"
+            },
+            "growth_a": {
+              "description": "Growth factor for Species A per day.",
+              "type": "integer"
+            },
+            "growth_b": {
+              "description": "Growth factor for Species B per day.",
+              "type": "integer"
+            },
+            "initial_species_a": {
+              "description": "Initial number of ants of Species A.",
+              "type": "integer"
+            },
+            "initial_species_b": {
+              "description": "Initial number of ants of Species B.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total cost given the price per item and quantities.",
+        "name": "calculate_total_cost",
+        "parameters": {
+          "properties": {
+            "pounds_of_beans": {
+              "description": "The number of pounds of beans purchased.",
+              "type": "integer"
+            },
+            "pounds_of_corn": {
+              "description": "The number of pounds of corn purchased.",
+              "type": "integer"
+            },
+            "price_per_pound_beans": {
+              "description": "Cost per pound of beans in cents.",
+              "type": "integer"
+            },
+            "price_per_pound_corn": {
+              "description": "Cost per pound of corn in cents.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve linear equations of the form ax + b = 0.",
+        "name": "solve_linear_equation",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "The coefficient of x.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "The constant term.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of a range of numbers in a specified series.",
+        "name": "calculate_sum",
+        "parameters": {
+          "properties": {
+            "end": {
+              "description": "The ending number of the series.",
+              "type": "integer"
+            },
+            "start": {
+              "description": "The starting number of the series.",
+              "type": "integer"
+            },
+            "step": {
+              "description": "The step increment for the series.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of the first n odd numbers.",
+        "name": "calculate_sum_of_odds",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "The number of odd numbers to sum.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a Cartesian plane.",
+        "name": "calculate_distance_between_points",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate the value of a cubic expression given coefficients and variables.",
+        "name": "evaluate_cubic_expression",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Coefficient of x^3.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Coefficient of x^2.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Coefficient of x.",
+              "type": "integer"
+            },
+            "d": {
+              "description": "Constant term.",
+              "type": "integer"
+            },
+            "x_value": {
+              "description": "Value of x to evaluate the cubic expression.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate a quadratic expression given coefficients and a variable.",
+        "name": "evaluate_quadratic_expression",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Coefficient of x^2.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Coefficient of x.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Constant term.",
+              "type": "integer"
+            },
+            "x_value": {
+              "description": "Value of x to evaluate the quadratic expression.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings safely and return the result or error message.",
+        "name": "evaluate_expression_safe",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve a system of linear equations with two variables.",
+        "name": "solve_system_of_equations",
+        "parameters": {
+          "properties": {
+            "equation1": {
+              "description": "The first equation in the format 'a*x + b*y = c'",
+              "type": "string"
+            },
+            "equation2": {
+              "description": "The second equation in the format 'a*x + b*y = c'",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of pounds of corn and beans purchased based on total weight and cost per pound.",
+        "name": "calculate_corn_and_beans",
+        "parameters": {
+          "properties": {
+            "beans_price": {
+              "description": "Cost per pound of beans in cents.",
+              "type": "integer"
+            },
+            "corn_price": {
+              "description": "Cost per pound of corn in cents.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans in pounds.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the weighted average of two quantities. This could be helpful for multiple future problems.",
+        "name": "calculate_weighted_average",
+        "parameters": {
+          "properties": {
+            "value1": {
+              "description": "The first value.",
+              "type": "integer"
+            },
+            "value2": {
+              "description": "The second value.",
+              "type": "integer"
+            },
+            "value3": {
+              "description": "The third value.",
+              "type": "integer"
+            },
+            "value4": {
+              "description": "The fourth value.",
+              "type": "integer"
+            },
+            "weight1": {
+              "description": "The weight of the first value.",
+              "type": "integer"
+            },
+            "weight2": {
+              "description": "The weight of the second value.",
+              "type": "integer"
+            },
+            "weight3": {
+              "description": "The weight of the third value.",
+              "type": "integer"
+            },
+            "weight4": {
+              "description": "The weight of the fourth value.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the final cost of items based on prices and quantities.",
+        "name": "calculate_final_cost",
+        "parameters": {
+          "properties": {
+            "beans_price": {
+              "description": "Cost per pound of beans in cents.",
+              "type": "integer"
+            },
+            "corn_price": {
+              "description": "Cost per pound of corn in cents.",
+              "type": "integer"
+            },
+            "pounds_of_beans": {
+              "description": "The number of pounds of beans purchased.",
+              "type": "integer"
+            },
+            "pounds_of_corn": {
+              "description": "The number of pounds of corn purchased.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a coordinate system.",
+        "name": "calculate_distance",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of an arithmetic series with a known first term, last term, and number of terms.",
+        "name": "calculate_series_sum",
+        "parameters": {
+          "properties": {
+            "first_term": {
+              "description": "The first term of the series.",
+              "type": "integer"
+            },
+            "last_term": {
+              "description": "The last term of the series.",
+              "type": "integer"
+            },
+            "num_terms": {
+              "description": "The number of terms in the series.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Find the largest three-digit integer whose distinct digits form a geometric sequence.",
+        "name": "calculate_geometric_sequence_digits",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the pounds of corn and beans purchased based on prices and total cost using given conditions.",
+        "name": "calculate_corn_and_beans_problem",
+        "parameters": {
+          "properties": {
+            "beans_price": {
+              "description": "Cost per pound of beans in cents.",
+              "type": "integer"
+            },
+            "corn_price": {
+              "description": "Cost per pound of corn in cents.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans in pounds.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the result of an arithmetic expression involving operations and variables.",
+        "name": "calculate_expression_result",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The arithmetic expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve a given equation string for a specified variable.",
+        "name": "solve_equation",
+        "parameters": {
+          "properties": {
+            "equation": {
+              "description": "The equation to solve, e.g., 'x + 3 = 7'",
+              "type": "string"
+            },
+            "variable": {
+              "description": "The variable to solve for, e.g., 'x'",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total cost based on price and quantity of two items.",
+        "name": "calculate_average_price",
+        "parameters": {
+          "properties": {
+            "price1": {
+              "description": "Price of item 1 in cents.",
+              "type": "integer"
+            },
+            "price2": {
+              "description": "Price of item 2 in cents.",
+              "type": "integer"
+            },
+            "quantity1": {
+              "description": "Quantity of item 1.",
+              "type": "integer"
+            },
+            "quantity2": {
+              "description": "Quantity of item 2.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

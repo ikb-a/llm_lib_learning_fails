@@ -1,0 +1,203 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the least common multiple (LCM) of two numbers.",
+        "name": "calculate_lcm",
+        "parameters": {
+          "properties": {
+            "num1": {
+              "description": "The first number.",
+              "type": "integer"
+            },
+            "num2": {
+              "description": "The second number.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the length between two points given their coordinates.",
+        "name": "calculate_length",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "The coordinates of point A as a tuple (x_A, y_A).",
+              "type": "object"
+            },
+            "C": {
+              "description": "The coordinates of point C as a tuple (x_C, y_C).",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the division of a number by the result of another expression and multiply by a third number.",
+        "name": "calculate_division_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "An expression to evaluate for the denominator.",
+              "type": "string"
+            },
+            "multiplier": {
+              "description": "A number to multiply the result by.",
+              "type": "integer"
+            },
+            "numerator": {
+              "description": "The numerator of the division.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a pentagon given relationships between its angles more generally.",
+        "name": "calculate_pentagon_angles_optimized",
+        "parameters": {
+          "properties": {
+            "angles": {
+              "description": "A dictionary containing the measures of angles as key-value pairs.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+        "name": "calculate_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "The number of favorable outcomes.",
+              "type": "integer"
+            },
+            "output_fraction": {
+              "description": "Indicate whether the output should be in fractional form.",
+              "type": "boolean"
+            },
+            "total_outcomes": {
+              "description": "The total number of outcomes.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the interior angles of a pentagon based on given angle relationships.",
+        "name": "calculate_pentagon_angles",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "The measure of angle A in degrees.",
+              "type": "integer"
+            },
+            "B": {
+              "description": "The measure of angle B in degrees.",
+              "type": "integer"
+            },
+            "additional_angle": {
+              "description": "An additional angle in degrees with respect to C.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the interior angles of a pentagon given the measurements of the known angles and the relationships among them.",
+        "name": "calculate_pentagon_angle",
+        "parameters": {
+          "properties": {
+            "angles": {
+              "description": "A dictionary containing the measures of known angles.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the diagonal length of a rectangle given its length and width.",
+        "name": "calculate_rectangle_diagonal",
+        "parameters": {
+          "properties": {
+            "length": {
+              "description": "The length of the rectangle.",
+              "type": "integer"
+            },
+            "width": {
+              "description": "The width of the rectangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the result of a fractional arithmetic expression.",
+        "name": "calculate_fractional_expression",
+        "parameters": {
+          "properties": {
+            "denominator": {
+              "description": "The denominator of the fraction.",
+              "type": "integer"
+            },
+            "numerator": {
+              "description": "The numerator of the fraction.",
+              "type": "integer"
+            },
+            "output_decimal": {
+              "description": "Indicate whether to return the result as a decimal.",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

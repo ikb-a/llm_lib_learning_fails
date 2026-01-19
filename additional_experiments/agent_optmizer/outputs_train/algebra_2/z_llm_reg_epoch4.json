@@ -1,0 +1,110 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the final cost of items based on prices and quantities.",
+      "name": "calculate_final_cost",
+      "parameters": {
+        "properties": {
+          "beans_price": {
+            "description": "Cost per pound of beans in cents.",
+            "type": "integer"
+          },
+          "corn_price": {
+            "description": "Cost per pound of corn in cents.",
+            "type": "integer"
+          },
+          "pounds_of_beans": {
+            "description": "The number of pounds of beans purchased.",
+            "type": "integer"
+          },
+          "pounds_of_corn": {
+            "description": "The number of pounds of corn purchased.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a coordinate system.",
+      "name": "calculate_distance",
+      "parameters": {
+        "properties": {
+          "x1": {
+            "description": "The x-coordinate of the first point.",
+            "type": "integer"
+          },
+          "x2": {
+            "description": "The x-coordinate of the second point.",
+            "type": "integer"
+          },
+          "y1": {
+            "description": "The y-coordinate of the first point.",
+            "type": "integer"
+          },
+          "y2": {
+            "description": "The y-coordinate of the second point.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve linear equations of the form ax + b = 0.",
+      "name": "solve_linear_equation",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "The coefficient of x.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "The constant term.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Safely evaluate mathematical expressions and handle errors gracefully.",
+      "name": "evaluate_expression_safe",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

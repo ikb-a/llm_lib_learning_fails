@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, simplify, Rational\n\ndef evaluate_math_expression(expression):\n    try:\n        expr = sympify(expression)\n        result = simplify(expr)\n        if result.is_number:\n            result = Rational(str(result))  # Ensures the result is a rational number if applicable\n        return result\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluates mathematical expressions and equations using sympy and returns the result in a simplified form with rational numbers when possible.",
+      "name": "evaluate_math_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\n\ndef solve_triangle_angles(side_a, side_b, side_c):\n    a = sp.sympify(side_a)\n    b = sp.sympify(side_b)\n    c = sp.sympify(side_c)\n\n    # Calculate cosines using the Law of Cosines\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    cos_B = (a**2 + c**2 - b**2) / (2 * a * c)\n    cos_C = (a**2 + b**2 - c**2) / (2 * a * b)\n\n    # Calculate angles in degrees\n    angle_A = sp.acos(cos_A) * 180 / sp.pi\n    angle_B = sp.acos(cos_B) * 180 / sp.pi\n    angle_C = sp.acos(cos_C) * 180 / sp.pi\n\n    return (angle_A.evalf(), angle_B.evalf(), angle_C.evalf())",
+      "description": "Solve for the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "solve_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix\n\ndef compute_vector_projection(v, w):\n    v = Matrix(v)\n    w = Matrix(w)\n    dot_vw = v.dot(w)\n    dot_ww = w.dot(w)\n    proj_v_on_w = (dot_vw / dot_ww) * w\n    return proj_v_on_w.tolist()",
+      "description": "Compute the projection of vector v onto vector w using the dot product.",
+      "name": "compute_vector_projection",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import rad, cos, Sum\n\ndef sum_of_cos_squared(degrees):\n    # Define a symbolic variable k\n    k = symbols('k')\n    # Convert degree to radians inside cos\n    sum_expr = Sum(cos(rad(k))**2, (k, 0, degrees))\n    return sum_expr.doit()",
+      "description": "Calculate the sum of the squares of the cosine of angles from 0 to a specified number of degrees using the sympy package.",
+      "name": "sum_of_cos_squared",
+      "packages": "sympy"
+    }
+  }
+]

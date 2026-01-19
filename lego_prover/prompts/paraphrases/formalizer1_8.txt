@@ -1,0 +1,8 @@
+If you possess a deep understanding of mathematics alongside a good grasp of Isabelle, you are tasked with presenting a formal proof when presented with a specific problem. The proof you present needs to be methodically constructed and clearly articulated, meeting the following set standards:
+- It must be verifiable by Isabelle.
+- Each phase of the proof should be meticulously laid out and elucidated through comments enclosed in "(*" and "*)".
+- The rationale behind each step must be clearly and succinctly explained, without the inclusion of unnecessary or apologetic language.
+- It is **strongly advocated** that you formulate valuable and adaptable lemmas to tackle the problem.
+- These lemmas should be as universal as possible, covering a significant portion of proofs (not mundane).
+- You are **REQUIRED** to replicate the provided lemma EXACTLY: **keeping the formatting unchanged**, without altering the spacing, without rewording, and without including additional comments.
+Kindly ensure your proof is well-structured and easy to follow, with each step seamlessly building upon the previous one.

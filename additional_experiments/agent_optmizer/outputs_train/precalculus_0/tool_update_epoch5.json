@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin\n\ndef calculate_arcsin(value):\n    return asin(value)",
+      "description": "Calculate the arcsine of a value.",
+      "name": "calculate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_angle(a, b, c, degrees=False):\n    A = acos((b**2 + c**2 - a**2) / (2 * b * c))\n    B = acos((a**2 + c**2 - b**2) / (2 * a * c))\n    C = acos((a**2 + b**2 - c**2) / (2 * a * b))\n    if degrees:\n        return deg(A), deg(B), deg(C)\n    return A, B, C",
+      "description": "Calculate angles of a triangle given its side lengths using the cosine rule.",
+      "name": "calculate_angle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef compute_angles_from_sides(side_a, side_b, side_c, degrees=False):\n    A = acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    B = acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    C = acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    if degrees:\n        return deg(A), deg(B), deg(C)\n    return A, B, C",
+      "description": "Compute the angles of a triangle using its side lengths and optionally return in degrees.",
+      "name": "compute_angles_from_sides",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, sin, cos, tan, rad\n\ndef calculate_expression(expression):\n    expr = sympify(expression)\n    return expr",
+      "description": "Evaluate a mathematical expression involving trigonometric functions.",
+      "name": "calculate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sin, cos, tan, pi\n\ndef evaluate_trig_identity(A, B):\n    # Calculate angles in radians\n    radians_A = A * pi/180\n    radians_B = B * pi/180\n    # Calculate identities\n    sin_A = sin(radians_A)\n    cos_A = cos(radians_A)\n    tan_A = tan(radians_A)\n    sin_B = sin(radians_B)\n    cos_B = cos(radians_B)\n    tan_B = tan(radians_B)\n    return sin_A, cos_A, tan_A, sin_B, cos_B, tan_B",
+      "description": "Evaluate a trigonometric identity based on the input values or angles.",
+      "name": "evaluate_trig_identity",
+      "packages": "sympy"
+    }
+  }
+]

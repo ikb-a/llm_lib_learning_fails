@@ -1,0 +1,34 @@
+{
+  "calculate_combinations": {
+    "code": "import math\n\ndef calculate_combinations(n, k):\n    return math.comb(n, k)",
+    "packages": "math"
+  },
+  "calculate_expected_dice_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_dice_rolls(year_days):\n    E = Rational(6, 5)\n    return year_days * E",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days):\n    E = Rational(6, 5)\n    return days * E",
+    "packages": "sympy"
+  },
+  "calculate_permutations": {
+    "code": "import math\n\ndef calculate_permutations(n, k):\n    return math.perm(n, k)",
+    "packages": "math"
+  },
+  "calculate_permutations_multiset": {
+    "code": "import math\n\ndef calculate_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "count_arrangements_with_conditions": {
+    "code": "import math\n\ndef count_arrangements_with_conditions(total_objects, distinguished_counts):\n    denominator = 1\n    for count in distinguished_counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_objects) // denominator",
+    "packages": "math"
+  },
+  "count_permutations_multiset": {
+    "code": "import math\n\ndef count_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "expected_rolls_die": {
+    "code": "from sympy import Rational\n\ndef expected_rolls_die(days):\n    E = Rational(6, 5)\n    return days * E",
+    "packages": "sympy"
+  }
+}

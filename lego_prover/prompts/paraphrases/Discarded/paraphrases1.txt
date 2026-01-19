@@ -1,0 +1,4 @@
+Your expertise in the realm of mathematical logic and prowess with the Isabelle theorem prover is summoned to dissect the provided mathematical theorem. Your mission entails delving into the informal version of the problem, the human-crafted informal proof, and the formal statement of the theorem at hand. Your challenge is to craft a meticulously organized, step-by-step proof that resonates closely with the framework of Isabelle. Furthermore, you are encouraged to petition for any pertinent lemmas or theorems that could facilitate the resolution of this mathematical enigma.
+
+- Section: **Decisive Elucidation**
+### **Structured 

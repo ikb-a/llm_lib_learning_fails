@@ -1,0 +1,142 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "sum_of_angles_pentagon",
+      "parameters": {
+        "properties": {
+          "angle_A": {
+            "description": "Measure of angle A",
+            "type": "integer"
+          },
+          "angle_B": {
+            "description": "Measure of angle B",
+            "type": "integer"
+          },
+          "x": {
+            "description": "Value subject to expressions for C, D, and E",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the fraction of a total based on a percentage and total amount.",
+      "name": "calculate_fraction_of_total",
+      "parameters": {
+        "properties": {
+          "percentage": {
+            "description": "The percentage to calculate",
+            "type": "integer"
+          },
+          "total_amount": {
+            "description": "The total amount",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of Hondas sold based on percentages of other car types.",
+      "name": "calculate_honda_sales",
+      "parameters": {
+        "properties": {
+          "percentage_acura": {
+            "description": "Percentage of Acuras sold",
+            "type": "integer"
+          },
+          "percentage_audi": {
+            "description": "Percentage of Audis sold",
+            "type": "integer"
+          },
+          "percentage_honda": {
+            "description": "Percentage of Hondas sold",
+            "type": "integer"
+          },
+          "percentage_toyota": {
+            "description": "Percentage of Toyotas sold",
+            "type": "integer"
+          },
+          "total_cars": {
+            "description": "Total number of cars sold",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+      "name": "calculate_remainder",
+      "parameters": {
+        "properties": {
+          "m": {
+            "description": "Index of the prime number to divide by",
+            "type": "integer"
+          },
+          "n": {
+            "description": "How many prime numbers to sum",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the percentage of a total based on the given count and total amount.",
+      "name": "calculate_percentage",
+      "parameters": {
+        "properties": {
+          "count": {
+            "description": "The part of the total",
+            "type": "integer"
+          },
+          "total": {
+            "description": "The total amount",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the largest angle in a pentagon given angles expressed in terms of a variable.",
+      "name": "calculate_max_angle_pentagon",
+      "parameters": {
+        "properties": {
+          "angle_A": {
+            "description": "Measure of angle A",
+            "type": "integer"
+          },
+          "angle_B": {
+            "description": "Measure of angle B",
+            "type": "integer"
+          },
+          "x": {
+            "description": "The parameter for determining angles C and D",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

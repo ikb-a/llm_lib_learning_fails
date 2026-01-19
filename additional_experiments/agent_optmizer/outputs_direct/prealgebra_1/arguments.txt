@@ -1,0 +1,7 @@
+{
+  "dataset": "prealgebra",
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_direct/prealgebra_1/",
+  "run_id": "1"
+}

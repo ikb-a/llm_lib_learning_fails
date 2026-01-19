@@ -1,0 +1,131 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the modular inverse of a number modulo another number using the Extended Euclidean Algorithm.",
+        "name": "calculate_modular_inverse",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "The number to find the modular inverse for.",
+              "type": "integer"
+            },
+            "m": {
+              "description": "The modulus.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the remainder of a decimal number divided by an integer.",
+        "name": "get_decimal_remainder",
+        "parameters": {
+          "properties": {
+            "decimal_number": {
+              "description": "The decimal number to find the remainder of.",
+              "type": "integer"
+            },
+            "divisor": {
+              "description": "The divisor to calculate the remainder.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of distinct remainders when squaring integers in a range.",
+        "name": "find_distinct_remainders_sum",
+        "parameters": {
+          "properties": {
+            "end": {
+              "description": "End of the range (inclusive).",
+              "type": "integer"
+            },
+            "modulus": {
+              "description": "The modulus to compute the remainders against.",
+              "type": "integer"
+            },
+            "start": {
+              "description": "Start of the range (inclusive).",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Convert a given decimal number to a specified base.",
+        "name": "convert_decimal_to_base",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The base to convert to.",
+              "type": "integer"
+            },
+            "number": {
+              "description": "The decimal number to convert.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Convert a repeating decimal to a simplified fraction and calculate a + b.",
+        "name": "process_repeating_decimal",
+        "parameters": {
+          "properties": {
+            "repeating_decimal": {
+              "description": "The repeating decimal as a string (e.g., '0.42')",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Convert a decimal or repeating decimal to a fraction.",
+        "name": "decimal_to_fraction",
+        "parameters": {
+          "properties": {
+            "decimal": {
+              "description": "The decimal as a string, it can be repeating like '0.42'.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

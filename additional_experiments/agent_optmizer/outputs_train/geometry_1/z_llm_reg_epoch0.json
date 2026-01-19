@@ -1,0 +1,42 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of various shapes given their dimensions.",
+      "name": "calculate_area_of_shapes",
+      "parameters": {
+        "properties": {
+          "dimensions": {
+            "description": "Dimensions of the shape (e.g., radius for circle, length & width for rectangle).",
+            "type": "object"
+          },
+          "shape_type": {
+            "description": "Type of shape (e.g., 'circle', 'rectangle', 'triangle').",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

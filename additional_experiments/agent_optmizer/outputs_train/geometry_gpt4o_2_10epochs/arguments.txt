@@ -1,0 +1,9 @@
+{
+  "dataset": "geometry",
+  "epochs": 10,
+  "limit": null,
+  "model": "gpt-4o",
+  "open_ai": true,
+  "output_dir": "outputs_train/geometry_gpt4o_2_10epochs/",
+  "run_id": "gpt4o_2_10epochs"
+}

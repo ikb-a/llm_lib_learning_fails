@@ -1,0 +1,93 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions using sympy, focusing on providing exact answers with fractions or radicals when possible.",
+      "name": "evaluate_math_expressions",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Perform operations on matrices like multiplication, addition, and inversion.",
+      "name": "matrix_operations",
+      "parameters": {
+        "properties": {
+          "matrix_a": {
+            "description": "The first matrix for the operation.",
+            "items": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "matrix_b": {
+            "description": "The second matrix, if needed, for operations like multiplication.",
+            "items": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "operation": {
+            "description": "The matrix operation to perform: 'multiply', 'add', 'invert'.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve math problems using sympy. Evaluate steps for differentiation, integration, and solving equations including trigonometric and matrix operations.",
+      "name": "solve_math_problem",
+      "parameters": {
+        "properties": {
+          "problem": {
+            "description": "Mathematical problem to solve symbolically.",
+            "type": "string"
+          },
+          "variables": {
+            "description": "Optional variables for the computation.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate trigonometric expressions provided as strings, supporting operations like simplification, conversion of degrees to radians, and calculation of trigonometric functions.",
+      "name": "evaluate_trig_expressions",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The trigonometric expression to evaluate, may include degree sign.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

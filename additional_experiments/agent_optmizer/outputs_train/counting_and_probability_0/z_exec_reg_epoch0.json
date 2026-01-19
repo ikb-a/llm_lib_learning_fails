@@ -1,0 +1,14 @@
+{
+  "calculate_expected_rolls": {
+    "code": "def calculate_expected_rolls():\n    from sympy import symbols, Eq, solve\n\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_rolls = solve(equation, E)[0]\n    return expected_rolls",
+    "packages": "sympy"
+  },
+  "calculate_probability": {
+    "code": "def calculate_probability(total_outcomes, favorable_outcomes):\n    from sympy import Rational\n    return Rational(favorable_outcomes, total_outcomes)",
+    "packages": "sympy"
+  },
+  "dice_roll_experiment": {
+    "code": "def dice_roll_experiment():\n    from sympy import symbols, Eq, solve\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_rolls = solve(equation, E)[0]\n    return expected_rolls",
+    "packages": "sympy"
+  }
+}

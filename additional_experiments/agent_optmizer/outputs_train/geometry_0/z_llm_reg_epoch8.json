@@ -1,0 +1,110 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of a frustum given the areas of the top and bottom bases and the height.",
+      "name": "calculate_area_of_frustum",
+      "parameters": {
+        "properties": {
+          "A_bottom": {
+            "description": "Area of the bottom base.",
+            "type": "integer"
+          },
+          "A_top": {
+            "description": "Area of the top base.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "Height of the frustum.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of painted surfaces of a cone and a frustum.",
+      "name": "calculate_paint_area",
+      "parameters": {
+        "properties": {
+          "height_cone": {
+            "description": "Height of the cone.",
+            "type": "integer"
+          },
+          "height_frustum": {
+            "description": "Height of the frustum.",
+            "type": "integer"
+          },
+          "radius_cone": {
+            "description": "Radius of the cone base.",
+            "type": "integer"
+          },
+          "radius_frustum_bottom": {
+            "description": "Radius of the bottom base of the frustum.",
+            "type": "integer"
+          },
+          "radius_frustum_top": {
+            "description": "Radius of the top base of the frustum.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the surface area of a cube given the length of an edge.",
+      "name": "calculate_cube_surface_area",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of one edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

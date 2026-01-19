@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_trapezoid_area(base1, base2, height):\n    return (base1 + base2) * height / 2",
+      "description": "Calculate the area of a trapezoid given the lengths of the bases and height.",
+      "name": "calculate_trapezoid_area",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_triangle_area(base, height):\n    return (1 / 2) * base * height",
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_triangle_area",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    if radius <= 0:\n        raise ValueError(\"Radius must be a positive number.\")\n    return pi * (radius ** 2)",
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_sum_of_lengths_of_altitudes(side_a, side_b, side_c):\n    s = (side_a + side_b + side_c) / 2\n    area = sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))\n    h_a = (2 * area) / side_a\n    h_b = (2 * area) / side_b\n    h_c = (2 * area) / side_c\n    return h_a + h_b",
+      "description": "Calculate the sum of the lengths of the two longest altitudes in a triangle given its sides.",
+      "name": "calculate_sum_of_lengths_of_altitudes",
+      "packages": "sympy"
+    }
+  }
+]

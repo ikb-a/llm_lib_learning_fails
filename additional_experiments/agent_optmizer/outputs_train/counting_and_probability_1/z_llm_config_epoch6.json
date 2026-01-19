@@ -1,0 +1,311 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls given specific outcomes and total days, accounting for retries when rolling a 1.",
+        "name": "calculate_expected_rolls_with_retries",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in the period.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of die rolls for a given number of days and based on the probability of rolling a composite number.",
+        "name": "calculate_expected_rolls_per_year",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in the period.",
+              "type": "integer"
+            },
+            "rolls_per_day": {
+              "description": "Expected number of rolls per day as a fraction.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability that at least two specified outcomes occur using complementary probability concepts.",
+        "name": "calculate_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Number of favorable outcomes.",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total possible outcomes of a situation.",
+              "type": "integer"
+            },
+            "trials": {
+              "description": "Number of trials or events considered.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of combinations for choosing k items from n items.",
+        "name": "calculate_combinations",
+        "parameters": {
+          "properties": {
+            "k": {
+              "description": "Number of items to choose.",
+              "type": "integer"
+            },
+            "n": {
+              "description": "Total items.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate probabilities associated with rolling dice or similar games.",
+        "name": "evaluate_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Number of favorable outcomes.",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total possible outcomes.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate factorial of a non-negative integer.",
+        "name": "factorial",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "The number for which to calculate the factorial.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of times a die will be rolled given certain conditions.",
+        "name": "expected_dice_rolls",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in the period.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls given specific outcomes and total days.",
+        "name": "calculate_expected_rolls",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in the period.",
+              "type": "integer"
+            },
+            "p_rolls": {
+              "description": "The probability of successfully rolling (1 or repeated).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate complementary probability for different scenarios related to dice rolling.",
+        "name": "evaluate_complementary_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Number of favorable outcomes.",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total possible outcomes.",
+              "type": "integer"
+            },
+            "trials": {
+              "description": "Number of trials or events considered.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the arrangements of distinct items considering duplicates.",
+        "name": "calculate_arrangements",
+        "parameters": {
+          "properties": {
+            "duplicates": {
+              "description": "Counts of each duplicated item by their identifier.",
+              "type": "object"
+            },
+            "total_items": {
+              "description": "Total number of items to arrange.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate factorial of a non-negative integer.",
+        "name": "calculate_factorial",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "The number for which to calculate the factorial.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate complementary probability for given favorable and total outcomes across specified trials.",
+        "name": "calculate_complementary_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Number of favorable outcomes.",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total possible outcomes.",
+              "type": "integer"
+            },
+            "trials": {
+              "description": "Number of trials or events considered.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls given the probabilities of outcomes for rolling a die.",
+        "name": "expected_rolls",
+        "parameters": {
+          "properties": {
+            "num_days": {
+              "description": "Number of days in a year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability of outcomes from dice rolls.",
+        "name": "calculate_probability_of_dice_rolls",
+        "parameters": {
+          "properties": {
+            "faces": {
+              "description": "Number of faces on the dice.",
+              "type": "integer"
+            },
+            "num_dice": {
+              "description": "Number of dice rolled.",
+              "type": "integer"
+            },
+            "success_condition": {
+              "description": "Condition for success as a probability expression.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total expected number of times Bob will roll his die in a non-leap year based on daily expected rolls.",
+        "name": "expected_dice_rolls_per_year",
+        "parameters": {
+          "properties": {
+            "days_in_year": {
+              "description": "Number of days in a year.",
+              "type": "integer"
+            },
+            "expected_rolls_per_day": {
+              "description": "Expected rolls in one day.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

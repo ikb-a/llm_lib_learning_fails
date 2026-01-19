@@ -1,0 +1,26 @@
+{
+  "arcsin_value": {
+    "code": "from sympy import asin\n\ndef arcsin_value(value):\n    return asin(value)",
+    "packages": "sympy"
+  },
+  "calculate_triangle_angles": {
+    "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    return A, B, C",
+    "packages": "sympy"
+  },
+  "compute_angle": {
+    "code": "from sympy import acos, deg\n\ndef compute_angle(a, b, c):\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    return deg(acos(cos_A))",
+    "packages": "sympy"
+  },
+  "compute_angles_of_triangle": {
+    "code": "from sympy import acos, deg\n\ndef compute_angles_of_triangle(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    return A, B, C",
+    "packages": "sympy"
+  },
+  "domain_of_tan_arccos": {
+    "code": "def domain_of_tan_arccos():\n    return [-1, 1]",
+    "packages": ""
+  },
+  "inverse_tangent": {
+    "code": "from sympy import atan\n\ndef inverse_tangent(value):\n    return atan(value)",
+    "packages": "sympy"
+  }
+}

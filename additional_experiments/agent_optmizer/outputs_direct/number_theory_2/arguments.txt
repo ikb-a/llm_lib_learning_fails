@@ -1,0 +1,7 @@
+{
+  "dataset": "number_theory",
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_direct/number_theory_2/",
+  "run_id": "2"
+}

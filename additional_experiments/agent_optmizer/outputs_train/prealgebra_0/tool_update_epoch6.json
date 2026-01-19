@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import primerange\n\ndef calculate_remainder(n, m):\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    sum_of_primes = sum(primes[:n])  # sum of the first n primes\n    return sum_of_primes % primes[m-1]  # remainder when divided by mth prime",
+      "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+      "name": "calculate_remainder",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_fraction_of_total(total_amount, percentage):\n    return Rational(percentage, 100) * total_amount",
+      "description": "Calculate the fraction of a total based on a percentage and total amount.",
+      "name": "calculate_fraction_of_total",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_square_root(number):\n    return sqrt(number).evalf()",
+      "description": "Calculate the square root of a given number.",
+      "name": "calculate_square_root",
+      "packages": "sympy"
+    }
+  }
+]

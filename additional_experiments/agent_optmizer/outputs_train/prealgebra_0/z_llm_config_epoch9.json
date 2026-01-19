@@ -1,0 +1,403 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Convert a symbolic representation of a value to its decimal form.",
+        "name": "calculate_decimal_value",
+        "parameters": {
+          "properties": {
+            "symbolic_value": {
+              "description": "The symbolic value to convert",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a right triangle using the Pythagorean theorem.",
+        "name": "calculate_pythagorean_distance",
+        "parameters": {
+          "properties": {
+            "AB": {
+              "description": "Length of side AB",
+              "type": "integer"
+            },
+            "BC": {
+              "description": "Length of side BC",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given the base and height.",
+        "name": "calculate_area_of_triangle",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The length of the base of the triangle.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "The height of the triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the length of the hypotenuse given the lengths of the other two sides using the Pythagorean theorem.",
+        "name": "calculate_pythagorean_length",
+        "parameters": {
+          "properties": {
+            "side_a": {
+              "description": "Length of side A.",
+              "type": "integer"
+            },
+            "side_b": {
+              "description": "Length of side B.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the interior angles of a pentagon based on the provided angle relationships and return the largest angle.",
+        "name": "calculate_interior_angles_pentagon",
+        "parameters": {
+          "properties": {
+            "angle_a": {
+              "description": "Measurement of angle A.",
+              "type": "integer"
+            },
+            "angle_b": {
+              "description": "Measurement of angle B.",
+              "type": "integer"
+            },
+            "angle_c_d": {
+              "description": "Measurement of angles C and D.",
+              "type": "integer"
+            },
+            "angle_e_formula": {
+              "description": "Formula representing angle E in terms of angle C.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate an arithmetic expression and round the result to the nearest specified decimal places.",
+        "name": "evaluate_and_round_expression",
+        "parameters": {
+          "properties": {
+            "decimal_places": {
+              "description": "Number of decimal places to round to.",
+              "type": "integer"
+            },
+            "expression": {
+              "description": "The arithmetic expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the length between two points given their coordinates using the distance formula.",
+        "name": "calculate_length",
+        "parameters": {
+          "properties": {
+            "point_A": {
+              "description": "Coordinates of point A (x1, y1)",
+              "type": "object"
+            },
+            "point_B": {
+              "description": "Coordinates of point B (x2, y2)",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the square root of a given number.",
+        "name": "calculate_square_root",
+        "parameters": {
+          "properties": {
+            "number": {
+              "description": "The number to find the square root of.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the measures of interior angles in a polygon given specific angle relations and returns the largest angle.",
+        "name": "calculate_angle_measures",
+        "parameters": {
+          "properties": {
+            "angle_A": {
+              "description": "Measure of angle A",
+              "type": "integer"
+            },
+            "angle_B": {
+              "description": "Measure of angle B",
+              "type": "integer"
+            },
+            "x": {
+              "description": "The parameter for determining angles C and D",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the measures of angles in a pentagon given expressions for the angles and returns the largest angle.",
+        "name": "calculate_angle_measures_pentagon",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "Measure of angle A",
+              "type": "integer"
+            },
+            "B": {
+              "description": "Measure of angle B",
+              "type": "integer"
+            },
+            "C": {
+              "description": "Measure of angle C",
+              "type": "integer"
+            },
+            "D": {
+              "description": "Measure of angle D",
+              "type": "integer"
+            },
+            "E": {
+              "description": "Measure of angle E",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of the first n prime numbers.",
+        "name": "sum_of_first_n_primes",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "How many prime numbers to sum",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+        "name": "sum_of_angles_pentagon",
+        "parameters": {
+          "properties": {
+            "angle_A": {
+              "description": "Measure of angle A",
+              "type": "integer"
+            },
+            "angle_B": {
+              "description": "Measure of angle B",
+              "type": "integer"
+            },
+            "x": {
+              "description": "Value subject to expressions for C, D, and E",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the fraction of a total based on a percentage and total amount.",
+        "name": "calculate_fraction_of_total",
+        "parameters": {
+          "properties": {
+            "percentage": {
+              "description": "The percentage to calculate",
+              "type": "integer"
+            },
+            "total_amount": {
+              "description": "The total amount",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of Hondas sold based on percentages of other car types.",
+        "name": "calculate_honda_sales",
+        "parameters": {
+          "properties": {
+            "percentage_acura": {
+              "description": "Percentage of Acuras sold",
+              "type": "integer"
+            },
+            "percentage_audi": {
+              "description": "Percentage of Audis sold",
+              "type": "integer"
+            },
+            "percentage_honda": {
+              "description": "Percentage of Hondas sold",
+              "type": "integer"
+            },
+            "percentage_toyota": {
+              "description": "Percentage of Toyotas sold",
+              "type": "integer"
+            },
+            "total_cars": {
+              "description": "Total number of cars sold",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+        "name": "calculate_remainder",
+        "parameters": {
+          "properties": {
+            "m": {
+              "description": "Index of the prime number to divide by",
+              "type": "integer"
+            },
+            "n": {
+              "description": "How many prime numbers to sum",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the percentage of a total based on the given count and total amount.",
+        "name": "calculate_percentage",
+        "parameters": {
+          "properties": {
+            "count": {
+              "description": "The part of the total",
+              "type": "integer"
+            },
+            "total": {
+              "description": "The total amount",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the largest angle in a pentagon given angles expressed in terms of a variable.",
+        "name": "calculate_max_angle_pentagon",
+        "parameters": {
+          "properties": {
+            "angle_A": {
+              "description": "Measure of angle A",
+              "type": "integer"
+            },
+            "angle_B": {
+              "description": "Measure of angle B",
+              "type": "integer"
+            },
+            "x": {
+              "description": "The parameter for determining angles C and D",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

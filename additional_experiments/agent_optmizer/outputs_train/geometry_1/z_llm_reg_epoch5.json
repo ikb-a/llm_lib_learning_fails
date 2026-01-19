@@ -1,0 +1,130 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area and volume of a cone based on its base radius and height.",
+      "name": "calculate_surface_area_and_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The base radius of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of an edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a right circular cone given its radius and height.",
+      "name": "calculate_surface_area_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a sphere given its radius.",
+      "name": "calculate_volume_of_sphere",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the sphere.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

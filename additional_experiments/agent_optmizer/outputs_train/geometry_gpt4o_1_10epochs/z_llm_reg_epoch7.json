@@ -1,0 +1,85 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the volume and surface area of a geometric shape given its dimensions. Added calculation for the diagonal of a cube.",
+      "name": "calculate_code_properties",
+      "parameters": {
+        "properties": {
+          "dimensions": {
+            "description": "The dimensions needed for the calculation, such as radius, height, etc.",
+            "properties": {
+              "height": {
+                "type": "integer"
+              },
+              "radius": {
+                "type": "integer"
+              },
+              "side": {
+                "type": "integer"
+              }
+            },
+            "type": "object"
+          },
+          "shape": {
+            "description": "The type of the shape, e.g., cone, sphere, cylinder, cube.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the Euclidean distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point in the format [x, y, z]",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point in the format [x,y,z]",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve mathematical problems using sympy for symbolic computation, supports solving equations and evaluating expressions.",
+      "name": "solve_math_problem_fixed",
+      "parameters": {
+        "properties": {
+          "equations": {
+            "description": "An array of mathematical equations to be solved.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "variables": {
+            "description": "An array of variables involved in the equations.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

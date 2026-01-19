@@ -1,0 +1,85 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "parameters": {
+        "properties": {
+          "x": {
+            "description": "Value to calculate arcsin for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the value of trigonometric expressions such as sin, cos, and tan.",
+      "name": "calculate_trigonometric_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The trigonometric expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the sum of distinct trigonometric functions over a defined interval.",
+      "name": "calculate_sum_of_functions",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "End of the range",
+            "type": "integer"
+          },
+          "expression": {
+            "description": "The trigonometric expression to be summed.",
+            "type": "string"
+          },
+          "start": {
+            "description": "Start of the range",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Determine the domain of a function expressed in a specific format.",
+      "name": "find_domain_of_function",
+      "parameters": {
+        "properties": {
+          "function_expression": {
+            "description": "The function expression to analyze.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

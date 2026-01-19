@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days):\n    E_per_day = Rational(6, 5)  # From previous calculations\n    return days * E_per_day",
+      "description": "Calculate the expected number of die rolls based on defined probabilities and rules.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\ndef calculate_combinations(n, k):\n    if k > n:\n        return 0\n    return math.comb(n, k)",
+      "description": "Calculate the number of combinations of choosing k items from n items.",
+      "name": "calculate_combinations",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\ndef calculate_permutations(n, k):\n    if k > n:\n        return 0\n    return math.perm(n, k)",
+      "description": "Calculate the number of permutations of n items taken k at a time.",
+      "name": "calculate_permutations",
+      "packages": "math"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "calculate_distance_3d": {
+    "code": "import math\n\ndef calculate_distance_3d(point1, point2):\n    x1, y1, z1 = point1\n    x2, y2, z2 = point2\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)\n    return distance",
+    "packages": "math"
+  },
+  "calculate_triangle_area": {
+    "code": "def calculate_triangle_area(side1, side2):\n    return (side1 * side2) / 2",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\nfrom sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application\n\ndef evaluate_expression(expression):\n    # Transformations to allow implicit multiplication and standard parsing\n    transformations = (standard_transformations + (implicit_multiplication_application,))\n    try:\n        parsed_expr = parse_expr(expression, transformations=transformations)\n        result = parsed_expr.simplify()\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n            if 'I' not in result:  # Check to prevent imaginary numbers in basic algebra calculations\n                # Ensure that radicals are represented in simplified fractional form\n                result = result.evalf() if parsed_expr.is_number else result\n        return result\n    except (SympifyError, SyntaxError) as e:\n        return str(e)\n",
+    "packages": "sympy"
+  }
+}

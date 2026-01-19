@@ -1,0 +1,7 @@
+{
+  "dataset": "counting_and_probability",
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_direct/counting_and_probability_2/",
+  "run_id": "2"
+}

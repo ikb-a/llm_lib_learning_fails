@@ -1,0 +1,44 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+      "name": "evaluate_math_problem",
+      "parameters": {
+        "properties": {
+          "problem_statement": {
+            "description": "The mathematical problem statement to be solved.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the Euclidean distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point in the format [x,y,z]",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point in the format [x,y,z]",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

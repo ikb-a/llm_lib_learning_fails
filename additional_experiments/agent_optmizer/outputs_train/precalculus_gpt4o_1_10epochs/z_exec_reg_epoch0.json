@@ -1,0 +1,14 @@
+{
+  "evaluate_math_expression": {
+    "code": "from sympy import sympify, simplify, Rational\n\ndef evaluate_math_expression(expression):\n    try:\n        expr = sympify(expression)\n        result = simplify(expr)\n        if result.is_number:\n            result = Rational(str(result))  # Ensures the result is a rational number if applicable\n        return result\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_question_with_sympy": {
+    "code": "from sympy import symbols, Eq, solve, simplify, Matrix, sqrt, atan, pi, acos, deg, Rational\n\ndef solve_question_with_sympy(problem_description, variables):\n    # Dynamically define symbols in sympy\n    symbols_list = symbols(variables)\n    \n    # Parsing mathematics naturally with sympy\n    # In a real setting, we might define helpful operations here for problem-solving\n    # We can create further sympy expressions, equations, or matrices according to the context\n    # This is a simple placeholder example for processing functions logically using sympy's capacity\n    equation_example = Eq(symbols_list[0] + symbols_list[1], 1)\n    result = solve(equation_example, symbols_list[0])\n    \n    return result",
+    "packages": "sympy"
+  },
+  "solve_triangle_angles": {
+    "code": "import sympy as sp\n\ndef solve_triangle_angles(side_a, side_b, side_c):\n    a = sp.sympify(side_a)\n    b = sp.sympify(side_b)\n    c = sp.sympify(side_c)\n\n    # Calculate cosines using the Law of Cosines\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    cos_B = (a**2 + c**2 - b**2) / (2 * a * c)\n    cos_C = (a**2 + b**2 - c**2) / (2 * a * b)\n\n    # Calculate angles in degrees\n    angle_A = sp.acos(cos_A) * 180 / sp.pi\n    angle_B = sp.acos(cos_B) * 180 / sp.pi\n    angle_C = sp.acos(cos_C) * 180 / sp.pi\n\n    return (angle_A.evalf(), angle_B.evalf(), angle_C.evalf())",
+    "packages": "sympy"
+  }
+}

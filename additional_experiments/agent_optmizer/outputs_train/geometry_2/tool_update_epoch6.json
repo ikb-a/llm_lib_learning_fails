@@ -1,0 +1,65 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+      "description": "Calculate the area of a circle given the radius.",
+      "name": "calculate_circle_area",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(a, b, c):\n    if a <= 0 or b <= 0 or c <= 0:\n        return 'Invalid triangle sides.'\n    s = (a + b + c) / 2\n    return sqrt(s * (s - a) * (s - b) * (s - c))",
+      "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+      "name": "calculate_area_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_ratio_of_areas(area1, area2):\n    return area1 / area2",
+      "description": "Calculate the ratio of areas of two triangles given their side lengths and area ratios.",
+      "name": "calculate_ratio_of_areas",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_area_of_frustum(radius_top, radius_bottom, height):\n    return (pi/3) * height * (radius_top ** 2 + radius_bottom ** 2 + radius_top * radius_bottom)",
+      "description": "Calculate the volume and surface area of a frustum given the top and bottom radii and height.",
+      "name": "calculate_area_of_frustum",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_power_of_circle(radius, height):\n    return radius * height",
+      "description": "Calculate the product of the radius and height of a cylinder given its dimensions.",
+      "name": "calculate_power_of_circle",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_surface_area_of_prism(base_area, height):\n    return 2 * base_area + 2 * height\n",
+      "description": "Calculate the surface area of a right prism given base area and height.",
+      "name": "calculate_surface_area_of_prism",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_area_of_shape(shape_type, parameters):\n    if shape_type.lower() == 'circle':\n        radius = parameters['radius']\n        return math.pi * radius ** 2\n    elif shape_type.lower() == 'triangle':\n        base = parameters['base']\n        height = parameters['height']\n        return 0.5 * base * height\n    elif shape_type.lower() == 'trapezoid':\n        base1 = parameters['base1']\n        base2 = parameters['base2']\n        height = parameters['height']\n        return ((base1 + base2) * height) / 2\n    else:\n        return 'Invalid shape type.'",
+      "description": "Calculate the area of various shapes based on given parameters.",
+      "name": "calculate_area_of_shape",
+      "packages": "math"
+    }
+  }
+]

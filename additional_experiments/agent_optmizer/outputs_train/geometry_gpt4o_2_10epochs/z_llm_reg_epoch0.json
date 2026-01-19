@@ -1,0 +1,38 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate and solve algebraic expressions and equations provided as strings.",
+      "name": "evaluate_algebra",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The algebraic expression or equation to evaluate.",
+            "type": "string"
+          },
+          "variable_values": {
+            "description": "A dictionary containing variable values to substitute, if any.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

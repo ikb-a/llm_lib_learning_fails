@@ -1,0 +1,85 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "parameters": {
+        "properties": {
+          "x": {
+            "description": "Value to calculate arcsin for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "calculate_angles_of_triangle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate trigonometric expressions such as sin, cos, and tan for given input values.",
+      "name": "calculate_trigonometric_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The trigonometric expression to be evaluated.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Compute the tangent of the arccosine value for a given input.",
+      "name": "compute_tangent_arccos",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value to compute tan(arccos(value)).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

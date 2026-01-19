@@ -1,0 +1,315 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Validate the expression for trigonometric functions.",
+        "name": "validate_expression",
+        "parameters": {
+          "properties": {
+            "theta": {
+              "description": "The angle for the trigonometric function.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate angles in a triangle given the lengths of the sides.",
+        "name": "evaluate_angle_expression",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Side length a.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Side length b.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Side length c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate various properties of a triangle given its side lengths, including angles and area.",
+        "name": "calculate_triangle_properties",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Side length a.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Side length b.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Side length c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Compute the sum of cos^2 angles or other trigonometric series over a specified range.",
+        "name": "sum_trigonometric_expression",
+        "parameters": {
+          "properties": {
+            "end": {
+              "description": "The ending angle in degrees.",
+              "type": "integer"
+            },
+            "function_type": {
+              "description": "Type of function to compute, e.g., 'cos', 'sin'.",
+              "type": "string"
+            },
+            "start": {
+              "description": "The starting angle in degrees.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angles of a triangle given its sides using the law of cosines.",
+        "name": "calculate_angle_from_sides",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Side length a.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Side length b.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Side length c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a triangle given its sides in degrees, handling the given lengths safely for any triangle defined uniquely.",
+        "name": "calculate_angles_of_triangle",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side a, positive.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side b, positive.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side c, positive.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate the arcsine of a given value.",
+        "name": "evaluate_arcsin",
+        "parameters": {
+          "properties": {
+            "value": {
+              "description": "The value to evaluate arcsine of.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate tan(\u03b1 - \u03b2) given tan(\u03b1) and tan(\u03b2).",
+        "name": "evaluate_tangent_difference",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "The tangent of angle alpha.",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "The tangent of angle beta.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+        "name": "calculate_tangent_arccos",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "The tangent of angle alpha.",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "The tangent of angle beta.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the orthocenter of a triangle using vertices A, B, and C given as tuples.",
+        "name": "get_orthocenter",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "Tuple representing vertex A (x,y,z).",
+              "type": "object"
+            },
+            "B": {
+              "description": "Tuple representing vertex B (x,y,z).",
+              "type": "object"
+            },
+            "C": {
+              "description": "Tuple representing vertex C (x,y,z).",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the tangent of the difference between two angles",
+        "name": "tan_difference",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "Tangent of angle alpha",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "Tangent of angle beta",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angles of a triangle given its side lengths using the law of cosines, returning angles in degrees.",
+        "name": "calculate_angles",
+        "parameters": {
+          "properties": {
+            "side_a": {
+              "description": "Length of side a.",
+              "type": "integer"
+            },
+            "side_b": {
+              "description": "Length of side b.",
+              "type": "integer"
+            },
+            "side_c": {
+              "description": "Length of side c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angles of a triangle given its side lengths and return in degrees.",
+        "name": "calculate_triangle_angles",
+        "parameters": {
+          "properties": {
+            "side_a": {
+              "description": "Length of side a.",
+              "type": "integer"
+            },
+            "side_b": {
+              "description": "Length of side b.",
+              "type": "integer"
+            },
+            "side_c": {
+              "description": "Length of side c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

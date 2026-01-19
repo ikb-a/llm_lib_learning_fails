@@ -1,0 +1,62 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Executes SymPy-based Python code to solve mathematical problems, ensuring outputs in fractions and radical forms instead of decimals, adhering to given problem requirements.",
+        "name": "execute_math_code",
+        "parameters": {
+          "properties": {
+            "problem_code": {
+              "description": "Python code implementing the solution using SymPy, with print for output.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Simplifies trigonometric expressions using known identities and returns the result.",
+        "name": "simplify_trig_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The trigonometric expression in sympy's string syntax.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solves mathematical problems by recognizing the problem type and applying necessary SymPy transformations. Outputs results in fractions and radical forms, ensuring compatibility with problem requirements. Enhanced error handling and evaluations included for common SymPy execution issues.",
+        "name": "transform_and_solve",
+        "parameters": {
+          "properties": {
+            "problem_code": {
+              "description": "Python code implementing the solution using SymPy, with print for output.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Perform operations on matrices such as multiplication, determinant calculation, and finding the inverse.",
+        "name": "matrix_operations",
+        "parameters": {
+          "properties": {
+            "matrix_a": {
+              "description": "The first matrix as a list of lists.",
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "matrix_b": {
+              "description": "The second matrix as a list of lists.",
+              "items": {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "operation": {
+              "description": "The matrix operation to perform: can be 'multiply', 'determinant', or 'inverse'.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions using sympy, focusing on providing exact answers with fractions or radicals when possible.",
+        "name": "evaluate_math_expressions",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve math problems using sympy. Evaluate steps for differentiation, integration, and solving equations.",
+        "name": "solve_math_problem",
+        "parameters": {
+          "properties": {
+            "problem": {
+              "description": "Mathematical problem to solve symbolically.",
+              "type": "string"
+            },
+            "variables": {
+              "description": "Optional variables for the computation.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate the cross product of two 3D vectors given as lists or tuples.",
+        "name": "evaluate_cross_product",
+        "parameters": {
+          "properties": {
+            "vector_a": {
+              "description": "The first 3D vector.",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "vector_b": {
+              "description": "The second 3D vector.",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve and transform trigonometric identities into simpler forms.",
+        "name": "solve_trigonometric_identity",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The trigonometric identity to solve.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate expressions involving matrix operations like multiplication, addition, and inversion.",
+        "name": "evaluate_matrix_expression",
+        "parameters": {
+          "properties": {
+            "matrix_a": {
+              "description": "The first matrix for the operation.",
+              "items": {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "matrix_b": {
+              "description": "The second matrix, if needed, for operations like multiplication.",
+              "items": {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "operation": {
+              "description": "The matrix operation to perform: 'multiply', 'add', 'invert'.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate trigonometric expressions provided as strings, supporting operations like simplification and conversion of degrees to radians, as well as approximate numerical evaluations.",
+        "name": "evaluate_trig_expressions",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The trigonometric expression to evaluate, may include degree sign.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

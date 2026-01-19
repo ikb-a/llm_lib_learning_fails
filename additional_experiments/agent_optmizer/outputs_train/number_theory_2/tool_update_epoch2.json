@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def decimal_to_base(number, base):\n    if number == 0:\n        return '0'\n    if base < 2:\n        raise ValueError('Base must be >= 2')\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "description": "Convert a decimal number to a specified base and return it as a string.",
+      "name": "decimal_to_base",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def convert_decimal_to_base_general(number, base):\n    if number < 0:\n        raise ValueError(\"Number must be non-negative.\")\n    if base < 2:\n        raise ValueError(\"Base must be >= 2.\")\n    if number == 0:\n        return '0'\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "description": "Convert any decimal number to a specified base and return the result as a string representation.",
+      "name": "convert_decimal_to_base_general",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef gcd(a, b):\n    return math.gcd(a, b)",
+      "description": "Calculate the greatest common divisor of two integers.",
+      "name": "gcd",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def modular_arithmetic(number, modulus):\n    if modulus <= 0:\n        raise ValueError(\"Modulus must be a positive integer.\")\n    return number % modulus",
+      "description": "Calculate the result of modulo operation for a given number and modulus.",
+      "name": "modular_arithmetic",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef gcd_modular_arithmetic(number, modulus):\n    if modulus <= 0:\n        raise ValueError(\"Modulus must be a positive integer.\")\n    gcd_result = math.gcd(number, modulus)\n    mod_result = number % modulus\n    return mod_result, gcd_result",
+      "description": "Calculate the result of modulo operation for a given number and modulus as well as their gcd.",
+      "name": "gcd_modular_arithmetic",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_remainder(number, modulus):\n    if modulus <= 0:\n        raise ValueError(\"Modulus must be a positive integer.\")\n    return number % modulus",
+      "description": "Calculate the remainder of a number when divided by a modulus.",
+      "name": "calculate_remainder",
+      "packages": "math"
+    }
+  }
+]

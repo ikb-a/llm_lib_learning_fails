@@ -1,0 +1,30 @@
+{
+  "calculate_ac_length": {
+    "code": "from sympy import sqrt\n\ndef calculate_ac_length(a_x, a_y, c_x, c_y):\n    return round(float(sqrt((c_x - a_x)**2 + (c_y - a_y)**2)), 1)",
+    "packages": "sympy"
+  },
+  "calculate_angle_sum": {
+    "code": "def calculate_angle_sum(n):\n    return (n - 2) * 180",
+    "packages": ""
+  },
+  "calculate_angle_value": {
+    "code": "def calculate_angle_value(angle_A, angle_B, angle_C, angle_D, angle_E):\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_distance_between_points": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance_between_points(x1, y1, x2, y2):\n    return round(float(sqrt((x2 - x1)**2 + (y2 - y1)**2)), 1)",
+    "packages": "sympy"
+  },
+  "calculate_fraction": {
+    "code": "def calculate_fraction(numerator, denominator):\n    if denominator == 0:\n        return 'Undefined'\n    return numerator / denominator",
+    "packages": ""
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "sum_of_angles_of_pentagon": {
+    "code": "def sum_of_angles_of_pentagon(n):\n    return (n - 2) * 180",
+    "packages": ""
+  }
+}

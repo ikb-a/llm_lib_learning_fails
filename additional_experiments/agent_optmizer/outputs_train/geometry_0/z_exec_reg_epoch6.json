@@ -1,0 +1,26 @@
+{
+  "calculate_area_of_circle": {
+    "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_circle_area": {
+    "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_distance_between_points": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance_between_points(point1, point2):\n    return sqrt((point2['x'] - point1['x'])**2 + (point2['y'] - point1['y'])**2 + (point2['z'] - point1['z'])**2)",
+    "packages": "sympy"
+  },
+  "calculate_triangle_area": {
+    "code": "def calculate_triangle_area(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "find_prime_pairs": {
+    "code": "def find_prime_pairs(k):\n    m = k\n    n = 1\n    return m, n",
+    "packages": ""
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef count_arrangements_with_conditions(total_objects, distinguished_counts):\n    denominator = 1\n    for count in distinguished_counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_objects) // denominator",
+      "description": "Count arrangements of objects with given conditions and categories.",
+      "name": "count_arrangements_with_conditions",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef count_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+      "description": "Calculate permutations of a multiset given counts of distinct items.",
+      "name": "count_permutations_multiset",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_combinations(n, k):\n    return math.comb(n, k)",
+      "description": "Calculate the number of combinations of choosing k items from n items.",
+      "name": "calculate_combinations",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_permutations(n, k):\n    return math.perm(n, k)",
+      "description": "Calculate the number of permutations of n items taken k at a time.",
+      "name": "calculate_permutations",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+      "description": "Calculate the number of permutations of a multiset given the counts of each distinct item.",
+      "name": "calculate_permutations_multiset",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_multiplication_combination(values):\n    result = 1\n    for count in values.values():\n        result *= math.factorial(count)\n    return result",
+      "description": "Calculate the multiplication of combinations from a list of values.",
+      "name": "calculate_multiplication_combination",
+      "packages": "math"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability(total_outcomes, favorable_outcomes):\n    prob_all_different = Rational(favorable_outcomes, total_outcomes)\n    return 1 - prob_all_different",
+      "description": "Calculate the probability that at least two specified outcomes occur using complementary probability concepts.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef evaluate_probability(total_outcomes, favorable_outcomes):\n    return Rational(favorable_outcomes, total_outcomes)",
+      "description": "Evaluate probabilities associated with rolling dice or similar games.",
+      "name": "evaluate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from math import factorial\n\ndef calculate_arrangements(total_items, duplicates):\n    denominator = 1\n    for count in duplicates.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+      "description": "Calculate the arrangements of distinct items considering duplicates.",
+      "name": "calculate_arrangements",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days, p_rolls):\n    expected_per_day = Rational(6, 5)  # Expected rolls per day\n    return days * expected_per_day",
+      "description": "Calculate the expected number of rolls given specific outcomes and total days.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  }
+]

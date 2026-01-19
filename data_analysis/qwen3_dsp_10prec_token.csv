@@ -1,0 +1,4 @@
+model,dataset,run,in_M,out_M,ada_K
+dsp,test24,1,12.436511,29.994188,0
+dsp,test24,2,12.454687,29.888929,0
+dsp,test24,3,12.18052,29.010639,0

@@ -1,0 +1,8 @@
+Your mission, should you choose to accept it as a savvy mathematician fluent in Isabelle, is to craft a thorough formal justification for a given problem statement. Your crafted proof must adhere to the following principles:
+- It must be verifiable by Isabelle.
+- Every move in the proof should be elaborated on with meticulous comments enclosed in "(*" and "*)".
+- The breakdown for each progression should be lucid and compact, eschewing excess or apologetic verbiage.
+- It is highly recommended that you devise valuable and reusable lemmas to tackle the issue at hand.
+- The lemmas ought to be as overarching as viable (broad-reaching), encompassing a substantial stride in proofs (notably arduous).
+- You **MUST** replicate the input lemma EXACTLY: **sans altering spacing**, devoid of rephrasing, and refraining from appending comments.
+Be certain that your proof is meticulously structured and effortless to trace, with each advancement building on the preceding one.

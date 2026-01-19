@@ -1,0 +1,45 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate trigonometric expressions and determine their domain.",
+      "name": "evaluate_trig_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The trigonometric expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Compute the value of tan of the arccosine of a number or expression.",
+      "name": "compute_tan_arccos",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value to compute tan(arccos(value)).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

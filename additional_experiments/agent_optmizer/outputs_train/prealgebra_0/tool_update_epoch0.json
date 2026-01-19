@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, Rational\n\ndef calculate_decimal_value(symbolic_value):\n    return sympify(symbolic_value).evalf() if sympify(symbolic_value).is_real else str(symbolic_value)",
+      "description": "Convert a symbolic representation of a value to its decimal form.",
+      "name": "calculate_decimal_value",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_pythagorean_distance(AB, BC):\n    if AB < 0 or BC < 0:\n        return 'Length values must be non-negative.'\n    return float(sqrt(AB**2 + BC**2))",
+      "description": "Calculate the distance between two points in a right triangle using the Pythagorean theorem.",
+      "name": "calculate_pythagorean_distance",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_area_of_triangle(base, height):\n    if base < 0 or height < 0:\n        return 'Base and height must be non-negative values.'\n    return (base * height) / 2",
+      "description": "Calculate the area of a triangle given the base and height.",
+      "name": "calculate_area_of_triangle",
+      "packages": "sympy"
+    }
+  }
+]

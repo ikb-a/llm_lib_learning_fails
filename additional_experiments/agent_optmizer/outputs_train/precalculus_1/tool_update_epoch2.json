@@ -1,0 +1,65 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_tangent_arccos(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + tan_alpha * tan_beta\n    return numerator / denominator",
+      "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+      "name": "calculate_tangent_arccos",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def evaluate_arcsin(value):\n    try:\n        result = sp.asin(value)\n        return result\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluate the arcsine of a given value.",
+      "name": "evaluate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\ndef calculate_triangle_angles(side_a, side_b, side_c):\n    angle_A = sp.acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    angle_B = sp.acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    angle_C = sp.acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+      "description": "Calculate angles of a triangle given its side lengths and return in degrees.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sin, cos, tan\ndef validate_expression(theta):\n    return {\n        'sin': sin(theta),\n        'cos': cos(theta),\n        'tan': tan(theta),\n    }",
+      "description": "Validate the expression for trigonometric functions.",
+      "name": "validate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\ndef calculate_angles_of_triangle(a, b, c):\n    # Calculate angles using the law of cosines\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return (sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C))",
+      "description": "Calculate the angles of a triangle given its sides.",
+      "name": "calculate_angles_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\ndef evaluate_angle_expression(a, b, c):\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return (sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C))",
+      "description": "Evaluate angles in a triangle given the lengths of the sides.",
+      "name": "evaluate_angle_expression",
+      "packages": "sympy"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculates the expected number of times a die is rolled based on specific rules.",
+      "name": "dice_roll_experiment",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the probability of drawing items based on defined outcomes and conditions.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "Total number of favorable outcomes",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "Total number of possible outcomes",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate expected number of times a die is rolled with specific conditions.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

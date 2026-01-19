@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import factorial\n\ndef calculate_unique_permutations(total_items, item_counts):\n    denominator = 1\n    for count in item_counts.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+      "description": "Calculate the number of distinct permutations of a multiset given the counts of each distinct item.",
+      "name": "calculate_unique_permutations",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days):\n    prob_prime = Rational(3, 6)  # Prime: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite: 4, 6\n    prob_one = Rational(1, 6)  # 1\n\n    # Expected rolls in a day\n    expected_rolls_day = Rational(1, 1 - prob_one)\n    # Total expected rolls over days\n    return days * expected_rolls_day",
+      "description": "Calculate the expected number of times a die will be rolled given specific outcomes.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef expected_number_of_rolls_v2(days):\n    # Probability analysis for the die's outcome\n    prob_prime = Rational(3, 6)  # Prime numbers: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite numbers: 4, 6\n    prob_one = Rational(1, 6)  # Roll of 1\n\n    # Expected rolls calculation considering re-rolls\n    expected_rolls_day = 1 * (1 / (1 - prob_one))  # Geometric series for the re-roll\n\n    return days * expected_rolls_day",
+      "description": "Calculate the expected number of rolls based on defined probabilities and rules, including handling re-rolls.",
+      "name": "expected_number_of_rolls_v2",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_primes_and_composites():\n    primes = [2, 3, 5]\n    composites = [4, 6]\n    count_primes = len(primes)\n    count_composites = len(composites)\n    total = count_primes + count_composites + 1  # including 1 which re-rolls\n\n    return {\n        'count_primes': count_primes,\n        'count_composites': count_composites,\n        'total': total,\n        'prob_prime': Rational(count_primes, total),\n        'prob_composite': Rational(count_composites, total),\n        'prob_one': Rational(1, total)\n    }",
+      "description": "Calculate the count of prime and composite numbers on a die, as well as the expected rolls based on those probabilities.",
+      "name": "calculate_primes_and_composites",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability(favorable_outcomes, total_outcomes):\n    if total_outcomes <= 0:\n        return 0\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+      "description": "Calculate the probability of an event based on favorable and total outcomes.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability_complement(n_trials, p_success):\n    p_failure = 1 - p_success\n    return 1 - (p_failure ** n_trials)",
+      "description": "Calculate the probability of at least one success using the complement rule.",
+      "name": "calculate_probability_complement",
+      "packages": "sympy"
+    }
+  }
+]

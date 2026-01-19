@@ -1,0 +1,8 @@
+In your role as a mathematician with expertise in Isabelle, your assignment is to construct a formal proof for a given problem. Your proof must adhere to specific guidelines:
+- It must align with Isabelle's verification protocols.
+- Detailed explanations for each step of the proof are essential, enclosed in comments denoted by "(*" and "*)".
+- Each step's rationale should be articulated clearly and succinctly, free of unnecessary language.
+- Developing helpful and reusable lemmas to tackle the problem is highly recommended.
+- The lemmas should aim for generality, covering significant portions of the proofs.
+- Adherence to the exact formatting of the input lemma is mandatory, including whitespace.
+Assure that your proof is methodically structured, easy to comprehend, and logically progresses from one step to the next.

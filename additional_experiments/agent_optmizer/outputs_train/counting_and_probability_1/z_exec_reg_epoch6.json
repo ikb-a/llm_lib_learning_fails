@@ -1,0 +1,62 @@
+{
+  "calculate_arrangements": {
+    "code": "from math import factorial\n\ndef calculate_arrangements(total_items, duplicates):\n    denominator = 1\n    for count in duplicates.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "calculate_arrangements_with_repetition": {
+    "code": "from math import factorial\n\ndef calculate_arrangements_with_repetition(total_items, repetition_counts):\n    denominator = 1\n    for count in repetition_counts.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "calculate_complementary_probability": {
+    "code": "from sympy import Rational\n\ndef calculate_complementary_probability(favorable_outcomes, total_outcomes, trials=1):\n    if trials <= 0:\n        return 'Invalid number of trials'\n    single_event_probability = Rational(favorable_outcomes, total_outcomes)\n    prob_all_different = single_event_probability ** trials\n    return 1 - prob_all_different",
+    "packages": "sympy"
+  },
+  "calculate_expected_probability": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_probability(dice_count, conditions):\n    total_probability = Rational(0)\n    for condition in conditions:\n        # Assuming each condition returns a rational probability when evaluated\n        total_probability += eval(condition)\n    return total_probability / dice_count",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days, p_rolls):\n    expected_per_day = Rational(6, 5)  # Expected rolls per day\n    return days * expected_per_day",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls_per_year": {
+    "code": "def calculate_expected_rolls_per_year(expected_rolls_per_day):\n    return expected_rolls_per_day * 365",
+    "packages": "math"
+  },
+  "calculate_factorial": {
+    "code": "from math import factorial\n\ndef calculate_factorial(n):\n    if n < 0:\n        raise ValueError('Factorial is not defined for negative numbers')\n    return factorial(n)",
+    "packages": "math"
+  },
+  "calculate_probability": {
+    "code": "from sympy import Rational\n\ndef calculate_probability(favorable_outcomes, total_outcomes):\n    return Rational(favorable_outcomes, total_outcomes)",
+    "packages": "sympy"
+  },
+  "calculate_probability_of_dice_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_probability_of_dice_rolls(num_dice, success_condition, faces=6):\n    total_outcomes = faces ** num_dice\n    # Ensure safe eval usage\n    favorable_outcomes = eval(success_condition) if isinstance(success_condition, str) else success_condition\n    return Rational(favorable_outcomes, total_outcomes)",
+    "packages": "sympy"
+  },
+  "complementary_probability": {
+    "code": "from sympy import Rational\n\ndef complementary_probability(favorable_outcomes, total_outcomes):\n    return 1 - Rational(favorable_outcomes, total_outcomes)",
+    "packages": "sympy"
+  },
+  "evaluate_complementary_probability": {
+    "code": "from sympy import Rational\n\ndef evaluate_complementary_probability(total_outcomes, favorable_outcomes, trials):\n    return 1 - (Rational(favorable_outcomes, total_outcomes) ** trials)",
+    "packages": "sympy"
+  },
+  "expected_dice_rolls": {
+    "code": "from sympy import Rational\n\ndef expected_dice_rolls(days):\n    return days * Rational(6, 5)  # Likelihood of rolling a number other than 1",
+    "packages": "sympy"
+  },
+  "expected_dice_rolls_per_year": {
+    "code": "def expected_dice_rolls_per_year(expected_rolls_per_day, days_in_year):\n    return expected_rolls_per_day * days_in_year",
+    "packages": "math"
+  },
+  "expected_rolls": {
+    "code": "from sympy import Rational\n\n\ndef expected_rolls(num_days):\n    P_match = Rational(319, 324)\n    E = Rational(6, 5)\n    return num_days * E",
+    "packages": "sympy"
+  },
+  "expected_rolls_per_year": {
+    "code": "def expected_rolls_per_year(daily_expected_rolls):\n    return daily_expected_rolls * 365",
+    "packages": "math"
+  }
+}

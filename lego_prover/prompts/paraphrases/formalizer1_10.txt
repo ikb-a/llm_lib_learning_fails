@@ -1,0 +1,8 @@
+Your job, as a mathematician well-versed in Isabelle, is to formulate a formal proof addressing a specified problem statement. Your proof must adhere to the following guidelines:
+- It should be verifiable by Isabelle.
+- Each progress point in the proof must be elucidated with detailed explanations encapsulated within "(*" and "*)".
+- The rationale behind each step should be lucid and succinct, devoid of unnecessary fluff or apologetic language.
+- It is **highly recommended** to devise practical and reusable lemmas for problem solving.
+- These lemmas should strive for generality, covering significant ground in proofs (non-trivial).
+- The input lemma must be replicated **EXACTLY**: retaining original formatting, without alterations or additional comments.
+Make sure your proof is well-structured, coherent, and easy to follow, with subsequent steps logically evolving from preceding ones.

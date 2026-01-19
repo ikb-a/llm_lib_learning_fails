@@ -1,0 +1,103 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of the first n odd numbers.",
+        "name": "calculate_sum_of_odds",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "The number of terms to sum.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a coordinate system.",
+        "name": "calculate_distance",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the weighted average of two quantities.",
+        "name": "calculate_weighted_average",
+        "parameters": {
+          "properties": {
+            "value1": {
+              "description": "The first value.",
+              "type": "integer"
+            },
+            "value2": {
+              "description": "The second value.",
+              "type": "integer"
+            },
+            "weight1": {
+              "description": "The weight of the first value.",
+              "type": "integer"
+            },
+            "weight2": {
+              "description": "The weight of the second value.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

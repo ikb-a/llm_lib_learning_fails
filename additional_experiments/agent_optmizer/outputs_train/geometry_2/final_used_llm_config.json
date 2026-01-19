@@ -1,0 +1,591 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the area of a rectangle given its width and height.",
+        "name": "calculate_area_of_rectangle",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the rectangle.",
+              "type": "integer"
+            },
+            "width": {
+              "description": "The width of the rectangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a cylinder given its radius and height.",
+        "name": "calculate_cylinder_volume",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cylinder.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cylinder.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a circle given the radius.",
+        "name": "calculate_area_of_circle",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a sphere given the radius.",
+        "name": "calculate_volume_of_sphere",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the sphere.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its base and height.",
+        "name": "calculate_triangle_area_by_base_height",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "Base length of the triangle.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "Height of the triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its three sides using Heron's formula.",
+        "name": "calculate_triangle_area_by_sides",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Side A length.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Side B length.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Side C length.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a cube given the length of a side.",
+        "name": "calculate_volume_of_cube",
+        "parameters": {
+          "properties": {
+            "side_length": {
+              "description": "The length of one side of the cube.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a circle given its radius.",
+        "name": "calculate_circle_surface_area",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a cone given its radius and height.",
+        "name": "calculate_cone_volume",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a frustum given the radii and heights.",
+        "name": "calculate_frustum_volume",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the frustum.",
+              "type": "integer"
+            },
+            "radius_bottom": {
+              "description": "The radius of the bottom base.",
+              "type": "integer"
+            },
+            "radius_top": {
+              "description": "The radius of the top base.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its base and height.",
+        "name": "calculate_triangle_area",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The length of the base of the triangle.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "The height of the triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the painted area of a cone with given dimensions and ratios for a smaller cone and frustum.",
+        "name": "calculate_painted_area",
+        "parameters": {
+          "properties": {
+            "cone_height": {
+              "description": "The height of the original cone.",
+              "type": "integer"
+            },
+            "cone_radius": {
+              "description": "The radius of the original cone.",
+              "type": "integer"
+            },
+            "small_cone_height_ratio": {
+              "description": "The ratio of the height of the smaller cone to the height of the original cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in 3D space.",
+        "name": "calculate_distance",
+        "parameters": {
+          "properties": {
+            "point1": {
+              "description": "Coordinates of the first point (x1, y1, z1).",
+              "type": "object"
+            },
+            "point2": {
+              "description": "Coordinates of the second point (x2, y2, z2).",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a cube given its edge length.",
+        "name": "calculate_surface_area_of_cube",
+        "parameters": {
+          "properties": {
+            "edge_length": {
+              "description": "The length of one edge of the cube.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a cone given its radius and height.",
+        "name": "calculate_volume_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a circle given the radius.",
+        "name": "calculate_circle_area",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the product of the radius and height of a cylinder given its dimensions.",
+        "name": "calculate_power_of_circle",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "Height of the cylinder.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "Radius of base of cylinder.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a right prism given base area and height.",
+        "name": "calculate_surface_area_of_prism",
+        "parameters": {
+          "properties": {
+            "base_area": {
+              "description": "The area of the base of the prism.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "The height of the prism.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a cone given its radius and height.",
+        "name": "calculate_surface_area_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the cone base.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the ratio of areas and volumes of two solids with given dimensions.",
+        "name": "calculate_ratio_of_areas_and_volumes",
+        "parameters": {
+          "properties": {
+            "area1": {
+              "description": "Area of the first solid.",
+              "type": "integer"
+            },
+            "area2": {
+              "description": "Area of the second solid.",
+              "type": "integer"
+            },
+            "volume1": {
+              "description": "Volume of the first solid.",
+              "type": "integer"
+            },
+            "volume2": {
+              "description": "Volume of the second solid.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the ratio of areas and volumes for similar cones and frustums given their dimensions.",
+        "name": "calculate_ratio_k",
+        "parameters": {
+          "properties": {
+            "area_cone": {
+              "description": "Total surface area of the original cone.",
+              "type": "integer"
+            },
+            "frustum_height": {
+              "description": "Height of the frustum.",
+              "type": "integer"
+            },
+            "height_small_cone": {
+              "description": "Height of the smaller cone.",
+              "type": "integer"
+            },
+            "radius_small_cone": {
+              "description": "Radius of the smaller cone.",
+              "type": "integer"
+            },
+            "volume_cone": {
+              "description": "Volume of the original cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume and surface area of a frustum given the top and bottom radii and height.",
+        "name": "calculate_area_of_frustum",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the frustum.",
+              "type": "integer"
+            },
+            "radius_bottom": {
+              "description": "The radius of the bottom base.",
+              "type": "integer"
+            },
+            "radius_top": {
+              "description": "The radius of the top base.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of various shapes based on given parameters.",
+        "name": "calculate_area_of_shape",
+        "parameters": {
+          "properties": {
+            "parameters": {
+              "description": "Parameters needed for the specified shape.",
+              "type": "object"
+            },
+            "shape_type": {
+              "description": "The type of shape (circle, triangle, trapezoid).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the areas and volumes of cones and frustums based on given parameters.",
+        "name": "calculate_areas_and_volumes",
+        "parameters": {
+          "properties": {
+            "cone_height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "cone_radius": {
+              "description": "The radius of the cone base.",
+              "type": "integer"
+            },
+            "frustum_height": {
+              "description": "The height of the frustum.",
+              "type": "integer"
+            },
+            "frustum_radius": {
+              "description": "The radius of the frustum base.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+        "name": "calculate_area_of_triangle",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side A.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side B.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side C.",
+              "type": "integer"
+            },
+            "semiperimeter": {
+              "description": "Calculate semi perimeter, which is (a + b + c) / 2.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the ratio of a smaller value to a larger value.",
+        "name": "calculate_ratio",
+        "parameters": {
+          "properties": {
+            "denominator": {
+              "description": "The denominator value.",
+              "type": "integer"
+            },
+            "numerator": {
+              "description": "The numerator value.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the ratio of two areas and their corresponding volumes for similar geometries.",
+        "name": "calculate_ratio_of_areas",
+        "parameters": {
+          "properties": {
+            "area1": {
+              "description": "Area of the first geometry.",
+              "type": "integer"
+            },
+            "area2": {
+              "description": "Area of the second geometry.",
+              "type": "integer"
+            },
+            "volume1": {
+              "description": "Volume of the first geometry.",
+              "type": "integer"
+            },
+            "volume2": {
+              "description": "Volume of the second geometry.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

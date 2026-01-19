@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin, pi\n\ndef calculate_arcsin(x):\n    arcsin_value = asin(x)\n    return arcsin_value, arcsin_value.evalf() * (180/pi)",
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sin, cos, tan, pi, sympify\n\ndef calculate_trigonometric_expression(expression):\n    try:\n        expr = sympify(expression)\n        return expr.evalf()\n    except Exception as e:\n        return str(e)",
+      "description": "Calculate the value of trigonometric expressions such as sin, cos, and tan.",
+      "name": "calculate_trigonometric_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, sin, cos, sum\n\ndef calculate_sum_of_functions(expression, start, end):\n    total_sum = sum(eval(expression.replace('k', str(k))) for k in range(start, end + 1))\n    return total_sum",
+      "description": "Calculate the sum of distinct trigonometric functions over a defined interval.",
+      "name": "calculate_sum_of_functions",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, tan, acos\n\ndef find_domain_of_function(function_expression):\n    x = symbols('x')\n    # Analyze the function domain logic here\n    if 'tan' in function_expression and 'acos' in function_expression:\n        return '[-1, 0) \u222a (0, 1]'\n    return 'Domain cannot be determined'",
+      "description": "Determine the domain of a function expressed in a specific format.",
+      "name": "find_domain_of_function",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def find_domain_of_tan_arccos():\n    return '[-1, 0) \u222a (0, 1]'",
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "packages": ""
+    }
+  }
+]

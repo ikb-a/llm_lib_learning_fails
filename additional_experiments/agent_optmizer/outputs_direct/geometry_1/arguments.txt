@@ -1,0 +1,7 @@
+{
+  "dataset": "geometry",
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_direct/geometry_1/",
+  "run_id": "1"
+}

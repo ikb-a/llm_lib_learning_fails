@@ -1,0 +1,34 @@
+[
+  {
+    "func_sig": {
+      "description": "Executes SymPy-based Python code to solve mathematical problems, ensuring outputs in fractions and radical forms instead of decimals, adhering to given problem requirements.",
+      "name": "execute_math_code",
+      "parameters": {
+        "properties": {
+          "problem_code": {
+            "description": "Python code implementing the solution using SymPy, with print for output.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Simplifies trigonometric expressions using known identities and returns the result.",
+      "name": "simplify_trig_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The trigonometric expression in sympy's string syntax.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

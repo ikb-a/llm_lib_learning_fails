@@ -1,0 +1,45 @@
+[
+  {
+    "func_sig": {
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate mathematical expressions with given variables and functions.",
+      "name": "calculate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "parameters": {
+        "properties": {
+          "x": {
+            "description": "Value to calculate arcsin for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

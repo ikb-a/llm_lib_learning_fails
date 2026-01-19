@@ -1,0 +1,26 @@
+{
+  "calculate_distinct_remainders_sum": {
+    "code": "def calculate_distinct_remainders_sum(start, end, modulus):\n    if end < start:\n        return 0\n    distinct_remainders = set()\n    for n in range(start, end + 1):\n        square = n ** 2\n        remainder = square % modulus\n        distinct_remainders.add(remainder)\n    return sum(distinct_remainders)",
+    "packages": "sympy"
+  },
+  "calculate_remainder": {
+    "code": "def calculate_remainder(number, modulus):\n    if modulus == 0:\n        return 'Division by zero is not allowed.'\n    return number % modulus",
+    "packages": ""
+  },
+  "convert_decimal_to_base": {
+    "code": "def convert_decimal_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "convert_decimal_to_fraction": {
+    "code": "from fractions import Fraction\nimport re\n\ndef convert_decimal_to_fraction(decimal_string):\n    # Check for repeating decimals with regex\n    match = re.match(r'^(\\d*\\.\\d*?)\\(\\d+\\)$', decimal_string)\n\n    if match:\n        non_repeating = match.group(1)\n        repeating = match.group(2)\n        non_repeating_digits = non_repeating.replace('.', '')\n        non_repeating_decimal = non_repeating if '.' in non_repeating else non_repeating + '.0'\n        repeating_decimal = repeating\n\n        # Lengths of parts\n        len_non_repeating = len(non_repeating_digits)\n        len_repeating = len(repeating)\n\n        # Creating the fractions\n        a = Fraction(non_repeating_decimal).limit_denominator()\n        b = (10**len_non_repeating) * (10**len_repeating - 1)\n        c = int(non_repeating_decimal.replace('.', ''))\n        d = a.numerator % b\n\n        return Fraction(d, b).limit_denominator()\n    else:\n        # Non-repeating decimals directly convert to a fraction\n        return Fraction(float(decimal_string)).limit_denominator()",
+    "packages": "fractions"
+  },
+  "find_last_digit_in_base": {
+    "code": "def find_last_digit_in_base(number, base):\n    return number % base",
+    "packages": ""
+  },
+  "remainder_and_quotient": {
+    "code": "def remainder_and_quotient(number, modulus):\n    if modulus == 0:\n        return 'Division by zero is not allowed.', None\n    remainder = number % modulus\n    quotient = number // modulus\n    return remainder, quotient",
+    "packages": ""
+  }
+}

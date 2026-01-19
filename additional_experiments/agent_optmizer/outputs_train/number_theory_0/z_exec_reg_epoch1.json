@@ -1,0 +1,22 @@
+{
+  "calculate_distinct_remainders_sum": {
+    "code": "def calculate_distinct_remainders_sum(start, end, modulus):\n    distinct_remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        distinct_remainders.add(remainder)\n    return sum(distinct_remainders) \n",
+    "packages": "sympy"
+  },
+  "calculate_remainders": {
+    "code": "def calculate_remainders(start, end, modulus):\n    remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        remainders.add(remainder)\n    return sum(remainders), len(remainders)",
+    "packages": "sympy"
+  },
+  "convert_decimal_to_base": {
+    "code": "def convert_decimal_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "find_last_digit_in_base": {
+    "code": "def find_last_digit_in_base(number, base):\n    return number % base",
+    "packages": ""
+  },
+  "modular_inverse": {
+    "code": "def modular_inverse(a, m):\n    gcd, x, y = sp.gcdex(a, m)\n    return x % m  # Ensure the inverse is positive",
+    "packages": "sympy"
+  }
+}

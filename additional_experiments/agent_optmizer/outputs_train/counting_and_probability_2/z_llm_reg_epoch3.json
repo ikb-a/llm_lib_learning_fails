@@ -1,0 +1,58 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of die rolls based on defined probabilities and rules.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in a non-leap year.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of combinations of choosing k items from n items.",
+      "name": "calculate_combinations",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "Number of items to choose.",
+            "type": "integer"
+          },
+          "n": {
+            "description": "Total number of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of permutations of n items taken k at a time.",
+      "name": "calculate_permutations",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "Number of items to arrange.",
+            "type": "integer"
+          },
+          "n": {
+            "description": "Total number of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

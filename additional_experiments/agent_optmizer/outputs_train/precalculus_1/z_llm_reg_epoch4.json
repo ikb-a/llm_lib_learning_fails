@@ -1,0 +1,134 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+      "name": "calculate_tangent_arccos",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "The tangent of angle alpha.",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "The tangent of angle beta.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate the arcsine of a given value.",
+      "name": "evaluate_arcsin",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value for which to find the arcsine.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate various properties of a triangle given its side lengths, including angles and area.",
+      "name": "calculate_triangle_properties",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Side length a.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Side length b.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Side length c.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles of a triangle given its sides using the law of cosines with checks for non-triangle conditions.",
+      "name": "calculate_angle_from_sides",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Side length a.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Side length b.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Side length c.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a triangle given its sides.",
+      "name": "calculate_angles_of_triangle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Side length a.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Side length b.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Side length c.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Compute the sum of cos^2 angles or other trigonometric series over a specified range.",
+      "name": "sum_trigonometric_expression",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The ending angle in degrees.",
+            "type": "integer"
+          },
+          "function_type": {
+            "description": "Type of function to compute, e.g., 'cos', 'sin'.",
+            "type": "string"
+          },
+          "start": {
+            "description": "The starting angle in degrees.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

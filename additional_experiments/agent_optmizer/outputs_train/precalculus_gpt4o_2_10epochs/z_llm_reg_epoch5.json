@@ -1,0 +1,18 @@
+[
+  {
+    "func_sig": {
+      "description": "Perform trigonometric transformations and simplify trigonometric expressions using SymPy.",
+      "name": "trig_transform",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The trigonometric expression to simplify.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

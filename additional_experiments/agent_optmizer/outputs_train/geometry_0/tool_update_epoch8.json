@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_area_of_frustum(A_bottom, A_top, height):\n    return (A_bottom + A_top) * height / 2",
+      "description": "Calculate the area of a frustum given the areas of the top and bottom bases and the height.",
+      "name": "calculate_area_of_frustum",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, sqrt\n\ndef calculate_paint_area(radius_cone, radius_frustum_top, radius_frustum_bottom, height_cone, height_frustum):\n    # Areas\n    A_cone = pi * radius_cone * sqrt(radius_cone**2 + height_cone**2) + pi * radius_cone**2\n    A_frustum = pi * (radius_frustum_top + radius_frustum_bottom) * (height_frustum + sqrt((radius_frustum_top - radius_frustum_bottom)**2 + height_frustum**2))\n    return A_cone + A_frustum",
+      "description": "Calculate the area of painted surfaces of a cone and a frustum.",
+      "name": "calculate_paint_area",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+      "description": "Calculates the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_cube_surface_area(edge_length):\n    return 6 * (edge_length ** 2)",
+      "description": "Calculates the surface area of a cube given the length of an edge.",
+      "name": "calculate_cube_surface_area",
+      "packages": ""
+    }
+  }
+]

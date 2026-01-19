@@ -1,0 +1,74 @@
+{
+  "calculate_angle_measures": {
+    "code": "def calculate_angle_measures(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_angle_measures_pentagon": {
+    "code": "def calculate_angle_measures_pentagon(A, B, C, D, E):\n    angles = [A, B, C, D, E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    if base < 0 or height < 0:\n        return 'Base and height must be non-negative values.'\n    return (base * height) / 2",
+    "packages": "sympy"
+  },
+  "calculate_decimal_value": {
+    "code": "from sympy import sympify, Rational\n\ndef calculate_decimal_value(symbolic_value):\n    return sympify(symbolic_value).evalf() if sympify(symbolic_value).is_real else str(symbolic_value)",
+    "packages": "sympy"
+  },
+  "calculate_fraction_of_total": {
+    "code": "from sympy import Rational\n\ndef calculate_fraction_of_total(total_amount, percentage):\n    if total_amount < 0:\n        raise ValueError('Total amount cannot be negative')\n    if percentage < 0 or percentage > 100:\n        raise ValueError('Percentage must be between 0 and 100')\n    fraction = Rational(percentage, 100) * total_amount\n    return fraction.evalf()",
+    "packages": "sympy"
+  },
+  "calculate_honda_sales": {
+    "code": "def calculate_honda_sales(total_cars, percentage_audi, percentage_toyota, percentage_acura, percentage_honda=0):\n    total_percentage = percentage_audi + percentage_toyota + percentage_acura + percentage_honda\n    if total_percentage > 100:\n        raise ValueError('Percentages cannot exceed 100%')\n    if total_cars < 0:\n        raise ValueError('Total cars cannot be negative')\n    number_of_hondas = (100 - total_percentage) / 100 * total_cars\n    return int(round(number_of_hondas))",
+    "packages": "sympy"
+  },
+  "calculate_interior_angles_pentagon": {
+    "code": "def calculate_largest_angle(angle_a, angle_b, angle_c, angle_e):\n    angles = [angle_a, angle_b, angle_c, angle_c, angle_e]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_length": {
+    "code": "from sympy import sqrt\n\ndef calculate_length(point_A, point_B):\n    return sqrt((point_B['x'] - point_A['x'])**2 + (point_B['y'] - point_A['y'])**2)",
+    "packages": "sympy"
+  },
+  "calculate_max_angle_pentagon": {
+    "code": "def calculate_max_angle_pentagon(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_percentage": {
+    "code": "from sympy import Rational\n\ndef calculate_percentage(count, total):\n    if total <= 0:\n        raise ValueError('Total must be a positive integer')\n    return Rational(count, total) * 100",
+    "packages": "sympy"
+  },
+  "calculate_pythagorean_distance": {
+    "code": "from sympy import sqrt\n\ndef calculate_pythagorean_distance(AB, BC):\n    if AB < 0 or BC < 0:\n        return 'Length values must be non-negative.'\n    return float(sqrt(AB**2 + BC**2))",
+    "packages": "sympy"
+  },
+  "calculate_pythagorean_length": {
+    "code": "from sympy import sqrt\n\ndef calculate_pythagorean_length(side_a, side_b):\n    if side_a < 0 or side_b < 0:\n        return 'Length values must be non-negative.'\n    return float(sqrt(side_a**2 + side_b**2))",
+    "packages": "sympy"
+  },
+  "calculate_remainder": {
+    "code": "from sympy import primerange\n\ndef calculate_remainder(n, m):\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    sum_of_primes = sum(primes[:n])  # sum of the first n primes\n    return sum_of_primes % primes[m-1]  # remainder when divided by mth prime",
+    "packages": "sympy"
+  },
+  "calculate_square_root": {
+    "code": "from sympy import sqrt\n\ndef calculate_square_root(number):\n    return sqrt(number).evalf()",
+    "packages": "sympy"
+  },
+  "evaluate_and_round_expression": {
+    "code": "from sympy import N\n\ndef evaluate_and_round_expression(expression, decimal_places):\n    result = N(expression)\n    if decimal_places is not None:\n        result = round(result, decimal_places)\n    return result",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "sum_of_angles_pentagon": {
+    "code": "def sum_of_angles_pentagon(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "sum_of_first_n_primes": {
+    "code": "from sympy import primerange\n\ndef sum_of_first_n_primes(n):\n    if n < 1:\n        raise ValueError('n must be a positive integer')\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    if n > len(primes):\n        raise ValueError('Not enough prime numbers available')\n    return sum(primes[:n])",
+    "packages": "sympy"
+  }
+}

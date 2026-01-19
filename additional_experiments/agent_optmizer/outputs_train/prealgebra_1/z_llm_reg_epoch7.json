@@ -1,0 +1,98 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the square root of a given number and return it in decimal format.",
+      "name": "calculate_square_root",
+      "parameters": {
+        "properties": {
+          "number": {
+            "description": "The number for which to calculate the square root.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "output_fraction": {
+            "description": "Indicate whether the output should be in fractional form.",
+            "type": "boolean"
+          },
+          "total_outcomes": {
+            "description": "The total number of outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the result of a fractional arithmetic expression.",
+      "name": "calculate_fractional_expression",
+      "parameters": {
+        "properties": {
+          "denominator": {
+            "description": "The denominator of the fraction.",
+            "type": "integer"
+          },
+          "numerator": {
+            "description": "The numerator of the fraction.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a right triangle given the lengths of the two legs.",
+      "name": "calculate_area_of_right_triangle",
+      "parameters": {
+        "properties": {
+          "leg_a": {
+            "description": "Length of the first leg.",
+            "type": "integer"
+          },
+          "leg_b": {
+            "description": "Length of the second leg.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate and return all angles of a pentagon based on angle relationships.",
+      "name": "calculate_pentagon_angle_measurements",
+      "parameters": {
+        "properties": {
+          "angles": {
+            "description": "A dictionary containing the measures of angles A, B and additional_angle.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

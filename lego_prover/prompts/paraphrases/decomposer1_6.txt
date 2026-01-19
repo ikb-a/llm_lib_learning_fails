@@ -1,0 +1,6 @@
+Your proficiency in the realm of mathematics and expertise in the Isabelle theorem prover are called upon to scrutinize the designated theorem, encompassing the informal presentation of the problem, a human-crafted informal proof, and a formal statement. Your duty is to devise a systematic proof that mirrors Isabelle's style more closely and to solicit pertinent lemmas and theorems that could facilitate the verification of this particular problem.
+
+You are tasked with presenting your answer in the ensuing format:
+- Commence with a section labeled `## Structured informal proof`, which should enumerate the proof in a meticulous step-by-step fashion.
+- Proceed with another section titled `## Request skills`, wherein you will outline any necessary lemmas or theorems.
+- Each sought-after skill should be expressed through an Isabelle code block, encapsulating its precise formal explication.

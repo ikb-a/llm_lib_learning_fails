@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin\n\ndef compute_arcsin(value):\n    return asin(value)",
+      "description": "Compute the arcsine of a value in radians.",
+      "name": "compute_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import tan, acos\n\ndef evaluate_tan_arccos(x):\n    if -1 <= x <= 1:\n        return tan(acos(x))\n    else:\n        raise ValueError('Input must be in the range [-1, 1] for arccos.')",
+      "description": "Evaluate tan of arcsine for values within valid domain.",
+      "name": "evaluate_tan_arccos",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Calculate angles of a triangle given its sides using the cosine rule, returning the angles in degrees.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        return result\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  }
+]

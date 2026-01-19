@@ -1,0 +1,65 @@
+[
+  {
+    "func_sig": {
+      "description": "Solve mathematical problems using sympy. This can be general enough for problems that require evaluation or simplification of mathematical expressions.",
+      "name": "solve_question_with_sympy",
+      "parameters": {
+        "properties": {
+          "problem_description": {
+            "description": "The problem to solve.",
+            "type": "string"
+          },
+          "variables": {
+            "description": "Variables used in the problem, for sympy to symbolically evaluate.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluates mathematical expressions and equations using sympy and returns the result in a simplified form with rational numbers when possible.",
+      "name": "evaluate_math_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression or equation to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve for the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "solve_triangle_angles",
+      "parameters": {
+        "properties": {
+          "side_a": {
+            "description": "Length of side a.",
+            "type": "string"
+          },
+          "side_b": {
+            "description": "Length of side b.",
+            "type": "string"
+          },
+          "side_c": {
+            "description": "Length of side c.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

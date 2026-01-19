@@ -1,0 +1,296 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls in a non-leap year based on daily expected rolls.",
+        "name": "expected_rolls_in_year",
+        "parameters": {
+          "properties": {
+            "daily_expected_rolls": {
+              "description": "The expected number of rolls in a single day.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls based on the probability of outcomes from rolling a die with specific rules.",
+        "name": "calculate_expected_value_of_dice_rolls",
+        "parameters": {
+          "properties": {
+            "total_rolls_per_year": {
+              "description": "The total number of rolls in a year",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the expected number of rolls of a die based on the rules for rerolling.",
+        "name": "expected_value_of_rolls",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the probability of outcomes for a specified number of non-six-sided dice rolls.",
+        "name": "calculate_probability_of_non_six_dice",
+        "parameters": {
+          "properties": {
+            "six_sided": {
+              "description": "Indicates if a six-sided die is being rolled",
+              "type": "boolean"
+            },
+            "total_rolls": {
+              "description": "Total number of rolls",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate combinations of n items taken k at a time.",
+        "name": "calculate_combinations",
+        "parameters": {
+          "properties": {
+            "k": {
+              "description": "Number of items to choose",
+              "type": "integer"
+            },
+            "n": {
+              "description": "Total number of items",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls in a year based on daily expected rolls and the number of days in a year.",
+        "name": "expected_value_of_rolls_in_year",
+        "parameters": {
+          "properties": {
+            "daily_expected_rolls": {
+              "description": "The expected number of rolls in a single day.",
+              "type": "integer"
+            },
+            "year_length": {
+              "description": "The number of days in a year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the probability of at least two identical rolls when rolling multiple dice.",
+        "name": "calculate_probability_of_at_least_two_identical_rolls",
+        "parameters": {
+          "properties": {
+            "number_of_dice": {
+              "description": "Number of dice rolled.",
+              "type": "integer"
+            },
+            "sides_per_die": {
+              "description": "Number of sides on each die.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the probability of drawing items based on defined outcomes and conditions.",
+        "name": "calculate_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Total number of favorable outcomes",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total number of possible outcomes",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total expected number of rolls in a non-leap year based on daily expected rolls.",
+        "name": "calculate_total_expected_rolls",
+        "parameters": {
+          "properties": {
+            "daily_expected_rolls": {
+              "description": "The expected number of rolls in a single day.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls when rolling a die with specific rules about outcomes.",
+        "name": "dice_roll_experiment",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected value of the number of rolls when rolling a die with specific rules about outcomes.",
+        "name": "calculate_expected_value",
+        "parameters": {
+          "properties": {
+            "total_rolls_per_year": {
+              "description": "The total number of rolls in a year",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected value based on the outcomes of rolling a die with specific rules about outcomes.",
+        "name": "expected_value_of_dice_rolls",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability of a specific event occurring based on total and favorable outcomes.",
+        "name": "calculate_probability_of_event",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Total number of favorable outcomes",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total number of possible outcomes",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate expected number of times a die is rolled with specific conditions, using the complement rule.",
+        "name": "calculate_expected_rolls",
+        "parameters": {
+          "properties": {
+            "total_rolls": {
+              "description": "Total number of rolls",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls in a year based on a specific daily expected rolls input and the number of days in a year.",
+        "name": "calculate_expected_rolls_for_year",
+        "parameters": {
+          "properties": {
+            "daily_expected_rolls": {
+              "description": "The expected daily rolls",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls in a non-leap year based on daily expected rolls.",
+        "name": "calculate_expected_rolls_in_year_non_leap",
+        "parameters": {
+          "properties": {
+            "daily_expected_rolls": {
+              "description": "The expected number of rolls in a single day.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls in a non-leap year based on daily expected rolls.",
+        "name": "calculate_expected_rolls_in_year",
+        "parameters": {
+          "properties": {
+            "daily_expected_rolls": {
+              "description": "The expected number of rolls in a single day.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

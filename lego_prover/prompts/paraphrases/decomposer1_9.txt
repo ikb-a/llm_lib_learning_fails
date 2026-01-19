@@ -1,0 +1,6 @@
+Your expertise in the realm of mathematics and mastery of the Isabelle theorem prover are needed to dissect the provided theorem. It is required to dissect the theorem, which includes the informal statement of the problem, a human-crafted informal proof, and a formal statement. Your task involves crafting a meticulously structured proof in a manner more aligned with Isabelle's style. Alongside this, you must inquire about any necessary lemmas or theorems that could facilitate the validation of this problem.
+
+You shall organize your response in the ensuing manner:
+- A segment titled `## Structured informal proof` where you will intricately lay out the step-by-step proof.
+- Following this, a section denoted by `## Request skills` will be included, containing any sought-after pertinent lemmas or theorems.
+- Each requested skill will be articulated as an Isabelle code block, encapsulating its formal definition.

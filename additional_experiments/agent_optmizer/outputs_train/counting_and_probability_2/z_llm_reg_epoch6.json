@@ -1,0 +1,74 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the probability of an event based on favorable and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "The total number of possible outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls based on defined probabilities and rules, including handling re-rolls.",
+      "name": "expected_number_of_rolls_v2",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in a year.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls given a non-leap year.",
+      "name": "expected_number_of_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "The number of days in a non-leap year.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of distinct permutations of a multiset given the counts of each distinct item.",
+      "name": "calculate_unique_permutations",
+      "parameters": {
+        "properties": {
+          "item_counts": {
+            "description": "Counts of each distinct item.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "Total number of items in the set.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

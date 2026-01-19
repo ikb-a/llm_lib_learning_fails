@@ -1,0 +1,67 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the equation of a plane given three points in 3D space. Returns coefficients A, B, C, and D of the plane equation Ax + By + Cz + D = 0.",
+      "name": "calculate_plane_equation",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point in 3D space as [x, y, z].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point in 3D space as [x, y, z].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point3": {
+            "description": "The third point in 3D space as [x, y, z].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solves mathematical problems by recognizing the problem type and applying necessary SymPy transformations. Outputs results in fractions and radical forms, ensuring compatibility with problem requirements. Enhanced error handling and evaluations included for common SymPy execution issues.",
+      "name": "transform_and_solve",
+      "parameters": {
+        "properties": {
+          "problem_code": {
+            "description": "Python code implementing the solution using SymPy, with print for output.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

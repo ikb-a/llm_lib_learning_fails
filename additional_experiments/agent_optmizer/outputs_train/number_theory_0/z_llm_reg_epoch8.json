@@ -1,0 +1,122 @@
+[
+  {
+    "func_sig": {
+      "description": "Convert a decimal number to a specified base and return its representation as a string.",
+      "name": "convert_decimal_to_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (must be greater than 1).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to convert.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Find the last digit of a number when presented in a specified base.",
+      "name": "find_last_digit_in_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base in which to find the last digit.",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The number to find the last digit of.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert a decimal (including repeating) string to a simplified fraction and returns the numerator and denominator.",
+      "name": "convert_decimal_to_fraction",
+      "parameters": {
+        "properties": {
+          "decimal_string": {
+            "description": "The decimal representation, can be repeating, like '0.42' or '0.42\u0305'",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the sum of distinct remainders of squares of integers in a specified range when divided by a given modulus.",
+      "name": "calculate_distinct_remainders_sum",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The end of the range (inclusive).",
+            "type": "integer"
+          },
+          "modulus": {
+            "description": "The modulus for calculating remainders.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "The start of the range (inclusive).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remainder of a number after division by a divisor.",
+      "name": "calculate_remainder",
+      "parameters": {
+        "properties": {
+          "modulus": {
+            "description": "The modulus to be used.",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The number to perform modulo operation on.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remainder and quotient of a number when divided by a modulus.",
+      "name": "remainder_and_quotient",
+      "parameters": {
+        "properties": {
+          "modulus": {
+            "description": "The modulus to divide by.",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The number to be divided.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

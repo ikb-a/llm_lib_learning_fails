@@ -1,0 +1,29 @@
+{
+  "agent": {
+    "gpt-4o-mini-2024-07-18": {
+      "completion_tokens": 90465,
+      "cost": 0.17621324999999985,
+      "prompt_tokens": 812895,
+      "total_tokens": 903360
+    },
+    "total_cost": 0.17621324999999985
+  },
+  "optimizer": {
+    "gpt-4o-mini-2024-07-18": {
+      "completion_tokens": 11906,
+      "cost": 0.1265334,
+      "prompt_tokens": 795932,
+      "total_tokens": 807838
+    },
+    "total_cost": 0.1265334
+  },
+  "total": {
+    "gpt-4o-mini-2024-07-18": {
+      "completion_tokens": 102371,
+      "cost": 0.30274664999999984,
+      "prompt_tokens": 1608827,
+      "total_tokens": 1711198
+    },
+    "total_cost": 0.30274664999999984
+  }
+}

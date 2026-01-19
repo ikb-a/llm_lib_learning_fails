@@ -1,0 +1,6 @@
+{
+  "transform_and_solve": {
+    "code": "import sympy as sp\n\ndef transform_and_solve(problem_code):\n    # Define a safe dictionary for globals\n    exec_globals = {\n        '__builtins__': None,\n        'sqrt': sp.sqrt,\n        'pi': sp.pi,\n        'acos': sp.acos,\n        'asin': sp.asin,\n        'atan2': sp.atan2,\n        'sin': sp.sin,\n        'cos': sp.cos,\n        'tan': sp.tan,\n        'Rational': sp.Rational,\n        'Matrix': sp.Matrix,\n        'symbols': sp.symbols,\n        'solve': sp.solve,\n        'Eq': sp.Eq,\n        'sympify': sp.sympify,\n        'simplify': sp.simplify,\n        'deg': sp.rad,\n        'nsimplify': sp.nsimplify,\n        'summation': sp.summation\n    }\n    try:\n        exec(problem_code, exec_globals)\n        return exec_globals.get('result', 'No result found')\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  }
+}

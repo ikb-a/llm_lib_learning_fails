@@ -1,0 +1,118 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+      "name": "calculate_remainder",
+      "parameters": {
+        "properties": {
+          "m": {
+            "description": "Index of the prime number to divide by",
+            "type": "integer"
+          },
+          "n": {
+            "description": "How many prime numbers to sum",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate an arithmetic expression and round the result to the nearest specified decimal places.",
+      "name": "evaluate_and_round_expression",
+      "parameters": {
+        "properties": {
+          "decimal_places": {
+            "description": "Number of decimal places to round to.",
+            "type": "integer"
+          },
+          "expression": {
+            "description": "The arithmetic expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "calculate_max_angle_pentagon",
+      "parameters": {
+        "properties": {
+          "angle_A": {
+            "description": "Measure of angle A",
+            "type": "integer"
+          },
+          "angle_B": {
+            "description": "Measure of angle B",
+            "type": "integer"
+          },
+          "angle_C": {
+            "description": "Measure of angle C",
+            "type": "integer"
+          },
+          "angle_D": {
+            "description": "Measure of angle D",
+            "type": "integer"
+          },
+          "angle_E": {
+            "description": "Measure of angle E",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "sum_of_angles_pentagon",
+      "parameters": {
+        "properties": {
+          "angle_A": {
+            "description": "Measure of angle A",
+            "type": "integer"
+          },
+          "angle_B": {
+            "description": "Measure of angle B",
+            "type": "integer"
+          },
+          "x": {
+            "description": "Value subject to expressions for C, D, and D",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the length between two points given their coordinates using the distance formula.",
+      "name": "calculate_length",
+      "parameters": {
+        "properties": {
+          "point_A": {
+            "description": "Coordinates of point A (x1, y1)",
+            "type": "object"
+          },
+          "point_B": {
+            "description": "Coordinates of point B (x2, y2)",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

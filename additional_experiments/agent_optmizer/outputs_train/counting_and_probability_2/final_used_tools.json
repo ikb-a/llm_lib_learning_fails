@@ -1,0 +1,82 @@
+{
+  "calculate_combinations": {
+    "code": "import math\ndef calculate_combinations(n, k):\n    if k > n:\n        return 0\n    return math.comb(n, k)",
+    "packages": "math"
+  },
+  "calculate_expected_dice_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_dice_rolls(year_days):\n    E = Rational(6, 5)\n    return year_days * E",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days):\n    prob_prime = Rational(3, 6)  # Prime: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite: 4, 6\n    prob_one = Rational(1, 6)  # 1\n\n    # Expected rolls in a day\n    expected_rolls_day = Rational(1, 1 - prob_one)\n    # Total expected rolls over days\n    return days * expected_rolls_day",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls_for_composite_prime": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls_for_composite_prime(days):\n    # Counting probabilities for rolling a 1, composite and prime numbers\n    prob_one = Rational(1, 6)  # Probability to roll a 1\n    prob_composite = Rational(3, 6)  # Composite: 4, 6\n    prob_prime = Rational(2, 6)  # Prime: 2, 3, 5\n\n    # Expected rolls calculation considering re-rolls\n    expected_rolls_day = (1 * (1 / (1 - prob_one))) + (1 * (1 / (prob_composite))) + (1 * (1 / (prob_prime)))\n    return days * expected_rolls_day",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls_in_year": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls_in_year(days):\n    E_per_day = Rational(6, 5)  # ",
+    "packages": "sympy"
+  },
+  "calculate_multiplication_combination": {
+    "code": "import math\n\ndef calculate_multiplication_combination(values):\n    result = 1\n    for count in values.values():\n        result *= math.factorial(count)\n    return result",
+    "packages": "math"
+  },
+  "calculate_permutations": {
+    "code": "import math\ndef calculate_permutations(n, k):\n    if k > n:\n        return 0\n    return math.perm(n, k)",
+    "packages": "math"
+  },
+  "calculate_permutations_multiset": {
+    "code": "import math\n\ndef calculate_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "calculate_primes_and_composites": {
+    "code": "from sympy import Rational\n\ndef calculate_primes_and_composites():\n    primes = [2, 3, 5]\n    composites = [4, 6]\n    count_primes = len(primes)\n    count_composites = len(composites)\n    total = count_primes + count_composites + 1  # including 1 which re-rolls\n\n    return {\n        'count_primes': count_primes,\n        'count_composites': count_composites,\n        'total': total,\n        'prob_prime': Rational(count_primes, total),\n        'prob_composite': Rational(count_composites, total),\n        'prob_one': Rational(1, total)\n    }",
+    "packages": "sympy"
+  },
+  "calculate_probability": {
+    "code": "from sympy import Rational\n\ndef calculate_probability(favorable_outcomes, total_outcomes):\n    if total_outcomes == 0:\n        return 0\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+    "packages": "sympy"
+  },
+  "calculate_probability_complement": {
+    "code": "from sympy import Rational\n\ndef calculate_probability_complement(n_trials, p_success):\n    p_failure = 1 - p_success\n    return 1 - (p_failure ** n_trials)",
+    "packages": "sympy"
+  },
+  "calculate_probability_of_outcome": {
+    "code": "from sympy import Rational\n\ndef calculate_probability_of_outcome(total_outcomes, favorable_outcomes):\n    probability = Rational(favorable_outcomes, total_outcomes)\n    return probability",
+    "packages": "sympy"
+  },
+  "calculate_rolls_expectation": {
+    "code": "from sympy import Rational\n\ndef calculate_rolls_expectation(days):\n    # The expected rolls for one day when rolling a die\n    prob_prime = Rational(3, 6)\n    prob_composite = Rational(2, 6)\n    prob_roll_again = Rational(1, 6)\n\n    # Expected rolls in one day (E), factoring roll again\n    E = Rational(1, 1 - prob_roll_again)\n    return days * E",
+    "packages": "sympy"
+  },
+  "calculate_total_arrangements": {
+    "code": "from sympy import factorial\n\ndef calculate_total_arrangements(total_items, category_counts):\n    denominator = 1\n    for count in category_counts.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+    "packages": "sympy"
+  },
+  "calculate_unique_permutations": {
+    "code": "from sympy import factorial\n\ndef calculate_unique_permutations(total_items, item_counts):\n    denominator = 1\n    for count in item_counts.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+    "packages": "sympy"
+  },
+  "count_arrangements_with_conditions": {
+    "code": "import math\n\ndef count_arrangements_with_conditions(total_objects, distinguished_counts):\n    denominator = 1\n    for count in distinguished_counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_objects) // denominator",
+    "packages": "math"
+  },
+  "count_permutations_multiset": {
+    "code": "import math\n\ndef count_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "expected_number_of_rolls": {
+    "code": "from sympy import Rational\n\ndef expected_number_of_rolls(days):\n    prob_one = Rational(1, 6)  # Probability to roll a 1\n    prob_prime = Rational(3, 6)  # Prime numbers: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite numbers: 4, 6\n\n    expected_rolls_day = 0\n\n    # Expected rolls for a day considering re-rolls\n    expected_rolls_day += (1 * (1 / (1 - prob_one))) + (1 * (1 / prob_prime)) + (1 * (1 / prob_composite))\n\n    return days * expected_rolls_day",
+    "packages": "sympy"
+  },
+  "expected_number_of_rolls_v2": {
+    "code": "from sympy import Rational\n\ndef expected_number_of_rolls_v2(days):\n    # Probability analysis for the die's outcome\n    prob_prime = Rational(3, 6)  # Prime: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite: 4, 6\n    prob_one = Rational(1, 6)  # 1\n    expected_rolls_day = Rational(0)\n\n    # Expected rolls calculation considering re-rolls\n    expected_rolls_day += (1 * (1 / (1 - prob_one))) + (1 * (1 / prob_composite)) + (1 * (1 / prob_prime))\n\n    return days * expected_rolls_day",
+    "packages": "sympy"
+  },
+  "expected_rolls_die": {
+    "code": "from sympy import Rational\n\ndef expected_rolls_die(days):\n    E = Rational(6, 5)\n    return days * E",
+    "packages": "sympy"
+  }
+}

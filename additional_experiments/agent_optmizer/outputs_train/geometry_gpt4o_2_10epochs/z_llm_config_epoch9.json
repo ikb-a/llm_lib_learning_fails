@@ -1,0 +1,100 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Solve various standard triangle properties, including calculating heights, medians, angles, and area given different initial parameters.",
+        "name": "solve_triangle_properties",
+        "parameters": {
+          "properties": {
+            "angle_unit": {
+              "description": "The unit for angles, either 'degrees' or 'radians'.",
+              "type": "string"
+            },
+            "side1": {
+              "description": "The first side length of the triangle.",
+              "type": "integer"
+            },
+            "side2": {
+              "description": "The second side length of the triangle.",
+              "type": "integer"
+            },
+            "side3": {
+              "description": "The third side length (or hypotenuse if needed) of the triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate trigonometric expressions and solve trigonometric equations provided as strings which can contain multiple expressions separated by commas or semicolons.",
+        "name": "evaluate_trigonometric",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The trigonometric expression or equation to evaluate. Expressions can be separated by commas or semicolons.",
+              "type": "string"
+            },
+            "variable_values": {
+              "default": {},
+              "description": "A dictionary containing variable values to substitute, if any.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate and solve algebraic expressions and equations provided as strings which can contain multiple expressions separated by commas or semicolons. It includes careful parsing and handling of equations.",
+        "name": "evaluate_algebra",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The algebraic expression or equation to evaluate. Expressions can be separated by commas or semicolons.",
+              "type": "string"
+            },
+            "variable_values": {
+              "default": {},
+              "description": "A dictionary containing variable values to substitute, if any.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "calculate_area": {
+    "code": "from sympy import pi\n\ndef calculate_area(shape_type, dimensions):\n    if shape_type == 'circle':\n        radius = dimensions['radius']\n        return pi * radius ** 2\n    elif shape_type == 'triangle':\n        base = dimensions['base']\n        height = dimensions['height']\n        return (1/2) * base * height\n    else:\n        return None",
+    "packages": "sympy"
+  },
+  "calculate_cylinder_volume": {
+    "code": "from sympy import pi\n\ndef calculate_cylinder_volume(radius, height):\n    return pi * radius ** 2 * height",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * edge_length ** 2",
+    "packages": "sympy"
+  },
+  "calculate_triangle_area": {
+    "code": "def calculate_triangle_area(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_volume_of_cone": {
+    "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  },
+  "find_prime_pairs": {
+    "code": "def find_prime_pairs(k):\n    m = k\n    n = 1\n    return m, n",
+    "packages": ""
+  }
+}

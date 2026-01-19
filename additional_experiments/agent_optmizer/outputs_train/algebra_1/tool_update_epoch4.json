@@ -1,0 +1,65 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Rational, Eq, solve\n\ndef calculate_volume_after_addition(current_fill_fraction, target_fill_fraction, additional_liters):\n    V = symbols('V')\n    current_fill = Rational(int(current_fill_fraction.split('/')[0]), int(current_fill_fraction.split('/')[1])) * V\n    target_fill = Rational(int(target_fill_fraction.split('/')[0]), int(target_fill_fraction.split('/')[1])) * V\n    equation = Eq(current_fill + additional_liters, target_fill)\n    return solve(equation, V)[0]",
+      "description": "Calculate the full volume of a tank after adding liters based on its current and target fill fractions.",
+      "name": "calculate_volume_after_addition",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_total_cost(quantities, prices):\n    if len(quantities) != len(prices):\n        return \"Error: Length of quantities and prices must match.\"\n    return sum(q * p for q, p in zip(quantities, prices))",
+      "description": "Calculate the total cost based on quantities and prices of multiple items.",
+      "name": "calculate_total_cost",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Rational, Eq, solve\n\ndef cylinder_volume(current_fill_fraction, additional_liters, target_fill_fraction):\n    V = symbols('V')\n    current_fill = Rational(int(current_fill_fraction.split('/')[0]), int(current_fill_fraction.split('/')[1])) * V\n    target_fill = Rational(int(target_fill_fraction.split('/')[0]), int(target_fill_fraction.split('/')[1])) * V\n    equation = Eq(current_fill + additional_liters, target_fill)\n    return solve(equation, V)[0]",
+      "description": "Calculate the full volume of a cylindrical tank given its filling states and additional liters.",
+      "name": "cylinder_volume",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Rational, Eq, solve\n\ndef calculate_equation_fill_fraction(current_fill_fraction, target_fill_fraction, additional_liters):\n    V = symbols('V')\n    current_fill = Rational(int(current_fill_fraction.split('/')[0]), int(current_fill_fraction.split('/')[1])) * V\n    target_fill = Rational(int(target_fill_fraction.split('/')[0]), int(target_fill_fraction.split('/')[1])) * V\n    equation = Eq(current_fill + additional_liters, target_fill)\n    return solve(equation, V)[0]",
+      "description": "Calculate the filling state of a tank given the current fill fraction, additional liters, and target fill fraction as strings.",
+      "name": "calculate_equation_fill_fraction",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_time_of_travel(distance, speed):\n    if speed <= 0:\n        return 'Error: Speed must be greater than zero.'\n    return distance / speed",
+      "description": "Calculate travel time given distance and speed.",
+      "name": "calculate_time_of_travel",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_distance(point1, point2):\n    if len(point1) != 2 or len(point2) != 2:\n        return \"Error: Each point must have exactly 2 coordinates.\"\n    x1, y1 = point1\n    x2, y2 = point2\n    distance = sqrt((x2 - x1)**2 + (y2 - y1)**2)\n    return distance.evalf()",
+      "description": "Calculate the distance between two points in a Cartesian plane.",
+      "name": "calculate_distance",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def execute_function(functionName, args):\n    if functionName == 'calculate_distance':\n        return calculate_distance(**args)\n    if functionName == 'calculate_total_cost':\n        return calculate_total_cost(**args)\n    if functionName == 'calculate_volume_after_addition':\n        return calculate_volume_after_addition(**args)\n    if functionName == 'cylinder_volume':\n        return cylinder_volume(**args)\n    if functionName == 'calculate_equation_fill_fraction':\n        return calculate_equation_fill_fraction(**args)\n    if functionName == 'calculate_time_of_travel':\n        return calculate_time_of_travel(**args)\n    return 'Error: Function not found.'",
+      "description": "Execute a function with given arguments and return the result.",
+      "name": "execute_function",
+      "packages": ""
+    }
+  }
+]

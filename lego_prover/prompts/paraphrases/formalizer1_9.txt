@@ -1,0 +1,8 @@
+As a mathematician skilled in Isabelle, your mission is to develop a formal verification in response to a specified problem. Your demonstration must adhere to the following guidelines:
+- It should be capable of being confirmed by Isabelle.
+- Break down each part of the proof thoroughly with lucid explanations enclosed in "(*" and "*)".
+- Justify each step clearly and succinctly, steering away from unnecessary or apologetic language.
+- It is highly recommended to craft valuable and reusable lemmas for problem-solving.
+- Lemmas should have broad applicability (be generalizable) and contribute significantly to proof steps.
+- You **MUST** replicate the provided lemma EXACTLY as it is: **without altering spaces**, refraining from paraphrasing, and omitting comments.
+It is essential to craft a well-structured and comprehensible proof, with each stage building upon the preceding one.

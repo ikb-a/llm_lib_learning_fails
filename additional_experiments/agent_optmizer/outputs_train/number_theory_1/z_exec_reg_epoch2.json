@@ -1,0 +1,18 @@
+{
+  "convert_decimal_to_base": {
+    "code": "def convert_decimal_to_base(number, base):\n    if number == 0:\n        return '0'\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "decimal_to_fraction": {
+    "code": "import sympy\n\ndef decimal_to_fraction(decimal):\n    if '.' in decimal:\n        if '\\overline{' in decimal:\n            whole, frac = decimal.split('.')\n            non_repeating, repeating = frac.split('\\overline{')\n            repeating = repeating.rstrip('}')\n            numerator = int(whole + non_repeating + repeating) - int(whole + non_repeating)\n            denominator = (10 ** len(non_repeating) * (10 ** len(repeating) - 1))\n        else:\n            whole, frac = decimal.split('.')\n            numerator = int(whole + frac)\n            denominator = 10 ** len(frac)\n    else:\n        numerator = int(decimal)\n        denominator = 1\n    \n    gcd = sympy.gcd(numerator, denominator)\n    simplified_numerator = numerator // gcd\n    simplified_denominator = denominator // gcd\n\n    return simplified_numerator, simplified_denominator",
+    "packages": "sympy"
+  },
+  "find_distinct_remainders_sum": {
+    "code": "def find_distinct_remainders_sum(start, end, modulus):\n    remainders = set()  \n    for n in range(start, end + 1):\n        square = n ** 2\n        remainder = square % modulus\n        remainders.add(remainder)\n    return sum(remainders)",
+    "packages": ""
+  },
+  "process_repeating_decimal": {
+    "code": "import sympy\n\ndef process_repeating_decimal(repeating_decimal):\n    # Extract the repeating digits\n    if '.' in repeating_decimal:\n        whole, frac = repeating_decimal.split('.')\n        if '\\overline{' in frac:\n            non_repeating, repeating = frac.split('\\overline{')\n            repeating = repeating.rstrip('}')\n        else:\n            non_repeating = frac\n            repeating = ''\n    else:\n        whole = repeating_decimal\n        non_repeating = ''\n        repeating = ''\n\n    # Convert the number to a fraction\n    if len(repeating) == 0:\n        numerator = int(whole + non_repeating) \n        denominator = 10 ** len(non_repeating)\n    else:\n        numerator = int(whole + non_repeating + repeating) - int(whole + non_repeating)\n        denominator = 10 ** len(non_repeating) * (10 ** len(repeating) - 1)\n\n    # Simplify the fraction\n    gcd = sympy.gcd(numerator, denominator)\n    simplified_numerator = numerator // gcd\n    simplified_denominator = denominator // gcd\n    \n    return simplified_numerator, simplified_denominator, simplified_numerator + simplified_denominator",
+    "packages": "sympy"
+  }
+}

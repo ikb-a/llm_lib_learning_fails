@@ -1,0 +1,171 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the surface area of a cube given the side length.",
+        "name": "calculate_surface_area_of_cube",
+        "parameters": {
+          "properties": {
+            "side_length": {
+              "description": "The length of one side of the cube.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a sphere given the radius.",
+        "name": "calculate_volume_of_sphere",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the sphere.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+        "name": "calculate_area_of_triangle",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side A.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side B.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side C.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+        "name": "calculate_triangle_area",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side A.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side B.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side C.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a circle given the radius.",
+        "name": "calculate_circle_area",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a right circular cone given its radius and height.",
+        "name": "calculate_volume_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a right circular cone given its radius and slant height.",
+        "name": "calculate_surface_area_of_cone",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            },
+            "slant_height": {
+              "description": "The slant height of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a rectangle given its width and height.",
+        "name": "calculate_area_of_rectangle",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the rectangle.",
+              "type": "integer"
+            },
+            "width": {
+              "description": "The width of the rectangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

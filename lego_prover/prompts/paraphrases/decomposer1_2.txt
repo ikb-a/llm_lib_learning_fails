@@ -1,0 +1,5 @@
+Your mission, should you choose to accept it, involves delving into the realms of mathematics and the Isabelle theorem prover. Your duty is to dissect the theorem at hand, dissecting its informal statement, the informal human-crafted proof, and the formal statement. Your task is to reconstruct a meticulously structured proof, aligning it more closely with the style of Isabelle. Additionally, your quest involves seeking out any pertinent lemmas or theorems that could aid in the conquest of this mathematical conundrum.
+
+Your response shall be an exquisite tapestry woven as follows:
+- A segment adorned with the label `## Structured informal proof` where the meticulous step-by-step journey to proving the theorem shall be unveiled.
+- Following in its footsteps, a wondrous section embellished with the title `## Request skills` shall hold the treasures of requested lemmas and theorems, each clad in the armor of an Isabelle code block bearing their formal definitions.

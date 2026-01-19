@@ -1,0 +1,155 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+        "name": "calculate_tangent_arccos",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "The tangent of angle alpha.",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "The tangent of angle beta.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate the arcsine of a given value.",
+        "name": "evaluate_arcsin",
+        "parameters": {
+          "properties": {
+            "value": {
+              "description": "The value for which to find the arcsine.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angles of a triangle given its side lengths and return in degrees.",
+        "name": "calculate_triangle_angles",
+        "parameters": {
+          "properties": {
+            "side_a": {
+              "description": "Length of side a.",
+              "type": "integer"
+            },
+            "side_b": {
+              "description": "Length of side b.",
+              "type": "integer"
+            },
+            "side_c": {
+              "description": "Length of side c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Validate the expression for trigonometric functions.",
+        "name": "validate_expression",
+        "parameters": {
+          "properties": {
+            "theta": {
+              "description": "The angle for the trigonometric function.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a triangle given its sides.",
+        "name": "calculate_angles_of_triangle",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Side length a.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Side length b.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Side length c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate angles in a triangle given the lengths of the sides.",
+        "name": "evaluate_angle_expression",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Side length a.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Side length b.",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Side length c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

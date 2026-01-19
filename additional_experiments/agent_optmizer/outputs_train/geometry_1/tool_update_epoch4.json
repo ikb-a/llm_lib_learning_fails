@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * (edge_length ** 2)",
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_volume_of_cone(radius, height):\n    from sympy import pi\n    if radius <= 0 or height <= 0:\n        raise ValueError(\"Radius and height must be positive numbers.\")\n    return (1/3) * pi * (radius ** 2) * height",
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\n\ndef calculate_area_of_circle(radius):\n    if radius <= 0:\n        raise ValueError(\"Radius must be a positive number.\")\n    return pi * (radius ** 2)",
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_visible_part_of_circle(diameter):\n    radius = diameter / 2\n    return (1 / 2) * pi * (radius ** 2)",
+      "description": "Calculate the visible area of the circle above the x-axis given its diameter.",
+      "name": "calculate_visible_part_of_circle",
+      "packages": "sympy"
+    }
+  }
+]

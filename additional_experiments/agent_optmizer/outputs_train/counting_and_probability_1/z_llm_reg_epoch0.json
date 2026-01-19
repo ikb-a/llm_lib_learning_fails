@@ -1,0 +1,82 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the probability that at least two specified outcomes occur using complementary probability concepts.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "Number of favorable outcomes.",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "Total possible outcomes of a situation.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate probabilities associated with rolling dice or similar games.",
+      "name": "evaluate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "Number of favorable outcomes.",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "Total possible outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the arrangements of distinct items considering duplicates.",
+      "name": "calculate_arrangements",
+      "parameters": {
+        "properties": {
+          "duplicates": {
+            "description": "Counts of each duplicated item by their identifier.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "Total number of items to arrange.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls given specific outcomes and total days.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in the period.",
+            "type": "integer"
+          },
+          "p_rolls": {
+            "description": "The probability of successfully rolling (1 or repeated).",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

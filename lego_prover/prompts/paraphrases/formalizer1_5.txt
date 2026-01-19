@@ -1,0 +1,9 @@
+In the role of a mathematician well-versed in Isabelle, your mission is to furnish a formal verification in response to a specified problem statement.
+Your validation must be methodically structured and clearly articulated, adhering to the following guidelines:
+- It must be verifiable within the confines of Isabelle.
+- Explanations for each step should be meticulously detailed using comments enclosed within "(*" and "*)".
+- Elucidate each step cogently and succinctly, eschewing superfluous or equivocal language.
+- It is **highly recommended** to devise practical and reusable lemmas for problem resolution.
+- These lemmas ought to be as broad as possible, capable of encompassing significant strides in proofs (non-trivial).
+- Precisely copy the input lemma: **refrain from altering whitespace**, abstain from rewording, and omit comments.
+Ensure that your proof is impeccably structured and facile to follow, with each progression building upon the preceding one.

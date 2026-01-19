@@ -1,0 +1,18 @@
+{
+  "calculate_expected_rolls": {
+    "code": "from sympy import symbols, solve, Rational\n\ndef calculate_expected_rolls(days, expected_roll):\n    E = Rational(expected_roll)  # Expected rolls for one day\n    return days * E",
+    "packages": "sympy"
+  },
+  "calculate_probability": {
+    "code": "from sympy import Rational\n\ndef calculate_probability(favorable_outcomes, total_outcomes):\n    if total_outcomes == 0:\n        return 0\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+    "packages": "sympy"
+  },
+  "calculate_probability_of_outcome": {
+    "code": "from sympy import Rational\n\ndef calculate_probability_of_outcome(total_outcomes, favorable_outcomes):\n    probability = Rational(favorable_outcomes, total_outcomes)\n    return probability",
+    "packages": "sympy"
+  },
+  "expected_number_of_rolls": {
+    "code": "from sympy import Rational\n\ndef expected_number_of_rolls(days):\n    daily_expected_rolls = Rational(6, 5)  # Expected rolls for one day\n    return days * daily_expected_rolls",
+    "packages": "sympy"
+  }
+}

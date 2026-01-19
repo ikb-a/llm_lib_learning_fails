@@ -1,0 +1,10 @@
+{
+  "evaluate_algebra": {
+    "code": "from sympy import symbols, Eq, solve, sympify\n\n# Define the helper function\ndef evaluate_algebra(expression, variable_values={}):\n    expr = sympify(expression)\n    # If the expression is an equation, solve it\n    if isinstance(expr, Eq):\n        solutions = solve(expr)\n        return solutions\n    # If there are variables values provided, substitute\n    if variable_values:\n        keys = symbols(' '.join(variable_values.keys()))\n        expr = expr.subs(variable_values)\n    # Evaluate the expression\n    return expr",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  }
+}

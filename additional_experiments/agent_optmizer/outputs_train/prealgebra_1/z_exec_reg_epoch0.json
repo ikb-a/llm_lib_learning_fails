@@ -1,0 +1,18 @@
+{
+  "calculate_lcm": {
+    "code": "from sympy import lcm\n\ndef calculate_lcm(num1, num2):\n    return lcm(num1, num2)  # Calculate least common multiple",
+    "packages": "sympy"
+  },
+  "calculate_length": {
+    "code": "from sympy import sqrt\n\ndef calculate_length(A, C):\n    return sqrt((C[0] - A[0])**2 + (C[1] - A[1])**2)  # Distance formula\n\n# Add a function to calculate the length of the diagonal in a rectangle formed by points A, B, C, D where B and D are used to calculate lengths.",
+    "packages": "sympy"
+  },
+  "calculate_pentagon_angles": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angles(A, B, additional_angle):\n    x = symbols('x')  # C = D = x\n    # E = 2x + additional_angle\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)  # sum of angles = 540\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return C, D, E\n",
+    "packages": "sympy"
+  },
+  "calculate_rectangle_diagonal": {
+    "code": "from sympy import sqrt\n\ndef calculate_rectangle_diagonal(length, width):\n    return sqrt(length**2 + width**2)  # Diagonal formula",
+    "packages": "sympy"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "calculate_area_of_circle": {
+    "code": "def calculate_area_of_circle(radius):\n    from sympy import pi\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_frustum": {
+    "code": "def calculate_area_of_frustum(radius1, radius2, height):\n    import sympy as sp\n    return sp.pi * (radius1 + radius2) * sp.sqrt((radius2-radius1)**2 + height**2) + sp.pi * (radius1**2 + radius2**2)",
+    "packages": "sympy"
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_surface_area_frustum": {
+    "code": "def calculate_surface_area_frustum(radius1, radius2, height):\n    from sympy import pi, sqrt\n    slant_height = sqrt(height**2 + (radius2 - radius1)**2)\n    area = pi * (radius1 + radius2) * slant_height + pi * (radius1**2 + radius2**2)\n    return area",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * edge_length ** 2",
+    "packages": "sympy"
+  },
+  "calculate_volume_of_cone": {
+    "code": "def calculate_volume_of_cone(radius, height):\n    from sympy import pi\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  }
+}

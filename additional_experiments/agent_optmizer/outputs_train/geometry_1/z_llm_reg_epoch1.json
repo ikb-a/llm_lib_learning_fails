@@ -1,0 +1,102 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its three sides using Heron's formula.",
+      "name": "calculate_triangle_area",
+      "parameters": {
+        "properties": {
+          "side_a": {
+            "description": "The length of side a.",
+            "type": "integer"
+          },
+          "side_b": {
+            "description": "The length of side b.",
+            "type": "integer"
+          },
+          "side_c": {
+            "description": "The length of side c.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of an edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a right circular cone given its radius and height.",
+      "name": "calculate_surface_area_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area and volume of a cone based on its base radius and height.",
+      "name": "calculate_surface_area_and_volume_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

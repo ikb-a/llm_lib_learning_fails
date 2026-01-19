@@ -1,0 +1,135 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Convert a decimal number to a specified base and return it as a string.",
+        "name": "decimal_to_base",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The base to convert to (e.g., 2 for binary, 4 for base four).",
+              "type": "integer"
+            },
+            "number": {
+              "description": "The decimal number to be converted.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Convert any decimal number to a specified base and return the result as a string representation.",
+        "name": "convert_decimal_to_base_general",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The base to convert to (minimum base is 2).",
+              "type": "integer"
+            },
+            "number": {
+              "description": "The decimal number to be converted.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the greatest common divisor of two integers.",
+        "name": "gcd",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "First integer.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Second integer.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the greatest common divisor of two integers using the Euclidean algorithm.",
+        "name": "find_gcd",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "First integer.",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Second integer.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the result of modulo operation for a given number and modulus.",
+        "name": "modular_arithmetic",
+        "parameters": {
+          "properties": {
+            "modulus": {
+              "description": "The modulus to divide by (must be positive integer).",
+              "type": "integer"
+            },
+            "number": {
+              "description": "The number to be divided.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the result of modulo operation for a given number and modulus as well as their gcd.",
+        "name": "gcd_modular_arithmetic",
+        "parameters": {
+          "properties": {
+            "modulus": {
+              "description": "The modulus to divide by.",
+              "type": "integer"
+            },
+            "number": {
+              "description": "The number to be divided.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

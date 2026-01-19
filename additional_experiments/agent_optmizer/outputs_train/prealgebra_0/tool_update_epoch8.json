@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def sum_of_angles_pentagon(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "sum_of_angles_pentagon",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_fraction_of_total(total_amount, percentage):\n    return Rational(percentage, 100) * total_amount",
+      "description": "Calculate the fraction of a total based on a percentage and total amount.",
+      "name": "calculate_fraction_of_total",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_honda_sales(total_cars, percentage_audi, percentage_toyota, percentage_acura, percentage_honda=0):\n    total_percentage = percentage_audi + percentage_toyota + percentage_acura + percentage_honda\n    if total_percentage > 100:\n        raise ValueError('Percentages cannot exceed 100%')\n    number_of_hondas = (100 - total_percentage) / 100 * total_cars\n    return int(round(number_of_hondas))",
+      "description": "Calculate the number of Hondas sold based on percentages of other car types.",
+      "name": "calculate_honda_sales",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import primerange\n\ndef calculate_remainder(n, m):\n    if n < 1 or m < 1:\n        raise ValueError('n and m must be positive integers')\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    if n > len(primes):\n        raise ValueError('Not enough prime numbers available')\n    if m > len(primes):\n        raise ValueError('m exceeds the number of available primes')\n    sum_of_primes = sum(primes[:n])  # sum of the first n primes\n    return sum_of_primes % primes[m-1]  # remainder when divided by the mth prime",
+      "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+      "name": "calculate_remainder",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_percentage(count, total):\n    if total <= 0:\n        raise ValueError('Total must be a positive integer')\n    return Rational(count, total) * 100",
+      "description": "Calculate the percentage of a total based on the given count and total amount.",
+      "name": "calculate_percentage",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_max_angle_pentagon(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+      "description": "Calculate the largest angle in a pentagon given angles expressed in terms of a variable.",
+      "name": "calculate_max_angle_pentagon",
+      "packages": "sympy"
+    }
+  }
+]

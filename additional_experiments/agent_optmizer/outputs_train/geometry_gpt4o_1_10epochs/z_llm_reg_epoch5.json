@@ -1,0 +1,30 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the volume and surface area of a geometric shape given its dimensions.",
+      "name": "calculate_code_properties",
+      "parameters": {
+        "properties": {
+          "dimensions": {
+            "description": "The dimensions needed for the calculation, such as radius, height, etc.",
+            "properties": {
+              "height": {
+                "type": "integer"
+              },
+              "radius": {
+                "type": "integer"
+              }
+            },
+            "type": "object"
+          },
+          "shape": {
+            "description": "The type of the shape, e.g., cone, sphere, cylinder.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

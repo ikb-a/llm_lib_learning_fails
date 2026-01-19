@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix\n\ndef calculate_plane_equation(point1, point2, point3):\n    # Create vectors from the points\n    v1 = Matrix([point2[i] - point1[i] for i in range(3)])\n    v2 = Matrix([point3[i] - point1[i] for i in range(3)])\n    \n    # Compute cross product to get normal vector\n    normal_vector = v1.cross(v2)\n    \n    # Plane coefficients from normal vector\n    A, B, C = normal_vector\n    D = - (A * point1[0] + B * point1[1] + C * point1[2])\n    return A, B, C, D",
+      "description": "Calculate the equation of a plane given three points in 3D space. Returns coefficients A, B, C, and D of the plane equation Ax + By + Cz + D = 0.",
+      "name": "calculate_plane_equation",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\nimport numpy as np\n\n# Revised function to address SymPy compatibility issues\n\ndef transform_and_solve(problem_code):\n    # Define the safe namespace for sure\n    exec_globals = {\n        '__builtins__': None,\n        'sqrt': sp.sqrt,\n        'pi': sp.pi,\n        'acos': sp.acos,\n        'asin': sp.asin,\n        'atan2': sp.atan2,\n        'sin': sp.sin,\n        'cos': sp.cos,\n        'tan': sp.tan,\n        'Rational': sp.Rational,\n        'Matrix': sp.Matrix,\n        'symbols': sp.symbols,\n        'solve': sp.solve,\n        'Eq': sp.Eq,\n        'sympify': sp.sympify,\n        'simplify': sp.simplify,\n        'rad': sp.rad,\n        'deg': sp.deg,\n        'nsimplify': sp.nsimplify,\n        'summation': sp.summation,\n        'diff': sp.diff,\n        'exp': sp.exp,\n        'log': sp.log,\n    }\n    exec_locals = {}\n    try:\n        exec(problem_code, exec_globals, exec_locals)\n        result = exec_locals.get('result', 'No result found')\n        if isinstance(result, sp.Basic):  # Check if it is a SymPy expression\n            return sp.nsimplify(result)\n        return result\n    except sp.SympifyError as e:\n        return f\"Sympify Error: {e}, problem in parsing expressions.\"\n    except AttributeError as e:  # If any attribute errors due to incorrect calls\n        return f\"Attribute Error: {e}, possibly due to unavailable function in SymPy.\"\n    except Exception as e:\n        if \"Objects/dictobject.c\" in str(e):\n            return \"Unexpected internal error related to dictionary object handling.\"\n        return f\"Unexpected Error: {e}\"",
+      "description": "Solves mathematical problems by recognizing the problem type and applying necessary SymPy transformations. Outputs results in fractions and radical forms, ensuring compatibility with problem requirements. Enhanced error handling and evaluations included for common SymPy execution issues.",
+      "name": "transform_and_solve",
+      "packages": "sympy, numpy"
+    }
+  }
+]

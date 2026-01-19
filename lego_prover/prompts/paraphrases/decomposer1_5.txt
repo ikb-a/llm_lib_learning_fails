@@ -1,0 +1,6 @@
+In your role as a mathematician well-versed in the Isabelle theorem prover, your duty is to meticulously examine the theorem at hand which encompasses the informal statement of the problem, a human-crafted informal proof, and a formal statement. Your objective is to present a meticulously organized proof that mirrors the structure of Isabelle more closely. In addition, seek out any pertinent lemmas or theorems that could aid in substantiating this theorem.
+
+You will organize your response in the following manner:
+- Begin with a section titled `## Structured informal proof` that delineates a methodical step-by-step proof.
+- Subsequently, include a section titled `## Request skills` where you will list any necessary lemmas or theorems.
+- Each needed skill should be outlined through an Isabelle code block featuring its precise formal definition.

@@ -1,0 +1,50 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "output_fraction": {
+            "description": "Indicate whether the output should be in fractional form.",
+            "type": "boolean"
+          },
+          "total_outcomes": {
+            "description": "The total number of outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the division of a number by the result of another expression and multiply by a third number.",
+      "name": "calculate_division_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "An expression to evaluate for the denominator.",
+            "type": "string"
+          },
+          "multiplier": {
+            "description": "A number to multiply the result by.",
+            "type": "integer"
+          },
+          "numerator": {
+            "description": "The numerator of the division.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

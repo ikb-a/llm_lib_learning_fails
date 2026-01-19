@@ -1,0 +1,22 @@
+{
+  "calculate_area_of_circle": {
+    "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_frustum": {
+    "code": "def calculate_area_of_frustum(A_bottom, A_top, height):\n    return (A_bottom + A_top) * height / 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_cube_surface_area": {
+    "code": "def calculate_cube_surface_area(edge_length):\n    return 6 * (edge_length ** 2)",
+    "packages": ""
+  },
+  "calculate_paint_area": {
+    "code": "from sympy import pi, sqrt\n\ndef calculate_paint_area(radius_cone, radius_frustum_top, radius_frustum_bottom, height_cone, height_frustum):\n    # Areas\n    A_cone = pi * radius_cone * sqrt(radius_cone**2 + height_cone**2) + pi * radius_cone**2\n    A_frustum = pi * (radius_frustum_top + radius_frustum_bottom) * (height_frustum + sqrt((radius_frustum_top - radius_frustum_bottom)**2 + height_frustum**2))\n    return A_cone + A_frustum",
+    "packages": "sympy"
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, simplify, Rational\n\ndef evaluate_math_expression(expression):\n    try:\n        expr = sympify(expression)\n        result = simplify(expr)\n        if result.is_number:\n            result = Rational(str(result))  # Ensures the result is a rational number if applicable\n        return result\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluates mathematical expressions and equations using sympy and returns the result in a simplified form with rational numbers when possible.",
+      "name": "evaluate_math_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\n\ndef solve_triangle_angles(side_a, side_b, side_c):\n    a = sp.sympify(side_a)\n    b = sp.sympify(side_b)\n    c = sp.sympify(side_c)\n\n    # Calculate cosines using the Law of Cosines\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    cos_B = (a**2 + c**2 - b**2) / (2 * a * c)\n    cos_C = (a**2 + b**2 - c**2) / (2 * a * b)\n\n    # Calculate angles in degrees\n    angle_A = sp.acos(cos_A) * 180 / sp.pi\n    angle_B = sp.acos(cos_B) * 180 / sp.pi\n    angle_C = sp.acos(cos_C) * 180 / sp.pi\n\n    return (angle_A.evalf(), angle_B.evalf(), angle_C.evalf())",
+      "description": "Solve for the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "solve_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, sqrt, atan2, acos, pi\n\ndef convert_rectangular_to_spherical(x, y, z):\n    x, y, z = float(x), float(y), float(z)\n    # Calculate rho\n    rho = sqrt(x**2 + y**2 + z**2)\n    # Calculate theta\n    theta = atan2(y, x)\n    if theta < 0:\n        theta += 2 * pi\n    # Calculate phi\n    phi = acos(z / rho)\n    return (rho, theta, phi)",
+      "description": "Converts rectangular coordinates to spherical coordinates in the format (rho, theta, phi).",
+      "name": "convert_rectangular_to_spherical",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix\n\ndef find_plane_equation_from_points(point1, point2, point3):\n    # Convert points to sympy matrices\n    point1 = Matrix([float(coor) for coor in point1])\n    point2 = Matrix([float(coor) for coor in point2])\n    point3 = Matrix([float(coor) for coor in point3])\n\n    # Compute two vectors in the plane\n    vector1 = point2 - point1\n    vector2 = point3 - point1\n\n    # Compute the normal vector to the plane\n    normal_vector = vector1.cross(vector2)\n\n    # Unpack normal vector\n    A, B, C = normal_vector\n\n    # Ax + By + Cz + D = 0, where (x, y, z) is a point on the plane to find D\n    D = -A*point1[0] - B*point1[1] - C*point1[2]\n\n    # Return the plane equation parameters\n    return (A, B, C, D)",
+      "description": "Finds the equation of a plane given three points in 3D space.",
+      "name": "find_plane_equation_from_points",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix\n\ndef compute_matrix_multiplication(matrix1, matrix2):\n    try:\n        mat1 = Matrix(matrix1)\n        mat2 = Matrix(matrix2)\n        product = mat1 * mat2\n        return product.tolist()\n    except Exception as e:\n        return str(e)",
+      "description": "Calculates the product of two matrices using sympy and returns the resulting matrix.",
+      "name": "compute_matrix_multiplication",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve, simplify, sympify\n\ndef solve_question_with_sympy(problem_description, variables):\n    try:\n        # Dynamically define symbols in sympy\n        symbols_list = symbols(variables)\n\n        # Parse equations from problem description\n        if 'intersection' in problem_description:\n            # Extract equations to solve for intersection points\n            equation_parts = problem_description.replace('intersection', '').split('and')\n            equations = [Eq(simplify(sympify(part.split('=')[0])),\n                            simplify(sympify(part.split('=')[1].strip()))) for part in equation_parts]\n            result = solve(equations, symbols_list)\n        else:\n            # General equation handling\n            if '=' in problem_description:\n                equation_parts = problem_description.split('and')\n                equations = [Eq(simplify(sympify(eq_part.split('=')[0].strip())),\n                                simplify(sympify(eq_part.split('=')[1].strip()))) for eq_part in equation_parts]\n                result = solve(equations, symbols_list)\n            else:\n                # Assume a general solve goal\n                equation = sympify(problem_description)\n                result = solve(equation, symbols_list)\n\n        return result if result else \"No solution found.\"\n    except (IndexError, ValueError, SympifyError, TypeError) as e:\n        return f\"Error occurred: {str(e)}\"",
+      "description": "A utility function to solve mathematical problems using sympy, suitable for problems involving the symbolic evaluation of equations or expressions.",
+      "name": "solve_question_with_sympy",
+      "packages": "sympy"
+    }
+  }
+]

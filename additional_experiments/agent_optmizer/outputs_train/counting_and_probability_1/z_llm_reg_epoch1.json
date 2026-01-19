@@ -1,0 +1,78 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the arrangements of distinct items considering duplicates.",
+      "name": "calculate_arrangements",
+      "parameters": {
+        "properties": {
+          "duplicates": {
+            "description": "Counts of each duplicated item by their identifier.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "Total number of items to arrange.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls given specific outcomes and total days.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in the period.",
+            "type": "integer"
+          },
+          "p_rolls": {
+            "description": "The probability of successfully rolling (1 or repeated).",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls given specific outcomes and total days, accounting for retries when rolling a 1.",
+      "name": "calculate_expected_rolls_with_retries",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in the period.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of die rolls for a given number of days and based on the probability of rolling a composite number.",
+      "name": "calculate_expected_rolls_per_year",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in the period.",
+            "type": "integer"
+          },
+          "rolls_per_day": {
+            "description": "Expected number of rolls per day as a fraction.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

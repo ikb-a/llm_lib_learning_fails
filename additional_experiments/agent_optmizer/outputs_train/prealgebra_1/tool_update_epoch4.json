@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angles_optimized(angles):\n    # Extract angles from dictionary\n    A = angles['A']\n    B = angles['B']\n    C = angles['C']\n    D = angles['D']\n    additional_angle = angles['additional_angle']\n    x = symbols('x')  # C = D = x\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)  # sum of angles = 540\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return C, D, E\n",
+      "description": "Calculate the angles of a pentagon given relationships between its angles more generally.",
+      "name": "calculate_pentagon_angles_optimized",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_probability(favorable_outcomes, total_outcomes, output_fraction=False):\n    from sympy import Rational\n    result = Rational(favorable_outcomes, total_outcomes)\n    if output_fraction:\n        return result  # Return as a fraction\n    else:\n        return float(result)  # Return as a decimal",
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angles(A, B, additional_angle):\n    x = symbols('x')  # C = D = x\n    # total sum of angles in a pentagon = 540 degrees\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)  # sum of angles = 540\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return C, D, E",
+      "description": "Calculate the interior angles of a pentagon based on given angle relationships.",
+      "name": "calculate_pentagon_angles",
+      "packages": "sympy"
+    }
+  }
+]

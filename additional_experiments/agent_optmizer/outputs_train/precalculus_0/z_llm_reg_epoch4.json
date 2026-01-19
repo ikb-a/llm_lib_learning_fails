@@ -1,0 +1,106 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the arcsine of a value.",
+      "name": "calculate_arcsin",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value to compute arcsine for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a triangle based on the lengths of its sides using the cosine rule.",
+      "name": "compute_triangle_angles",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of the first side",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of the second side",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of the third side",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate expressions of sine and cosine values for given angles and return their simplified output.",
+      "name": "evaluate_sine_cosine_expression",
+      "parameters": {
+        "properties": {
+          "angle_degrees": {
+            "description": "The angle in degrees to evaluate.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles of a triangle given its sides using the cosine rule.",
+      "name": "calculate_triangle_angles",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles A, B, and C of a triangle given its side lengths using the cosine rule.",
+      "name": "calculate_arccosine_and_sine",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

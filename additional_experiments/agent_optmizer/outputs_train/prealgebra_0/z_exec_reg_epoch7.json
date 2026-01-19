@@ -1,0 +1,26 @@
+{
+  "calculate_angle_measures": {
+    "code": "def calculate_angle_measures(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_angle_measures_pentagon": {
+    "code": "def calculate_angle_measures_pentagon(A, B, C, D, E):\n    angles = [A, B, C, D, E]\n    return max(angles)",
+    "packages": "sympy"
+  },
+  "calculate_fraction_of_total": {
+    "code": "from sympy import Rational\n\ndef calculate_fraction_of_total(total_amount, percentage):\n    if total_amount < 0:\n        raise ValueError('Total amount cannot be negative')\n    if percentage < 0 or percentage > 100:\n        raise ValueError('Percentage must be between 0 and 100')\n    return Rational(percentage, 100) * total_amount",
+    "packages": "sympy"
+  },
+  "calculate_honda_sales": {
+    "code": "def calculate_honda_sales(total_cars, percentage_audi, percentage_toyota, percentage_acura, percentage_honda=0):\n    total_percentage = percentage_audi + percentage_toyota + percentage_acura + percentage_honda\n    if total_percentage > 100:\n        raise ValueError('Percentages cannot exceed 100%')\n    if total_cars < 0:\n        raise ValueError('Total cars cannot be negative')\n    number_of_hondas = (100 - total_percentage) / 100 * total_cars\n    return int(round(number_of_hondas))",
+    "packages": "sympy"
+  },
+  "calculate_remainder": {
+    "code": "from sympy import primerange\n\ndef calculate_remainder(n, m):\n    if n < 1 or m < 1:\n        raise ValueError('n and m must be positive integers')\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    if n > len(primes):\n        raise ValueError('Not enough prime numbers available')\n    sum_of_primes = sum(primes[:n])  # sum of the first n primes\n    if m > len(primes):\n        raise ValueError('m exceeds the number of available primes')\n    return sum_of_primes % primes[m-1]  # remainder when divided by the mth prime",
+    "packages": "sympy"
+  },
+  "sum_of_first_n_primes": {
+    "code": "from sympy import primerange\n\ndef sum_of_first_n_primes(n):\n    if n < 1:\n        raise ValueError('n must be a positive integer')\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    if n > len(primes):\n        raise ValueError('Not enough prime numbers available')\n    return sum(primes[:n])",
+    "packages": "sympy"
+  }
+}

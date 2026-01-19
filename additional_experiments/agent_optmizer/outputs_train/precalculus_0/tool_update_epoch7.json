@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import atan, deg\n\ndef get_angle_from_tangent(tan_value):\n    return deg(atan(tan_value))",
+      "description": "Calculate the angle based on given tangent value.",
+      "name": "get_angle_from_tangent",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef compute_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Compute angles of a triangle based on its sides and return them as degrees.",
+      "name": "compute_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_angle_from_sides(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Calculate angles of a triangle given its side lengths using cosine rule.",
+      "name": "calculate_angle_from_sides",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Calculate angles of a triangle given its sides using the cosine rule.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin, pi\n\ndef evaluate_arcsin(value):\n    if value < -1 or value > 1:\n        raise ValueError('Value must be in the range [-1, 1].')\n    return asin(value).evalf()",
+      "description": "Evaluate arcsin for a given value.",
+      "name": "evaluate_arcsin",
+      "packages": "sympy"
+    }
+  }
+]

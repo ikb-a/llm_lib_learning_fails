@@ -1,0 +1,10 @@
+{
+  "calculate_distance_3d": {
+    "code": "import math\ndef calculate_distance_3d(point1, point2):\n    x1, y1, z1 = point1\n    x2, y2, z2 = point2\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)\n    return distance",
+    "packages": "math"
+  },
+  "evaluate_math_problem": {
+    "code": "from sympy import symbols, solve, SympifyError\n\ndef evaluate_math_problem(problem_statement):\n    try:\n        x, y, z = symbols('x y z')\n        # Using a safer way to evaluate a math expression\n        locals_dict = {'x': x, 'y': y, 'z': z, 'solve': solve}\n        expr = eval(problem_statement, {\"__builtins__\": None}, locals_dict)  \n        return expr\n    except SympifyError as e:\n        return str(e)\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  }
+}

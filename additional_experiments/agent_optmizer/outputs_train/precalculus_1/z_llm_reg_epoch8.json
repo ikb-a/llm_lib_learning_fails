@@ -1,0 +1,106 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+      "name": "calculate_tangent_arccos",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "The tangent of angle alpha.",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "The tangent of angle beta.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the tangent of the difference between two angles",
+      "name": "tan_difference",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "Tangent of angle alpha",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "Tangent of angle beta",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles of a triangle given its side lengths and return in degrees.",
+      "name": "calculate_triangle_angles",
+      "parameters": {
+        "properties": {
+          "side_a": {
+            "description": "Length of side a.",
+            "type": "integer"
+          },
+          "side_b": {
+            "description": "Length of side b.",
+            "type": "integer"
+          },
+          "side_c": {
+            "description": "Length of side c.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the orthocenter of a triangle using vertices A, B, and C given as tuples.",
+      "name": "get_orthocenter",
+      "parameters": {
+        "properties": {
+          "A": {
+            "description": "Tuple representing vertex A (x,y,z).",
+            "type": "object"
+          },
+          "B": {
+            "description": "Tuple representing vertex B (x,y,z).",
+            "type": "object"
+          },
+          "C": {
+            "description": "Tuple representing vertex C (x,y,z).",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

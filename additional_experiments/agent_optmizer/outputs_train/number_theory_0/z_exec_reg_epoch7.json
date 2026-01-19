@@ -1,0 +1,30 @@
+{
+  "calculate_distinct_remainders_sum": {
+    "code": "def calculate_distinct_remainders_sum(start, end, modulus):\n    if end < start:\n        return 0\n    distinct_remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        distinct_remainders.add(remainder)\n    return sum(distinct_remainders)",
+    "packages": "sympy"
+  },
+  "calculate_remainder": {
+    "code": "def calculate_remainder(number, modulus):\n    if modulus == 0:\n        return 'Division by zero is not allowed.'\n    return number % modulus",
+    "packages": ""
+  },
+  "convert_decimal_to_any_base": {
+    "code": "def convert_decimal_to_any_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "convert_decimal_to_base": {
+    "code": "def convert_decimal_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "find_last_digit_in_base": {
+    "code": "def find_last_digit_in_base(number, base):\n    return number % base",
+    "packages": ""
+  },
+  "get_modular_exponentiation": {
+    "code": "def get_modular_exponentiation(base, exponent, modulus):\n    return pow(base, exponent, modulus)",
+    "packages": "sympy"
+  },
+  "modular_inverse": {
+    "code": "import sympy as sp\n\ndef modular_inverse(a, m):\n    gcd, x, _ = sp.gcdex(a, m)\n    return x % m if gcd == 1 else None  # Ensure the inverse is positive or return None if not invertible",
+    "packages": "sympy"
+  }
+}

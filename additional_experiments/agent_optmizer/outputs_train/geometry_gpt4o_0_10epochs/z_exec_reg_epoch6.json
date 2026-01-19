@@ -1,0 +1,14 @@
+{
+  "calculate_distance": {
+    "code": "import math\n\ndef calculate_distance(point1, point2):\n    # Ensure the points are of the same dimension\n    if len(point1) != len(point2):\n        raise ValueError(\"Points must be of the same dimension.\")\n    \n    # Calculate the Euclidean distance\n    distance = math.sqrt(sum((x - y) ** 2 for x, y in zip(point1, point2)))\n    return distance",
+    "packages": "math"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\nfrom sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application\n\ndef evaluate_expression(expression):\n    # Transformations to allow implicit multiplication and standard parsing\n    transformations = (standard_transformations + (implicit_multiplication_application,))\n    try:\n        parsed_expr = parse_expr(expression, transformations=transformations)\n        result = parsed_expr.simplify()\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n            if 'I' not in result:  # Check to prevent imaginary numbers in basic algebra calculations\n                # Ensure that radicals are represented in simplified fractional form\n                result = result.evalf() if parsed_expr.is_number else result\n        return result\n    except (SympifyError, SyntaxError) as e:\n        return str(e)\n",
+    "packages": "sympy"
+  },
+  "solve_pythagorean_theorem": {
+    "code": "import math\n\ndef solve_pythagorean_theorem(a, b, c=None):\n    \"\"\"Given two sides a and b, returns the length of the third side, or verifies if a, b, and c form a right triangle.\"\"\"\n    if c is None:\n        if a == 0 or b == 0:\n            return \"Invalid side length\"\n        return math.sqrt(a**2 + b**2)\n    else:\n        # Sort the sides to ensure c is the largest (hypotenuse)\n        sides = sorted([a, b, c])\n        return \"Forms a right triangle\" if math.isclose(sides[2]**2, sides[0]**2 + sides[1]**2) else \"Does not form a right triangle\"",
+    "packages": "math"
+  }
+}

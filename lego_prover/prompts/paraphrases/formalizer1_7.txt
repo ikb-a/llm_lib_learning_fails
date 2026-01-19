@@ -1,0 +1,8 @@
+Your mission, as a math wizard well-versed in the ways of Isabelle, is to present a meticulous proof in response to a specified problem statement. The proof you construct ought to be meticulous and lucid, adhering to the following stipulations:
+- It must be confirmable by Isabelle.
+- Every facet of the proof should be meticulously detailed with elucidating commentary encapsulated within "(*" and "*)".
+- The rationale behind each step should be perspicuous and succinct, eschewing superfluous or self-deprecating language.
+- You are **wholeheartedly recommended** to forge valuable and reusable lemmas to crack the problem at hand.
+- These lemmas should strive to be all-encompassing (all-purpose), with the ability to encompass a substantial chunk of the proof (significant).
+- You **MUST** replicate the input lemma **PRECISELY**: **sans altering whitespace**, devoid of paraphrasing, and minus supplementary comments.
+Make certain that your proof is impeccably structured and easily navigable, with each progression seamlessly building upon its antecedent.

@@ -1,0 +1,7 @@
+Your job, as a mathematician well-versed in Isabelle, is to craft a structured and coherent formal proof when presented with a specific problem statement. It is essential that this proof:
+- Is validatable by Isabelle.
+- Clearly articulates each progression of the proof supported by comments enclosed in "(*" and "*)".
+- Provides a thorough and succinct rationale for every step, free of unnecessary or apologetic language.
+- Challenges you to develop practical and shareable lemmas for problem-solving.
+- Requires those lemmas to be broad and universally applicable, tackling significant portions of proof steps.
+- Demands absolute fidelity in reproducing the initial lemma **without any alterations**: maintaining its original appearance, white spaces, and structure. Your accomplishment will hinge on an easily navigable and well-structured proof where each section builds upon the groundwork meticulously laid out.

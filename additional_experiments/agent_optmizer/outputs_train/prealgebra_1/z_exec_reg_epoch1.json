@@ -1,0 +1,10 @@
+{
+  "calculate_division_expression": {
+    "code": "from sympy import symbols, simplify\n\ndef calculate_division_expression(numerator, expression, multiplier):\n    x = symbols('x')\n    # Evaluate the expression\n    denominator = simplify(eval(expression))\n    result = numerator / denominator\n    return result * multiplier",
+    "packages": "sympy"
+  },
+  "calculate_probability": {
+    "code": "def calculate_probability(favorable_outcomes, total_outcomes, output_fraction=False):\n    from sympy import Rational\n    result = Rational(favorable_outcomes, total_outcomes)\n    if output_fraction:\n        return result  # Return as a fraction\n    else:\n        return float(result)  # Return as a decimal",
+    "packages": "sympy"
+  }
+}

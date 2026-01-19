@@ -1,0 +1,282 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate how many pounds of corn and beans based on given weights and costs in a single function.",
+      "name": "add_weighted_items",
+      "parameters": {
+        "properties": {
+          "beans_cost": {
+            "description": "Cost per pound of beans.",
+            "type": "integer"
+          },
+          "corn_cost": {
+            "description": "Cost per pound of corn.",
+            "type": "integer"
+          },
+          "total_cost": {
+            "description": "Total cost in cents.",
+            "type": "integer"
+          },
+          "total_weight": {
+            "description": "Total weight of corn and beans.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of pounds of each type of item based on total weight and individual item costs.",
+      "name": "get_number_of_pounds_of_items",
+      "parameters": {
+        "properties": {
+          "item_costs": {
+            "description": "An object mapping item names to their costs.",
+            "type": "object"
+          },
+          "total_cost": {
+            "description": "Total cost in cents.",
+            "type": "integer"
+          },
+          "total_weight": {
+            "description": "Total weight of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the total weight of corn and beans based on total weight, costs, and their individual prices.",
+      "name": "calculate_total_corn_and_beans",
+      "parameters": {
+        "properties": {
+          "beans_cost": {
+            "description": "Cost per pound of beans.",
+            "type": "integer"
+          },
+          "corn_cost": {
+            "description": "Cost per pound of corn.",
+            "type": "integer"
+          },
+          "total_cost": {
+            "description": "Total cost in cents.",
+            "type": "integer"
+          },
+          "total_weight": {
+            "description": "Total weight of corn and beans.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of pounds of corn Shea bought based on total costs and weights.",
+      "name": "calculate_pounds_of_corn",
+      "parameters": {
+        "properties": {
+          "beans_cost": {
+            "description": "Cost per pound of beans.",
+            "type": "integer"
+          },
+          "corn_cost": {
+            "description": "Cost per pound of corn.",
+            "type": "integer"
+          },
+          "total_cost": {
+            "description": "Total cost in cents.",
+            "type": "integer"
+          },
+          "total_weight": {
+            "description": "Total weight of corn and beans.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate a constant arithmetic or mathematical expression directly without needing to parse a string.",
+      "name": "evaluate_constant_expression",
+      "parameters": {
+        "properties": {
+          "input_value": {
+            "description": "The constant value to evaluate.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the total price for a given weight of items based on their costs.",
+      "name": "calculate_weight_price",
+      "parameters": {
+        "properties": {
+          "cost_per_pound": {
+            "description": "Cost per pound of the item.",
+            "type": "integer"
+          },
+          "weight": {
+            "description": "Total weight of the items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a 2D space given their coordinates.",
+      "name": "calculate_distance",
+      "parameters": {
+        "properties": {
+          "x1": {
+            "description": "The x-coordinate of the first point.",
+            "type": "integer"
+          },
+          "x2": {
+            "description": "The x-coordinate of the second point.",
+            "type": "integer"
+          },
+          "y1": {
+            "description": "The y-coordinate of the first point.",
+            "type": "integer"
+          },
+          "y2": {
+            "description": "The y-coordinate of the second point.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the sum of odd integers up to a given limit.",
+      "name": "calculate_sum_of_odds",
+      "parameters": {
+        "properties": {
+          "limit": {
+            "description": "The upper limit for the odd integers to sum.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate total weight cost based on weight and cost per pound for multiple items.",
+      "name": "calculate_weight_cost",
+      "parameters": {
+        "properties": {
+          "costs": {
+            "description": "An object mapping item names to their costs.",
+            "type": "object"
+          },
+          "weights": {
+            "description": "An object mapping item names to their weights.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the sum of an arithmetic or geometric sequence based on the type and parameters provided.",
+      "name": "calculate_sum_of_sequence",
+      "parameters": {
+        "properties": {
+          "common_difference": {
+            "description": "The common difference (for arithmetic sequences) or common ratio (for geometric sequences).",
+            "type": "integer"
+          },
+          "first_term": {
+            "description": "The first term of the sequence.",
+            "type": "integer"
+          },
+          "num_terms": {
+            "description": "The total number of terms in the sequence.",
+            "type": "integer"
+          },
+          "sequence_type": {
+            "description": "'arithmetic' or 'geometric'",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the sum of the first n terms of a sequence given the first term, common difference, and number of terms.",
+      "name": "calculate_sum_of_n_terms",
+      "parameters": {
+        "properties": {
+          "common_difference": {
+            "description": "The common difference (for arithmetic sequences) or common ratio (for geometric sequences).",
+            "type": "integer"
+          },
+          "first_term": {
+            "description": "The first term of the sequence.",
+            "type": "integer"
+          },
+          "num_terms": {
+            "description": "The total number of terms in the sequence.",
+            "type": "integer"
+          },
+          "sequence_type": {
+            "description": "'arithmetic' or 'geometric'",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

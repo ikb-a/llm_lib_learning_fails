@@ -1,0 +1,82 @@
+{
+  "calculate_distinct_remainders_sum": {
+    "code": "def calculate_distinct_remainders_sum(start, end, modulus):\n    if end < start:\n        return 0\n    distinct_remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        distinct_remainders.add(remainder)\n    return sum(distinct_remainders), distinct_remainders",
+    "packages": "sympy"
+  },
+  "calculate_modulo": {
+    "code": "def calculate_modulo(number, modulus):\n    return number % modulus",
+    "packages": ""
+  },
+  "calculate_remainder": {
+    "code": "def calculate_remainder(number, modulus):\n    if modulus == 0:\n        return 'Division by zero is not allowed.'\n    return number % modulus",
+    "packages": ""
+  },
+  "calculate_remainders": {
+    "code": "def calculate_remainders(start, end, modulus):\n    if end < start:\n        return 0, 0\n    remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        remainders.add(remainder)\n    return sum(remainders), len(remainders);",
+    "packages": "sympy"
+  },
+  "calculate_square_and_remainder": {
+    "code": "def calculate_square_and_remainder(start, end, modulus):\n    squares = [n**2 for n in range(start, end + 1)]\n    remainders = [square % modulus for square in squares]\n    distinct_remainders = set(remainders)\n    return distinct_remainders, sum(distinct_remainders);",
+    "packages": "sympy"
+  },
+  "calculate_square_modulus": {
+    "code": "def calculate_square_modulus(start, end, modulus):\n    distinct_remainders = set();\n    for n in range(start, end + 1):\n        distinct_remainders.add((n ** 2) % modulus);\n    return distinct_remainders;",
+    "packages": "sympy"
+  },
+  "calculate_squared_remainders": {
+    "code": "def calculate_squared_remainders(start, end, modulus):\n    distinct_remainders = set();\n    for n in range(start, end + 1):\n        remainder = (n ** 2) % modulus;\n        distinct_remainders.add(remainder);\n    return distinct_remainders, sum(distinct_remainders);",
+    "packages": "sympy"
+  },
+  "calculate_squares_and_remainders": {
+    "code": "def calculate_squares_and_remainders(start, end, modulus):\n    distinct_remainders = set();\n    for n in range(start, end + 1):\n        remainder = (n ** 2) % modulus;\n        distinct_remainders.add(remainder);\n    return distinct_remainders, sum(distinct_remainders);",
+    "packages": "sympy"
+  },
+  "convert_decimal_to_any_base": {
+    "code": "def convert_decimal_to_any_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "convert_decimal_to_base": {
+    "code": "def convert_decimal_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "convert_decimal_to_fraction": {
+    "code": "from fractions import Fraction\nimport re\n\ndef convert_decimal_to_fraction(decimal_string):\n    # Check for repeating decimals with regex\n    match = re.match(r'^(\\d*\\.\\d*?)\\(\\d+\\)$', decimal_string)\n\n    if match:\n        non_repeating = match.group(1)\n        repeating = match.group(2)\n        non_repeating_digits = non_repeating.replace('.', '')\n        non_repeating_decimal = non_repeating if '.' in non_repeating else non_repeating + '.0'\n        repeating_decimal = repeating\n\n        # Lengths of parts\n        len_non_repeating = len(non_repeating_digits)\n        len_repeating = len(repeating)\n\n        # Creating the fractions\n        a = Fraction(non_repeating_decimal).limit_denominator()\n        b = (10**len_non_repeating) * (10**len_repeating - 1)\n        c = int(non_repeating_decimal.replace('.', ''))\n        d = a.numerator % b\n\n        return Fraction(d, b).limit_denominator()\n    else:\n        # Non-repeating decimals directly convert to a fraction\n        return Fraction(float(decimal_string)).limit_denominator()",
+    "packages": "fractions"
+  },
+  "convert_from_decimal": {
+    "code": "def convert_from_decimal(number, base):\n    if number < 0:\n        return '-' + convert_from_decimal(-number, base)\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return '0'\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "convert_to_base": {
+    "code": "def convert_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "find_last_digit_in_base": {
+    "code": "def find_last_digit_in_base(number, base):\n    return number % base",
+    "packages": ""
+  },
+  "gcd": {
+    "code": "import math\n\ndef gcd(a, b):\n    return math.gcd(a, b)",
+    "packages": "math"
+  },
+  "get_modular_exponentiation": {
+    "code": "def get_modular_exponentiation(base, exponent, modulus):\n    return pow(base, exponent, modulus)",
+    "packages": "sympy"
+  },
+  "modular_exponentiation": {
+    "code": "def modular_exponentiation(base, exponent, modulus):\n    return pow(base, exponent, modulus)",
+    "packages": ""
+  },
+  "modular_inverse": {
+    "code": "def modular_inverse(a, m):\n    if a < 1 or m <= 1:\n        return None  # Inverse doesn't exist if a is less than 1 or modulus is less than or equal to 1\n    gcd, x, _ = sp.gcdex(a, m)\n    return x % m if gcd == 1 else None",
+    "packages": "sympy"
+  },
+  "remainder_and_quotient": {
+    "code": "def remainder_and_quotient(number, modulus):\n    if modulus == 0:\n        return 'Division by zero is not allowed.', None\n    remainder = number % modulus\n    quotient = number // modulus\n    return remainder, quotient",
+    "packages": ""
+  },
+  "sum_of_digits_in_base": {
+    "code": "def sum_of_digits_in_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    total = 0\n    digits = convert_to_base(number, base)\n    for digit in digits:\n        total += int(digit)\n    return total",
+    "packages": ""
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "calculate_angle_from_sides": {
+    "code": "import sympy as sp\ndef calculate_angle_from_sides(a, b, c):\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+    "packages": "sympy"
+  },
+  "calculate_angles": {
+    "code": "import sympy as sp\ndef calculate_angles(side_a, side_b, side_c):\n    angle_A = sp.acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    angle_B = sp.acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    angle_C = sp.acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+    "packages": "sympy"
+  },
+  "calculate_angles_of_triangle": {
+    "code": "import sympy as sp\ndef calculate_angles_of_triangle(a, b, c):\n    if a + b > c and a + c > b and b + c > a:  # Check if a triangle can be formed\n        angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n        angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n        angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n        return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)\n    else:\n        return None, None, None",
+    "packages": "sympy"
+  },
+  "calculate_tangent_arccos": {
+    "code": "def calculate_tangent_arccos(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + tan_alpha * tan_beta\n    return numerator / denominator",
+    "packages": "sympy"
+  },
+  "calculate_triangle_angles": {
+    "code": "import sympy as sp\ndef calculate_triangle_angles(side_a, side_b, side_c):\n    angle_A = sp.acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    angle_B = sp.acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    angle_C = sp.acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+    "packages": "sympy"
+  },
+  "calculate_triangle_properties": {
+    "code": "import sympy as sp\ndef calculate_triangle_properties(a, b, c):\n    import sympy as sp\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    angle_A_degrees = sp.deg(angle_A)\n    angle_B_degrees = sp.deg(angle_B)\n    angle_C_degrees = sp.deg(angle_C)\n    # Area using Heron's formula\n    s = (a + b + c) / 2\n    area = sp.sqrt(s * (s - a) * (s - b) * (s - c))\n    return angle_A_degrees, angle_B_degrees, angle_C_degrees, area",
+    "packages": "sympy"
+  },
+  "evaluate_angle_expression": {
+    "code": "import sympy as sp\ndef evaluate_angle_expression(a, b, c):\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return (sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C))",
+    "packages": "sympy"
+  },
+  "evaluate_arcsin": {
+    "code": "from sympy import asin, pi\n\ndef evaluate_arcsin(value):\n    try:\n        value = float(value)\n        if value < -1 or value > 1:\n            return \"Value out of range for arcsin\"\n        return asin(value)  # Will return in radians\n    except ValueError:\n        return \"Invalid input\"",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        return result.evalf() if result.is_number else str(result)\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "evaluate_tangent_difference": {
+    "code": "def evaluate_tangent_difference(tan_alpha, tan_beta):\n    return (tan_alpha - tan_beta) / (1 + tan_alpha * tan_beta)",
+    "packages": "sympy"
+  },
+  "get_orthocenter": {
+    "code": "import numpy as np\n\ndef get_orthocenter(A, B, C):\n    def cross_product(v1, v2):\n        return np.cross(v1, v2)\n\n    # Vectors from A to B and A to C\n    AB = np.array(B) - np.array(A)\n    AC = np.array(C) - np.array(A)\n    \n    # Normal vector of the plane defined by A, B, and C\n    normal_vector = cross_product(AB, AC)\n    \n    # Parametric equations of the altitude from point A\n    # Substitute as required to find the intersection with line BC\n    return normal_vector",
+    "packages": "numpy"
+  },
+  "sum_trigonometric_expression": {
+    "code": "import sympy as sp\n\ndef sum_trigonometric_expression(start, end, function_type):\n    total_sum = 0\n    for angle in range(start, end + 1):\n        if function_type == 'cos':\n            total_sum += sp.cos(sp.rad(angle))\n        elif function_type == 'sin':\n            total_sum += sp.sin(sp.rad(angle))\n        elif function_type == 'tan':\n            total_sum += sp.tan(sp.rad(angle))\n    return total_sum",
+    "packages": "sympy"
+  },
+  "tan_difference": {
+    "code": "def tan_difference(tan_alpha, tan_beta):\n    return (tan_alpha - tan_beta) / (1 + tan_alpha * tan_beta)",
+    "packages": "sympy"
+  },
+  "validate_expression": {
+    "code": "from sympy import sin, cos, tan\ndef validate_expression(theta):\n    return {\n        'sin': sin(theta),\n        'cos': cos(theta),\n        'tan': tan(theta),\n    }",
+    "packages": "sympy"
+  }
+}

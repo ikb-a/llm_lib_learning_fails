@@ -1,0 +1,88 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the volume and surface area of a geometric shape given its dimensions.",
+      "name": "calculate_code_properties",
+      "parameters": {
+        "properties": {
+          "dimensions": {
+            "description": "The dimensions needed for the calculation, such as radius, height, etc.",
+            "properties": {
+              "height": {
+                "type": "integer"
+              },
+              "radius": {
+                "type": "integer"
+              }
+            },
+            "type": "object"
+          },
+          "shape": {
+            "description": "The type of the shape, e.g., cone, sphere, cylinder.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+      "name": "evaluate_math_problem",
+      "parameters": {
+        "properties": {
+          "problem_statement": {
+            "description": "The mathematical problem statement to be solved.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve mathematical tasks using sympy for symbolic computation, given equations and variables to solve for.",
+      "name": "solve_task_with_sympy",
+      "parameters": {
+        "properties": {
+          "equations": {
+            "description": "An array of mathematical equations or expressions to be solved.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "variables": {
+            "description": "An array of variables to solve for.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a sphere given its radius.",
+      "name": "calculate_volume_of_sphere",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the sphere.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

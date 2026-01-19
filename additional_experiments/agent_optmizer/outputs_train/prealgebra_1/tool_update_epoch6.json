@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_slope(x1, y1, x2, y2):\n    if x2 - x1 == 0:\n        return 'Undefined slope (vertical line)'\n    return (y2 - y1) / (x2 - x1)",
+      "description": "Calculate the slope of a line given two points (x1, y1) and (x2, y2).",
+      "name": "calculate_slope",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_probability(favorable_outcomes, total_outcomes, output_fraction=False):\n    from sympy import Rational\n    if total_outcomes <= 0:\n        return 'Total outcomes must be greater than zero.'  # Error handling\n    if favorable_outcomes < 0:\n        return 'Favorable outcomes cannot be negative.'  # Error handling\n    result = Rational(favorable_outcomes, total_outcomes)\n    if output_fraction:\n        return result  # Return as a fraction\n    else:\n        return float(result)  # Return as a decimal",
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_remainder(numerator, denominator):\n    if denominator == 0:\n        return 'Denominator must not be zero.'  # Error handling\n    return numerator % denominator",
+      "description": "Calculate the remainder of a division operation.",
+      "name": "calculate_remainder",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_sum_of_primes(start, end):\n    from sympy import primerange\n    primes = list(primerange(start, end))\n    return len(primes), primes",
+      "description": "Calculate the number of prime numbers in a given range.",
+      "name": "calculate_sum_of_primes",
+      "packages": "sympy"
+    }
+  }
+]

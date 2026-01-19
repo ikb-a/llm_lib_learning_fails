@@ -1,0 +1,30 @@
+{
+  "calculate_angle": {
+    "code": "from sympy import acos, deg\n\ndef calculate_angle(a, b, c):\n    return deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n",
+    "packages": "sympy"
+  },
+  "calculate_angles": {
+    "code": "from sympy import acos, deg\n\ndef calculate_angles(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    return (A, B, C)",
+    "packages": "sympy"
+  },
+  "calculate_arcsin": {
+    "code": "from sympy import asin, pi\n\ndef calculate_arcsin(x):\n    arcsin_value = asin(x)\n    return arcsin_value, arcsin_value.evalf() * (180/pi)",
+    "packages": "sympy"
+  },
+  "calculate_tan_difference": {
+    "code": "from sympy import Rational\n\ndef calculate_tan_difference(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + (tan_alpha * tan_beta)\n    result = Rational(numerator, denominator)\n    return result",
+    "packages": "sympy"
+  },
+  "compute_tan_difference": {
+    "code": "from sympy import Rational\n\ndef compute_tan_difference(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + (tan_alpha * tan_beta)\n    result = Rational(numerator, denominator)\n    return result",
+    "packages": "sympy"
+  },
+  "find_domain_of_tan_arccos": {
+    "code": "def find_domain_of_tan_arccos():\n    return '[-1, 0) \u222a (0, 1]'",
+    "packages": ""
+  },
+  "validate_and_compute_tan_difference": {
+    "code": "from sympy import Rational\n\ndef validate_and_compute_tan_difference(tan_alpha, tan_beta):\n    if isinstance(tan_alpha, (int, float)) and isinstance(tan_beta, (int, float)):\n        numerator = tan_alpha - tan_beta\n        denominator = 1 + (tan_alpha * tan_beta)\n        if denominator == 0:\n            return \"Undefined (division by zero)\"\n        result = Rational(numerator, denominator)\n        return result\n    else:\n        return \"Invalid input types for tangent values.\"",
+    "packages": "sympy"
+  }
+}

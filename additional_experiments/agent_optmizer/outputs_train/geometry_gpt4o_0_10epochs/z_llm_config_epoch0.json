@@ -1,0 +1,11 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ]
+}

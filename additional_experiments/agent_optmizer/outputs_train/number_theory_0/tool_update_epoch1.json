@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def convert_decimal_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "description": "Convert a decimal number to a specified base and return its representation as a string.",
+      "name": "convert_decimal_to_base",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def find_last_digit_in_base(number, base):\n    return number % base",
+      "description": "Find the last digit of a number when presented in a specified base.",
+      "name": "find_last_digit_in_base",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_remainders(start, end, modulus):\n    remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        remainders.add(remainder)\n    return sum(remainders), len(remainders)",
+      "description": "Calculate the distinct remainders when the squares of integers in a specified range are divided by a given modulus, and return their sum and count.",
+      "name": "calculate_remainders",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_distinct_remainders_sum(start, end, modulus):\n    distinct_remainders = set()\n    for n in range(start, end + 1):\n        square = n**2\n        remainder = square % modulus\n        distinct_remainders.add(remainder)\n    return sum(distinct_remainders) \n",
+      "description": "Calculate the sum of distinct remainders of squares of integers in a specified range when divided by a given modulus.",
+      "name": "calculate_distinct_remainders_sum",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def modular_inverse(a, m):\n    gcd, x, y = sp.gcdex(a, m)\n    return x % m  # Ensure the inverse is positive",
+      "description": "Calculate the modular inverse of a number with respect to a given modulus using the Extended Euclidean Algorithm.",
+      "name": "modular_inverse",
+      "packages": "sympy"
+    }
+  }
+]

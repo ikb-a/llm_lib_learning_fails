@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from math import factorial\n\ndef calculate_arrangements(total_items, duplicates):\n    denominator = 1\n    for count in duplicates.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+      "description": "Calculate the arrangements of distinct items considering duplicates.",
+      "name": "calculate_arrangements",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days, p_rolls):\n    expected_per_day = Rational(6, 5)  # Expected rolls per day\n    return days * expected_per_day",
+      "description": "Calculate the expected number of rolls given specific outcomes and total days.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls_with_retries(days):\n    expected_per_roll = Rational(6, 5)  # Expected rolls per day accounting for retries\n    return days * expected_per_roll",
+      "description": "Calculate the expected number of rolls given specific outcomes and total days, accounting for retries when rolling a 1.",
+      "name": "calculate_expected_rolls_with_retries",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls_per_year(days, rolls_per_day):\n    return days * Rational(rolls_per_day)",
+      "description": "Calculate the expected number of die rolls for a given number of days and based on the probability of rolling a composite number.",
+      "name": "calculate_expected_rolls_per_year",
+      "packages": "sympy"
+    }
+  }
+]

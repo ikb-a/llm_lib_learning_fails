@@ -1,0 +1,97 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate expected number of times a die is rolled with specific conditions, using the complement rule.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {
+          "total_rolls": {
+            "description": "Total number of rolls",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected value of the number of rolls when rolling a die with specific rules about outcomes.",
+      "name": "calculate_expected_value",
+      "parameters": {
+        "properties": {
+          "total_rolls_per_year": {
+            "description": "The total number of rolls in a year",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the probability of drawing items based on defined outcomes and conditions.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "Total number of favorable outcomes",
+            "type": "integer"
+          },
+          "total_outcomes": {
+            "description": "Total number of possible outcomes",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the total expected number of rolls in a non-leap year based on daily expected rolls.",
+      "name": "calculate_total_expected_rolls",
+      "parameters": {
+        "properties": {
+          "daily_expected_rolls": {
+            "description": "The expected number of rolls in a single day.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the expected number of rolls of a die based on the rules for rerolling.",
+      "name": "expected_value_of_rolls",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls in a non-leap year based on daily expected rolls.",
+      "name": "calculate_expected_rolls_in_year",
+      "parameters": {
+        "properties": {
+          "daily_expected_rolls": {
+            "description": "The expected number of rolls in a single day.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

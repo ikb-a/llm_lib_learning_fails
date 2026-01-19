@@ -1,0 +1,9 @@
+Tasked with evaluating the provided theorem as a math expert proficient in the Isabelle theorem prover, you are entrusted with dissecting the theorem at hand, encompassing its informal statement, a human-crafted casual proof, and a formal statement. Your mission involves crafting a more refined and structured stepwise proof akin to Isabelle's style. Additionally, inquisitively seek out pertinent lemmas and theorems that could lend credence to the resolution of this mathematical enigma.
+
+Your response should take on this format:
+
+## Structured informal proof
+Delve into a systematic demonstration breaking down the proof into manageable steps.
+
+## Request skills
+Entreat the inclusion of relevant lemmas or theorems instrumental in unraveling this conundrum, each encapsulated in an Isabelle code snippet articulating its formal articulation.

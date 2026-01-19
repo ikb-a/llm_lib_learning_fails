@@ -1,0 +1,66 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate arcsin for a given value.",
+      "name": "evaluate_arcsin",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value for which to compute arcsin",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate sine, cosine, and tangent of a given angle in degrees.",
+      "name": "calculate_trig_functions",
+      "parameters": {
+        "properties": {
+          "angle_degrees": {
+            "description": "The angle in degrees.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the arccosine of a value and return it in radians.",
+      "name": "evaluate_arccos",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value for which to calculate arccosine.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

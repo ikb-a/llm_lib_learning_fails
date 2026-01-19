@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\n\ndef solve_triangle_angles(side_a, side_b, side_c):\n    a = sp.sympify(side_a)\n    b = sp.sympify(side_b)\n    c = sp.sympify(side_c)\n\n    # Calculate cosines using the Law of Cosines\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    cos_B = (a**2 + c**2 - b**2) / (2 * a * c)\n    cos_C = (a**2 + b**2 - c**2) / (2 * a * b)\n\n    # Calculate angles in degrees\n    angle_A = sp.acos(cos_A) * 180 / sp.pi\n    angle_B = sp.acos(cos_B) * 180 / sp.pi\n    angle_C = sp.acos(cos_C) * 180 / sp.pi\n\n    return (angle_A.evalf(), angle_B.evalf(), angle_C.evalf())",
+      "description": "Solve for the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "solve_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix\n\ndef compute_vector_projection(v, w):\n    v = Matrix(v)\n    w = Matrix(w)\n    dot_vw = v.dot(w)\n    dot_ww = w.dot(w)\n    proj_v_on_w = (dot_vw / dot_ww) * w\n    return proj_v_on_w.tolist()",
+      "description": "Compute the projection of vector v onto vector w using the dot product.",
+      "name": "compute_vector_projection",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve, simplify, sympify, atan2, acos, sqrt, pi, Matrix\n\ndef solve_question_with_sympy(problem_description, variables):\n    try:\n        # Convert natural language problem description to a solvable format\n        symbols_list = symbols(variables)\n\n        # Convert problem to lower for easy matching\n        problem_lower = problem_description.lower()\n\n        # Resolve commonly encountered problem descriptions\n        # Coordinate conversion\n        if 'convert rectangular coordinates' in problem_lower:\n            coords_str = problem_description.split('(')[1].split(')')[0]\n            x, y, z = map(sympify, coords_str.split(','))\n            rho = sqrt(x**2 + y**2 + z**2)\n            theta = atan2(y, x)\n            if theta < 0:\n                theta += 2 * pi\n            phi = acos(z / rho)\n            return (rho, theta, phi)\n\n        # Solve equations and find intersections\n        if 'intersection' in problem_lower or '=' in problem_lower:\n            eqs = [eq.strip() for eq in problem_description.split('and')]\n            equations = [Eq(simplify(sympify(eq.split('=')[0])), simplify(sympify(eq.split('=')[1]))) for eq in eqs]\n            solution = solve(equations, symbols_list)\n            return solution if solution else \"No solution found.\"\n\n        # Evaluate expressions directly\n        sym_expr = sympify(problem_description)\n        if '=' in problem_lower:\n            lhs, rhs = map(sympify, problem_description.split('='))\n            solution = solve(lhs - rhs, symbols_list)\n            return solution\n        else:\n            solution = solve(sym_expr, symbols_list)\n            return solution if solution else \"Solved without result.\"\n\n    except Exception as e:\n        return f\"Error occurred: {str(e)}\"",
+      "description": "Solves a variety of mathematical problems by formulating equations, systems of equations, and numeric computations using SymPy. Includes enhancements for better parsing, evaluation, and handling of specific symbolic expressions and numeric calculations.",
+      "name": "solve_question_with_sympy",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, simplify, Rational\n\ndef evaluate_math_expression(expression):\n    try:\n        expr = sympify(expression)\n        result = simplify(expr)\n        # Ensure result is returned as a rational number if applicable\n        if result.is_number:\n            result = Rational(str(result))\n        return result\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings and return the result as a simplified expression.",
+      "name": "evaluate_math_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Matrix, sympify\n\ndef find_plane_equation_from_points(point1, point2, point3):\n    # Convert points to sympy vector format\n    p1 = Matrix([sympify(coord) for coord in point1])\n    p2 = Matrix([sympify(coord) for coord in point2])\n    p3 = Matrix([sympify(coord) for coord in point3])\n\n    # Create vectors from points\n    v1 = p2 - p1\n    v2 = p3 - p1\n\n    # Calculate the normal vector through cross product\n    normal_vector = v1.cross(v2)\n    A, B, C = normal_vector\n\n    # Calculate D using a point from the plane\n    D = -(A*p1[0] + B*p1[1] + C*p1[2])\n\n    # To ensure integers as output and gcd(A,B,C,D) = 1 while A > 0\n    gcd_val = gcd(A, gcd(B, gcd(C, D)))\n    A, B, C, D = A/gcd_val, B/gcd_val, C/gcd_val, D/gcd_val\n    if A < 0:\n        A, B, C, D = -A, -B, -C, -D\n\n    return A, B, C, D",
+      "description": "Finds the equation of a plane given three points in 3D space, using the sympy package to compute cross products and determine the coefficients of the plane's equation in the form Ax + By + Cz + D = 0.",
+      "name": "find_plane_equation_from_points",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, sqrt, atan2, acos, pi\n\ndef convert_coordinates_to_spherical(x, y, z):\n    x, y, z = sympify(x), sympify(y), sympify(z)\n    rho = sqrt(x**2 + y**2 + z**2)\n    theta = atan2(y, x)\n    if theta < 0:\n        theta += 2 * pi\n    phi = acos(z / rho)\n    return rho, theta, phi",
+      "description": "Convert a point from rectangular coordinates to spherical coordinates (rho, theta, phi) where rho > 0, 0 <= theta < 2*pi, and 0 <= phi <= pi.",
+      "name": "convert_coordinates_to_spherical",
+      "packages": "sympy"
+    }
+  }
+]

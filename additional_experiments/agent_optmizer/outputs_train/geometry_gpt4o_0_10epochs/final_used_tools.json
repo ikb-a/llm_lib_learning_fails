@@ -1,0 +1,58 @@
+{
+  "calculate_cone_properties": {
+    "code": "import math\n\ndef calculate_cone_properties(radius, height):\n    \"\"\"Calculate the volume and lateral surface area of a cone.\"\"\"\n    # Volume of the cone\n    volume = (1/3) * math.pi * radius**2 * height\n    # Slant height of the cone\n    slant_height = math.sqrt(radius**2 + height**2)\n    # Lateral surface area\n    lateral_surface_area = math.pi * radius * slant_height\n    return {\n        'volume': volume,\n        'lateral_surface_area': lateral_surface_area\n    }",
+    "packages": "math"
+  },
+  "calculate_distance": {
+    "code": "import math\n\ndef calculate_distance(point1, point2):\n    # Ensure the points are of the same dimension\n    if len(point1) != len(point2):\n        raise ValueError(\"Points must be of the same dimension.\")\n    \n    # Calculate the Euclidean distance\n    distance = math.sqrt(sum((x - y) ** 2 for x, y in zip(point1, point2)))\n    return distance",
+    "packages": "math"
+  },
+  "calculate_distance_2d": {
+    "code": "import math\n\ndef calculate_distance_2d(point1, point2):\n    x1, y1 = point1\n    x2, y2 = point2\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)\n    return distance",
+    "packages": "math"
+  },
+  "calculate_distance_3d": {
+    "code": "import math\n\ndef calculate_distance_3d(point1, point2):\n    x1, y1, z1 = point1\n    x2, y2, z2 = point2\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)\n    return distance",
+    "packages": "math"
+  },
+  "calculate_right_triangle_leg": {
+    "code": "import math\n\ndef calculate_right_triangle_leg(leg, hypotenuse):\n    \"\"\"Calculate the missing leg of a right triangle given one leg and the hypotenuse.\"\"\"\n    remaining_leg = math.sqrt(hypotenuse**2 - leg**2)\n    return remaining_leg if remaining_leg.is_integer() else round(remaining_leg, 2)",
+    "packages": "math"
+  },
+  "calculate_spherical_volume": {
+    "code": "import math\n\ndef calculate_spherical_volume(diameter):\n    radius = diameter / 2\n    volume = (4/3) * math.pi * (radius ** 3)\n    return volume",
+    "packages": "math"
+  },
+  "calculate_triangle_area": {
+    "code": "def calculate_triangle_area(side1, side2):\n    return (side1 * side2) / 2",
+    "packages": "sympy"
+  },
+  "calculate_triangle_properties": {
+    "code": "from sympy import sqrt, symbols\n\ndef calculate_triangle_properties(side_a=None, side_b=None, side_c=None, vertex1=None, vertex2=None, vertex3=None):\n    properties = {}\n    if side_a and side_b and side_c:\n        # Calculate the area using Heron's formula\n        s = (side_a + side_b + side_c) / 2\n        area = sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))\n        properties['area'] = area\n\n        # Check if it's a right triangle\n        sides = sorted([side_a, side_b, side_c])\n        if sides[0]**2 + sides[1]**2 == sides[2]**2:\n            properties['type'] = 'right'\n        else:\n            properties['type'] = 'not right'\n    elif vertex1 and vertex2 and vertex3:\n        # Calculate sides\n        x1, y1 = vertex1\n        x2, y2 = vertex2\n        x3, y3 = vertex3\n        side_a = sqrt((x2 - x1)**2 + (y2 - y1)**2)\n        side_b = sqrt((x3 - x2)**2 + (y3 - y2)**2)\n        side_c = sqrt((x3 - x1)**2 + (y3 - y1)**2)\n        properties['side_lengths'] = [side_a, side_b, side_c]\n\n    return properties",
+    "packages": "sympy"
+  },
+  "calculate_volume_cone": {
+    "code": "import math\n\ndef calculate_volume_cone(r, h):\n    \"\"\"\n    Calculate the volume of a cone.\n    r: Radius of the base of the cone\n    h: Height of the cone\n    Returns the volume of the cone\n    \"\"\"\n    volume = (1/3) * math.pi * r**2 * h\n    return volume",
+    "packages": "math"
+  },
+  "calculate_volume_surface_cone": {
+    "code": "import math\n\ndef calculate_volume_surface_cone(radius, height):\n    # Calculate the slant height\n    slant_height = math.sqrt(radius**2 + height**2)\n    \n    # Calculate the volume\n    volume = (1/3) * math.pi * radius**2 * height\n    \n    # Calculate the surface area\n    surface_area = math.pi * radius * (radius + slant_height)\n    \n    return volume, surface_area",
+    "packages": "math"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\nfrom sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application\n\ndef evaluate_expression(expression):\n    # Transformations to allow implicit multiplication and standard parsing\n    transformations = (standard_transformations + (implicit_multiplication_application,))\n    try:\n        parsed_expr = parse_expr(expression, transformations=transformations)\n        result = parsed_expr.simplify()\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n            if 'I' not in result:  # Check to prevent imaginary numbers in basic algebra calculations\n                # Ensure that radicals are represented in simplified fractional form\n                result = result.evalf() if parsed_expr.is_number else result\n        return result\n    except (SympifyError, SyntaxError) as e:\n        return str(e)\n",
+    "packages": "sympy"
+  },
+  "solve_pythagorean_theorem": {
+    "code": "import math\n\ndef solve_pythagorean_theorem(a, b, c=None):\n    \"\"\"Given two sides a and b, returns the length of the third side, or verifies if a, b, and c form a right triangle.\"\"\"\n    if c is None:\n        if a == 0 or b == 0:\n            return \"Invalid side length\"\n        return math.sqrt(a**2 + b**2)\n    else:\n        # Sort the sides to ensure c is the largest (hypotenuse)\n        sides = sorted([a, b, c])\n        return \"Forms a right triangle\" if math.isclose(sides[2]**2, sides[0]**2 + sides[1]**2) else \"Does not form a right triangle\"",
+    "packages": "math"
+  },
+  "solve_triangle_sides": {
+    "code": "from sympy import symbols, sin, cos, sqrt, solve, pi\n\ndef solve_triangle_sides(side_a, side_b, angle_C):\n    angle_C_rad = angle_C * pi / 180  # Convert angle to radians\n    c = sqrt(side_a**2 + side_b**2 - 2 * side_a * side_b * cos(angle_C_rad))\n    return c",
+    "packages": "math, sympy"
+  },
+  "volume_of_sphere": {
+    "code": "import math\n\ndef volume_of_sphere(radius):\n    return (4/3) * math.pi * (radius ** 3)",
+    "packages": "math"
+  }
+}

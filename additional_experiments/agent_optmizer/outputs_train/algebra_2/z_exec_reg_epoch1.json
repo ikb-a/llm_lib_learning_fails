@@ -1,0 +1,18 @@
+{
+  "calculate_distance": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance(x1, y1, x2, y2):\n    dx = x2 - x1\n    dy = y2 - y1\n    distance = sqrt(dx**2 + dy**2)\n    return distance",
+    "packages": "sympy"
+  },
+  "calculate_total_ants": {
+    "code": "def calculate_total_ants(initial_species_a, initial_species_b, days, growth_a, growth_b):\n    final_species_a = initial_species_a * (growth_a ** days)\n    final_species_b = initial_species_b * (growth_b ** days)\n    total = final_species_a + final_species_b\n    return total",
+    "packages": ""
+  },
+  "calculate_weighted_average": {
+    "code": "def calculate_weighted_average(value1, weight1, value2, weight2, value3, weight3, value4, weight4):\n    total_weight = weight1 + weight2 + weight3 + weight4\n    weighted_average = (value1 * weight1 + value2 * weight2 + value3 * weight3 + value4 * weight4) / total_weight\n    return weighted_average",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  }
+}

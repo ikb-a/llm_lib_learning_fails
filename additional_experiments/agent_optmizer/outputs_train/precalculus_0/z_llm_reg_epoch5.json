@@ -1,0 +1,112 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the arcsine of a value.",
+      "name": "calculate_arcsin",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value to compute arcsine for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles of a triangle given its side lengths using the cosine rule.",
+      "name": "calculate_angle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          },
+          "degrees": {
+            "default": false,
+            "description": "Whether to return angles in degrees",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Compute the angles of a triangle using its side lengths and optionally return in degrees.",
+      "name": "compute_angles_from_sides",
+      "parameters": {
+        "properties": {
+          "degrees": {
+            "default": false,
+            "description": "Whether to return angles in degrees",
+            "type": "boolean"
+          },
+          "side_a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "side_b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "side_c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate a mathematical expression involving trigonometric functions.",
+      "name": "calculate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate a trigonometric identity based on the input values or angles.",
+      "name": "evaluate_trig_identity",
+      "parameters": {
+        "properties": {
+          "A": {
+            "description": "The first angle in degrees.",
+            "type": "integer"
+          },
+          "B": {
+            "description": "The second angle in degrees.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

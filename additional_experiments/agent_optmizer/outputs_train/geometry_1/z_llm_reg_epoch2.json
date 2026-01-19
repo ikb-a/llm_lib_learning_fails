@@ -1,0 +1,98 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of an edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "Base length of triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "Height of triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its vertices using the determinant formula.",
+      "name": "calculate_area_of_triangle_from_vertices",
+      "parameters": {
+        "properties": {
+          "vertex_a": {
+            "description": "Coordinates of vertex A as a tuple (x, y).",
+            "type": "object"
+          },
+          "vertex_b": {
+            "description": "Coordinates of vertex B as a tuple (x, y).",
+            "type": "object"
+          },
+          "vertex_c": {
+            "description": "Coordinates of vertex C as a tuple (x, y).",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

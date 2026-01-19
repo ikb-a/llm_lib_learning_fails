@@ -1,0 +1,118 @@
+[
+  {
+    "func_sig": {
+      "description": "Find relatively prime pairs (m, n) from an integer k represented as k = m/n.",
+      "name": "find_prime_pairs",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "The integer representing the ratio m/n.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_triangle_area",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a shape (circle, triangle, etc.) based on shape type and its dimensions.",
+      "name": "calculate_area",
+      "parameters": {
+        "properties": {
+          "dimensions": {
+            "description": "Dimensions of the shape. For circle: {\"radius\": value}. For triangle: {\"base\": value, \"height\": value}.",
+            "type": "object"
+          },
+          "shape_type": {
+            "description": "Type of shape (circle, triangle).",
+            "enum": [
+              "circle",
+              "triangle"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the surface area of a cube given the length of an edge.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of one edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the cone's base.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a right circular cylinder given its radius and height.",
+      "name": "calculate_cylinder_volume",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cylinder.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the cylinder's base.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

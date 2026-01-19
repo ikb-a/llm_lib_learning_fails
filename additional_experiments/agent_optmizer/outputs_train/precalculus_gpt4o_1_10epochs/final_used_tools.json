@@ -1,0 +1,46 @@
+{
+  "compute_matrix_multiplication": {
+    "code": "from sympy import Matrix\n\ndef compute_matrix_multiplication(matrix1, matrix2):\n    try:\n        mat1 = Matrix(matrix1)\n        mat2 = Matrix(matrix2)\n        product = mat1 * mat2\n        return product.tolist()\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "compute_vector_projection": {
+    "code": "from sympy import Matrix\n\ndef compute_vector_projection(v, w):\n    v = Matrix(v)\n    w = Matrix(w)\n    dot_vw = v.dot(w)\n    dot_ww = w.dot(w)\n    proj_v_on_w = (dot_vw / dot_ww) * w\n    return proj_v_on_w.tolist()",
+    "packages": "sympy"
+  },
+  "convert_coordinates_to_spherical": {
+    "code": "from sympy import sympify, sqrt, atan2, acos, pi\n\ndef convert_coordinates_to_spherical(x, y, z):\n    x, y, z = sympify(x), sympify(y), sympify(z)\n    rho = sqrt(x**2 + y**2 + z**2)\n    theta = atan2(y, x)\n    if theta < 0:\n        theta += 2 * pi\n    phi = acos(z / rho)\n    return rho, theta, phi",
+    "packages": "sympy"
+  },
+  "convert_rectangular_to_spherical": {
+    "code": "from sympy import symbols, sqrt, atan2, acos, pi\n\ndef convert_rectangular_to_spherical(x, y, z):\n    x, y, z = float(x), float(y), float(z)\n    # Calculate rho\n    rho = sqrt(x**2 + y**2 + z**2)\n    # Calculate theta\n    theta = atan2(y, x)\n    if theta < 0:\n        theta += 2 * pi\n    # Calculate phi\n    phi = acos(z / rho)\n    return (rho, theta, phi)",
+    "packages": "sympy"
+  },
+  "evaluate_math_expression": {
+    "code": "from sympy import sympify, simplify, Rational\n\ndef evaluate_math_expression(expression):\n    try:\n        expr = sympify(expression)\n        result = simplify(expr)\n        # Ensure result is returned as a rational number if applicable\n        if result.is_number:\n            result = Rational(str(result))\n        return result\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "evaluate_tangent_difference": {
+    "code": "from sympy import Rational, simplify\n\ndef evaluate_tangent_difference(tan_alpha, tan_beta):\n    # Use the formula for tangent of a difference\n    tan_diff = (tan_alpha - tan_beta) / (1 + tan_alpha * tan_beta)\n    return simplify(tan_diff)",
+    "packages": "sympy"
+  },
+  "find_plane_equation_from_points": {
+    "code": "from sympy import Matrix, sympify, gcd as sympy_gcd\n\ndef find_plane_equation_from_points(point1, point2, point3):\n    # Convert points to sympy vector format\n    p1 = Matrix([sympify(coord) for coord in point1])\n    p2 = Matrix([sympify(coord) for coord in point2])\n    p3 = Matrix([sympify(coord) for coord in point3])\n\n    # Create vectors from points\n    v1 = p2 - p1\n    v2 = p3 - p1\n\n    # Calculate the normal vector through cross product\n    normal_vector = v1.cross(v2)\n    A, B, C = normal_vector\n\n    # Calculate D using a point from the plane\n    D = -(A*p1[0] + B*p1[1] + C*p1[2])\n\n    # Ensure integers as output and gcd(A,B,C,D) = 1 while A > 0\n    gcd_val = sympy_gcd(A, sympy_gcd(B, sympy_gcd(C, D)))\n    A, B, C, D = A/gcd_val, B/gcd_val, C/gcd_val, D/gcd_val\n    if A < 0:\n        A, B, C, D = -A, -B, -C, -D\n\n    return A, B, C, D",
+    "packages": "sympy"
+  },
+  "solve_question_with_sympy": {
+    "code": "from sympy import symbols, Eq, solve, simplify, sympify, atan2, acos, sqrt, pi, Matrix, SympifyError\n\ndef solve_question_with_sympy(problem_description, variables):\n    try:\n        # Convert problem description\n        problem_lower = problem_description.lower()\n        symbols_list = symbols(variables)\n\n        # Parsing for equations\n        if '=' in problem_lower:\n            eqs = problem_description.replace(' and ', ',').split(',')\n            equations = []\n            for eq in eqs:\n                if '=' in eq:\n                    lhs, rhs = eq.split('=')\n                    eq_obj = Eq(simplify(sympify(lhs.strip())), simplify(sympify(rhs.strip())))\n                    equations.append(eq_obj)\n            solution = solve(equations, symbols_list, dict=True)\n            return solution if solution else \"No solution found.\"\n\n        # Handle coordinate conversions\n        if 'convert rectangular coordinates' in problem_lower:\n            coords_str = problem_description.split('(')[1].split(')')[0]\n            x, y, z = map(sympify, coords_str.split(','))\n            rho = sqrt(x**2 + y**2 + z**2)\n            theta = atan2(y, x)\n            if theta < 0:\n                theta += 2 * pi\n            phi = acos(z / rho)\n            return (rho, theta, phi)\n\n        # Direct expression evaluation\n        sym_expr = sympify(problem_description)\n        solution = solve(sym_expr, symbols_list, dict=True)\n        return solution if solution else \"Solved without result.\"\n\n    except SympifyError as e:\n        return f\"SympifyError occurred: {str(e)}\"\n    except Exception as e:\n        return f\"Error occurred: {str(e)}\"",
+    "packages": "sympy"
+  },
+  "solve_tangent_difference": {
+    "code": "from sympy import Rational\n\ndef solve_tangent_difference(tan_alpha, tan_beta):\n    # Use the tangent subtraction formula\n    tan_diff = Rational(tan_alpha - tan_beta, 1 + tan_alpha * tan_beta)\n    return tan_diff",
+    "packages": "sympy"
+  },
+  "solve_triangle_angles": {
+    "code": "import sympy as sp\n\ndef solve_triangle_angles(side_a, side_b, side_c):\n    a = sp.sympify(side_a)\n    b = sp.sympify(side_b)\n    c = sp.sympify(side_c)\n\n    # Calculate cosines using the Law of Cosines\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    cos_B = (a**2 + c**2 - b**2) / (2 * a * c)\n    cos_C = (a**2 + b**2 - c**2) / (2 * a * b)\n\n    # Calculate angles in degrees\n    angle_A = sp.acos(cos_A) * 180 / sp.pi\n    angle_B = sp.acos(cos_B) * 180 / sp.pi\n    angle_C = sp.acos(cos_C) * 180 / sp.pi\n\n    return (angle_A.evalf(), angle_B.evalf(), angle_C.evalf())",
+    "packages": "sympy"
+  },
+  "sum_of_cos_squared": {
+    "code": "from sympy import rad, cos, Sum\n\ndef sum_of_cos_squared(degrees):\n    # Define a symbolic variable k\n    k = symbols('k')\n    # Convert degree to radians inside cos\n    sum_expr = Sum(cos(rad(k))**2, (k, 0, degrees))\n    return sum_expr.doit()",
+    "packages": "sympy"
+  }
+}

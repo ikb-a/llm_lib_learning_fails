@@ -1,0 +1,50 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate and solve algebraic expressions and equations provided as strings.",
+        "name": "evaluate_algebra",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The algebraic expression or equation to evaluate.",
+              "type": "string"
+            },
+            "variable_values": {
+              "description": "A dictionary containing variable values to substitute, if any.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

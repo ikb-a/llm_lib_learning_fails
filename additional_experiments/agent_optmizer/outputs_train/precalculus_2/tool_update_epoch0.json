@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_domain_of_tan_arccos():\n    return '[-1, 0) \u222a (0, 1]'",
+      "description": "Calculate the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "calculate_domain_of_tan_arccos",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg, sqrt\n\ndef calculate_angles_of_triangle(a, b, c):\n    # Calculate angles using the Law of Cosines\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return (A, B, C)",
+      "description": "Calculate the angles of the triangle given the lengths of its sides using the Law of Cosines.",
+      "name": "calculate_angles_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_angles_of_triangle_v2(a, b, c):\n    # Calculate angles using the Law of Cosines with validation\n    if a + b <= c or a + c <= b or b + c <= a:\n        return 'Invalid triangle dimensions'\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return (A, B, C)",
+      "description": "Calculate the angles of a triangle given its side lengths using the Law of Cosines with added constraints for optimization.",
+      "name": "calculate_angles_of_triangle_v2",
+      "packages": "sympy"
+    }
+  }
+]

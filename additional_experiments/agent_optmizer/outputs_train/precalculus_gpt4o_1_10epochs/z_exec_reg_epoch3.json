@@ -1,0 +1,14 @@
+{
+  "evaluate_math_expression": {
+    "code": "from sympy import sympify, simplify, nsimplify\n\ndef evaluate_math_expression(expression):\n    try:\n        expr = sympify(expression)\n        \n        # Attempt to simplify the expression\n        result = simplify(expr)\n        \n        # If the result is a number, then handle it as a rational number\n        if result.is_number:\n            result = nsimplify(result)\n        \n        return result\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_question_with_sympy": {
+    "code": "from sympy import symbols, Eq, solve, simplify, sympify, cos, sin, tan, pi\n\ndef solve_question_with_sympy(problem_description, variables):\n    try:\n        # Dynamically define symbols in sympy\n        symbols_list = symbols(variables)\n\n        # Parse equations from problem description\n        if '=' in problem_description:\n            # Handling for equations\n            equation_parts = [part.split('=') for part in problem_description.split('and')]\n            equations = [Eq(sympify(part[0].strip()), sympify(part[1].strip())) for part in equation_parts]\n            result = solve(equations, symbols_list)\n        else:\n            # General expression evaluation or solving\n            expression = sympify(problem_description)\n            result = solve(expression, symbols_list)\n\n        return result if result else \"No result or solution found.\"\n    except Exception as e:\n        return f\"Error: {str(e)}\"",
+    "packages": "sympy"
+  },
+  "solve_triangle_angles": {
+    "code": "import sympy as sp\n\ndef solve_triangle_angles(side_a, side_b, side_c):\n    a = sp.sympify(side_a)\n    b = sp.sympify(side_b)\n    c = sp.sympify(side_c)\n\n    # Calculate cosines using the Law of Cosines\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    cos_B = (a**2 + c**2 - b**2) / (2 * a * c)\n    cos_C = (a**2 + b**2 - c**2) / (2 * a * b)\n\n    # Calculate angles in degrees\n    angle_A = sp.acos(cos_A) * 180 / sp.pi\n    angle_B = sp.acos(cos_B) * 180 / sp.pi\n    angle_C = sp.acos(cos_C) * 180 / sp.pi\n\n    return (angle_A.evalf(), angle_B.evalf(), angle_C.evalf())",
+    "packages": "sympy"
+  }
+}

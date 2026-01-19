@@ -1,0 +1,20 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve, sqrt, pi, Rational, simplify, evalf\n\ndef evaluate_math_problem(problem_statement):\n    try:\n        # This function will parse the problem statement and solve it using sympy.\n        # The implementation is hypothetical and needs more context regarding how problem_statement is structured.\n        # Hypothetical parsing/interpretation included below.\n        \n        # Example usage:\n        # problem_statement could be an equation like 'x**2 - 4'\n        # Convert the string problem statement to a sympy expression.\n        expr = eval(problem_statement)  # Evaluate string expression to a sympy expression.\n        x = symbols('x')\n        solution = solve(expr, x)\n        return solution\n    except Exception as e:\n        return str(e)",
+      "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+      "name": "evaluate_math_problem",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_code_properties(shape, dimensions):\n    if shape == 'cone':\n        radius = dimensions.get('radius', 0)\n        height = dimensions.get('height', 0)\n        slant_height = math.sqrt(radius**2 + height**2)\n        volume = (1/3) * math.pi * radius**2 * height\n        surface_area = math.pi * radius * (radius + slant_height)\n    elif shape == 'sphere':\n        radius = dimensions.get('radius', 0)\n        volume = (4/3) * math.pi * radius**3\n        surface_area = 4 * math.pi * radius**2\n    elif shape == 'cylinder':\n        radius = dimensions.get('radius', 0)\n        height = dimensions.get('height', 0)\n        volume = math.pi * radius**2 * height\n        surface_area = 2 * math.pi * radius * (radius + height)\n    else:\n        return {\"error\": \"Shape not recognized\"}\n\n    return {\n        \"volume\": volume,\n        \"surface_area\": surface_area\n    }",
+      "description": "Calculate the volume and surface area of a geometric shape given its dimensions.",
+      "name": "calculate_code_properties",
+      "packages": "math"
+    }
+  }
+]

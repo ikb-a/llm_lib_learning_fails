@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def sum_of_angles_of_pentagon(n):\n    return (n - 2) * 180",
+      "description": "Calculate the sum of the interior angles of a pentagon.",
+      "name": "sum_of_angles_of_pentagon",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_pentagon_angle(A, B, C):\n    D = C\n    E = 2 * C + 15\n    angles = [A, B, C, D, E]\n    return max(angles)",
+      "description": "Calculate the angles of a pentagon from given angle relationships.",
+      "name": "calculate_pentagon_angle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_ac_length(a_x, a_y, c_x, c_y):\n    return sqrt((c_x - a_x)**2 + (c_y - a_y)**2)",
+      "description": "Calculate the length of AC in a pentagon using the distance formula.",
+      "name": "calculate_ac_length",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_distance_between_points(x1, y1, x2, y2):\n    return round(float(sqrt((x2 - x1)**2 + (y2 - y1)**2)), 1)",
+      "description": "Calculate the distance between two points in a 2D plane using the distance formula.",
+      "name": "calculate_distance_between_points",
+      "packages": "sympy"
+    }
+  }
+]

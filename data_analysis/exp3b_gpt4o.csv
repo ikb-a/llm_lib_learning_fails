@@ -1,0 +1,17 @@
+model,dataset,run,problem_attempt,successful_problem,attempts
+dsp,test12,1,1,amc12a_2021_3,200
+dsp,test12,1,1,mathd_algebra_329,200
+dsp,test12,1,2,mathd_algebra_184,200
+dsp,test12,1,54,numbertheory_sqmod3in01d,200
+dsp,test12,1,195,mathd_numbertheory_85,200
+dsp,test12,2,1,amc12a_2021_3,200
+dsp,test12,2,1,mathd_algebra_329,200
+dsp,test12,2,2,mathd_algebra_184,200
+dsp,test12,2,51,numbertheory_sqmod3in01d,200
+dsp,test12,2,195,mathd_numbertheory_85,200
+dsp,test12,3,1,amc12a_2021_3,200
+dsp,test12,3,1,mathd_algebra_329,200
+dsp,test12,3,4,mathd_algebra_184,200
+dsp,test12,3,54,numbertheory_sqmod3in01d,200
+dsp,test12,3,186,induction_11div10tonmn1ton,200
+dsp,test12,3,195,mathd_numbertheory_85,200

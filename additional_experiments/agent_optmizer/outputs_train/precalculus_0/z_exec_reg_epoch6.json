@@ -1,0 +1,22 @@
+{
+  "calculate_angle_from_sides": {
+    "code": "from sympy import acos, deg\n\ndef calculate_angle_from_sides(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+    "packages": "sympy"
+  },
+  "calculate_triangle_angles": {
+    "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+    "packages": "sympy"
+  },
+  "compute_triangle_angles": {
+    "code": "from sympy import acos, deg\n\ndef compute_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+    "packages": "sympy"
+  },
+  "evaluate_arcsin": {
+    "code": "from sympy import asin\n\ndef evaluate_arcsin(value):\n    return asin(value)",
+    "packages": "sympy"
+  },
+  "get_angle_from_tangent": {
+    "code": "from sympy import atan, deg\n\ndef get_angle_from_tangent(tan_value):\n    return deg(atan(tan_value))",
+    "packages": "sympy"
+  }
+}

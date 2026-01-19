@@ -1,0 +1,11 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, sin, cos, tan, csc, sec, cot, simplify\n\ndef trig_transform(expression):\n    try:\n        # Simplify the trigonometric expression\n        expr = simplify(expression)\n        return expr\n    except Exception as e:\n        return str(e)",
+      "description": "Perform trigonometric transformations and simplify trigonometric expressions using SymPy.",
+      "name": "trig_transform",
+      "packages": "sympy"
+    }
+  }
+]

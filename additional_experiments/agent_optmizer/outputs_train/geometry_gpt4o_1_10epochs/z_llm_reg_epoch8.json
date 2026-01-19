@@ -1,0 +1,46 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+      "name": "evaluate_math_problem",
+      "parameters": {
+        "properties": {
+          "problem_statement": {
+            "description": "The mathematical problem statement to be solved.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve for a missing side in a right triangle using trigonometric ratios such as sine, cosine, or tangent.",
+      "name": "solve_trigonometric_triangle",
+      "parameters": {
+        "properties": {
+          "angle_degree": {
+            "description": "The angle in degrees for which to perform the calculation.",
+            "type": "integer"
+          },
+          "angle_type": {
+            "description": "The type of trigonometric function to use: 'sine', 'cosine', or 'tangent'.",
+            "type": "string"
+          },
+          "known_side": {
+            "description": "The known side against the angle: opposite, adjacent, or hypotenuse.",
+            "type": "string"
+          },
+          "known_value": {
+            "description": "The length of the known side.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

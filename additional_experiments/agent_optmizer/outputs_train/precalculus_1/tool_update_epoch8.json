@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_tangent_arccos(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + tan_alpha * tan_beta\n    return numerator / denominator",
+      "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+      "name": "calculate_tangent_arccos",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        return result.evalf() if result.is_number else str(result)\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def tan_difference(tan_alpha, tan_beta):\n    return (tan_alpha - tan_beta) / (1 + tan_alpha * tan_beta)",
+      "description": "Calculate the tangent of the difference between two angles",
+      "name": "tan_difference",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\ndef calculate_triangle_angles(side_a, side_b, side_c):\n    # Ensure that we can actually form a triangle\n    if side_a + side_b <= side_c or side_a + side_c <= side_b or side_b + side_c <= side_a:\n        return None  # Not a valid triangle\n    angle_A = sp.acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    angle_B = sp.acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    angle_C = sp.acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+      "description": "Calculate angles of a triangle given its side lengths and return in degrees.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import numpy as np\n\ndef get_orthocenter(A, B, C):\n    def cross_product(v1, v2):\n        return np.cross(v1, v2)\n\n    # Vectors from A to B and A to C\n    AB = np.array(B) - np.array(A)\n    AC = np.array(C) - np.array(A)\n    \n    # Normal vector of the plane defined by A, B, and C\n    normal_vector = cross_product(AB, AC)\n    \n    # Parametric equations of the altitude from point A\n    # Substitute as required to find the intersection with line BC\n    return normal_vector",
+      "description": "Calculate the orthocenter of a triangle using vertices A, B, and C given as tuples.",
+      "name": "get_orthocenter",
+      "packages": "numpy"
+    }
+  }
+]

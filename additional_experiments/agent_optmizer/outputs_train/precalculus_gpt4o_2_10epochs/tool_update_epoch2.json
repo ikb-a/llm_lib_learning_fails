@@ -1,0 +1,20 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\n\ndef execute_math_code(problem_code):\n    exec_globals = {\n        'sqrt': sp.sqrt,\n        'pi': sp.pi,\n        'acos': sp.acos,\n        'asin': sp.asin,\n        'atan2': sp.atan2,\n        'sin': sp.sin,\n        'cos': sp.cos,\n        'tan': sp.tan,\n        'Rational': sp.Rational,\n        'Matrix': sp.Matrix,\n        'symbols': sp.symbols,\n        'solve': sp.solve,\n        'Eq': sp.Eq,\n        'sympify': sp.sympify,\n        'simplify': sp.simplify,\n        'rad': sp.rad,\n        'nsimplify': sp.nsimplify,\n        'summation': sp.summation,\n        'deg': sp.deg,\n        'Interval': sp.Interval,\n        'Union': sp.Union,\n        'complement': sp.complement,\n        'solveset': sp.solveset,\n        'Symbol': sp.Symbol,\n        'Piecewise': sp.Piecewise,\n        'Mod': sp.Mod,\n        'ceil': sp.ceil,\n        'floor': sp.floor,\n        'Abs': sp.Abs\n    }\n    exec_locals = {}\n    try:\n        exec(problem_code, exec_globals, exec_locals)\n        return exec_locals.get('result', 'No result found')\n    except Exception as e:\n        return str(e)",
+      "description": "Executes SymPy-based Python code to solve mathematical problems, ensuring outputs in fractions and radical forms instead of decimals, adhering to given problem requirements.",
+      "name": "execute_math_code",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy as sp\n\ndef simplify_trig_expression(expression):\n    expr = sp.sympify(expression)\n    simplified_expr = sp.simplify(expr)\n    return simplified_expr",
+      "description": "Simplifies trigonometric expressions using known identities and returns the result.",
+      "name": "simplify_trig_expression",
+      "packages": "sympy"
+    }
+  }
+]

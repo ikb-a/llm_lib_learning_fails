@@ -1,0 +1,65 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef count_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+      "description": "Calculate permutations of a multiset given counts of distinct items.",
+      "name": "count_permutations_multiset",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_permutations(n, k):\n    return math.perm(n, k)",
+      "description": "Calculate the number of permutations of n items taken k at a time.",
+      "name": "calculate_permutations",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_multiplication_combination(values):\n    result = 1\n    for count in values.values():\n        result *= math.factorial(count)\n    return result",
+      "description": "Calculate the multiplication of combinations from a list of values.",
+      "name": "calculate_multiplication_combination",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_expected_rolls(days):\n    E_per_day = 6/5  # From previous calculations\n    return days * E_per_day",
+      "description": "Calculate the expected number of rolls of a die given the rules of rolling.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_permutations_multiset(total_items, counts):\n    denominator = 1\n    for count in counts.values():\n        denominator *= math.factorial(count)\n    return math.factorial(total_items) // denominator",
+      "description": "Calculate permutations of a multiset given counts of distinct items.",
+      "name": "calculate_permutations_multiset",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_combinations(n, k):\n    if k > n:\n        return 0\n    return math.comb(n, k)",
+      "description": "Calculate the number of combinations of choosing k items from n items.",
+      "name": "calculate_combinations",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls_in_year(days):\n    E_per_day = Rational(6, 5)  # ",
+      "description": "Calculate expected rolls of a six-sided die in a non-leap year based on defined probabilities.",
+      "name": "calculate_expected_rolls_in_year",
+      "packages": "sympy"
+    }
+  }
+]

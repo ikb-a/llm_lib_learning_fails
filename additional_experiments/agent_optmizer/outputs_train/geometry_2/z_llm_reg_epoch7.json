@@ -1,0 +1,170 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side A.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side B.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side C.",
+            "type": "integer"
+          },
+          "semiperimeter": {
+            "description": "Semi-perimeter of the triangle, calculated as (a + b + c) / 2.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the ratio between any two given numbers.",
+      "name": "calculate_ratio",
+      "parameters": {
+        "properties": {
+          "denominator": {
+            "description": "The denominator for the ratio.",
+            "type": "integer"
+          },
+          "numerator": {
+            "description": "The numerator for the ratio.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_triangle_area",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the painted area of a cone with given dimensions and ratios for a smaller cone and frustum.",
+      "name": "calculate_painted_area",
+      "parameters": {
+        "properties": {
+          "cone_height": {
+            "description": "The height of the original cone.",
+            "type": "integer"
+          },
+          "cone_radius": {
+            "description": "The radius of the original cone.",
+            "type": "integer"
+          },
+          "small_cone_height_ratio": {
+            "description": "The ratio of the height of the smaller cone to the height of the original cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in 3D space.",
+      "name": "calculate_distance",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "Coordinates of the first point (x1, y1, z1).",
+            "type": "object"
+          },
+          "point2": {
+            "description": "Coordinates of the second point (x2, y2, z2).",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of one edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cone given its radius and slant height.",
+      "name": "calculate_surface_area_of_cone",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the cone's base.",
+            "type": "integer"
+          },
+          "slant_height": {
+            "description": "The slant height of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

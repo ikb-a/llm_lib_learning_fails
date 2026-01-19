@@ -1,0 +1,243 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Simplify a mathematical expression and return both simplified and float values.",
+        "name": "simplify_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to simplify.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total cost of a given weight of corn and beans and provides the weights based on total weight and prices.",
+        "name": "calculate_costs",
+        "parameters": {
+          "properties": {
+            "beans_cost": {
+              "description": "Cost per pound of beans.",
+              "type": "integer"
+            },
+            "corn_cost": {
+              "description": "Cost per pound of corn.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate a constant function that always returns a specific value.",
+        "name": "evaluate_constant_function",
+        "parameters": {
+          "properties": {
+            "input_value": {
+              "description": "The constant value to return.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the weights of items based on total weight and costs for multiple items (e.g., corn and beans).",
+        "name": "solve_weighted_items",
+        "parameters": {
+          "properties": {
+            "costs": {
+              "description": "An object mapping item names to their costs per unit.",
+              "type": "object"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of the items.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a 2D space given their coordinates.",
+        "name": "calculate_distance",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total cost of items with given weights and costs.",
+        "name": "calculate_total_cost",
+        "parameters": {
+          "properties": {
+            "costs": {
+              "description": "An object mapping item names to their costs per pound.",
+              "type": "object"
+            },
+            "weights": {
+              "description": "An object mapping item names to their weights in pounds.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate how many pounds of corn and beans based on given weights and costs in a single function.",
+        "name": "add_weighted_items",
+        "parameters": {
+          "properties": {
+            "beans_cost": {
+              "description": "Cost per pound of beans.",
+              "type": "integer"
+            },
+            "corn_cost": {
+              "description": "Cost per pound of corn.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the weight of corn and beans based on total weight and costs.",
+        "name": "calculate_corn_and_beans",
+        "parameters": {
+          "properties": {
+            "beans_cost": {
+              "description": "Cost per pound of beans.",
+              "type": "integer"
+            },
+            "corn_cost": {
+              "description": "Cost per pound of corn.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the average cost of corn based on variable costs and weights.",
+        "name": "calculate_average_corn_cost",
+        "parameters": {
+          "properties": {
+            "corn_cost": {
+              "description": "Cost per pound of corn in cents.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn in pounds.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

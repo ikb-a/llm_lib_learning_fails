@@ -1,0 +1,110 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_circle_area",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in 3D space given their coordinates.",
+      "name": "calculate_distance_between_points",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "Coordinates of point 1, structured as {x: value, y: value, z: value}.",
+            "type": "object"
+          },
+          "point2": {
+            "description": "Coordinates of point 2, structured as {x: value, y: value, z: value}.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Find relatively prime pairs (m, n) from an integer k represented as k = m/n.",
+      "name": "find_prime_pairs",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "The integer representing the ratio m/n.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_triangle_area",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the full volume of a tank after adding liters based on its current and target fill fractions.",
+      "name": "calculate_volume_after_addition",
+      "parameters": {
+        "properties": {
+          "additional_liters": {
+            "description": "Liters added to reach the target fill fraction.",
+            "type": "integer"
+          },
+          "current_fill_fraction": {
+            "description": "Current fill fraction as string (e.g., '1/5').",
+            "type": "string"
+          },
+          "target_fill_fraction": {
+            "description": "Target fill fraction as string (e.g., '1/4').",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the total cost based on quantities and prices of multiple items.",
+      "name": "calculate_total_cost",
+      "parameters": {
+        "properties": {
+          "prices": {
+            "description": "List of prices for each item.",
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "quantities": {
+            "description": "List of quantities for each item.",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the full volume of a cylindrical tank given its filling states and additional liters.",
+      "name": "cylinder_volume",
+      "parameters": {
+        "properties": {
+          "additional_liters": {
+            "description": "Liters added to reach another fill fraction.",
+            "type": "integer"
+          },
+          "current_fill_fraction": {
+            "description": "Current fill fraction as string (e.g., '1/5').",
+            "type": "string"
+          },
+          "target_fill_fraction": {
+            "description": "Target fill fraction as string (e.g., '1/4').",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the filling state of a tank given the current fill fraction, additional liters, and target fill fraction as strings.",
+      "name": "calculate_equation_fill_fraction",
+      "parameters": {
+        "properties": {
+          "additional_liters": {
+            "description": "Liters added to reach the target fill fraction.",
+            "type": "integer"
+          },
+          "current_fill_fraction": {
+            "description": "Current fill fraction as string (e.g., '1/5').",
+            "type": "string"
+          },
+          "target_fill_fraction": {
+            "description": "Target fill fraction as string (e.g., '1/4').",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate travel time given distance and speed.",
+      "name": "calculate_time_of_travel",
+      "parameters": {
+        "properties": {
+          "distance": {
+            "description": "The distance to be traveled.",
+            "type": "integer"
+          },
+          "speed": {
+            "description": "The speed of travel.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a Cartesian plane.",
+      "name": "calculate_distance",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "Coordinates of first point (x1, y1).",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "Coordinates of second point (x2, y2).",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Execute a function with given arguments and return the result.",
+      "name": "execute_function",
+      "parameters": {
+        "properties": {
+          "args": {
+            "description": "The arguments to pass to the function.",
+            "type": "object"
+          },
+          "functionName": {
+            "description": "The name of the function to execute.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

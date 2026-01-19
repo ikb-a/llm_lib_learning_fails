@@ -1,0 +1,30 @@
+{
+  "calculate_angles_of_triangle": {
+    "code": "import sympy as sp\ndef calculate_angles_of_triangle(a, b, c):\n    # Calculate angles using the law of cosines\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return (sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C))",
+    "packages": "sympy"
+  },
+  "calculate_tangent_arccos": {
+    "code": "def calculate_tangent_arccos(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + tan_alpha * tan_beta\n    return numerator / denominator",
+    "packages": "sympy"
+  },
+  "calculate_triangle_angles": {
+    "code": "import sympy as sp\ndef calculate_triangle_angles(side_a, side_b, side_c):\n    angle_A = sp.acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    angle_B = sp.acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    angle_C = sp.acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+    "packages": "sympy"
+  },
+  "evaluate_angle_expression": {
+    "code": "import sympy as sp\ndef evaluate_angle_expression(a, b, c):\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    return (sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C))",
+    "packages": "sympy"
+  },
+  "evaluate_arcsin": {
+    "code": "def evaluate_arcsin(value):\n    try:\n        result = sp.asin(value)\n        return result\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "validate_expression": {
+    "code": "from sympy import sin, cos, tan\ndef validate_expression(theta):\n    return {\n        'sin': sin(theta),\n        'cos': cos(theta),\n        'tan': tan(theta),\n    }",
+    "packages": "sympy"
+  }
+}

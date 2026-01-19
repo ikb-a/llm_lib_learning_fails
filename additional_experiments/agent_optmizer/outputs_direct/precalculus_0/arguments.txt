@@ -1,0 +1,7 @@
+{
+  "dataset": "precalculus",
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_direct/precalculus_0/",
+  "run_id": "0"
+}

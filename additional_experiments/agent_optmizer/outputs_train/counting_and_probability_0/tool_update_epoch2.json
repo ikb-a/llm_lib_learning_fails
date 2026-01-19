@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_probability(total_outcomes, favorable_outcomes):\n    from sympy import Rational\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+      "description": "Calculates the probability of drawing items based on defined outcomes and conditions.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_expected_rolls(total_rolls):\n    from sympy import symbols, Eq, solve\n\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_rolls = solve(equation, E)[0]\n    return expected_rolls * total_rolls",
+      "description": "Calculate expected number of times a die is rolled with specific conditions, using the complement rule.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_expected_value(total_rolls_per_year):\n    from sympy import symbols, Eq, solve\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_value = solve(equation, E)[0]\n    return expected_value * total_rolls_per_year",
+      "description": "Calculate the expected value of the number of rolls when rolling a die with specific rules about outcomes.",
+      "name": "calculate_expected_value",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def expected_rolls_in_year(daily_expected_rolls):\n    days_in_year = 365\n    total_expected_rolls = daily_expected_rolls * days_in_year\n    return total_expected_rolls",
+      "description": "Calculate the expected number of rolls in a non-leap year based on daily expected rolls.",
+      "name": "expected_rolls_in_year",
+      "packages": "numpy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\n\ndef calculate_expected_value_of_dice_rolls(total_rolls_per_year):\n    E = Rational(6, 5)\n    return E * total_rolls_per_year",
+      "description": "Calculate the expected number of rolls based on the probability of outcomes from rolling a die with specific rules.",
+      "name": "calculate_expected_value_of_dice_rolls",
+      "packages": "sympy"
+    }
+  }
+]

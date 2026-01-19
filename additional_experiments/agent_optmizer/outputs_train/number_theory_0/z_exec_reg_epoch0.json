@@ -1,0 +1,22 @@
+{
+  "calculate_modulo": {
+    "code": "def calculate_modulo(number, modulus):\n    return number % modulus",
+    "packages": ""
+  },
+  "calculate_remainder": {
+    "code": "def calculate_remainder(number, divisor):\n    if divisor == 0:\n        return 'Division by zero is undefined'\n    return number % divisor",
+    "packages": "sympy"
+  },
+  "convert_to_base": {
+    "code": "def convert_to_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    if number == 0:\n        return str(0)\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "gcd": {
+    "code": "import math\n\ndef gcd(a, b):\n    return math.gcd(a, b)",
+    "packages": "math"
+  },
+  "sum_of_digits_in_base": {
+    "code": "def sum_of_digits_in_base(number, base):\n    if base <= 1:\n        return 'Base must be greater than 1'\n    total = 0\n    digits = convert_to_base(number, base)\n    for digit in digits:\n        total += int(digit)\n    return total",
+    "packages": ""
+  }
+}

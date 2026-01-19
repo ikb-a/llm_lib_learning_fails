@@ -1,0 +1,185 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the arcsin of a given value and return the result in radians and degrees.",
+      "name": "calculate_arcsin",
+      "parameters": {
+        "properties": {
+          "x": {
+            "description": "Value to calculate arcsin for.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the tangent of the difference between two angles based on their tangents.",
+      "name": "calculate_tan_difference",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "Tangent of angle alpha.",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "Tangent of angle beta.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a triangle given its sides using the Law of Cosines.",
+      "name": "compute_triangle_angles",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angle using the Law of Cosines given the lengths of the sides.",
+      "name": "calculate_angle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Find the orthocenter of a triangle given its vertex coordinates.",
+      "name": "find_orthocenter",
+      "parameters": {
+        "properties": {
+          "A": {
+            "description": "Coordinates of point A",
+            "type": "object"
+          },
+          "B": {
+            "description": "Coordinates of point B",
+            "type": "object"
+          },
+          "C": {
+            "description": "Coordinates of point C",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a triangle given the lengths of its sides using the Law of Cosines.",
+      "name": "calculate_angles_from_sides",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the tangent of the difference between two angles based on their tangents.",
+      "name": "compute_tan_difference",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "Tangent of angle alpha.",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "Tangent of angle beta.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Validate tangent inputs and compute the tangent of the difference between two angles based on their tangents.",
+      "name": "validate_and_compute_tan_difference",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "Tangent of angle alpha.",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "Tangent of angle beta.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Determine the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "find_domain_of_tan_arccos",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

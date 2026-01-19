@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin\n\ndef calculate_arcsin(value):\n    return asin(value)",
+      "description": "Calculate the arcsine of a value.",
+      "name": "calculate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef compute_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Calculate the angles of a triangle based on the lengths of its sides using the cosine rule.",
+      "name": "compute_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sin, cos, pi\n\ndef evaluate_sine_cosine_expression(angle_degrees):\n    angle_radians = angle_degrees * pi / 180\n    return sin(angle_radians), cos(angle_radians)",
+      "description": "Evaluate expressions of sine and cosine values for given angles and return their simplified output.",
+      "name": "evaluate_sine_cosine_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Calculate angles of a triangle given its sides using the cosine rule.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_arccosine_and_sine(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return A, B, C",
+      "description": "Calculate angles A, B, and C of a triangle given its side lengths using the cosine rule.",
+      "name": "calculate_arccosine_and_sine",
+      "packages": "sympy"
+    }
+  }
+]

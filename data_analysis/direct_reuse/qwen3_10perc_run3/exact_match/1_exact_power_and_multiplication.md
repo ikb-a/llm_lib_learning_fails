@@ -1,0 +1,120 @@
+# power_and_multiplication
+
+Tasks where a provided skill is reproduced verbatim
+
+Frequency: 1
+
+Lemma:
+```isabelle
+lemma power_and_multiplication:
+  "8 * (9^2) = (648::nat)"
+  by auto
+```
+
+
+## Usage 1 of 1:
+### Problem:
+Task name: `mathd_numbertheory_207.json`
+
+Convert $852_9$ to base 10. Show that it is 695.
+### Informal Proof:
+We have that $852_9 = 8(9^2) +5(9^1)+ 2(9^0) = 8(81)+5(9)+2(1)=648 + 45 + 2 = 695$.
+### Solution:
+```isabelle
+theorem mathd_numbertheory_207:
+  "8 * 9^2 + 5 * 9 + 2 = (695::nat)"
+```
+AI Generated completion (lemma lines higlighted):
+<think>
+Okay, I need to convert the base-9 number 852_9 to base 10 and show it equals 695. Let's break down the steps.
+
+First, I remember that each digit in a base-9 number represents a power of 9. So 852_9 is 8*9² + 5*9¹ + 2*9⁰. That's the standard way to convert from base b to base 10.
+
+Next, I need to compute each term. Let's start with 9². 9 squared is 81, so 8*81 is 648. Then 5*9 is 45, and 2*1 is 2. Adding those up: 648 + 45 is 693, plus 2 makes 695. 
+
+But how to formalize this in Isabelle? The user provided some examples where they used lemmas to compute each part. For example, they had a lemma called power_and_multiplication that showed 8*9² equals 648. Similarly, they had a lemma for 648 + 45 + 2 = 695.  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+So maybe I should create similar lemmas here. Let me check the existing examples. The first example used power_and_multiplication with 8*9² = 648. Then another lemma for adding 45 and 2.  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+So I can start by proving that 8*9^2 is 648. Then 5*9 is 45. Then 2 is 2. Then sum them up. 
+
+Wait, the formal statement given is exactly 8*9^2 +5*9 +2 =695. So the proof needs to show that. 
+
+In the previous example, the user used multiple lemmas. For instance, they had a lemma for 8*9²=648, another for 5*9=45, and then adding them all. Then a lemma that 648+45+2=695. 
+
+But maybe I can do this in a more straightforward way. Let me think. Since Isabelle's simplifier can handle arithmetic, perhaps using simp with the appropriate lemmas. 
+
+Alternatively, I can break it down into steps. First compute 9^2, then multiply by 8, then compute 5*9, add them all. 
+
+Wait, the user's existing example for the same problem uses the lemma "8 * 9^2 + 5 * 9 + 2 = 695" and proves it with simp. But maybe that's not enough. Let me check if the simplifier can handle it. 
+
+In Isabelle, by default, the simplifier knows that 9^2 is 81, so 8*81 is 648, 5*9 is 45, and adding them gives 695. So maybe the lemma can be proven with simp. 
+
+But to make it explicit, perhaps the user wants to break it into steps. Let me see the previous examples. For instance, the first example used a lemma that directly states the equality and uses auto or simp. 
+
+So maybe the correct approach is to write the lemma and use simp. Let me check the existing code in the user's examples. For example, they had:
+
+lemma power_and_multiplication: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  "8 * (9^2) = (648::nat)"
+  by auto
+
+Then another lemma for adding 45 and 2. So perhaps the same approach here. 
+
+So the steps would be:
+
+1. Prove 8*9^2 = 648.
+2. Prove 5*9 = 45.
+3. Then add 648 + 45 + 2 = 695.
+
+But how to structure this in Isabelle. Let's see. The formal statement is "8 * 9^2 + 5 * 9 + 2 = 695". So the proof can be done by splitting into these components. 
+
+Alternatively, since 9^2 is 81, 8*81 is 648, 5*9 is 45, and 2 is 2. Then 648 +45 is 693, plus 2 is 695. 
+
+In Isabelle, using the simplifier with the right rules should handle this. So the lemma can be proven with simp. But to make sure, maybe break it into steps. 
+
+But the user's example for the same problem uses a direct lemma with simp. So perhaps the answer is to write the lemma and use simp. 
+
+Wait, the user's previous example for the same problem shows:
+
+lemma "648 + 45 + 2 = (695::nat)"
+  by simp
+
+So perhaps the proof can be done by first proving that 8*9^2 is 648, then 5*9 is 45, then adding them all. But in the formal statement, the user has the entire expression. 
+
+Alternatively, the entire expression can be simplified in one step. Let me check in Isabelle if 8*9^2 +5*9 +2 is indeed 695. 
+
+In Isabelle, when using the nat type, the simplifier would compute these values correctly. So the lemma can be proven with simp. 
+
+Therefore, the correct Isabelle code would be:
+
+theory mathd_numbertheory_207
+  imports Main
+begin
+
+theorem mathd_numbertheory_207:
+  "8 * 9^2 + 5 * 9 + 2 = (695::nat)"
+  by simp
+
+end
+
+But the user's examples used multiple lemmas. However, in this case, the entire expression can be simplified directly. But maybe the user expects to break it into steps. However, the problem statement says to provide a formal proof that can be verified by Isabelle. Since the simplifier can handle this, the proof is straightforward. 
+
+But maybe the user wants to follow the steps as in the informal proof. So the proof should have steps that compute each part. 
+
+Alternatively, the answer can be as simple as the lemma with simp. 
+
+I think the correct approach here is to use the simplifier, as the arithmetic is straightforward. Therefore, the proof is just a single lemma with by simp.
+</think>
+
+```isabelle
+theory mathd_numbertheory_207
+  imports Main
+begin
+
+(* Formal statement: Convert 852_9 to base 10 and show it equals 695 *)
+theorem mathd_numbertheory_207:
+  "8 * 9^2 + 5 * 9 + 2 = (695::nat)"
+  by simp
+
+end
+```

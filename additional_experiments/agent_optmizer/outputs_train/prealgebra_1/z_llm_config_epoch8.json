@@ -1,0 +1,319 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the least common multiple (LCM) of two numbers.",
+        "name": "calculate_lcm",
+        "parameters": {
+          "properties": {
+            "num1": {
+              "description": "The first number.",
+              "type": "integer"
+            },
+            "num2": {
+              "description": "The second number.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the length between two points given their coordinates.",
+        "name": "calculate_length",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "The coordinates of point A as a tuple (x_A, y_A).",
+              "type": "object"
+            },
+            "C": {
+              "description": "The coordinates of point C as a tuple (x_C, y_C).",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the division of a number by the result of another expression and multiply by a third number.",
+        "name": "calculate_division_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "An expression to evaluate for the denominator.",
+              "type": "string"
+            },
+            "multiplier": {
+              "description": "A number to multiply the result by.",
+              "type": "integer"
+            },
+            "numerator": {
+              "description": "The numerator of the division.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the interior angles of a pentagon given the measurements of the known angles and the relationships among them.",
+        "name": "calculate_pentagon_angle",
+        "parameters": {
+          "properties": {
+            "angles": {
+              "description": "A dictionary containing the measures of known angles.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the diagonal length of a rectangle given its length and width.",
+        "name": "calculate_rectangle_diagonal",
+        "parameters": {
+          "properties": {
+            "length": {
+              "description": "The length of the rectangle.",
+              "type": "integer"
+            },
+            "width": {
+              "description": "The width of the rectangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a pentagon given relationships between its angles more generally.",
+        "name": "calculate_pentagon_angles_optimized",
+        "parameters": {
+          "properties": {
+            "angles": {
+              "description": "A dictionary containing the measures of angles as key-value pairs.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the interior angles of a pentagon based on given angle relationships.",
+        "name": "calculate_pentagon_angles",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "The measure of angle A in degrees.",
+              "type": "integer"
+            },
+            "B": {
+              "description": "The measure of angle B in degrees.",
+              "type": "integer"
+            },
+            "additional_angle": {
+              "description": "An additional angle in degrees with respect to C.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the slope of a line given two points (x1, y1) and (x2, y2).",
+        "name": "calculate_slope",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the remainder of a division operation.",
+        "name": "calculate_remainder",
+        "parameters": {
+          "properties": {
+            "denominator": {
+              "description": "The number to divide by.",
+              "type": "integer"
+            },
+            "numerator": {
+              "description": "The number to be divided.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of prime numbers in a given range.",
+        "name": "calculate_sum_of_primes",
+        "parameters": {
+          "properties": {
+            "end": {
+              "description": "The ending number of the range.",
+              "type": "integer"
+            },
+            "start": {
+              "description": "The starting number of the range.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the square root of a given number and return it in decimal format.",
+        "name": "calculate_square_root",
+        "parameters": {
+          "properties": {
+            "number": {
+              "description": "The number for which to calculate the square root.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+        "name": "calculate_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "The number of favorable outcomes.",
+              "type": "integer"
+            },
+            "output_fraction": {
+              "description": "Indicate whether the output should be in fractional form.",
+              "type": "boolean"
+            },
+            "total_outcomes": {
+              "description": "The total number of outcomes.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the result of a fractional arithmetic expression.",
+        "name": "calculate_fractional_expression",
+        "parameters": {
+          "properties": {
+            "denominator": {
+              "description": "The denominator of the fraction.",
+              "type": "integer"
+            },
+            "numerator": {
+              "description": "The numerator of the fraction.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a right triangle given the lengths of the two legs.",
+        "name": "calculate_area_of_right_triangle",
+        "parameters": {
+          "properties": {
+            "leg_a": {
+              "description": "Length of the first leg.",
+              "type": "integer"
+            },
+            "leg_b": {
+              "description": "Length of the second leg.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate and return all angles of a pentagon based on angle relationships.",
+        "name": "calculate_pentagon_angle_measurements",
+        "parameters": {
+          "properties": {
+            "angles": {
+              "description": "A dictionary containing the measures of angles A, B and additional_angle.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

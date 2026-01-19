@@ -1,0 +1,7 @@
+Your expertise as a mathematician and proficient user of the Isabelle theorem prover requires you to dissect the provided theorem. This includes examining the informal statement of the problem, the non-formal proof written by a human, and the formalized statement of the theorem. Your goal is to restructure the proof in a well-organized manner that is more aligned with the Isabelle format. Additionally, you should inquire about any lemmas or theorems that could aid in the verification of this theorem.
+
+You will present your response in the following format:
+
+- An initial segment titled `## Structured informal proof` detailing the systematic breakdown of the proof.
+- Subsequently, a section titled `## Request skills` where you will list any pertinent lemmas or theorems needed for proving the theorem.
+- Each requested skill will be denoted by an Isabelle code block showcasing its precise formal definition.

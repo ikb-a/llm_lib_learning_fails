@@ -1,0 +1,114 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the Euclidean distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point [x1, y1, z1].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point [x2, y2, z2].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solves for the third side of a right triangle using the Pythagorean Theorem when two side lengths are provided and can also check if a, b, and c form a Pythagorean triple.",
+      "name": "solve_pythagorean_theorem",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "The length of one side of the triangle.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "The length of the other side of the triangle.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "The length of the hypotenuse or the third side of the triangle. If provided, the function will verify whether a, b, and c form a Pythagorean triple.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume and surface area of a right circular cone given the radius and height.",
+      "name": "calculate_volume_surface_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "Height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "Radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the Euclidean distance between two points in 2D space.",
+      "name": "calculate_distance_2d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point [x1, y1].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point [x2, y2].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

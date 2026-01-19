@@ -1,0 +1,64 @@
+[
+  {
+    "func_sig": {
+      "description": "Solves for the third side of a right triangle using the Pythagorean Theorem when two side lengths are provided.",
+      "name": "solve_pythagorean_theorem",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "The length of one side (not the hypotenuse) of the triangle.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "The length of the other side (not the hypotenuse) of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the Euclidean distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point [x1, y1, z1].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point [x2, y2, z2].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

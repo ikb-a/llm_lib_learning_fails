@@ -1,0 +1,20 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, sqrt\ndef calculate_area_of_shapes(shape_type, dimensions):\n    if shape_type == 'circle':\n        radius = dimensions['radius']\n        return pi * radius ** 2\n    elif shape_type == 'rectangle':\n        length = dimensions['length']\n        width = dimensions['width']\n        return length * width\n    elif shape_type == 'triangle':\n        base = dimensions['base']\n        height = dimensions['height']\n        return (1/2) * base * height\n    else:\n        return 'Shape not supported.'",
+      "description": "Calculate the area of various shapes given their dimensions.",
+      "name": "calculate_area_of_shapes",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_area_of_triangle(base, height):\n    return (1 / 2) * base * height",
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "packages": "sympy"
+    }
+  }
+]

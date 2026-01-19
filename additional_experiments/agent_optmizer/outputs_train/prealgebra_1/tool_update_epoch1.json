@@ -1,0 +1,20 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_probability(favorable_outcomes, total_outcomes, output_fraction=False):\n    from sympy import Rational\n    result = Rational(favorable_outcomes, total_outcomes)\n    if output_fraction:\n        return result  # Return as a fraction\n    else:\n        return float(result)  # Return as a decimal",
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, simplify\n\ndef calculate_division_expression(numerator, expression, multiplier):\n    x = symbols('x')\n    # Evaluate the expression\n    denominator = simplify(eval(expression))\n    result = numerator / denominator\n    return result * multiplier",
+      "description": "Calculate the division of a number by the result of another expression and multiply by a third number.",
+      "name": "calculate_division_expression",
+      "packages": "sympy"
+    }
+  }
+]

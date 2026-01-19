@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef solve_pythagorean_theorem(a, b):\n    \"\"\"Given two sides a and b, returns the hypotenuse length.\"\"\"\n    c = math.sqrt(a**2 + b**2)\n    return c",
+      "description": "Solves for the third side of a right triangle using the Pythagorean Theorem when two side lengths are provided.",
+      "name": "solve_pythagorean_theorem",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_distance_3d(point1, point2):\n    x1, y1, z1 = point1\n    x2, y2, z2 = point2\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)\n    return distance",
+      "description": "Calculate the Euclidean distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef volume_of_sphere(radius):\n    return (4/3) * math.pi * (radius ** 3)",
+      "description": "Calculate the volume of a sphere given its radius.",
+      "name": "volume_of_sphere",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, sin, cos, sqrt, solve, pi\n\ndef solve_triangle_sides(side_a, side_b, angle_C):\n    angle_C_rad = angle_C * pi / 180  # Convert angle to radians\n    c = sqrt(side_a**2 + side_b**2 - 2 * side_a * side_b * cos(angle_C_rad))\n    return c",
+      "description": "Calculate the missing side or angles of a triangle given some sides or angles using trigonometric properties.",
+      "name": "solve_triangle_sides",
+      "packages": "math, sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_spherical_volume(diameter):\n    radius = diameter / 2\n    volume = (4/3) * math.pi * (radius ** 3)\n    return volume",
+      "description": "Calculate the volume of a sphere given its diameter or radius.",
+      "name": "calculate_spherical_volume",
+      "packages": "math"
+    }
+  }
+]

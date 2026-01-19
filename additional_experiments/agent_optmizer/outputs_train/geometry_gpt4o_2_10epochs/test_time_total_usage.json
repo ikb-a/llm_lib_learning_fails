@@ -1,0 +1,9 @@
+{
+  "gpt-4o-2024-08-06": {
+    "completion_tokens": 58720,
+    "cost": 1.292385,
+    "prompt_tokens": 282074,
+    "total_tokens": 340794
+  },
+  "total_cost": 1.292385
+}

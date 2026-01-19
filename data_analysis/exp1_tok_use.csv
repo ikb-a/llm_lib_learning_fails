@@ -1,0 +1,5 @@
+model,dataset,run,in_M,out_M,ada_K
+dsp,test,1,39.11,10.29,0.
+dsp,test,2-3,78.17,20.67,0.0
+lp,test,1,164.99,77.39,12010
+lp,test,2-3,326.8,149.02,TODO

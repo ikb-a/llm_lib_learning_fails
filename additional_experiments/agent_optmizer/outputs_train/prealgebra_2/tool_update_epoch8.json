@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def sum_of_angles_of_pentagon(n):\n    return (n - 2) * 180",
+      "description": "Calculate the sum of the interior angles of a pentagon.",
+      "name": "sum_of_angles_of_pentagon",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_distance_between_points(x1, y1, x2, y2):\n    return round(float(sqrt((x2 - x1)**2 + (y2 - y1)**2)), 1)",
+      "description": "Calculate the distance between two points in a 2D plane using the distance formula.",
+      "name": "calculate_distance_between_points",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_ac_length(a_x, a_y, c_x, c_y):\n    return round(float(sqrt((c_x - a_x)**2 + (c_y - a_y)**2)), 1)",
+      "description": "Calculate the length of AC in a pentagon using the distance formula.",
+      "name": "calculate_ac_length",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_angle_sum(n):\n    return (n - 2) * 180",
+      "description": "Calculate the sum of the interior angles of a polygon given the number of sides.",
+      "name": "calculate_angle_sum",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_angle_value(angle_A, angle_B, angle_C, angle_D, angle_E):\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+      "description": "Calculate the specified angle based on input relationships in a pentagon.",
+      "name": "calculate_angle_value",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import math\n\ndef calculate_radians(degrees):\n    return degrees * (math.pi / 180)",
+      "description": "Convert degrees to radians.",
+      "name": "calculate_radians",
+      "packages": ""
+    }
+  }
+]

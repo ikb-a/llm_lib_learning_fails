@@ -1,0 +1,370 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Evaluate a trigonometric expression involving sine and cosine functions.",
+        "name": "evaluate_trig_expression",
+        "parameters": {
+          "properties": {
+            "angle": {
+              "description": "The angle in degrees",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate trigonometric functions like sine, cosine, or tangent of given angles in degrees.",
+        "name": "evaluate_trig_functions",
+        "parameters": {
+          "properties": {
+            "angle_degrees": {
+              "description": "The angle in degrees to evaluate",
+              "type": "integer"
+            },
+            "function": {
+              "description": "The trigonometric function to evaluate (sin, cos, tan)",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate expressions involving secant and cosecant functions given input angles in degrees.",
+        "name": "evaluate_secant_cosecant_expression",
+        "parameters": {
+          "properties": {
+            "angle_degrees": {
+              "description": "The angle in degrees to evaluate",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angle in degrees from tangent values.",
+        "name": "calculate_angle",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "Tangent value of angle alpha",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "Tangent value of angle beta",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate all angles of a triangle given its side lengths using the cosine rule.",
+        "name": "calculate_triangle_angles_all",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side a",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side b",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side c",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the arccosine value given a side length. Returns the angle in radians.",
+        "name": "calculate_arccos",
+        "parameters": {
+          "properties": {
+            "x": {
+              "description": "Value for which to calculate arccosine.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Compute the arcsine of a value.",
+        "name": "arcsin_value",
+        "parameters": {
+          "properties": {
+            "value": {
+              "description": "The value to compute arcsine for.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Find the domain of the function f(x) = tan(arccos(x^2)).",
+        "name": "domain_of_tan_arccos",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angle of a triangle given its sides using cosine rule.",
+        "name": "compute_angle",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side a",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side b",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side c",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a triangle given its side lengths using the cosine rule.",
+        "name": "compute_angles_of_triangle",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side a",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side b",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side c",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Compute the inverse tangent of a value.",
+        "name": "inverse_tangent",
+        "parameters": {
+          "properties": {
+            "value": {
+              "description": "The value to compute the inverse tangent for.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Compute the arcsine of a value in radians.",
+        "name": "compute_arcsin",
+        "parameters": {
+          "properties": {
+            "value": {
+              "description": "The value to compute arcsine for.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate tan of arcsine for values within valid domain.",
+        "name": "evaluate_tan_arccos",
+        "parameters": {
+          "properties": {
+            "x": {
+              "description": "The input value for which to evaluate tan(arccos).",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the arcsine of a value.",
+        "name": "calculate_arcsin",
+        "parameters": {
+          "properties": {
+            "value": {
+              "description": "The value to compute arcsine for.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a triangle based on the lengths of its sides using the cosine rule.",
+        "name": "compute_triangle_angles",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of the first side",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of the second side",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of the third side",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate expressions of sine and cosine values for given angles and return their simplified output.",
+        "name": "evaluate_sine_cosine_expression",
+        "parameters": {
+          "properties": {
+            "angle_degrees": {
+              "description": "The angle in degrees to evaluate.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angles of a triangle given its sides using the cosine rule.",
+        "name": "calculate_triangle_angles",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side a",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side b",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side c",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate angles A, B, and C of a triangle given its side lengths using the cosine rule.",
+        "name": "calculate_arccosine_and_sine",
+        "parameters": {
+          "properties": {
+            "a": {
+              "description": "Length of side a",
+              "type": "integer"
+            },
+            "b": {
+              "description": "Length of side b",
+              "type": "integer"
+            },
+            "c": {
+              "description": "Length of side c",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

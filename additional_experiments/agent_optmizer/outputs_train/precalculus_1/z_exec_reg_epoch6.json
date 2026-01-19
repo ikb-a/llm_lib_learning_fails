@@ -1,0 +1,22 @@
+{
+  "calculate_angles_of_triangle": {
+    "code": "import sympy as sp\ndef calculate_angles_of_triangle(a, b, c):\n    angle_A = sp.acos((b**2 + c**2 - a**2) / (2 * b * c))\n    angle_B = sp.acos((a**2 + c**2 - b**2) / (2 * a * c))\n    angle_C = sp.acos((a**2 + b**2 - c**2) / (2 * a * b))\n    # Convert angles to degrees\n    angle_A_degrees = sp.deg(angle_A)\n    angle_B_degrees = sp.deg(angle_B)\n    angle_C_degrees = sp.deg(angle_C)\n    return angle_A_degrees, angle_B_degrees, angle_C_degrees",
+    "packages": "sympy"
+  },
+  "calculate_tangent_arccos": {
+    "code": "def calculate_tangent_arccos(tan_alpha, tan_beta):\n    numerator = tan_alpha - tan_beta\n    denominator = 1 + tan_alpha * tan_beta\n    return numerator / denominator",
+    "packages": "sympy"
+  },
+  "calculate_triangle_angles": {
+    "code": "import sympy as sp\ndef calculate_triangle_angles(side_a, side_b, side_c):\n    angle_A = sp.acos((side_b**2 + side_c**2 - side_a**2) / (2 * side_b * side_c))\n    angle_B = sp.acos((side_a**2 + side_c**2 - side_b**2) / (2 * side_a * side_c))\n    angle_C = sp.acos((side_a**2 + side_b**2 - side_c**2) / (2 * side_a * side_b))\n    return sp.deg(angle_A), sp.deg(angle_B), sp.deg(angle_C)",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        return result.evalf() if result.is_number else str(result)\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "tan_difference": {
+    "code": "def tan_difference(tan_alpha, tan_beta):\n    return (tan_alpha - tan_beta) / (1 + tan_alpha * tan_beta)",
+    "packages": "sympy"
+  }
+}

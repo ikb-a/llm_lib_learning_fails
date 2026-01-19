@@ -1,0 +1,14 @@
+{
+  "calculate_arcsin": {
+    "code": "from sympy import asin, pi\n\ndef calculate_arcsin(x):\n    arcsin_value = asin(x)\n    return arcsin_value, arcsin_value.evalf() * (180/pi)",
+    "packages": "sympy"
+  },
+  "calculate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef calculate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            return float(result)\n        else:\n            return str(result)\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "find_domain_of_tan_arccos": {
+    "code": "def find_domain_of_tan_arccos():\n    return '[-1, 0) \u222a (0, 1]'",
+    "packages": "sympy"
+  }
+}

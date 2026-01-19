@@ -1,0 +1,58 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate arcsin for a given value.",
+      "name": "evaluate_arcsin",
+      "parameters": {
+        "properties": {
+          "value": {
+            "description": "The value for which to compute arcsin",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate angles of a triangle given its sides using the cosine rule.",
+      "name": "calculate_triangle_angles",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side a",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side b",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side c",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate sine, cosine, and tangent of a given angle in degrees.",
+      "name": "calculate_trig_functions",
+      "parameters": {
+        "properties": {
+          "angle_degrees": {
+            "description": "The angle in degrees.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

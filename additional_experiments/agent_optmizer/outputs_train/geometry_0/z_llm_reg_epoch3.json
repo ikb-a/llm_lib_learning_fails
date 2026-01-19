@@ -1,0 +1,122 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculates the volume of a cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a frustum given the radii and height.",
+      "name": "calculate_surface_area_frustum",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the frustum.",
+            "type": "integer"
+          },
+          "radius1": {
+            "description": "The radius of the upper base of the frustum.",
+            "type": "integer"
+          },
+          "radius2": {
+            "description": "The radius of the lower base of the frustum.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of one edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a frustum of a cone given the radii of the two bases and the height.",
+      "name": "calculate_area_of_frustum",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the frustum.",
+            "type": "integer"
+          },
+          "radius1": {
+            "description": "The radius of the upper base of the frustum.",
+            "type": "integer"
+          },
+          "radius2": {
+            "description": "The radius of the lower base of the frustum.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

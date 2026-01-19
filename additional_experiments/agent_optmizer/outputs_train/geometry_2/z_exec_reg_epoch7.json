@@ -1,0 +1,34 @@
+{
+  "calculate_area_of_triangle": {
+    "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(a, b, c):\n    if a <= 0 or b <= 0 or c <= 0:\n        return 'Invalid triangle sides.'\n    s = (a + b + c) / 2\n    return sqrt(s * (s - a) * (s - b) * (s - c))",
+    "packages": "sympy"
+  },
+  "calculate_distance": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance(point1, point2):\n    x1, y1, z1 = point1['x'], point1['y'], point1['z']\n    x2, y2, z2 = point2['x'], point2['y'], point2['z']\n    return sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)",
+    "packages": "sympy"
+  },
+  "calculate_painted_area": {
+    "code": "from sympy import pi, sqrt\n\ndef calculate_painted_area(cone_height, cone_radius, small_cone_height_ratio):\n    r1 = cone_radius * (small_cone_height_ratio / cone_height)\n    l1 = sqrt(r1**2 + (small_cone_height_ratio)**2)\n    area_small_cone = pi * r1 * (r1 + l1)\n    volume_small_cone = (1/3) * pi * r1**2 * small_cone_height_ratio\n    area_cone = 24 * pi  # total surface area of cone\n    volume_cone = 12 * pi  # total volume of cone\n    area_frustum = area_cone - area_small_cone\n    volume_frustum = volume_cone - volume_small_cone\n    k_area = area_small_cone / area_frustum\n    k_volume = volume_small_cone / volume_frustum\n    return k_area, k_volume",
+    "packages": "sympy"
+  },
+  "calculate_ratio": {
+    "code": "def calculate_ratio(numerator, denominator):\n    if denominator == 0:\n        return 'Denominator cannot be zero'\n    return numerator / denominator",
+    "packages": ""
+  },
+  "calculate_surface_area_of_cone": {
+    "code": "from sympy import pi\n\ndef calculate_surface_area_of_cone(radius, slant_height):\n    return pi * radius * (radius + slant_height)",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * (edge_length ** 2)",
+    "packages": ""
+  },
+  "calculate_triangle_area": {
+    "code": "def calculate_triangle_area(base, height):\n    return 0.5 * base * height",
+    "packages": ""
+  },
+  "calculate_volume_of_cone": {
+    "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * (radius ** 2) * height",
+    "packages": "sympy"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "transform_and_solve": {
+    "code": "def transform_and_solve(problem_code):\n    exec_globals = {}\n    exec(problem_code, {\"__builtins__\": None}, exec_globals)\n    return exec_globals.get('result', 'No result found')",
+    "packages": "sympy"
+  }
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate permutations of a multiset given counts of distinct items.",
+      "name": "count_permutations_multiset",
+      "parameters": {
+        "properties": {
+          "counts": {
+            "description": "A dictionary with counts of each distinct item.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "The total number of items in the multiset.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of permutations of n items taken k at a time.",
+      "name": "calculate_permutations",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "Number of items to arrange.",
+            "type": "integer"
+          },
+          "n": {
+            "description": "Total number of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the multiplication of combinations from a list of values.",
+      "name": "calculate_multiplication_combination",
+      "parameters": {
+        "properties": {
+          "values": {
+            "description": "A dictionary of values to calculate combinations for.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the expected number of rolls of a die given the rules of rolling.",
+      "name": "calculate_expected_rolls",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in a year.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate permutations of a multiset given counts of distinct items.",
+      "name": "calculate_permutations_multiset",
+      "parameters": {
+        "properties": {
+          "counts": {
+            "description": "A dictionary with counts of each distinct item.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "The total number of items in the multiset.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of combinations of choosing k items from n items.",
+      "name": "calculate_combinations",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "Number of items to choose.",
+            "type": "integer"
+          },
+          "n": {
+            "description": "Total number of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate expected rolls of a six-sided die in a non-leap year based on defined probabilities.",
+      "name": "calculate_expected_rolls_in_year",
+      "parameters": {
+        "properties": {
+          "days": {
+            "description": "Number of days in a non-leap year.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

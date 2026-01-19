@@ -1,0 +1,62 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the tangent of the difference of two angles using their tangent values.",
+      "name": "calculate_tangent_arccos",
+      "parameters": {
+        "properties": {
+          "tan_alpha": {
+            "description": "The tangent of angle alpha.",
+            "type": "integer"
+          },
+          "tan_beta": {
+            "description": "The tangent of angle beta.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the angles of a triangle given its sides.",
+      "name": "calculate_angles_of_triangle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Side length a.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Side length b.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Side length c.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

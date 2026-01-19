@@ -1,0 +1,74 @@
+[
+  {
+    "func_sig": {
+      "description": "Convert a symbolic representation of a value to its decimal form.",
+      "name": "calculate_decimal_value",
+      "parameters": {
+        "properties": {
+          "symbolic_value": {
+            "description": "The symbolic value to convert",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a right triangle using the Pythagorean theorem.",
+      "name": "calculate_pythagorean_distance",
+      "parameters": {
+        "properties": {
+          "AB": {
+            "description": "Length of side AB",
+            "type": "integer"
+          },
+          "BC": {
+            "description": "Length of side BC",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given the base and height.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The length of the base of the triangle.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "The height of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * (edge_length ** 2)",
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * (radius ** 2) * height",
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_triangle_area(base, height):\n    return (1 / 2) * base * height",
+      "description": "Calculate the area of a triangle given its base and height.",
+      "name": "calculate_triangle_area",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    if radius <= 0:\n        raise ValueError(\"Radius must be a positive number.\")\n    return pi * (radius ** 2)",
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_lengths_of_altitudes(side_a, side_b, side_c):\n    s = (side_a + side_b + side_c) / 2\n    area = sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))\n    h_a = (2 * area) / side_a\n    h_b = (2 * area) / side_b\n    h_c = (2 * area) / side_c\n    return sorted([h_a, h_b, h_c], reverse=True)[:2]",
+      "description": "Calculate the lengths of the two longest altitudes in a triangle given its sides.",
+      "name": "calculate_lengths_of_altitudes",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, sqrt\n\ndef calculate_surface_area_of_frustum(radius_lower, radius_upper, height):\n    slant_height = sqrt(height**2 + (radius_upper - radius_lower)**2)\n    return pi * (radius_lower + radius_upper) * slant_height + pi * (radius_lower**2 + radius_upper**2)",
+      "description": "Calculate the surface area of a frustum given its upper and lower radii and height.",
+      "name": "calculate_surface_area_of_frustum",
+      "packages": "sympy"
+    }
+  }
+]

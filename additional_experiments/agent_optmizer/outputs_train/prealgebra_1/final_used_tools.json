@@ -1,0 +1,82 @@
+{
+  "calculate_and_return_angle_measures": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_and_return_angle_measures(angles):\n    # Extract angles from the dictionary\n    A = angles['A']\n    B = angles['B']\n    C = angles['C']\n    D = angles['D']\n    E = angles['E']\n\n    # Sum of angles for polygon\n    total_sum = A + B + C + D + E\n\n    return total_sum",
+    "packages": "sympy"
+  },
+  "calculate_area_of_right_triangle": {
+    "code": "def calculate_area_of_right_triangle(leg_a, leg_b):\n    return (leg_a * leg_b) / 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+    "packages": "sympy"
+  },
+  "calculate_division_expression": {
+    "code": "from sympy import symbols, simplify\n\ndef calculate_division_expression(numerator, expression, multiplier):\n    x = symbols('x')\n    # Evaluate the expression\n    denominator = simplify(eval(expression))\n    result = numerator / denominator\n    return result * multiplier",
+    "packages": "sympy"
+  },
+  "calculate_fractional_expression": {
+    "code": "from sympy import Rational\n\ndef calculate_fractional_expression(numerator, denominator):\n    if denominator == 0:\n        return 'Error: Denominator cannot be zero!'\n    result = Rational(numerator, denominator)\n    return float(result) if result.is_number else str(result)",
+    "packages": "sympy"
+  },
+  "calculate_lcm": {
+    "code": "from sympy import lcm\n\ndef calculate_lcm(num1, num2):\n    return lcm(num1, num2)  # Calculate least common multiple",
+    "packages": "sympy"
+  },
+  "calculate_length": {
+    "code": "from sympy import sqrt\n\ndef calculate_length(A, C):\n    return sqrt((C[0] - A[0])**2 + (C[1] - A[1])**2)  # Distance formula\n\n# Add a function to calculate the length of the diagonal in a rectangle formed by points A, B, C, D where B and D are used to calculate lengths.",
+    "packages": "sympy"
+  },
+  "calculate_pentagon_angle": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angle(angles):\n    A = angles['A']\n    B = angles['B']\n    C, D = symbols('C D')\n    additional_angle = angles['additional_angle']\n    equation = Eq(A + B + 2*C + 2*D + additional_angle, 540)\n    solution = solve(equation, (C, D))\n    return solution",
+    "packages": "sympy"
+  },
+  "calculate_pentagon_angle_measurements": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angle_measurements(angles):\n    A = angles['A']\n    B = angles['B']\n    additional_angle = angles['additional_angle']\n    x = symbols('x')  # C = D = x\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return {'C': C.evalf(), 'D': D.evalf(), 'E': E.evalf()}",
+    "packages": "sympy"
+  },
+  "calculate_pentagon_angles": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angles(A, B, additional_angle):\n    x = symbols('x')  # C = D = x\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)  # sum of angles = 540\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return C.evalf(), D.evalf(), E.evalf()",
+    "packages": "sympy"
+  },
+  "calculate_pentagon_angles_optimized": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pentagon_angles_optimized(angles):\n    # Extract angles from dictionary\n    A = angles['A']\n    B = angles['B']\n    C = angles['C']\n    D = angles['D']\n    additional_angle = angles['additional_angle']\n    x = symbols('x')  # C = D = x\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)  # sum of angles = 540\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return C, D, E\n",
+    "packages": "sympy"
+  },
+  "calculate_perpendicular_distance": {
+    "code": "def calculate_perpendicular_distance(x1, y1, x2, y2):\n    return abs((y2 - y1) * x1 - (x2 - x1) * y1) / ((y2 - y1)**2 + (x2 - x1)**2)**0.5",
+    "packages": "math"
+  },
+  "calculate_polygon_angle_measurements": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_polygon_angle_measurements(angles):\n    A = angles['A']\n    B = angles['B']\n    C = angles['C']\n    D = angles['D']\n    E = angles['E']\n\n    total_sum = A + B + C + D + E\n    return total_sum",
+    "packages": "sympy"
+  },
+  "calculate_probability": {
+    "code": "def calculate_probability(favorable_outcomes, total_outcomes, output_fraction=False):\n    from sympy import Rational\n    if total_outcomes <= 0:\n        return 'Error: Total outcomes must be greater than zero.'\n    if favorable_outcomes < 0:\n        return 'Error: Favorable outcomes cannot be negative.'\n    result = Rational(favorable_outcomes, total_outcomes)\n    return result if output_fraction else float(result)",
+    "packages": "sympy"
+  },
+  "calculate_rectangle_diagonal": {
+    "code": "from sympy import sqrt\n\ndef calculate_rectangle_diagonal(length, width):\n    return sqrt(length**2 + width**2)",
+    "packages": "sympy"
+  },
+  "calculate_remainder": {
+    "code": "def calculate_remainder(numerator, denominator):\n    if denominator == 0:\n        return 'Denominator must not be zero.'  # Error handling\n    return numerator % denominator",
+    "packages": "sympy"
+  },
+  "calculate_slope": {
+    "code": "def calculate_slope(x1, y1, x2, y2):\n    if x2 - x1 == 0:\n        return 'Undefined slope (vertical line)'\n    return (y2 - y1) / (x2 - x1)",
+    "packages": "sympy"
+  },
+  "calculate_square_root": {
+    "code": "from sympy import sqrt\n\ndef calculate_square_root(number):\n    return sqrt(number).evalf()",
+    "packages": "sympy"
+  },
+  "calculate_sum_of_primes": {
+    "code": "def calculate_sum_of_primes(start, end):\n    from sympy import primerange\n    primes = list(primerange(start, end))\n    return len(primes), primes",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        return result.evalf() if result.is_number else str(result)\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  }
+}

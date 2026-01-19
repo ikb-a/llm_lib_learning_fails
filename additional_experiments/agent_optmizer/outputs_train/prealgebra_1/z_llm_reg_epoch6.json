@@ -1,0 +1,94 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the slope of a line given two points (x1, y1) and (x2, y2).",
+      "name": "calculate_slope",
+      "parameters": {
+        "properties": {
+          "x1": {
+            "description": "The x-coordinate of the first point.",
+            "type": "integer"
+          },
+          "x2": {
+            "description": "The x-coordinate of the second point.",
+            "type": "integer"
+          },
+          "y1": {
+            "description": "The y-coordinate of the first point.",
+            "type": "integer"
+          },
+          "y2": {
+            "description": "The y-coordinate of the second point.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the probability based on favorable outcomes and total outcomes.",
+      "name": "calculate_probability",
+      "parameters": {
+        "properties": {
+          "favorable_outcomes": {
+            "description": "The number of favorable outcomes.",
+            "type": "integer"
+          },
+          "output_fraction": {
+            "description": "Indicate whether the output should be in fractional form.",
+            "type": "boolean"
+          },
+          "total_outcomes": {
+            "description": "The total number of outcomes.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remainder of a division operation.",
+      "name": "calculate_remainder",
+      "parameters": {
+        "properties": {
+          "denominator": {
+            "description": "The number to divide by.",
+            "type": "integer"
+          },
+          "numerator": {
+            "description": "The number to be divided.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of prime numbers in a given range.",
+      "name": "calculate_sum_of_primes",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The ending number of the range.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "The starting number of the range.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

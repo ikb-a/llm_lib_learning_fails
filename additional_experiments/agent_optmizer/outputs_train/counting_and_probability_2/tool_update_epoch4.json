@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability(favorable_outcomes, total_outcomes):\n    if total_outcomes == 0:\n        return 0\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+      "description": "Calculate the probability of an event based on favorable and total outcomes.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef expected_number_of_rolls(days):\n    daily_expected_rolls = Rational(6, 5)  # Expected rolls for one day\n    return days * daily_expected_rolls",
+      "description": "Calculate the expected number of rolls given a non-leap year.",
+      "name": "expected_number_of_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, solve, Rational\n\ndef calculate_expected_rolls(days, expected_roll):\n    E = Rational(expected_roll)  # Expected rolls for one day\n    return days * E",
+      "description": "Calculate the expected number of die rolls based on defined probabilities and rules.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability_of_outcome(total_outcomes, favorable_outcomes):\n    probability = Rational(favorable_outcomes, total_outcomes)\n    return probability",
+      "description": "Calculate the probability of rolling outcomes given defined conditions.",
+      "name": "calculate_probability_of_outcome",
+      "packages": "sympy"
+    }
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef expected_dice_rolls(days):\n    return days * Rational(6, 5)  # Likelihood of rolling a number other than 1",
+      "description": "Calculate the expected number of times a die will be rolled given certain conditions.",
+      "name": "expected_dice_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days, p_rolls):\n    expected_per_day = Rational(6, 5)  # Expected rolls per day\n    return days * expected_per_day",
+      "description": "Calculate the expected number of rolls given specific outcomes and total days.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef evaluate_complementary_probability(total_outcomes, favorable_outcomes, trials):\n    return 1 - (Rational(favorable_outcomes, total_outcomes) ** trials)",
+      "description": "Evaluate complementary probability for different scenarios related to dice rolling.",
+      "name": "evaluate_complementary_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from math import factorial\n\ndef calculate_arrangements(total_items, duplicates):\n    denominator = 1\n    for count in duplicates.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+      "description": "Calculate the arrangements of distinct items considering duplicates.",
+      "name": "calculate_arrangements",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from math import factorial\n\ndef calculate_factorial(n):\n    if n < 0:\n        raise ValueError('Factorial is not defined for negative numbers')\n    return factorial(n)",
+      "description": "Calculate factorial of a non-negative integer.",
+      "name": "calculate_factorial",
+      "packages": "math"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_complementary_probability(favorable_outcomes, total_outcomes, trials=1):\n    if trials <= 0:\n        return 'Invalid number of trials'\n    single_event_probability = Rational(favorable_outcomes, total_outcomes)\n    prob_all_different = single_event_probability ** trials\n    return 1 - prob_all_different",
+      "description": "Calculate complementary probability for given favorable and total outcomes across specified trials.",
+      "name": "calculate_complementary_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\n\ndef expected_rolls(num_days):\n    P_match = Rational(319, 324)\n    E = Rational(6, 5)\n    return num_days * E",
+      "description": "Calculate the expected number of rolls given the probabilities of outcomes for rolling a die.",
+      "name": "expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import Rational\n\ndef calculate_probability_of_dice_rolls(num_dice, success_condition, faces=6):\n    total_outcomes = faces ** num_dice\n    favorable_outcomes = eval(success_condition)  # Assuming success_condition is safe to eval\n    return Rational(favorable_outcomes, total_outcomes)",
+      "description": "Calculate the probability of outcomes from dice rolls.",
+      "name": "calculate_probability_of_dice_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def expected_dice_rolls_per_year(expected_rolls_per_day, days_in_year):\n    return expected_rolls_per_day * days_in_year",
+      "description": "Calculate the total expected number of times Bob will roll his die in a non-leap year based on daily expected rolls.",
+      "name": "expected_dice_rolls_per_year",
+      "packages": "math"
+    }
+  }
+]

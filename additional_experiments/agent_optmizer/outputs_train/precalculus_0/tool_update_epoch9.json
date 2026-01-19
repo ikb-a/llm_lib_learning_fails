@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin, pi\n\ndef evaluate_arcsin(value):\n    if value < -1 or value > 1:\n        raise ValueError('Value must be in the range [-1, 1].')\n    return asin(value).evalf()",
+      "description": "Evaluate arcsin for a given value.",
+      "name": "evaluate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, sin, cos, tan, rad\n\ndef calculate_trig_functions(angle_degrees):\n    angle_radians = rad(angle_degrees)\n    return sin(angle_radians), cos(angle_radians), tan(angle_radians)",
+      "description": "Calculate sine, cosine, and tangent of a given angle in degrees.",
+      "name": "calculate_trig_functions",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos\n\ndef evaluate_arccos(value):\n    return acos(value)",
+      "description": "Calculate the arccosine of a value and return it in radians.",
+      "name": "evaluate_arccos",
+      "packages": "sympy"
+    }
+  }
+]

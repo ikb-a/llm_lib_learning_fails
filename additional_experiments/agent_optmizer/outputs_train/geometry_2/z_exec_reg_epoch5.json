@@ -1,0 +1,26 @@
+{
+  "calculate_area_of_triangle": {
+    "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(a, b, c):\n    s = (a + b + c) / 2\n    return sqrt(s * (s - a) * (s - b) * (s - c))",
+    "packages": "sympy"
+  },
+  "calculate_circle_area": {
+    "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_circle_surface_area": {
+    "code": "from sympy import pi\n\ndef calculate_circle_surface_area(radius):\n    return 4 * pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_cone_volume": {
+    "code": "from sympy import pi\n\ndef calculate_cone_volume(radius, height):\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  },
+  "calculate_frustum_volume": {
+    "code": "from sympy import pi\n\ndef calculate_frustum_volume(radius_top, radius_bottom, height):\n    return (1/3) * pi * height * (radius_top ** 2 + radius_top * radius_bottom + radius_bottom ** 2)",
+    "packages": "sympy"
+  },
+  "calculate_ratio_of_areas_and_volumes": {
+    "code": "def calculate_ratio_of_areas_and_volumes(area_large_cone, volume_large_cone, area_small_cone, volume_small_cone):\n    ratio_area = area_small_cone / (area_large_cone - area_small_cone)\n    ratio_volume = volume_small_cone / (volume_large_cone - volume_small_cone)\n    return ratio_area, ratio_volume",
+    "packages": ""
+  }
+}

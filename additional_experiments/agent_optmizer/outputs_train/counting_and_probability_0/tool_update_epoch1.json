@@ -1,0 +1,38 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_expected_rolls(total_rolls):\n    from sympy import symbols, Eq, solve\n\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_rolls = solve(equation, E)[0]\n    return expected_rolls * total_rolls",
+      "description": "Calculate expected number of times a die is rolled with specific conditions, using the complement rule.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_expected_value(total_rolls_per_year):\n    from sympy import symbols, solve\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_value = solve(equation, E)[0]\n    return expected_value * total_rolls_per_year",
+      "description": "Calculate the expected value of the number of rolls when rolling a die with specific rules about outcomes.",
+      "name": "calculate_expected_value",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_probability(total_outcomes, favorable_outcomes):\n    from sympy import Rational\n    return Rational(favorable_outcomes, total_outcomes).limit_denominator()",
+      "description": "Calculates the probability of drawing items based on defined outcomes and conditions.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def expected_value_of_rolls():\n    E = 0\n    total_outcomes = 6**6\n    favorable_outcomes = math.factorial(6)\n    prob_all_different = favorable_outcomes / total_outcomes\n    E = 1 - prob_all_different\n    return E",
+      "description": "Calculates the expected number of rolls of a die based on the rules for rerolling.",
+      "name": "expected_value_of_rolls",
+      "packages": ""
+    }
+  }
+]

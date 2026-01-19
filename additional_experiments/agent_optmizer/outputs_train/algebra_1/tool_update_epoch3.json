@@ -1,0 +1,74 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Rational, Eq, solve\n\ndef calculate_volume_after_addition(current_fill_fraction, target_fill_fraction, additional_liters):\n    V = symbols('V')\n    current_fill = Rational(int(current_fill_fraction.split('/')[0]), int(current_fill_fraction.split('/')[1])) * V\n    target_fill = Rational(int(target_fill_fraction.split('/')[0]), int(target_fill_fraction.split('/')[1])) * V\n    equation = Eq(current_fill + additional_liters, target_fill)\n    return solve(equation, V)[0]",
+      "description": "Calculate the full volume of a tank after adding liters based on its current and target fill fractions.",
+      "name": "calculate_volume_after_addition",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Rational, Eq, solve\n\ndef cylinder_volume(current_fill_fraction, additional_liters, target_fill_fraction):\n    V = symbols('V')\n    current_fill = Rational(int(current_fill_fraction.split('/')[0]), int(current_fill_fraction.split('/')[1])) * V\n    target_fill = Rational(int(target_fill_fraction.split('/')[0]), int(target_fill_fraction.split('/')[1])) * V\n    equation = Eq(current_fill + additional_liters, target_fill)\n    return solve(equation, V)[0]",
+      "description": "Calculate the full volume of a cylindrical tank given its filling states and additional liters.",
+      "name": "cylinder_volume",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Rational, Eq, solve\n\ndef calculate_equation_fill_fraction(current_fill_fraction, target_fill_fraction, additional_liters):\n    V = symbols('V')\n    current_fill = Rational(int(current_fill_fraction.split('/')[0]), int(current_fill_fraction.split('/')[1])) * V\n    target_fill = Rational(int(target_fill_fraction.split('/')[0]), int(target_fill_fraction.split('/')[1])) * V\n    equation = Eq(current_fill + additional_liters, target_fill)\n    return solve(equation, V)[0]",
+      "description": "Calculate the filling state of a tank given the current fill fraction, additional liters, and target fill fraction as strings.",
+      "name": "calculate_equation_fill_fraction",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_total_cost(quantities, prices):\n    if len(quantities) != len(prices):\n        return \"Error: Length of quantities and prices must match.\"\n    return sum(q * p for q, p in zip(quantities, prices))",
+      "description": "Calculate the total cost based on quantities and prices of multiple items.",
+      "name": "calculate_total_cost",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_average_cost(quantities, prices):\n    if len(quantities) != len(prices):\n        return \"Error: Length of quantities and prices must match.\"\n    total_cost = sum(q * p for q, p in zip(quantities, prices))\n    total_quantity = sum(quantities)\n    return total_cost / total_quantity if total_quantity > 0 else 0",
+      "description": "Calculate the average cost per item based on quantities and prices of multiple items.",
+      "name": "calculate_average_cost",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_distance(point1, point2):\n    if len(point1) != 2 or len(point2) != 2:\n        return \"Error: Each point must have exactly 2 coordinates.\"\n    x1, y1 = point1\n    x2, y2 = point2\n    distance = sqrt((x2 - x1)**2 + (y2 - y1)**2)\n    return distance.evalf()",
+      "description": "Calculate the distance between two points in a Cartesian plane.",
+      "name": "calculate_distance",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve\n\ndef solve_system_of_equations(equations):\n    variables = symbols(' '.join(['var'+str(i) for i in range(len(equations))]))\n    eqs = []\n    for i, eq in enumerate(equations):\n        eqs.append(Eq(eval(eq), 0))\n    return solve(eqs, variables)",
+      "description": "Solve a system of linear equations provided as strings.",
+      "name": "solve_system_of_equations",
+      "packages": "sympy"
+    }
+  }
+]

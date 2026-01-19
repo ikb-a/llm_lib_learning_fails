@@ -1,0 +1,130 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the surface area and volume of a cone given its radius and height.",
+        "name": "calculate_area_and_volume_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve mathematical problems using sympy library and given inputs.",
+        "name": "solve_task_with_sympy",
+        "parameters": {
+          "properties": {
+            "equations": {
+              "description": "The equations to solve.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "variables": {
+              "description": "The variables involved in the equations.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume and surface area of a geometric shape given its dimensions.",
+        "name": "calculate_code_properties",
+        "parameters": {
+          "properties": {
+            "dimensions": {
+              "description": "The dimensions needed for the calculation, such as radius, height, etc.",
+              "properties": {
+                "height": {
+                  "type": "integer"
+                },
+                "radius": {
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            },
+            "shape": {
+              "description": "The type of the shape, e.g., cone, sphere, cylinder.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+        "name": "evaluate_math_problem",
+        "parameters": {
+          "properties": {
+            "problem_statement": {
+              "description": "The mathematical problem statement to be solved.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the Euclidean distance between two points in 3D space.",
+        "name": "calculate_distance_3d",
+        "parameters": {
+          "properties": {
+            "point1": {
+              "description": "The first point in the format [x,y,z]",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "point2": {
+              "description": "The second point in the format [x,y,z]",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

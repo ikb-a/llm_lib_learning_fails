@@ -1,0 +1,18 @@
+{
+  "calculate_modular_inverse": {
+    "code": "from sympy import mod_inverse\n\ndef calculate_modular_inverse(a, m):\n    if m <= 0:\n        return 'Invalid modulus.'\n    return mod_inverse(a, m)",
+    "packages": "sympy"
+  },
+  "convert_decimal_to_base": {
+    "code": "def convert_decimal_to_base(number, base):\n    if number == 0:\n        return '0'\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+    "packages": ""
+  },
+  "convert_repeating_decimal_to_fraction": {
+    "code": "import sympy\n\ndef convert_repeating_decimal_to_fraction(repeating_decimal):\n    # Extract the repeating digits\n    if '.' in repeating_decimal:\n        whole, frac = repeating_decimal.split('.')\n        if '\\overline{' in frac:\n            non_repeating, repeating = frac.split('\\overline{')\n            repeating = repeating.rstrip('}')\n            numerator = int(whole + non_repeating + repeating) - int(whole + non_repeating)\n            denominator = (10 ** len(non_repeating) * (10 ** len(repeating) - 1))\n        else:\n            numerator = int(whole + frac)\n            denominator = 10 ** len(frac)\n    else:\n        numerator = int(repeating_decimal)\n        denominator = 1\n\n    if denominator == 0:\n        return 'Error: Division by zero'\n\n    gcd = sympy.gcd(numerator, denominator)\n    simplified_numerator = numerator // gcd\n    simplified_denominator = denominator // gcd\n\n    return simplified_numerator, simplified_denominator, simplified_numerator + simplified_denominator",
+    "packages": "sympy"
+  },
+  "find_distinct_remainders_sum": {
+    "code": "def find_distinct_remainders_sum(start, end, modulus):\n    remainders = set()  \n    for n in range(start, end + 1):\n        square = n ** 2\n        remainder = square % modulus\n        remainders.add(remainder)\n    return sum(remainders)",
+    "packages": ""
+  }
+}

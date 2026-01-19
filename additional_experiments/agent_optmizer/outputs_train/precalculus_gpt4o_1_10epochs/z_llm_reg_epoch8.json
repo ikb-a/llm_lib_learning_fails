@@ -1,0 +1,132 @@
+[
+  {
+    "func_sig": {
+      "description": "Solve for the angles of a triangle given its side lengths using the Law of Cosines.",
+      "name": "solve_triangle_angles",
+      "parameters": {
+        "properties": {
+          "side_a": {
+            "description": "Length of side a.",
+            "type": "string"
+          },
+          "side_b": {
+            "description": "Length of side b.",
+            "type": "string"
+          },
+          "side_c": {
+            "description": "Length of side c.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Compute the projection of vector v onto vector w using the dot product.",
+      "name": "compute_vector_projection",
+      "parameters": {
+        "properties": {
+          "v": {
+            "description": "The vector to project.",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "w": {
+            "description": "The vector to project onto.",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert a point from rectangular coordinates to spherical coordinates (rho, theta, phi) where rho > 0, 0 <= theta < 2*pi, and 0 <= phi <= pi.",
+      "name": "convert_coordinates_to_spherical",
+      "parameters": {
+        "properties": {
+          "x": {
+            "description": "X coordinate of the point.",
+            "type": "string"
+          },
+          "y": {
+            "description": "Y coordinate of the point.",
+            "type": "string"
+          },
+          "z": {
+            "description": "Z coordinate of the point.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Find the equation of a plane given three points in 3D space. The result is simplified to integers where applicable, ensuring greatest common divisor of coefficients is 1.",
+      "name": "find_plane_equation_from_points",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "First point coordinates.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "Second point coordinates.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "point3": {
+            "description": "Third point coordinates.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve a wide range of mathematical problems such as solving equations, converting coordinates, evaluating expressions, and finding intersections or projections using SymPy. Enhanced for better parsing and computation of symbolic or numerical results. This version fixes issues related to the preceding definition and corrects exceptions for improved versatility across equation, intersection, and conversion tasks.",
+      "name": "solve_question_with_sympy",
+      "parameters": {
+        "properties": {
+          "problem_description": {
+            "description": "The problem to solve, described in mathematical terms or natural language.",
+            "type": "string"
+          },
+          "variables": {
+            "description": "Variables involved in the problem statement.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

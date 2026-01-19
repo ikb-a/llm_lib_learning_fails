@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_surface_area_of_cube(edge_length):\n    return 6 * (edge_length ** 2)",
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, simplify\n\ndef calculate_area_of_circle(radius):\n    if radius <= 0:\n        raise ValueError(\"Radius must be a positive number.\")\n    return simplify(pi * (radius ** 2))",
+      "description": "Calculate the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, sqrt, simplify\n\ndef calculate_surface_area_of_cone(radius, height):\n    if radius <= 0 or height <= 0:\n        raise ValueError(\"Radius and height must be positive numbers.\")\n    slant_height = sqrt(radius**2 + height**2)\n    surface_area = simplify(pi * radius * (slant_height + radius))\n    return surface_area",
+      "description": "Calculate the surface area of a right circular cone given its radius and height.",
+      "name": "calculate_surface_area_of_cone",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi, simplify\n\ndef calculate_volume_of_cone(radius, height):\n    if radius <= 0 or height <= 0:\n        raise ValueError(\"Radius and height must be positive numbers.\")\n    return simplify((1/3) * pi * (radius ** 2) * height)",
+      "description": "Calculate the volume of a right circular cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(side_a, side_b, side_c):\n    s = (side_a + side_b + side_c) / 2\n    return sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))",
+      "description": "Calculate the area of a triangle using Heron's formula given the lengths of its sides.",
+      "name": "calculate_area_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_surface_area_of_cylinder(radius, height):\n    return 2 * pi * radius * (height + radius)",
+      "description": "Calculate the surface area of a cylinder given its radius and height.",
+      "name": "calculate_surface_area_of_cylinder",
+      "packages": "sympy"
+    }
+  }
+]

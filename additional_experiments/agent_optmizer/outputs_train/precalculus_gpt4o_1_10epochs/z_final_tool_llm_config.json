@@ -1,0 +1,272 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Converts rectangular coordinates to spherical coordinates in the format (rho, theta, phi).",
+        "name": "convert_rectangular_to_spherical",
+        "parameters": {
+          "properties": {
+            "x": {
+              "description": "X coordinate in rectangular form.",
+              "type": "string"
+            },
+            "y": {
+              "description": "Y coordinate in rectangular form.",
+              "type": "string"
+            },
+            "z": {
+              "description": "Z coordinate in rectangular form.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the product of two matrices using sympy and returns the resulting matrix.",
+        "name": "compute_matrix_multiplication",
+        "parameters": {
+          "properties": {
+            "matrix1": {
+              "description": "The first matrix for multiplication.",
+              "items": {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "matrix2": {
+              "description": "The second matrix for multiplication.",
+              "items": {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of the squares of the cosine of angles from 0 to a specified number of degrees using the sympy package.",
+        "name": "sum_of_cos_squared",
+        "parameters": {
+          "properties": {
+            "degrees": {
+              "description": "The upper bound of the range in degrees to calculate the sum of cos^2 from 0 to this degree.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve for the angles of a triangle given its side lengths using the Law of Cosines.",
+        "name": "solve_triangle_angles",
+        "parameters": {
+          "properties": {
+            "side_a": {
+              "description": "Length of side a.",
+              "type": "string"
+            },
+            "side_b": {
+              "description": "Length of side b.",
+              "type": "string"
+            },
+            "side_c": {
+              "description": "Length of side c.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Compute the projection of vector v onto vector w using the dot product.",
+        "name": "compute_vector_projection",
+        "parameters": {
+          "properties": {
+            "v": {
+              "description": "The vector to project.",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "w": {
+              "description": "The vector to project onto.",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings and return the result as a simplified expression.",
+        "name": "evaluate_math_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression or equation to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Convert a point from rectangular coordinates to spherical coordinates (rho, theta, phi) where rho > 0, 0 <= theta < 2*pi, and 0 <= phi <= pi.",
+        "name": "convert_coordinates_to_spherical",
+        "parameters": {
+          "properties": {
+            "x": {
+              "description": "X coordinate of the point.",
+              "type": "string"
+            },
+            "y": {
+              "description": "Y coordinate of the point.",
+              "type": "string"
+            },
+            "z": {
+              "description": "Z coordinate of the point.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Finds the equation of a plane given three points in 3D space. The result is simplified to integers where applicable, ensuring greatest common divisor of coefficients is 1.",
+        "name": "find_plane_equation_from_points",
+        "parameters": {
+          "properties": {
+            "point1": {
+              "description": "First point coordinates.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "point2": {
+              "description": "Second point coordinates.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "point3": {
+              "description": "Third point coordinates.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the tangent of the difference of two angles using the tangent subtraction formula.",
+        "name": "solve_tangent_difference",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "Tangent of angle alpha.",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "Tangent of angle beta.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solves a variety of mathematical problems by formulating equations, systems of equations, and numeric computations using SymPy. Includes enhancements for better parsing, evaluation, and handling of specific symbolic expressions and numeric calculations. Now with improved parsing for exceptions and refined input recognition for equations and geometric problems.",
+        "name": "solve_question_with_sympy",
+        "parameters": {
+          "properties": {
+            "problem_description": {
+              "description": "The problem to solve, described in natural language.",
+              "type": "string"
+            },
+            "variables": {
+              "description": "Variables involved in the problem statement, used for symbolic evaluation.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the tangent of the difference between two angles given their tangents.",
+        "name": "evaluate_tangent_difference",
+        "parameters": {
+          "properties": {
+            "tan_alpha": {
+              "description": "Tangent of angle alpha.",
+              "type": "integer"
+            },
+            "tan_beta": {
+              "description": "Tangent of angle beta.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

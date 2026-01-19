@@ -1,0 +1,18 @@
+{
+  "calculate_arrangements": {
+    "code": "from math import factorial\n\ndef calculate_arrangements(total_items, duplicates):\n    denominator = 1\n    for count in duplicates.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+    "packages": "math"
+  },
+  "calculate_expected_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days, p_rolls):\n    expected_per_day = Rational(6, 5)  # Expected rolls per day\n    return days * expected_per_day",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls_per_year": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls_per_year(days, rolls_per_day):\n    return days * Rational(rolls_per_day)",
+    "packages": "sympy"
+  },
+  "calculate_expected_rolls_with_retries": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls_with_retries(days):\n    expected_per_roll = Rational(6, 5)  # Expected rolls per day accounting for retries\n    return days * expected_per_roll",
+    "packages": "sympy"
+  }
+}

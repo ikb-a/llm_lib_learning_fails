@@ -1,0 +1,18 @@
+{
+  "calculate_distance": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance(x1, y1, x2, y2):\n    dx = x2 - x1\n    dy = y2 - y1\n    distance = sqrt(dx**2 + dy**2)\n    return distance, float(distance)",
+    "packages": "sympy"
+  },
+  "evaluate_constant_function": {
+    "code": "\ndef evaluate_constant_function(input_value):\n    return 2",
+    "packages": ""
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "simplify_expression": {
+    "code": "from sympy import sympify\n\n\ndef simplify_expression(expression):\n    simplified = sympify(expression)\n    return simplified, float(simplified)",
+    "packages": "sympy"
+  }
+}

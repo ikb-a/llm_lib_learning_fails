@@ -1,0 +1,370 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the expected number of times a die will be rolled given specific rules about rolling and outcomes.",
+        "name": "calculate_expected_dice_rolls",
+        "parameters": {
+          "properties": {
+            "year_days": {
+              "description": "The number of days in the year, typically 365 or 366 for leap years.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of times a die will be rolled given the specific rules about rolling.",
+        "name": "expected_rolls_die",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "The number of days over which to calculate expected rolls.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Count arrangements of objects with given conditions and categories.",
+        "name": "count_arrangements_with_conditions",
+        "parameters": {
+          "properties": {
+            "distinguished_counts": {
+              "description": "A dictionary containing counts of different elements for the arrangement.",
+              "type": "object"
+            },
+            "total_objects": {
+              "description": "Total number of distinguishable objects.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate permutations of a multiset given counts of distinct items.",
+        "name": "count_permutations_multiset",
+        "parameters": {
+          "properties": {
+            "counts": {
+              "description": "A dictionary with counts of each distinct item.",
+              "type": "object"
+            },
+            "total_items": {
+              "description": "The total number of items in the multiset.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the multiplication of combinations from a list of values.",
+        "name": "calculate_multiplication_combination",
+        "parameters": {
+          "properties": {
+            "values": {
+              "description": "A dictionary of values to calculate combinations for.",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate permutations of a multiset given counts of distinct items.",
+        "name": "calculate_permutations_multiset",
+        "parameters": {
+          "properties": {
+            "counts": {
+              "description": "A dictionary with counts of each distinct item.",
+              "type": "object"
+            },
+            "total_items": {
+              "description": "The total number of items in the multiset.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate expected rolls of a six-sided die in a non-leap year based on defined probabilities.",
+        "name": "calculate_expected_rolls_in_year",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in a non-leap year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of combinations of choosing k items from n items.",
+        "name": "calculate_combinations",
+        "parameters": {
+          "properties": {
+            "k": {
+              "description": "Number of items to choose.",
+              "type": "integer"
+            },
+            "n": {
+              "description": "Total number of items.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of permutations of n items taken k at a time.",
+        "name": "calculate_permutations",
+        "parameters": {
+          "properties": {
+            "k": {
+              "description": "Number of items to arrange.",
+              "type": "integer"
+            },
+            "n": {
+              "description": "Total number of items.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability of rolling outcomes given defined conditions.",
+        "name": "calculate_probability_of_outcome",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "Favorable outcomes that meet conditions",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "Total possible outcomes",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls based on defined probabilities and rules.",
+        "name": "calculate_rolls_expectation",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in a non-leap year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total arrangements for given categories with constraints.",
+        "name": "calculate_total_arrangements",
+        "parameters": {
+          "properties": {
+            "category_counts": {
+              "description": "Counts of each category.",
+              "type": "object"
+            },
+            "total_items": {
+              "description": "Total items to arrange.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of times a die will be rolled given specific outcomes.",
+        "name": "calculate_expected_rolls",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in a year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the count of prime and composite numbers on a die, as well as the expected rolls based on those probabilities.",
+        "name": "calculate_primes_and_composites",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability of at least one success using the complement rule.",
+        "name": "calculate_probability_complement",
+        "parameters": {
+          "properties": {
+            "n_trials": {
+              "description": "The total number of trials.",
+              "type": "integer"
+            },
+            "p_success": {
+              "description": "The probability of success in a single trial.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the probability of an event based on favorable and total outcomes.",
+        "name": "calculate_probability",
+        "parameters": {
+          "properties": {
+            "favorable_outcomes": {
+              "description": "The number of favorable outcomes.",
+              "type": "integer"
+            },
+            "total_outcomes": {
+              "description": "The total number of possible outcomes.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the number of distinct permutations of a multiset given the counts of each distinct item.",
+        "name": "calculate_unique_permutations",
+        "parameters": {
+          "properties": {
+            "item_counts": {
+              "description": "Counts of each distinct item.",
+              "type": "object"
+            },
+            "total_items": {
+              "description": "Total number of items in the set.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of die rolls based on composite and prime outcomes.",
+        "name": "calculate_expected_rolls_for_composite_prime",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in a non-leap year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls based on defined probabilities and rules, including handling re-rolls.",
+        "name": "expected_number_of_rolls_v2",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Number of days in a year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the expected number of rolls based on defined probabilities and rules, including handling re-rolls.",
+        "name": "expected_number_of_rolls",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "The number of days in a non-leap year.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

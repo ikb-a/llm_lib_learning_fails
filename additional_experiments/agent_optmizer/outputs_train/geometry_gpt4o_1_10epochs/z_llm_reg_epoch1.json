@@ -1,0 +1,70 @@
+[
+  {
+    "func_sig": {
+      "description": "Solve mathematical problems using sympy library and given inputs.",
+      "name": "solve_task_with_sympy",
+      "parameters": {
+        "properties": {
+          "equations": {
+            "description": "The equations to solve.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "variables": {
+            "description": "The variables involved in the equations.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point as an array [x1, y1, z1].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point as an array [x2, y2, z2].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+      "name": "evaluate_math_problem",
+      "parameters": {
+        "properties": {
+          "problem_statement": {
+            "description": "The mathematical problem statement to be solved.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

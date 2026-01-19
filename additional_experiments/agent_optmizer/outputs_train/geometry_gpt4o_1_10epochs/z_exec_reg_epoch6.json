@@ -1,0 +1,10 @@
+{
+  "evaluate_math_problem": {
+    "code": "from sympy import symbols, Eq, solve, sqrt, pi, Rational, simplify, evalf, sympify\n\ndef evaluate_math_problem(problem_statement):\n    try:\n        # Supported variables (expand as needed for the problems solved)\n        x, y, z = symbols('x y z')\n        expr = sympify(problem_statement, evaluate=False)  # Safely parse the problem statement\n        return expr\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_math_problem": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef solve_math_problem(equations, variables):\n    try:\n        # Declaring variables\n        var_symbols = symbols(variables)\n        # Creating sympy equations\n        eq_objects = [Eq(*map(sympify, eq.split('='))) for eq in equations]\n        # Solving equations\n        solutions = solve(eq_objects, var_symbols)\n        return solutions\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  }
+}

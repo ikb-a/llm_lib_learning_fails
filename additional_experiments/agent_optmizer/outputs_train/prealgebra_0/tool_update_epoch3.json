@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import primerange\n\ndef calculate_remainder(n, m):\n    primes = list(primerange(1, 100))  # get prime numbers below 100\n    sum_of_primes = sum(primes[:n])  # sum of the first n primes\n    return sum_of_primes % primes[m-1]  # remainder when divided by mth prime",
+      "description": "Calculate the remainder of the sum of the first n primes divided by the mth prime.",
+      "name": "calculate_remainder",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import N\n\ndef evaluate_and_round_expression(expression, decimal_places):\n    result = N(expression)\n    if decimal_places is not None:\n        result = round(result, decimal_places)\n    return result",
+      "description": "Evaluate an arithmetic expression and round the result to the nearest specified decimal places.",
+      "name": "evaluate_and_round_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_max_angle_pentagon(angle_A, angle_B, angle_C, angle_D, angle_E):\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "calculate_max_angle_pentagon",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def sum_of_angles_pentagon(angle_A, angle_B, x):\n    angle_C = x\n    angle_D = x\n    angle_E = 2 * x + 15\n    angles = [angle_A, angle_B, angle_C, angle_D, angle_E]\n    return max(angles)",
+      "description": "Calculate the largest angle in a pentagon given two angles and expressions for the others.",
+      "name": "sum_of_angles_pentagon",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_length(point_A, point_B):\n    return sqrt((point_B['x'] - point_A['x'])**2 + (point_B['y'] - point_A['y'])**2)",
+      "description": "Calculate the length between two points given their coordinates using the distance formula.",
+      "name": "calculate_length",
+      "packages": "sympy"
+    }
+  }
+]

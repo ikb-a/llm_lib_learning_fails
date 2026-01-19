@@ -1,0 +1,44 @@
+[
+  {
+    "func_sig": {
+      "description": "Evaluate and solve mathematical expressions or problems using sympy for symbolic computation.",
+      "name": "evaluate_math_problem",
+      "parameters": {
+        "properties": {
+          "problem_statement": {
+            "description": "The mathematical problem statement to be solved.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solve mathematical problems using sympy for symbolic computation, especially for mathematical expressions.",
+      "name": "solve_math_problem",
+      "parameters": {
+        "properties": {
+          "equations": {
+            "description": "An array of mathematical expressions or equations to be solved.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "variables": {
+            "description": "An array of variables involved in the equations.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

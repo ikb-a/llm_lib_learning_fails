@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_time_of_travel(distance, speed):\n    if speed <= 0:\n        return 'Error: Speed must be greater than zero.'\n    return distance / speed",
+      "description": "Calculate travel time based on distance and speed.",
+      "name": "calculate_time_of_travel",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_arithmetic_expression(expression):\n    try:\n        result = sympify(expression)\n        return result.evalf() if result.is_number else str(result)\n    except SympifyError:\n        return 'Error: Invalid expression.'",
+      "description": "Evaluate an arithmetic expression and return the result.",
+      "name": "evaluate_arithmetic_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, Eq, solve\n\ndef solve_linear_equation(corn_weight, beans_weight, total_weight, total_cost):\n    x = symbols('x')\n    y = total_weight - x\n    cost = 0.99 * x + 0.45 * y\n    if cost == total_cost:\n        return (x, y)\n    return None",
+      "description": "Solves a linear equation in two variables based on cost and weight information.",
+      "name": "solve_linear_equation",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_distance_general(point1, point2):\n    if len(point1) != 2 or len(point2) != 2:\n        return \"Error: Each point must have exactly 2 coordinates.\"\n    x1, y1 = point1\n    x2, y2 = point2\n    distance = sqrt((x2 - x1)**2 + (y2 - y1)**2)\n    return distance.expand().simplify()",
+      "description": "Calculate the distance between two points in a Cartesian plane and return it in simplest radical form.",
+      "name": "calculate_distance_general",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import symbols, solve\n\ndef calculate_specific_statistics(corn_weight, beans_weight, total_weight, total_cost):\n    x = symbols('x')\n    y = total_weight - x\n    cost = 0.99 * x + 0.45 * y\n    return (cost, solve(cost - total_cost, x))",
+      "description": "Calculate various statistics related to total costs and weights based on given constraints while making the function more general.",
+      "name": "calculate_specific_statistics",
+      "packages": "sympy"
+    }
+  }
+]

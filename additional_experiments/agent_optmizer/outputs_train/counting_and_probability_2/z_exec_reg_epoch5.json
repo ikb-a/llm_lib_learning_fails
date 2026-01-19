@@ -1,0 +1,14 @@
+{
+  "calculate_rolls_expectation": {
+    "code": "from sympy import Rational\n\ndef calculate_rolls_expectation(days):\n    # The expected rolls for one day when rolling a die\n    prob_prime = Rational(3, 6)\n    prob_composite = Rational(2, 6)\n    prob_roll_again = Rational(1, 6)\n\n    # Expected rolls in one day (E), factoring roll again\n    E = Rational(1, 1 - prob_roll_again)\n    return days * E",
+    "packages": "sympy"
+  },
+  "calculate_total_arrangements": {
+    "code": "from sympy import factorial\n\ndef calculate_total_arrangements(total_items, category_counts):\n    denominator = 1\n    for count in category_counts.values():\n        denominator *= factorial(count)\n    return factorial(total_items) // denominator",
+    "packages": "sympy"
+  },
+  "expected_number_of_rolls": {
+    "code": "from sympy import Rational\n\ndef expected_number_of_rolls(days):\n    # Probability for numbers on a die\n    prob_prime = Rational(3, 6)  # Prime numbers: 2, 3, 5\n    prob_composite = Rational(2, 6)  # Composite numbers: 4, 6\n    prob_roll_again = Rational(1, 6)  # Number 1\n\n    # Expected rolls calculation for one day (E)\n    expected_rolls_in_day = Rational(1, 1 - prob_roll_again)  # E = 1 / (1 - P(roll again))\n    return days * expected_rolls_in_day",
+    "packages": "sympy"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "openai",
+      "base_url": "REDACT",
+      "model": "gpt-4o",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Executes SymPy-based Python code to solve mathematical problems, ensuring outputs in fractions and radical forms instead of decimals, adhering to given problem requirements.",
+        "name": "execute_math_code",
+        "parameters": {
+          "properties": {
+            "problem_code": {
+              "description": "Python code implementing the solution using SymPy, with print for output.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Simplifies trigonometric expressions using known identities and returns the result.",
+        "name": "simplify_trig_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The trigonometric expression in sympy's string syntax.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Perform trigonometric transformations and simplify trigonometric expressions using SymPy.",
+        "name": "trig_transform",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The trigonometric expression to simplify.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solves mathematical problems by recognizing the problem type and applying necessary SymPy transformations. Outputs results in fractions and radical forms, ensuring compatibility with problem requirements. Enhanced error handling and evaluations included for common SymPy execution issues. This includes correcting the misaligned complement attribute and adjusting the implementation to avoid unexpected internal errors.",
+        "name": "transform_and_solve",
+        "parameters": {
+          "properties": {
+            "problem_code": {
+              "description": "Python code implementing the solution using SymPy, with print for output.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the equation of a plane given three points in 3D space. Returns coefficients A, B, C, and D of the plane equation Ax + By + Cz + D = 0.",
+        "name": "calculate_plane_equation",
+        "parameters": {
+          "properties": {
+            "point1": {
+              "description": "The first point in 3D space as [x, y, z].",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "point2": {
+              "description": "The second point in 3D space as [x, y, z].",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "point3": {
+              "description": "The third point in 3D space as [x, y, z].",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

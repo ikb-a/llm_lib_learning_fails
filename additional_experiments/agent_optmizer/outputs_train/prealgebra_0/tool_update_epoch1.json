@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_square_root(number):\n    if number < 0:\n        return 'Cannot calculate the square root of a negative number.'\n    return float(sqrt(number))",
+      "description": "Calculate the square root of a number.",
+      "name": "calculate_square_root",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_pythagorean_length(side_a, side_b):\n    if side_a < 0 or side_b < 0:\n        return 'Length values must be non-negative.'\n    return float(sqrt(side_a**2 + side_b**2))",
+      "description": "Calculate the length of the hypotenuse given the lengths of the other two sides using the Pythagorean theorem.",
+      "name": "calculate_pythagorean_length",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_largest_angle(angle_a, angle_b, angle_c, angle_e):\n    angles = [angle_a, angle_b, angle_c, angle_c, angle_e]\n    return max(angles)",
+      "description": "Calculate the interior angles of a pentagon based on the provided angle relationships and return the largest angle.",
+      "name": "calculate_interior_angles_pentagon",
+      "packages": "sympy"
+    }
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate area and volume of common geometric shapes given their dimensions and shape type.",
+        "name": "calculate_area_and_volume_of_shapes",
+        "parameters": {
+          "properties": {
+            "dimensions": {
+              "description": "The dimensions of the shape that are necessary to calculate its area and volume.",
+              "type": "object"
+            },
+            "shape_type": {
+              "description": "The type of shape (e.g. 'circle', 'cone' or 'rectangle').",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the area of a circle given its radius.",
+        "name": "calculate_area_of_circle",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculates the volume of a cone given its radius and height.",
+        "name": "calculate_volume_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a cube given its side length.",
+        "name": "calculate_surface_area_of_cube",
+        "parameters": {
+          "properties": {
+            "side_length": {
+              "description": "The length of one side of the cube.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

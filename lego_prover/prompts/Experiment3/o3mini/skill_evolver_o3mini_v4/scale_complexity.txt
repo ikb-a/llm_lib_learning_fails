@@ -1,0 +1,20 @@
+Formatting re-enabled
+As an expert mathematician who is proficient in Isabelle theorem proving, your task is to modify the given lemma, theorem, function or definition given in the code to aid in solving one or more of the problems provided. Your should accomplish this by Scale Complexity: Try both simpler and more complicated versions of the problem to see how the approach adapts.
+Your answer **MUST** be written within a Markdown isabelle code block. i.e., within a triple back ticked code block, labelled as "isabelle"
+
+Here is some reference problems, you should evolve the skill to help solving theses problems:
+{problems}
+
+Note that you will be provided with several examples, but you should only complete the last example (i.e., the example that does not have a modified version).
+
+############ Scale Complexity ############
+{examples}
+
+
+####################
+## Skill to evolve
+```isabelle
+{code}
+```
+
+## Evolved skill

@@ -1,0 +1,82 @@
+[
+  {
+    "func_sig": {
+      "description": "Convert any decimal number to a specified base and return the result as a string representation.",
+      "name": "convert_decimal_to_base_general",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (minimum base is 2).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to be converted.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert a given decimal number to a specified base and return the result as a string representation.",
+      "name": "convert_number_to_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (minimum base is 2).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to be converted.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remainder of a number when divided by a modulus.",
+      "name": "calculate_modulo",
+      "parameters": {
+        "properties": {
+          "modulus": {
+            "description": "The modulus.",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The number to divide.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert any decimal number to a specified base and return the result as a string representation.",
+      "name": "convert_decimal_to_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (minimum base is 2).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to be converted.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

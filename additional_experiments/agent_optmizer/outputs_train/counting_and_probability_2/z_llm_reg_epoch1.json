@@ -1,0 +1,118 @@
+[
+  {
+    "func_sig": {
+      "description": "Count arrangements of objects with given conditions and categories.",
+      "name": "count_arrangements_with_conditions",
+      "parameters": {
+        "properties": {
+          "distinguished_counts": {
+            "description": "A dictionary containing counts of different elements for the arrangement.",
+            "type": "object"
+          },
+          "total_objects": {
+            "description": "Total number of distinguishable objects.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate permutations of a multiset given counts of distinct items.",
+      "name": "count_permutations_multiset",
+      "parameters": {
+        "properties": {
+          "counts": {
+            "description": "A dictionary with counts of each distinct item.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "The total number of items in the multiset.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of combinations of choosing k items from n items.",
+      "name": "calculate_combinations",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "Number of items to choose.",
+            "type": "integer"
+          },
+          "n": {
+            "description": "Total number of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of permutations of n items taken k at a time.",
+      "name": "calculate_permutations",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "Number of items to arrange.",
+            "type": "integer"
+          },
+          "n": {
+            "description": "Total number of items.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the number of permutations of a multiset given the counts of each distinct item.",
+      "name": "calculate_permutations_multiset",
+      "parameters": {
+        "properties": {
+          "counts": {
+            "description": "A dictionary with counts of each distinct item.",
+            "type": "object"
+          },
+          "total_items": {
+            "description": "The total number of items in the multiset.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the multiplication of combinations from a list of values.",
+      "name": "calculate_multiplication_combination",
+      "parameters": {
+        "properties": {
+          "values": {
+            "description": "A dictionary of values to calculate combinations for.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

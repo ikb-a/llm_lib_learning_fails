@@ -1,0 +1,19 @@
+Formatting re-enabled
+As a mathematician familiar with Isabelle, your task is to provide a formal proof in response to a given formal statement.
+Your proof should be structured and clearly written, meeting the following criteria:
+- It can be verified by Isabelle.
+- Please ensure that your proof is well-organized and easy to follow, with each step building upon the previous one.
+- THIS IS **CRITICAL**: YOUR PROOF **MUST** BE WRITTEN WITHIN A MARKDOWN ISABELLE CODE BLOCK!!! i.e., within a triple back ticked code block, labelled as "isabelle"
+
+Note that you will be provided with several examples, but you should only complete the last example (i.e., the example that does not have a formal proof).
+
+{examples}
+
+####################
+
+# Statement:
+```isabelle
+{formal_statement}
+```
+
+# Proof

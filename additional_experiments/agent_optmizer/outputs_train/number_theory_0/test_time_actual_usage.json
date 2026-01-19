@@ -1,0 +1,9 @@
+{
+  "gpt-4o-mini-2024-07-18": {
+    "completion_tokens": 55855,
+    "cost": 0.12406740000000001,
+    "prompt_tokens": 603696,
+    "total_tokens": 659551
+  },
+  "total_cost": 0.12406740000000001
+}

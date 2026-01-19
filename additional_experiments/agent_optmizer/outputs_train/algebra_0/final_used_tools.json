@@ -1,0 +1,106 @@
+{
+  "add_weighted_items": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef add_weighted_items(total_weight, corn_cost, beans_cost, total_cost):\n    x, y = symbols('corn beans')\n    eq1 = Eq(x + y, total_weight)\n    eq2 = Eq(corn_cost * x + beans_cost * y, total_cost)\n    solution = solve((eq1, eq2), (x, y))\n    return solution[x] if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_average_corn_cost": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_average_corn_cost(total_weight, corn_cost, total_cost):\n    x = symbols('corn')\n    eq1 = Eq(x, total_weight)\n    eq2 = Eq(x * corn_cost, total_cost)\n    solution = solve((eq1, eq2), (x))\n    return solution if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_corn_and_beans": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_corn_and_beans(total_weight, corn_cost, beans_cost, total_cost):\n    corn_weight, beans_weight = symbols('corn beans')\n    eq1 = Eq(corn_weight + beans_weight, total_weight)\n    eq2 = Eq(corn_cost * corn_weight + beans_cost * beans_weight, total_cost)\n    solution = solve((eq1, eq2), (corn_weight, beans_weight))\n    return solution if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_corn_weight": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_corn_weight(corn_cost, beans_cost, total_weight, total_cost):\n    corn, beans = symbols('corn beans')\n    eq1 = Eq(corn + beans, total_weight)  # Total weight of corn and beans\n    eq2 = Eq(corn_cost * corn + beans_cost * beans, total_cost)  # Total cost equation\n    solution = solve((eq1, eq2), (corn, beans))  # Solve the equations\n    return solution[corn] if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_costs": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_costs(total_weight, corn_cost, beans_cost, total_cost):\n    corn, beans = symbols('corn beans')\n    eq1 = Eq(corn + beans, total_weight)\n    eq2 = Eq(corn_cost * corn + beans_cost * beans, total_cost)\n    solution = solve((eq1, eq2), (corn, beans))\n    return {'corn': solution[corn], 'beans': solution[beans]} if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_distance": {
+    "code": "from sympy import sqrt\n\ndef calculate_distance(x1, y1, x2, y2):\n    dx = x2 - x1\n    dy = y2 - y1\n    distance = sqrt(dx**2 + dy**2)\n    return float(distance)",
+    "packages": "sympy"
+  },
+  "calculate_pounds_of_corn": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_pounds_of_corn(corn_cost, beans_cost, total_weight, total_cost):\n    c, b = symbols('corn beans')\n    eq1 = Eq(c + b, total_weight)  # Total weight of corn and beans\n    eq2 = Eq(corn_cost * c + beans_cost * b, total_cost)  # Total cost equation\n    solution = solve((eq1, eq2), (c, b))  # Solve the equations\n    return solution[c] if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_sum_of_n_terms": {
+    "code": "def calculate_sum_of_n_terms(sequence_type, first_term, common_difference, num_terms):\n    if sequence_type == 'arithmetic':\n        return num_terms / 2 * (2 * first_term + (num_terms - 1) * common_difference)\n    elif sequence_type == 'geometric':\n        if common_difference == 1:\n            return first_term * num_terms\n        else:\n            return first_term * (1 - common_difference**num_terms) / (1 - common_difference)\n    else:\n        return None",
+    "packages": "sympy"
+  },
+  "calculate_sum_of_odds": {
+    "code": "def calculate_sum_of_odds(limit):\n    n = (limit + 1) // 2\n    return n * n",
+    "packages": "sympy"
+  },
+  "calculate_sum_of_sequence": {
+    "code": "def calculate_sum_of_sequence(sequence_type, first_term, common_difference, num_terms):\n    if sequence_type == 'arithmetic':\n        return num_terms / 2 * (2 * first_term + (num_terms - 1) * common_difference)\n    elif sequence_type == 'geometric':\n        if common_difference == 1:\n            return first_term * num_terms\n        else:\n            return first_term * (1 - common_difference**num_terms) / (1 - common_difference)\n    else:\n        return None",
+    "packages": "sympy"
+  },
+  "calculate_total_corn_and_beans": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_total_corn_and_beans(total_weight, corn_cost, beans_cost, total_cost):\n    corn, beans = symbols('corn beans')\n    eq1 = Eq(corn + beans, total_weight)\n    eq2 = Eq(corn_cost * corn + beans_cost * beans, total_cost)\n    solution = solve((eq1, eq2), (corn, beans))\n    return solution[corn], solution[beans] if solution else (None, None)",
+    "packages": "sympy"
+  },
+  "calculate_total_cost": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_total_cost(weights, costs):\n    total_cost = sum(weights[item] * costs[item] for item in weights)\n    return total_cost",
+    "packages": "sympy"
+  },
+  "calculate_weight_and_cost": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_weight_and_cost(total_weight, corn_cost, beans_cost, total_cost):\n    corn, beans = symbols('corn beans')\n    eq1 = Eq(corn + beans, total_weight)\n    eq2 = Eq(corn_cost * corn + beans_cost * beans, total_cost)\n    solution = solve((eq1, eq2), (corn, beans))\n    return solution if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_weight_cost": {
+    "code": "def calculate_weight_cost(weights, costs):\n    total_cost = 0\n    for item, weight in weights.items():\n        total_cost += weight * costs[item]\n    return total_cost",
+    "packages": "sympy"
+  },
+  "calculate_weight_of_corn": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef calculate_weight_of_corn(total_weight, corn_cost, beans_cost, total_cost):\n    corn, beans = symbols('corn beans')\n    eq1 = Eq(corn + beans, total_weight)\n    eq2 = Eq(corn_cost * corn + beans_cost * beans, total_cost)\n    solution = solve((eq1, eq2), (corn, beans))\n    return solution[corn] if solution else None",
+    "packages": "sympy"
+  },
+  "calculate_weight_price": {
+    "code": "def calculate_weight_price(weight, cost_per_pound):\n    return weight * cost_per_pound",
+    "packages": "sympy"
+  },
+  "calculate_weight_price_with_corn_beans": {
+    "code": "def calculate_weight_price_with_corn_beans(corn_weight, beans_weight, corn_cost, beans_cost):\n    total_price = (corn_weight * corn_cost) + (beans_weight * beans_cost)\n    return total_price",
+    "packages": "sympy"
+  },
+  "evaluate_constant_expression": {
+    "code": "from sympy import sympify\n\ndef evaluate_constant_expression(input_value):\n    return sympify(input_value)",
+    "packages": "sympy"
+  },
+  "evaluate_constant_function": {
+    "code": "def evaluate_constant_function(input_value):\n    return input_value",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            return float(result)\n        else:\n            return str(result)\n    except SympifyError:\n        return 'Invalid expression.'",
+    "packages": "sympy"
+  },
+  "get_number_of_pounds_of_items": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef get_number_of_pounds_of_items(total_weight, item_costs, total_cost):\n    variables = symbols(', '.join(item_costs.keys()))\n    equations = [Eq(sum(variables), total_weight)]\n    equations.append(Eq(sum(item_costs[item] * variables[i] for i, item in enumerate(item_costs.keys())), total_cost))\n    solution = solve(equations, variables)\n    return solution",
+    "packages": "sympy"
+  },
+  "simplify_expression": {
+    "code": "from sympy import sympify\n\n\ndef simplify_expression(expression):\n    simplified = sympify(expression)\n    return simplified, float(simplified)",
+    "packages": "sympy"
+  },
+  "solve_linear_system": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef solve_linear_system(equations):\n    variables = set()\n    eqs = []\n    for eq in equations:\n        lhs, rhs = eq.split('=')\n        lhs_expr = sympify(lhs.strip())\n        rhs_expr = sympify(rhs.strip())\n        eqs.append(Eq(lhs_expr, rhs_expr))\n        variables.update(lhs_expr.free_symbols)\n    sol = solve(eqs, list(variables))\n    return sol",
+    "packages": "sympy"
+  },
+  "solve_weighted_items": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef solve_weighted_items(total_weight, costs, total_cost):\n    variables = symbols(', '.join(costs.keys()))\n    equations = [Eq(sum(variables), total_weight)]\n    equations.append(Eq(sum(costs[item] * variables[i] for i, item in enumerate(costs.keys())), total_cost))\n    solution = solve(equations, variables)\n    return solution",
+    "packages": "sympy"
+  },
+  "sum_of_odd_integers": {
+    "code": "def sum_of_odd_integers(limit):\n    n = (limit + 1) // 2\n    return n * n",
+    "packages": "sympy"
+  },
+  "sum_of_series": {
+    "code": "def sum_of_series(first_term, common_difference, num_terms):\n    return num_terms / 2 * (2 * first_term + (num_terms - 1) * common_difference)",
+    "packages": "sympy"
+  }
+}

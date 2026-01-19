@@ -1,0 +1,158 @@
+[
+  {
+    "func_sig": {
+      "description": "Convert a decimal number to a specified base and return its representation as a string.",
+      "name": "convert_decimal_to_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (must be greater than 1).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to convert.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Find the last digit of a number when presented in a specified base.",
+      "name": "find_last_digit_in_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base in which to find the last digit.",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The number to find the last digit of.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the modular inverse of a number with respect to a given modulus using the Extended Euclidean Algorithm.",
+      "name": "modular_inverse",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "The number to find the modular inverse for.",
+            "type": "integer"
+          },
+          "m": {
+            "description": "The modulus.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the squares of integers in a specified range and their remainders when divided by a given modulus, returning distinct remainders and their sum.",
+      "name": "calculate_squared_remainders",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The end of the range (inclusive).",
+            "type": "integer"
+          },
+          "modulus": {
+            "description": "The modulus for calculating remainders.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "The start of the range (inclusive).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the sum of distinct remainders of squares of integers in a specified range when divided by a given modulus.",
+      "name": "calculate_distinct_remainders_sum",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The end of the range (inclusive).",
+            "type": "integer"
+          },
+          "modulus": {
+            "description": "The modulus for calculating remainders.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "The start of the range (inclusive).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distinct remainders when the squares of integers in a specified range are divided by a given modulus, and return their sum and count.",
+      "name": "calculate_remainders",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The end of the range (inclusive).",
+            "type": "integer"
+          },
+          "modulus": {
+            "description": "The modulus for calculating remainders.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "The start of the range (inclusive).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the squares of integers in a specified range and their remainders when divided by a given modulus, returning distinct remainders and their sum.",
+      "name": "calculate_squares_and_remainders",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "The end of the range (inclusive).",
+            "type": "integer"
+          },
+          "modulus": {
+            "description": "The modulus for calculating remainders.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "The start of the range (inclusive).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

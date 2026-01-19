@@ -1,0 +1,163 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate travel time based on distance and speed.",
+      "name": "calculate_time_of_travel",
+      "parameters": {
+        "properties": {
+          "distance": {
+            "description": "The distance to be traveled.",
+            "type": "integer"
+          },
+          "speed": {
+            "description": "The speed of travel.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate an arithmetic expression and return the result.",
+      "name": "evaluate_arithmetic_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The arithmetic expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the largest three-digit integer whose digits are distinct and form a geometric sequence.",
+      "name": "calculate_geometric_progression",
+      "parameters": {
+        "properties": {},
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Solves a linear equation in two variables based on cost and weight information.",
+      "name": "solve_linear_equation",
+      "parameters": {
+        "properties": {
+          "beans_weight": {
+            "description": "Weight of beans in pounds",
+            "type": "integer"
+          },
+          "corn_weight": {
+            "description": "Weight of corn in pounds",
+            "type": "integer"
+          },
+          "total_cost": {
+            "description": "Total cost in dollars",
+            "type": "string"
+          },
+          "total_weight": {
+            "description": "Total weight of corn and beans in pounds",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the weights of various items based on given constraints",
+      "name": "calculate_costs_and_weights",
+      "parameters": {
+        "properties": {
+          "beans_weight": {
+            "description": "Weight of beans in pounds",
+            "type": "integer"
+          },
+          "corn_weight": {
+            "description": "Weight of corn in pounds",
+            "type": "integer"
+          },
+          "total_cost": {
+            "description": "Total cost in dollars",
+            "type": "string"
+          },
+          "total_weight": {
+            "description": "Total weight of corn and beans in pounds",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate a general mathematical expression provided as a string.",
+      "name": "evaluate_mathematical_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in a Cartesian plane.",
+      "name": "calculate_distance",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "Coordinates of first point (x1, y1).",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "Coordinates of second point (x2, y2).",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

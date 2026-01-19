@@ -1,0 +1,7 @@
+{
+  "dataset": "algebra",
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_direct/algebra_0/",
+  "run_id": "0"
+}

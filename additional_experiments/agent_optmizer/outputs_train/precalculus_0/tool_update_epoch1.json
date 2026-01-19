@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin\ndef calculate_arcsin(x):\n    return asin(x)",
+      "description": "Calculate the arcsine of a value in radians.",
+      "name": "calculate_arcsin",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import atan, deg\ndef calculate_angle(tan_alpha, tan_beta):\n    angle = (tan_alpha - tan_beta) / (1 + tan_alpha * tan_beta)\n    return angle",
+      "description": "Calculate angle in degrees from tangent values.",
+      "name": "calculate_angle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles_all(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return A, B, C",
+      "description": "Calculate all angles of a triangle given its side lengths using the cosine rule.",
+      "name": "calculate_triangle_angles_all",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+      "description": "Calculate angles of a triangle given its side lengths using the cosine rule.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos\nimport math\n\ndef calculate_arccos(x):\n    if x < -1 or x > 1:\n        raise ValueError('Input must be in the range [-1, 1] for arccos.')\n    return math.acos(x)",
+      "description": "Calculate the arccosine value given a side length. Returns the angle in radians.",
+      "name": "calculate_arccos",
+      "packages": "sympy"
+    }
+  }
+]

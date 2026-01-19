@@ -1,0 +1,14 @@
+{
+  "evaluate_algebra": {
+    "code": "from sympy import symbols, Eq, solve, sympify, cancel\n\ndef evaluate_algebra(expression, variable_values={}):\n    # Split expressions if they are separated by commas or semicolons\n    exprs = [sympify(e.strip()) for e in expression.split(',')]\n    exprs = sum([e.split(';') if isinstance(e, str) else [e] for e in exprs], [])\n    solutions = []\n    for expr in exprs:\n        expr = simplify(cancel(expr))\n        if isinstance(expr, Eq):\n            solutions.append(solve(expr, dict=True))\n        elif variable_values:\n            expr = expr.subs(variable_values)\n            solutions.append(expr)\n        else:\n            solutions.append(expr)\n    return solutions",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify, SympifyError\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        else:\n            result = str(result)\n        return result\n    except SympifyError as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "evaluate_trigonometric": {
+    "code": "from sympy import symbols, Eq, solve, sympify, sin, cos, tan, simplify, cancel\n\ndef evaluate_trigonometric(expression, variable_values={}):\n    # Split expressions if they are separated by commas or semicolons\n    exprs = [sympify(e.strip(), evaluate=False) for e in expression.split(',')]\n    exprs = sum([e.split(';') if isinstance(e, str) else [e] for e in exprs], [])\n    solutions = []\n    for expr in exprs:\n        expr = expr.rewrite(sin).rewrite(cos).rewrite(tan)\n        expr = simplify(cancel(expr))\n        if isinstance(expr, Eq):\n            solutions.append(solve(expr, dict=True))\n        elif variable_values:\n            expr = expr.subs(variable_values)\n            solutions.append(expr)\n        else:\n            solutions.append(expr)\n    return solutions",
+    "packages": "sympy"
+  }
+}

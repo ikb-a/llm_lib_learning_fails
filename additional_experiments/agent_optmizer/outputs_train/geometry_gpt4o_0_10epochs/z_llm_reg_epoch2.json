@@ -1,0 +1,136 @@
+[
+  {
+    "func_sig": {
+      "description": "Solves for the third side of a right triangle using the Pythagorean Theorem when two side lengths are provided.",
+      "name": "solve_pythagorean_theorem",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "The length of one side (not the hypotenuse) of the triangle.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "The length of the other side (not the hypotenuse) of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the Euclidean distance between two points in 3D space.",
+      "name": "calculate_distance_3d",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "The first point [x1, y1, z1].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "point2": {
+            "description": "The second point [x2, y2, z2].",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a sphere given its radius.",
+      "name": "volume_of_sphere",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the sphere.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+      "name": "evaluate_expression",
+      "parameters": {
+        "properties": {
+          "expression": {
+            "description": "The mathematical expression to evaluate.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a sphere given its diameter or radius.",
+      "name": "calculate_spherical_volume",
+      "parameters": {
+        "properties": {
+          "diameter": {
+            "description": "Diameter of the sphere.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remaining leg of a right triangle given one leg and the hypotenuse using the Pythagorean theorem.",
+      "name": "calculate_right_triangle_leg",
+      "parameters": {
+        "properties": {
+          "hypotenuse": {
+            "description": "The length of the hypotenuse of the triangle.",
+            "type": "integer"
+          },
+          "leg": {
+            "description": "The length of the known leg of the triangle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the volume and surface area of a cone given its height and radius.",
+      "name": "calculate_cone_properties",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

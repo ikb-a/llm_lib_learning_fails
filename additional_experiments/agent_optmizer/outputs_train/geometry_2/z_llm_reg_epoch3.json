@@ -1,0 +1,46 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the area of a circle given the radius.",
+      "name": "calculate_circle_area",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+      "name": "calculate_area_of_triangle",
+      "parameters": {
+        "properties": {
+          "a": {
+            "description": "Length of side A.",
+            "type": "integer"
+          },
+          "b": {
+            "description": "Length of side B.",
+            "type": "integer"
+          },
+          "c": {
+            "description": "Length of side C.",
+            "type": "integer"
+          },
+          "semiperimeter": {
+            "description": "Semi-perimeter of the triangle, calculated as (a + b + c) / 2.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

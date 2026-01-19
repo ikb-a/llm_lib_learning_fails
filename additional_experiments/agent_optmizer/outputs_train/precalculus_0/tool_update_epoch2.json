@@ -1,0 +1,56 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import asin\n\ndef arcsin_value(value):\n    return asin(value)",
+      "description": "Compute the arcsine of a value.",
+      "name": "arcsin_value",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def domain_of_tan_arccos():\n    return [-1, 1]",
+      "description": "Find the domain of the function f(x) = tan(arccos(x^2)).",
+      "name": "domain_of_tan_arccos",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef compute_angle(a, b, c):\n    cos_A = (b**2 + c**2 - a**2) / (2 * b * c)\n    return deg(acos(cos_A))",
+      "description": "Calculate the angle of a triangle given its sides using cosine rule.",
+      "name": "compute_angle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef compute_angles_of_triangle(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    return A, B, C",
+      "description": "Calculate the angles of a triangle given its side lengths using the cosine rule.",
+      "name": "compute_angles_of_triangle",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    C = 180 - A - B\n    return A, B, C",
+      "description": "Calculate angles of a triangle given its sides using the cosine rule, returning the angles in degrees.",
+      "name": "calculate_triangle_angles",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import atan\n\ndef inverse_tangent(value):\n    return atan(value)",
+      "description": "Compute the inverse tangent of a value.",
+      "name": "inverse_tangent",
+      "packages": "sympy"
+    }
+  }
+]

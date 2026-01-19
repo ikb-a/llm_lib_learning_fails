@@ -1,0 +1,14 @@
+{
+  "calculate_combinations": {
+    "code": "import math\ndef calculate_combinations(n, k):\n    if k > n:\n        return 0\n    return math.comb(n, k)",
+    "packages": "math"
+  },
+  "calculate_expected_rolls": {
+    "code": "from sympy import Rational\n\ndef calculate_expected_rolls(days):\n    E_per_day = Rational(6, 5)  # From previous calculations\n    return days * E_per_day",
+    "packages": "sympy"
+  },
+  "calculate_permutations": {
+    "code": "import math\ndef calculate_permutations(n, k):\n    if k > n:\n        return 0\n    return math.perm(n, k)",
+    "packages": "math"
+  }
+}

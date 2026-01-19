@@ -1,0 +1,178 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the distance between two points in 3D space given their coordinates.",
+      "name": "calculate_distance_between_points",
+      "parameters": {
+        "properties": {
+          "point1": {
+            "description": "Coordinates of point 1, structured as {x: value, y: value, z: value}.",
+            "type": "object"
+          },
+          "point2": {
+            "description": "Coordinates of point 2, structured as {x: value, y: value, z: value}.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Find relatively prime pairs (m, n) from an integer k represented as k = m/n.",
+      "name": "find_prime_pairs",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "The integer representing the ratio m/n.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its edge length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "The length of one edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a cone given its base radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cone given its base radius and height.",
+      "name": "calculate_surface_area_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the cone's base.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a frustum given the areas of the top and bottom bases and the height.",
+      "name": "calculate_area_of_frustum",
+      "parameters": {
+        "properties": {
+          "A_bottom": {
+            "description": "Area of the bottom base.",
+            "type": "integer"
+          },
+          "A_top": {
+            "description": "Area of the top base.",
+            "type": "integer"
+          },
+          "height": {
+            "description": "Height of the frustum.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the ratios of areas and volumes given the dimensions of the original solid and the ratios.",
+      "name": "calculate_ratios_of_areas_volumes",
+      "parameters": {
+        "properties": {
+          "k": {
+            "description": "The ratio value k.",
+            "type": "integer"
+          },
+          "original_area": {
+            "description": "The area of the original solid.",
+            "type": "integer"
+          },
+          "original_volume": {
+            "description": "The volume of the original solid.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume and surface area of a cone given the radius and height.",
+      "name": "calculate_cone_volume_and_surface_area",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given the edge length.",
+      "name": "calculate_area_of_cube",
+      "parameters": {
+        "properties": {
+          "edge_length": {
+            "description": "Length of one edge of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

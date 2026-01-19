@@ -1,0 +1,20 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+      "description": "Calculate the area of a circle given the radius.",
+      "name": "calculate_circle_area",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(a, b, c):\n    s = (a + b + c) / 2\n    return sqrt(s * (s - a) * (s - b) * (s - c))",
+      "description": "Calculate the area of a triangle given the lengths of its sides using Heron's formula.",
+      "name": "calculate_area_of_triangle",
+      "packages": "sympy"
+    }
+  }
+]

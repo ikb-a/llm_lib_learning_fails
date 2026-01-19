@@ -1,0 +1,335 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the area of various shapes given their dimensions.",
+        "name": "calculate_area_of_shapes",
+        "parameters": {
+          "properties": {
+            "dimensions": {
+              "description": "Dimensions of the shape (e.g., radius for circle, length & width for rectangle).",
+              "type": "object"
+            },
+            "shape_type": {
+              "description": "Type of shape (e.g., 'circle', 'rectangle', 'triangle').",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area and volume of a cone based on its base radius and height.",
+        "name": "calculate_surface_area_and_volume_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its vertices using the determinant formula.",
+        "name": "calculate_area_of_triangle_from_vertices",
+        "parameters": {
+          "properties": {
+            "vertex_a": {
+              "description": "Coordinates of vertex A as a tuple (x, y).",
+              "type": "object"
+            },
+            "vertex_b": {
+              "description": "Coordinates of vertex B as a tuple (x, y).",
+              "type": "object"
+            },
+            "vertex_c": {
+              "description": "Coordinates of vertex C as a tuple (x, y).",
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a cylinder given its radius and height.",
+        "name": "calculate_surface_area_of_cylinder",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cylinder.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cylinder.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the visible area of the circle above the x-axis given its diameter.",
+        "name": "calculate_visible_part_of_circle",
+        "parameters": {
+          "properties": {
+            "diameter": {
+              "description": "The diameter of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area and volume of a cone based on its base radius and height.",
+        "name": "calculate_surface_area_and_volume_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The base radius of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a right circular cone given its radius and height.",
+        "name": "calculate_surface_area_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a sphere given its radius.",
+        "name": "calculate_volume_of_sphere",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the sphere.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the volume of a right circular cone given its radius and height.",
+        "name": "calculate_volume_of_cone",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the cone.",
+              "type": "integer"
+            },
+            "radius": {
+              "description": "The radius of the base of the cone.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its base and height.",
+        "name": "calculate_area_of_triangle",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "The length of the base of the triangle.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "The height of the triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a cube given its edge length.",
+        "name": "calculate_surface_area_of_cube",
+        "parameters": {
+          "properties": {
+            "edge_length": {
+              "description": "The length of an edge of the cube.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the surface area of a frustum given its upper and lower radii and height.",
+        "name": "calculate_surface_area_of_frustum",
+        "parameters": {
+          "properties": {
+            "height": {
+              "description": "The height of the frustum.",
+              "type": "integer"
+            },
+            "radius_lower": {
+              "description": "The radius of the lower base of the frustum.",
+              "type": "integer"
+            },
+            "radius_upper": {
+              "description": "The radius of the upper base of the frustum.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a trapezoid given the lengths of the bases and height.",
+        "name": "calculate_trapezoid_area",
+        "parameters": {
+          "properties": {
+            "base1": {
+              "description": "The length of the first base.",
+              "type": "integer"
+            },
+            "base2": {
+              "description": "The length of the second base.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "The height of the trapezoid.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a triangle given its base and height.",
+        "name": "calculate_triangle_area",
+        "parameters": {
+          "properties": {
+            "base": {
+              "description": "Base length of triangle.",
+              "type": "integer"
+            },
+            "height": {
+              "description": "Height of triangle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the area of a circle given its radius.",
+        "name": "calculate_area_of_circle",
+        "parameters": {
+          "properties": {
+            "radius": {
+              "description": "The radius of the circle.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of the lengths of the two longest altitudes in a triangle given its sides.",
+        "name": "calculate_sum_of_lengths_of_altitudes",
+        "parameters": {
+          "properties": {
+            "side_a": {
+              "description": "The length of side a.",
+              "type": "integer"
+            },
+            "side_b": {
+              "description": "The length of side b.",
+              "type": "integer"
+            },
+            "side_c": {
+              "description": "The length of side c.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

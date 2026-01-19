@@ -1,0 +1,8 @@
+{
+  "dataset": "algebra",
+  "epochs": 10,
+  "limit": null,
+  "model": "gpt-4o-mini",
+  "output_dir": "outputs_train/algebra_0/",
+  "run_id": "0"
+}

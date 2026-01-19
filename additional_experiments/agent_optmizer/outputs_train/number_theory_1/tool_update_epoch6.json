@@ -1,0 +1,47 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def find_distinct_remainders_sum(start, end, modulus):\n    remainders = set()  \n    for n in range(start, end + 1):\n        square = n ** 2\n        remainder = square % modulus\n        remainders.add(remainder)\n    return sum(remainders)",
+      "description": "Calculate the sum of distinct remainders when squaring integers in a range.",
+      "name": "find_distinct_remainders_sum",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "from sympy import mod_inverse\n\ndef calculate_modular_inverse(a, m):\n    if m <= 0:\n        return 'Invalid modulus.'\n    return mod_inverse(a, m)",
+      "description": "Calculate the modular inverse of a number modulo another number using the Extended Euclidean Algorithm.",
+      "name": "calculate_modular_inverse",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def convert_decimal_to_base(number, base):\n    if number == 0:\n        return '0'\n    digits = []\n    while number:\n        digits.append(int(number % base))\n        number //= base\n    return ''.join(str(x) for x in digits[::-1])",
+      "description": "Convert a given decimal number to a specified base.",
+      "name": "convert_decimal_to_base",
+      "packages": ""
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy\n\ndef process_repeating_decimal(repeating_decimal):\n    # Extract the repeating digits\n    if '.' in repeating_decimal:\n        whole, frac = repeating_decimal.split('.')\n        if '\\overline{' in frac:\n            non_repeating, repeating = frac.split('\\overline{')\n            repeating = repeating.rstrip('}')\n        else:\n            non_repeating = frac\n            repeating = ''\n    else:\n        whole = repeating_decimal\n        non_repeating = ''\n        repeating = ''\n\n    # Check for cases with no non-repeating part\n    if len(non_repeating) + len(repeating) == 0:\n        return 'Error: No valid number'\n    numerator = int(whole + non_repeating + repeating) - int(whole + non_repeating)\n    if len(non_repeating) > 0:\n        denominator = 10 ** len(non_repeating) * (10 ** len(repeating) - 1) if len(repeating) > 0 else 10 ** len(non_repeating)\n    else:\n        denominator = 10 ** len(repeating) - 1\n\n    if denominator == 0:\n        return 'Error: Division by zero'\n\n    gcd = sympy.gcd(numerator, denominator)\n    simplified_numerator = numerator // gcd\n    simplified_denominator = denominator // gcd\n    \n    return simplified_numerator, simplified_denominator, simplified_numerator + simplified_denominator",
+      "description": "Convert a repeating decimal to a simplified fraction and calculate a + b.",
+      "name": "process_repeating_decimal",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "import sympy\n\ndef convert_repeating_decimal(decimal):\n    if '.' in decimal:\n        if '\\overline{' in decimal:\n            non_repeating, repeating = decimal.split('\\overline{')\n            repeating = repeating.rstrip('}')\n            whole = non_repeating.split('.')[0]\n            numerator = int(whole + non_repeating.split('.')[1] + repeating) - int(whole + non_repeating.split('.')[1])\n            denominator = 10 ** len(non_repeating.split('.')[1]) * (10 ** len(repeating) - 1)\n        else:\n            whole, frac = decimal.split('.')\n            numerator = int(whole + frac)\n            denominator = 10 ** len(frac)\n    else:\n        numerator = int(decimal)\n        denominator = 1\n\n    gcd = sympy.gcd(numerator, denominator)\n    simplified_numerator = numerator // gcd\n    simplified_denominator = denominator // gcd\n\n    return simplified_numerator, simplified_denominator, simplified_numerator + simplified_denominator",
+      "description": "Convert a repeating decimal represented as a string to a fraction.",
+      "name": "convert_repeating_decimal",
+      "packages": "sympy"
+    }
+  }
+]

@@ -1,0 +1,339 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Calculate the sum of angles given the number of sides of a polygon.",
+        "name": "calculate_angle_sum",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "The number of sides of the polygon.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a pentagon and return the largest angle.",
+        "name": "calculate_pentagon_angle_and_largest",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "Angle A in degrees.",
+              "type": "integer"
+            },
+            "B": {
+              "description": "Angle B in degrees.",
+              "type": "integer"
+            },
+            "C": {
+              "description": "Angle C in degrees, which is equal to angle D.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angle measures based on the relationships in a pentagon.",
+        "name": "calculate_angle",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "Angle A in degrees.",
+              "type": "integer"
+            },
+            "B": {
+              "description": "Angle B in degrees.",
+              "type": "integer"
+            },
+            "C": {
+              "description": "Angle C in degrees (which is equal to angle D).",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a 2D plane using the distance formula and return the result.",
+        "name": "calculate_length",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the measures of angles in a pentagon given certain relationships.",
+        "name": "calculate_angle_of_pentagon",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "Angle A in degrees.",
+              "type": "integer"
+            },
+            "B": {
+              "description": "Angle B in degrees.",
+              "type": "integer"
+            },
+            "C": {
+              "description": "Angle C in degrees (equal to angle D).",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a polygon given expressions and return the largest angle.",
+        "name": "calculate_angle_from_expressions",
+        "parameters": {
+          "properties": {
+            "angle_A": {
+              "description": "Angle A in degrees.",
+              "type": "integer"
+            },
+            "angle_B": {
+              "description": "Angle B in degrees.",
+              "type": "integer"
+            },
+            "angle_C": {
+              "description": "Angle C in degrees, which is equal to angle D.",
+              "type": "integer"
+            },
+            "angle_suffix": {
+              "description": "Suffix for angle E calculation.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the angles of a pentagon from given angle relationships.",
+        "name": "calculate_pentagon_angle",
+        "parameters": {
+          "properties": {
+            "A": {
+              "description": "Angle A in degrees.",
+              "type": "integer"
+            },
+            "B": {
+              "description": "Angle B in degrees.",
+              "type": "integer"
+            },
+            "C": {
+              "description": "Angle C in degrees (to be set equal to angle D).",
+              "type": "integer"
+            },
+            "E": {
+              "description": "Angle E in degrees, related to angle C.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the specified angle based on input relationships in a pentagon.",
+        "name": "calculate_angle_value",
+        "parameters": {
+          "properties": {
+            "angle_A": {
+              "description": "Measure of angle A in degrees.",
+              "type": "integer"
+            },
+            "angle_B": {
+              "description": "Measure of angle B in degrees.",
+              "type": "integer"
+            },
+            "angle_C": {
+              "description": "Measure of angle C in degrees.",
+              "type": "integer"
+            },
+            "angle_D": {
+              "description": "Measure of angle D in degrees.",
+              "type": "integer"
+            },
+            "angle_E": {
+              "description": "Measure of angle E in degrees.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the sum of the interior angles of a pentagon.",
+        "name": "sum_of_angles_of_pentagon",
+        "parameters": {
+          "properties": {
+            "n": {
+              "description": "The number of sides of the polygon.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the individual angles of a pentagon when provided interior angle relationships and the sum of angles.",
+        "name": "calculate_pentagon_interior_angles",
+        "parameters": {
+          "properties": {
+            "angle1": {
+              "description": "First interior angle in degrees.",
+              "type": "integer"
+            },
+            "angle2": {
+              "description": "Second interior angle in degrees.",
+              "type": "integer"
+            },
+            "angle3": {
+              "description": "Any relationship with the third angle in degrees.",
+              "type": "integer"
+            },
+            "angle4": {
+              "description": "Any relationship with the fourth angle in degrees.",
+              "type": "integer"
+            },
+            "angle5": {
+              "description": "Any relationship with the fifth angle in degrees.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a 2D plane using the distance formula.",
+        "name": "calculate_distance_between_points",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the length of AC in a pentagon using the distance formula.",
+        "name": "calculate_ac_length",
+        "parameters": {
+          "properties": {
+            "a_x": {
+              "description": "The x-coordinate of point A.",
+              "type": "integer"
+            },
+            "a_y": {
+              "description": "The y-coordinate of point A.",
+              "type": "integer"
+            },
+            "c_x": {
+              "description": "The x-coordinate of point C.",
+              "type": "integer"
+            },
+            "c_y": {
+              "description": "The y-coordinate of point C.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

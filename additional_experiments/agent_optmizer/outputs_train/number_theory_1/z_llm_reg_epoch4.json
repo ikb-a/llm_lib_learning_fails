@@ -1,0 +1,46 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the sum of distinct remainders when squaring integers in a range.",
+      "name": "find_distinct_remainders_sum",
+      "parameters": {
+        "properties": {
+          "end": {
+            "description": "End of the range (inclusive).",
+            "type": "integer"
+          },
+          "modulus": {
+            "description": "The modulus to compute the remainders against.",
+            "type": "integer"
+          },
+          "start": {
+            "description": "Start of the range (inclusive).",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert a given decimal number to a specified base.",
+      "name": "convert_decimal_to_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to.",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to convert.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

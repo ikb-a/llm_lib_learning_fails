@@ -1,0 +1,22 @@
+{
+  "calculate_area_of_right_triangle": {
+    "code": "def calculate_area_of_right_triangle(leg_a, leg_b):\n    return (leg_a * leg_b) / 2",
+    "packages": "sympy"
+  },
+  "calculate_fractional_expression": {
+    "code": "def calculate_fractional_expression(numerator, denominator):\n    if denominator == 0:\n        return 'Denominator cannot be zero!'\n    return Rational(numerator, denominator).evalf()",
+    "packages": "sympy"
+  },
+  "calculate_pentagon_angle_measurements": {
+    "code": "def calculate_pentagon_angle_measurements(angles):\n    A = angles['A']\n    B = angles['B']\n    additional_angle = angles['additional_angle']\n    x = symbols('x')  # C = D = x\n    equation = Eq(A + B + 4*x + (2*x + additional_angle), 540)\n    solution = solve(equation, x)\n    C = D = solution[0]  # C and D are equal\n    E = 2 * C + additional_angle  # calculate E\n    return {'C': float(C.evalf()), 'D': float(D.evalf()), 'E': float(E.evalf())}",
+    "packages": "sympy"
+  },
+  "calculate_probability": {
+    "code": "def calculate_probability(favorable_outcomes, total_outcomes, output_fraction=False):\n    from sympy import Rational\n    if total_outcomes <= 0:\n        return 'Total outcomes must be greater than zero.'  # Error handling\n    if favorable_outcomes < 0:\n        return 'Favorable outcomes cannot be negative.'  # Error handling\n    result = Rational(favorable_outcomes, total_outcomes)\n    if output_fraction:\n        return result  # Return as a fraction\n    else:\n        return float(result)\n    return result",
+    "packages": "sympy"
+  },
+  "calculate_square_root": {
+    "code": "from sympy import sqrt\n\ndef calculate_square_root(number):\n    return sqrt(number).evalf()",
+    "packages": "sympy"
+  }
+}

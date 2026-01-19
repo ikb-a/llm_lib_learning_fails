@@ -1,0 +1,18 @@
+{
+  "calculate_area_of_circle": {
+    "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_area_of_triangle": {
+    "code": "def calculate_area_of_triangle(base, height):\n    return (base * height) / 2",
+    "packages": ""
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(side_length):\n    return 6 * side_length ** 2",
+    "packages": "sympy"
+  },
+  "calculate_volume_of_cone": {
+    "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  }
+}

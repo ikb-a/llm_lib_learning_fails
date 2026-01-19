@@ -1,0 +1,119 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Evaluate a constant function for any input value.",
+        "name": "evaluate_constant_function",
+        "parameters": {
+          "properties": {
+            "input_value": {
+              "description": "Any input value to evaluate a constant function.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Simplify a mathematical expression and return both simplified and float values.",
+        "name": "simplify_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to simplify.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a 2D space given their coordinates.",
+        "name": "calculate_distance",
+        "parameters": {
+          "properties": {
+            "x1": {
+              "description": "The x-coordinate of the first point.",
+              "type": "integer"
+            },
+            "x2": {
+              "description": "The x-coordinate of the second point.",
+              "type": "integer"
+            },
+            "y1": {
+              "description": "The y-coordinate of the first point.",
+              "type": "integer"
+            },
+            "y2": {
+              "description": "The y-coordinate of the second point.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate how many pounds of corn and beans based on given weights and costs in a single function.",
+        "name": "add_weighted_items",
+        "parameters": {
+          "properties": {
+            "beans_cost": {
+              "description": "Cost per pound of beans.",
+              "type": "integer"
+            },
+            "corn_cost": {
+              "description": "Cost per pound of corn.",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in cents.",
+              "type": "integer"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

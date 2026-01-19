@@ -1,0 +1,114 @@
+[
+  {
+    "func_sig": {
+      "description": "Calculate the ratio of two numbers.",
+      "name": "calculate_ratio",
+      "parameters": {
+        "properties": {
+          "num1": {
+            "description": "The first number.",
+            "type": "integer"
+          },
+          "num2": {
+            "description": "The second number.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the surface area of a cube given its side length.",
+      "name": "calculate_surface_area_of_cube",
+      "parameters": {
+        "properties": {
+          "side_length": {
+            "description": "The length of one side of the cube.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the area of a right triangle given the lengths of the two legs.",
+      "name": "calculate_area_of_right_triangle",
+      "parameters": {
+        "properties": {
+          "leg_a": {
+            "description": "Length of leg a.",
+            "type": "integer"
+          },
+          "leg_b": {
+            "description": "Length of leg b.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a cone given its radius and height.",
+      "name": "calculate_volume_of_cone",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cone.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cone.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculates the area of a circle given its radius.",
+      "name": "calculate_area_of_circle",
+      "parameters": {
+        "properties": {
+          "radius": {
+            "description": "The radius of the circle.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the volume of a cylinder given its radius and height.",
+      "name": "calculate_cylinder_volume",
+      "parameters": {
+        "properties": {
+          "height": {
+            "description": "The height of the cylinder.",
+            "type": "integer"
+          },
+          "radius": {
+            "description": "The radius of the base of the cylinder.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "calculate_triangle_angles": {
+    "code": "from sympy import acos, deg\n\ndef calculate_triangle_angles(a, b, c):\n    angle_A = deg(acos((b**2 + c**2 - a**2) / (2 * b * c)))\n    angle_B = deg(acos((a**2 + c**2 - b**2) / (2 * a * c)))\n    angle_C = deg(acos((a**2 + b**2 - c**2) / (2 * a * b)))\n    return angle_A, angle_B, angle_C",
+    "packages": "sympy"
+  },
+  "compute_arcsin": {
+    "code": "from sympy import asin\n\ndef compute_arcsin(value):\n    return asin(value)",
+    "packages": "sympy"
+  },
+  "evaluate_expression": {
+    "code": "from sympy import sympify\n\ndef evaluate_expression(expression):\n    try:\n        result = sympify(expression)\n        if result.is_number:\n            result = float(result)\n        return result\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "evaluate_tan_arccos": {
+    "code": "from sympy import tan, acos\n\ndef evaluate_tan_arccos(x):\n    if -1 <= x <= 1:\n        return tan(acos(x))\n    else:\n        raise ValueError('Input must be in the range [-1, 1] for arccos.')",
+    "packages": "sympy"
+  }
+}

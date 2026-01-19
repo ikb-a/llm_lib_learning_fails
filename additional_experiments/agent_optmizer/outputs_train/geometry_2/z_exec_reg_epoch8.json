@@ -1,0 +1,42 @@
+{
+  "calculate_area_of_frustum": {
+    "code": "from sympy import pi\n\ndef calculate_area_of_frustum(radius_top, radius_bottom, height):\n    volume = (pi * height / 3) * (radius_top ** 2 + radius_bottom ** 2 + radius_top * radius_bottom)\n    surface_area = pi * (radius_top + radius_bottom) * (height + radius_top + radius_bottom)\n    return volume, surface_area;",
+    "packages": "sympy"
+  },
+  "calculate_area_of_shape": {
+    "code": "import math\n\ndef calculate_area_of_shape(shape_type, parameters):\n    if shape_type.lower() == 'circle':\n        radius = parameters['radius']\n        return math.pi * radius ** 2\n    elif shape_type.lower() == 'triangle':\n        base = parameters['base']\n        height = parameters['height']\n        return 0.5 * base * height\n    elif shape_type.lower() == 'trapezoid':\n        base1 = parameters['base1']\n        base2 = parameters['base2']\n        height = parameters['height']\n        return ((base1 + base2) * height) / 2\n    else:\n        return 'Invalid shape type.'",
+    "packages": "math"
+  },
+  "calculate_area_of_triangle": {
+    "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(a, b, c):\n    if a <= 0 or b <= 0 or c <= 0:\n        return 'Invalid triangle sides.'\n    s = (a + b + c) / 2\n    return sqrt(s * (s - a) * (s - b) * (s - c)).evalf()",
+    "packages": "sympy"
+  },
+  "calculate_circle_area": {
+    "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_power_of_circle": {
+    "code": "def calculate_power_of_circle(radius, height):\n    return radius * height",
+    "packages": ""
+  },
+  "calculate_ratio_k": {
+    "code": "from sympy import symbols, pi\n\ndef calculate_ratio_k(area_cone, volume_cone, height_small_cone, radius_small_cone, frustum_height):\n    angle_cone = area_cone - (1/3) * pi * radius_small_cone**2 * height_small_cone\n    area_ratio =  (1/3) * pi * radius_small_cone**2 * height_small_cone / angle_cone\n    volume_ratio = volume_cone - (1/3) * pi * radius_small_cone**2 * height_small_cone\n    return area_ratio, volume_ratio",
+    "packages": "sympy"
+  },
+  "calculate_ratio_of_areas": {
+    "code": "def calculate_ratio_of_areas(area1, area2):\n    return area1 / area2",
+    "packages": ""
+  },
+  "calculate_ratio_of_areas_and_volumes": {
+    "code": "def calculate_ratio_of_areas_and_volumes(area1, area2, volume1, volume2):\n    ratio_area = area1 / area2\n    ratio_volume = volume1 / volume2\n    return ratio_area, ratio_volume;",
+    "packages": ""
+  },
+  "calculate_surface_area_of_cone": {
+    "code": "from sympy import pi, sqrt\n\ndef calculate_surface_area_of_cone(radius, height):\n    slant_height = sqrt(radius**2 + height**2)\n    return pi * radius * (radius + slant_height).evalf()",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_prism": {
+    "code": "def calculate_surface_area_of_prism(base_area, height):\n    return 2 * base_area + 2 * height\n",
+    "packages": ""
+  }
+}

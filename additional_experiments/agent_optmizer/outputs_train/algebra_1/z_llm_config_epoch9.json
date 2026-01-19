@@ -1,0 +1,399 @@
+{
+  "config_list": [
+    {
+      "api_key": "REDACT",
+      "api_type": "azure",
+      "api_version": "2024-08-01-preview",
+      "base_url": "REDACT",
+      "model": "gpt-4o-mini",
+      "tags": []
+    }
+  ],
+  "parallel_tool_calls": false,
+  "tools": [
+    {
+      "function": {
+        "description": "Solve a linear system of equations given two equations as strings.",
+        "name": "solve_linear_system",
+        "parameters": {
+          "properties": {
+            "eq1": {
+              "description": "First equation as a string",
+              "type": "string"
+            },
+            "eq2": {
+              "description": "Second equation as a string",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve a linear equation system given two equations as strings.",
+        "name": "solve_linear_equation_system",
+        "parameters": {
+          "properties": {
+            "eq1": {
+              "description": "First equation as a string",
+              "type": "string"
+            },
+            "eq2": {
+              "description": "Second equation as a string",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the average cost per item based on quantities and prices of multiple items.",
+        "name": "calculate_average_cost",
+        "parameters": {
+          "properties": {
+            "prices": {
+              "description": "List of prices for each item.",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "quantities": {
+              "description": "List of quantities for each item.",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solve a system of linear equations provided as strings.",
+        "name": "solve_system_of_equations",
+        "parameters": {
+          "properties": {
+            "equations": {
+              "description": "List of equations as strings.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Execute a function with given arguments and return the result.",
+        "name": "execute_function",
+        "parameters": {
+          "properties": {
+            "args": {
+              "description": "The arguments to pass to the function.",
+              "type": "object"
+            },
+            "functionName": {
+              "description": "The name of the function to execute.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the total cost based on quantities and prices of multiple items.",
+        "name": "calculate_total_cost",
+        "parameters": {
+          "properties": {
+            "prices": {
+              "description": "List of prices for each item.",
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "quantities": {
+              "description": "List of quantities for each item.",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Find the common ratio of a geometric sequence given the first two terms.",
+        "name": "calculate_geometric_sequence",
+        "parameters": {
+          "properties": {
+            "first_term": {
+              "description": "The first term of the geometric sequence.",
+              "type": "integer"
+            },
+            "second_term": {
+              "description": "The second term of the geometric sequence.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the full volume of a cylindrical tank given its filling states and additional liters.",
+        "name": "cylinder_volume",
+        "parameters": {
+          "properties": {
+            "additional_liters": {
+              "description": "Liters added to reach another fill fraction.",
+              "type": "integer"
+            },
+            "current_fill_fraction": {
+              "description": "Current fill fraction as string (e.g., '1/5').",
+              "type": "string"
+            },
+            "target_fill_fraction": {
+              "description": "Target fill fraction as string (e.g., '1/4').",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the filling state of a tank given the current fill fraction, additional liters, and target fill fraction as strings.",
+        "name": "calculate_equation_fill_fraction",
+        "parameters": {
+          "properties": {
+            "additional_liters": {
+              "description": "Liters added to reach the target fill fraction.",
+              "type": "integer"
+            },
+            "current_fill_fraction": {
+              "description": "Current fill fraction as string (e.g., '1/5').",
+              "type": "string"
+            },
+            "target_fill_fraction": {
+              "description": "Target fill fraction as string (e.g., '1/4').",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the full volume of a tank after adding liters based on its current and target fill fractions.",
+        "name": "calculate_volume_after_addition",
+        "parameters": {
+          "properties": {
+            "additional_liters": {
+              "description": "Liters added to reach the target fill fraction.",
+              "type": "integer"
+            },
+            "current_fill_fraction": {
+              "description": "Current fill fraction as string (e.g., '1/5').",
+              "type": "string"
+            },
+            "target_fill_fraction": {
+              "description": "Target fill fraction as string (e.g., '1/4').",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate travel time based on distance and speed.",
+        "name": "calculate_time_of_travel",
+        "parameters": {
+          "properties": {
+            "distance": {
+              "description": "The distance to be traveled.",
+              "type": "integer"
+            },
+            "speed": {
+              "description": "The speed of travel.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate an arithmetic expression and return the result.",
+        "name": "evaluate_arithmetic_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The arithmetic expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the largest three-digit integer whose digits are distinct and form a geometric sequence.",
+        "name": "calculate_geometric_progression",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Solves a linear equation in two variables based on cost and weight information.",
+        "name": "solve_linear_equation",
+        "parameters": {
+          "properties": {
+            "beans_weight": {
+              "description": "Weight of beans in pounds",
+              "type": "integer"
+            },
+            "corn_weight": {
+              "description": "Weight of corn in pounds",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in dollars",
+              "type": "string"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans in pounds",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the weights of various items based on given constraints",
+        "name": "calculate_costs_and_weights",
+        "parameters": {
+          "properties": {
+            "beans_weight": {
+              "description": "Weight of beans in pounds",
+              "type": "integer"
+            },
+            "corn_weight": {
+              "description": "Weight of corn in pounds",
+              "type": "integer"
+            },
+            "total_cost": {
+              "description": "Total cost in dollars",
+              "type": "string"
+            },
+            "total_weight": {
+              "description": "Total weight of corn and beans in pounds",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate a general mathematical expression provided as a string.",
+        "name": "evaluate_mathematical_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Calculate the distance between two points in a Cartesian plane.",
+        "name": "calculate_distance",
+        "parameters": {
+          "properties": {
+            "point1": {
+              "description": "Coordinates of first point (x1, y1).",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "point2": {
+              "description": "Coordinates of second point (x2, y2).",
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "Evaluate arithmetic or mathematical expressions provided as strings.",
+        "name": "evaluate_expression",
+        "parameters": {
+          "properties": {
+            "expression": {
+              "description": "The mathematical expression to evaluate.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

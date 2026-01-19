@@ -1,0 +1,10 @@
+{
+  "calculate_area_of_triangle": {
+    "code": "from sympy import sqrt\n\ndef calculate_area_of_triangle(a, b, c):\n    s = (a + b + c) / 2\n    return sqrt(s * (s - a) * (s - b) * (s - c))",
+    "packages": "sympy"
+  },
+  "calculate_circle_area": {
+    "code": "from sympy import pi\n\ndef calculate_circle_area(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  }
+}

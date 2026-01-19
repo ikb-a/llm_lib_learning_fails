@@ -1,0 +1,38 @@
+{
+  "calculate_area_and_volume_of_cone": {
+    "code": "import math\n\ndef calculate_area_and_volume_of_cone(radius, height):\n    slant_height = math.sqrt(radius**2 + height**2)\n    surface_area = math.pi * radius * (radius + slant_height)\n    volume = (1/3) * math.pi * radius**2 * height\n    return {\n        \"surface_area\": surface_area,\n        \"volume\": volume\n    }",
+    "packages": "math"
+  },
+  "calculate_code_properties": {
+    "code": "import math\n\ndef calculate_code_properties(shape, dimensions):\n    if shape == 'cone':\n        radius = dimensions.get('radius', 0)\n        height = dimensions.get('height', 0)\n        slant_height = math.sqrt(radius**2 + height**2)\n        volume = (1/3) * math.pi * radius**2 * height\n        surface_area = math.pi * radius * (radius + slant_height)\n    elif shape == 'sphere':\n        radius = dimensions.get('radius', 0)\n        volume = (4/3) * math.pi * radius**3\n        surface_area = 4 * math.pi * radius**2\n    elif shape == 'cylinder':\n        radius = dimensions.get('radius', 0)\n        height = dimensions.get('height', 0)\n        volume = math.pi * radius**2 * height\n        surface_area = 2 * math.pi * radius * (radius + height)\n    else:\n        return {\"error\": \"Shape not recognized\"}\n\n    return {\n        \"volume\": volume,\n        \"surface_area\": surface_area\n    }",
+    "packages": "math"
+  },
+  "calculate_distance_3d": {
+    "code": "import math\n\ndef calculate_distance_3d(point1, point2):\n    x1, y1, z1 = point1\n    x2, y2, z2 = point2\n    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)\n    return distance",
+    "packages": "math"
+  },
+  "calculate_volume_of_sphere": {
+    "code": "from sympy import pi\n\ndef calculate_volume_of_sphere(radius):\n    try:\n        volume = (4/3) * pi * radius**3\n        return volume\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "evaluate_math_problem": {
+    "code": "from sympy import symbols, Eq, solve, sqrt, pi, Rational, simplify, evalf, sympify\n\ndef evaluate_math_problem(problem_statement):\n    try:\n        # Supported variables\n        x, y, z = symbols('x y z')\n        # Safely parse the expression\n        expr = sympify(problem_statement)\n        # If it's an equation like expression solve for variables if possible\n        if isinstance(expr, Eq):\n            solution = solve(expr)\n        else:\n            solution = expr.evalf()\n        return solution\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_math_problem": {
+    "code": "from sympy import symbols, Eq, solve\n\ndef solve_math_problem(equations, variables):\n    try:\n        # Declaring variables\n        var_symbols = symbols(variables)\n        # Creating sympy equations\n        eq_objects = [Eq(*map(sympify, eq.split('='))) for eq in equations]\n        # Solving equations\n        solutions = solve(eq_objects, var_symbols)\n        return solutions\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_math_problem_fixed": {
+    "code": "from sympy import symbols, Eq, solve, sympify\n\ndef solve_math_problem_fixed(equations, variables):\n    try:\n        # Declaring variables\n        var_symbols = symbols(variables)\n        # Creating sympy equations\n        eq_objects = [Eq(*map(sympify, eq.split('='))) for eq in equations]\n        # Solving equations\n        solutions = solve(eq_objects, var_symbols)\n        return solutions\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_task_with_sympy": {
+    "code": "from sympy import symbols, Eq, solve, sympify\n\ndef solve_task_with_sympy(equations, variables):\n    try:\n        # Declare the variables\n        var_symbols = symbols(variables)\n        # Check if the equation contains '=' for any equality\n        eq_objects = []\n        for eq in equations:\n            if '=' in eq:\n                lhs, rhs = eq.split('=')\n                eq_objects.append(Eq(sympify(lhs), sympify(rhs)))\n            else:\n                eq_objects.append(sympify(eq))\n        # Solve the equations\n        solutions = solve(eq_objects, var_symbols)\n        return solutions\n    except Exception as e:\n        return str(e)",
+    "packages": "sympy"
+  },
+  "solve_trigonometric_triangle": {
+    "code": "import math\n\ndef solve_trigonometric_triangle(angle_type, known_side, known_value, angle_degree):\n    # Convert the angle from degrees to radians\n    angle_radian = math.radians(angle_degree)\n    \n    # Calculate the missing side using the given trigonometric function\n    if angle_type == 'sine':\n        if known_side == 'opposite':\n            # Solve for hypotenuse\n            return known_value / math.sin(angle_radian)\n        elif known_side == 'hypotenuse':\n            # Solve for opposite\n            return known_value * math.sin(angle_radian)\n    elif angle_type == 'cosine':\n        if known_side == 'adjacent':\n            # Solve for hypotenuse\n            return known_value / math.cos(angle_radian)\n        elif known_side == 'hypotenuse':\n            # Solve for adjacent\n            return known_value * math.cos(angle_radian)\n    elif angle_type == 'tangent':\n        if known_side == 'opposite':\n            # Solve for adjacent\n            return known_value / math.tan(angle_radian)\n        elif known_side == 'adjacent':\n            # Solve for opposite\n            return known_value * math.tan(angle_radian)\n    else:\n        raise ValueError(\"Invalid angle type provided.\")",
+    "packages": "math"
+  }
+}

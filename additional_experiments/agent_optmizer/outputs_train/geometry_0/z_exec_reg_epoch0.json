@@ -1,0 +1,18 @@
+{
+  "calculate_area_and_volume_of_shapes": {
+    "code": "from sympy import pi, sqrt\n\ndef calculate_area_and_volume_of_shapes(shape_type, dimensions):\n    if shape_type == 'circle':\n        radius = dimensions['radius']\n        area = pi * radius ** 2\n        volume = None\n        return {'area': area, 'volume': None}\n    elif shape_type == 'cone':\n        radius = dimensions['radius']\n        height = dimensions['height']\n        area = pi * radius * sqrt(radius**2 + height**2) + pi * radius**2  # lateral + base\n        volume = (1/3) * pi * radius**2 * height\n        return {'area': area, 'volume': volume}\n    elif shape_type == 'rectangle':\n        width = dimensions['width']\n        height = dimensions['height']\n        area = width * height\n        volume = None\n        return {'area': area, 'volume': None}\n    else:\n        return {'area': None, 'volume': None}",
+    "packages": "sympy"
+  },
+  "calculate_area_of_circle": {
+    "code": "from sympy import pi\n\ndef calculate_area_of_circle(radius):\n    return pi * radius ** 2",
+    "packages": "sympy"
+  },
+  "calculate_surface_area_of_cube": {
+    "code": "def calculate_surface_area_of_cube(side_length):\n    return 6 * side_length ** 2",
+    "packages": "sympy"
+  },
+  "calculate_volume_of_cone": {
+    "code": "from sympy import pi\n\ndef calculate_volume_of_cone(radius, height):\n    return (1/3) * pi * radius ** 2 * height",
+    "packages": "sympy"
+  }
+}

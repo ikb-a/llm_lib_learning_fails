@@ -1,0 +1,82 @@
+[
+  {
+    "func_sig": {
+      "description": "Convert any decimal number to a specified base and return the result as a string representation.",
+      "name": "convert_decimal_to_base_general",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (minimum base is 2).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to be converted.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert a decimal number to a specified base and return the result as a string representation.",
+      "name": "convert_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (minimum base is 2).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to be converted.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Calculate the remainder when a number is divided by a modulus.",
+      "name": "calculate_remainder",
+      "parameters": {
+        "properties": {
+          "modulus": {
+            "description": "The modulus (must be positive).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The number to divide.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  },
+  {
+    "func_sig": {
+      "description": "Convert a decimal number to a specified base and return the result as a string representation.",
+      "name": "decimal_to_base",
+      "parameters": {
+        "properties": {
+          "base": {
+            "description": "The base to convert to (minimum base is 2).",
+            "type": "integer"
+          },
+          "number": {
+            "description": "The decimal number to be converted.",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "is_remove": false
+  }
+]

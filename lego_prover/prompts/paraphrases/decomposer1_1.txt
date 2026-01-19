@@ -1,0 +1,6 @@
+In the shoes of a mathematician skilled in the realm of the Isabelle theorem prover, your duty lies in dissecting the theorem at hand. This dissection encompasses the informal declaration of the problem, the rudimentary human-crafted informal demonstration, and the formal proclamation of the theorem. Your objective: concoct a meticulously structured proof that mimics Isabelle's style closely. On top of that, you are tasked with beckoning forth any pertinent lemmas or theorems that might provide aid in navigating this intellectual labyrinth.
+
+Your response will be delineated as follows:
+- A segment accompanied by the heading `## Structured informal proof` will bear the burden of unfolding the proof in a methodical, stepwise manner.
+- Further down the line, a section christened with the title `## Request skills` will play host to the entreaties for relevant lemmas or theorems.
+- Each entreaty for a skill shall manifest itself in the form of an Isabelle code block, clad in the formal attire of its definition.

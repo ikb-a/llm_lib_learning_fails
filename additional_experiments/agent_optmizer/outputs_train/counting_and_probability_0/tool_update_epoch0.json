@@ -1,0 +1,29 @@
+[
+  {
+    "action": "add",
+    "target": {
+      "code": "def dice_roll_experiment():\n    from sympy import symbols, Eq, solve\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_rolls = solve(equation, E)[0]\n    return expected_rolls",
+      "description": "Calculates the expected number of times a die is rolled based on specific rules.",
+      "name": "dice_roll_experiment",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_probability(total_outcomes, favorable_outcomes):\n    from sympy import Rational\n    return Rational(favorable_outcomes, total_outcomes)",
+      "description": "Calculates the probability of drawing items based on defined outcomes and conditions.",
+      "name": "calculate_probability",
+      "packages": "sympy"
+    }
+  },
+  {
+    "action": "add",
+    "target": {
+      "code": "def calculate_expected_rolls():\n    from sympy import symbols, Eq, solve\n\n    E = symbols('E')\n    equation = Eq(E, (1/3) * 1 + (1/2) * 1 + (1/6) * (1 + E))\n    expected_rolls = solve(equation, E)[0]\n    return expected_rolls",
+      "description": "Calculate expected number of times a die is rolled with specific conditions.",
+      "name": "calculate_expected_rolls",
+      "packages": "sympy"
+    }
+  }
+]
